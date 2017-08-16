@@ -44,6 +44,12 @@ html {
 	text-rendering:optimizeLegibility;
 }
 body {
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:-o-flex;
+	display:flex;
+	flex-direction:column;
 	color:#000;
 	font:normal 1.5rem Sregular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	background-color:#fff;
@@ -65,20 +71,23 @@ a {
 	a:hover {
 		text-decoration:underline;
 	}
+.main {
+	flex:1;
+}
 /*  </general>  */
 
 /*  <menu>  */
 .menu__cover {
 	position:fixed;
 	top:0; right:0; bottom:0; left:0;
-	z-index:3;
+	z-index:6;
 	overflow-y:auto;
 	background-color:rgba(0, 0, 0, .4);
 }
 .menu {
 	position:fixed;
 	top:0; bottom:0; left:-90%;
-	z-index:4;
+	z-index:7;
 	overflow-y:auto;
 	width:90%;
 	background-color:#fafafa;
@@ -171,6 +180,8 @@ a {
 
 /*  <header>  */
 .header {
+	position:relative;
+	z-index:5;
 	background-attachment:fixed;
 	background-repeat:no-repeat;
 	background-position:center 0;
@@ -405,20 +416,18 @@ a {
 	}
 		.copyright {
 			position:absolute;
-			bottom:15px; left:35px;
+			bottom:15px; left:15px;
 			color:#c6c6c6;
 		}
 		.footer__nav {
-			margin:0 0 20px 20px;
+			margin:0 0 20px;
 		}
 			.footer-nav__item {
 				display:block;
 				color:#000;
 				padding:10px 0;
 			}
-		.footer__social {
-			margin-left:20px;
-		}
+		.footer__social {}
 			.social__item {
 				display:inline-block;
 				width:32px; height:32px;
@@ -440,7 +449,7 @@ a {
 			}
 		.footer__language {
 			position:absolute;
-			top:40px; left:35px;
+			top:40px; left:15px;
 			color:#000;
 			line-height:16px;
 			background-repeat:no-repeat;
@@ -463,6 +472,88 @@ a {
 		}
 /*  </footer>  */
 
+/*  <auth>  */
+.auth {
+	position:fixed;
+	top:0; right:0; left:0; bottom:0;
+	z-index:4;
+	background:#f9f9f9 url(../i/auth__bg.jpg) no-repeat center top / cover;
+}
+	.auth__wrap {
+		position:relative;
+		width:462px;
+		max-width:90%;
+		background-color:#fff;
+		border:1px solid #ececec;
+		border-radius:2px;
+		padding:20px 15px;
+		margin:170px auto 80px;
+	}
+		.auth__title {
+			font-size:2.7rem;
+			font-family:Smedium;
+			margin:0 0 24px;
+		}
+		.auth__system {
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:-ms-flex;
+			display:-o-flex;
+			display:flex;
+			justify-content:space-between;
+		}
+			.auth__system-item:last-child {
+				text-align:right;
+			}
+				.auth__remember {
+					position:absolute;
+					left:-9999px;
+				}
+				.auth__remember + label {
+					position:relative;
+					padding-left:28px;
+				}
+					.auth__remember + label::before {
+						position:absolute;
+						top:0; left:0;
+						width:18px; height:18px;
+						border:1px solid #d0d3e4;
+						border-radius:3px;
+						content:'';
+					}
+					.auth__remember:checked + label::after {
+						position:absolute;
+						top:4px; left:4px;
+						width:10px; height:10px;
+						background-color:#d0d3e4;
+						content:'';
+					}
+				.auth__forget {
+					color:#0a73ea;
+				}
+		.auth .btn {
+			height:36px;
+		}
+		.auth__safe {
+			position:absolute;
+			bottom:-60px; left:50%;
+			width:97px; height:30px;
+			background-image:url(../i/auth__safe.png);
+			transform:translateX(-50%);
+		}
+/*  </auth>  */
+
+/*  <safety>  */
+.safety {}
+	.safety__item {
+		margin:40px 0;
+	}
+		.safety__title {
+			font-size:2.7rem;
+			margin:0 0 10px;
+		}
+/*  </safety>  */
+
 /*  <elements>  */
 .btn {
 	height:44px;
@@ -470,12 +561,29 @@ a {
 	font-size:1.6rem;
 	font-family:Smedium;
 	background-color:#498dea;
+	border:0;
 	border-radius:4px;
 	padding:0 45px;
 }
 a.btn {
 	display:inline-block;
 	line-height:44px;
+}
+.input-text {
+	width:100%; height:36px;
+	color:#000;
+	background-color:#fff;
+	border:1px solid #d0d3e4;
+	border-radius:2px;
+	padding:0 16px;
+	transition:all .2s;
+}
+	.input-text:focus {
+		border:1px solid #498dea;
+		box-shadow:0 0 0 1px #498dea;
+	}
+.form__row {
+	margin-bottom:24px;
 }
 /*  </elements>  */
 
@@ -485,56 +593,66 @@ a.btn {
 		left:-310px;
 		width:310px;
 	}
+	.auth__wrap {
+		padding:30px;
+	}
 }
 @media screen and (min-width:992px) {
 	.btn {
 		font-size:1.8rem;
 	}
-	.burger {
-		display:none;
-	}
-	.logo {
-		top:20px; left:5px;
-		padding:10px;
-	}
-	.header__nav {
-		display:block;
-		color:#fff;
-		line-height:80px;
+	.header {
 		text-align:right;
-		margin-right:98px;
 	}
-		.header-nav__item {
-			margin-left:18px;
+		.burger {
+			display:none;
 		}
-	.header__login {
-		display:block;
-		position:absolute;
-		top:26px; right:0;
-		color:#fff;
-		font-family:Ssemi;
-		line-height:29px;
-		background-color:rgba(255, 255, 255, .15);
-		border-radius:2px;
-		padding:0 18px;
-	}
-	.header__description-title {
-		font-size:3.5rem;
-	}
-	.header__description-text {
-		font-size:1.7rem;
-		margin:25px 0 50px;
-	}
-	.header__promo {
-		display:block;
-		color:#fff;
-		font-size:1.7rem;
-		font-family:Smedium;
-		line-height:34px;
-		background:url(../i/icons/icon-play.png) no-repeat 0 center;
-		padding-left:48px;
-		margin-bottom:70px;
-	}
+		.logo {
+			top:20px; left:5px;
+			padding:10px;
+		}
+		.header__nav {
+			display:inline-block;
+			color:#fff;
+			line-height:80px;
+			text-align:right;
+			margin-right:20px;
+		}
+			.header-nav__item {
+				margin-left:18px;
+			}
+		.header__login {
+			display:inline-block;
+			color:#fff;
+			font-family:Ssemi;
+			line-height:29px;
+			background-color:rgba(255, 255, 255, .15);
+			border-radius:2px;
+			padding:0 18px;
+		}
+		.header__main {
+			text-align:left;
+		}
+			.header__description {
+				margin-top:20px;
+			}
+				.header__description-title {
+					font-size:3.5rem;
+				}
+				.header__description-text {
+					font-size:1.7rem;
+					margin:25px 0 50px;
+				}
+			.header__promo {
+				display:block;
+				color:#fff;
+				font-size:1.7rem;
+				font-family:Smedium;
+				line-height:34px;
+				background:url(../i/icons/icon-play.png) no-repeat 0 center;
+				padding-left:48px;
+				margin-bottom:70px;
+			}
 	.general-info {
 		display:-webkit-flex;
 		display:-moz-flex;
@@ -566,6 +684,7 @@ a.btn {
 			}
 	.about-crypto {
 		position:relative;
+		overflow:hidden;
 		text-align:left;
 	}
 		.about-crypto__text {
@@ -677,6 +796,30 @@ a.btn {
 			.footer__language::before {
 				right:10px;
 			}
+	.auth__wrap {
+		padding:60px;
+	}
+	.safety__item {
+		background-repeat:no-repeat;
+		background-position:0 8px;
+		padding-left:93px;
+	}
+	.safety__item--encrypt {
+		background-image:url(../i/safety__encrypt.png);
+		background-position:3px 8px;
+	}
+	.safety__item--recommend {
+		background-image:url(../i/safety__recommend.png);
+	}
+	.safety__item--unknown {
+		background-image:url(../i/safety__unknown.png);
+	}
+		.safety__title {
+			font-size:2.5rem;
+		}
+		.safety__descr {
+			line-height:2.7rem;
+		}
 }
 @media screen and (min-width:1200px) {
 }
