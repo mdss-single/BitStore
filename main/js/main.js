@@ -1,6 +1,11 @@
 (function($){ 
 	"use strict";
 
+	$(window).scroll(function() {
+		var scrolledY = $(window).scrollTop();
+		$('.header').css('background-position', 'center ' + ((scrolledY)) + 'px');
+	});
+
 	// mobile menu
 	$(window).on('load resize', function() {
 		if ($(window).width() < 992) {
