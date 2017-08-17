@@ -661,6 +661,17 @@ a.btn {
 	font-size:2.7rem;
 	font-family:Smedium;
 }
+.format-text {}
+	.format__block {
+		margin-top:18px;
+	}
+	.format-text p {
+		line-height:2.7rem;
+		margin:0;
+	}
+	.format__title {
+		font-family:Smedium;
+	}
 @keyframes fadein {
 	from {
 		opacity:0;
@@ -700,9 +711,15 @@ a.btn {
 	.page__title {
 		font-size:3rem;
 	}
-	.header {
-		text-align:right;
+	.format-text {
+		font-size:1.7rem;
 	}
+		.format__block {
+			margin-top:30px;
+		}
+		.format-text p {
+			line-height:3.6rem;
+		}
 	.header--auth {
 		background-color:transparent;
 	}
