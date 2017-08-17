@@ -73,6 +73,7 @@ a {
 	}
 .main {
 	flex:1;
+	padding-top:10px;
 	padding-bottom:30px;
 }
 /*  </general>  */
@@ -191,6 +192,7 @@ a {
 }
 .header--auth {
 	min-height:60px;
+	background-color:#3469c6;
 }
 .header.header--blue {
 	background-color:#3469c6;
@@ -236,13 +238,16 @@ a {
 		color:#fff;
 		font-family:Ssemi;
 	}
+	.header__system {
+		height:60px;
+	}
 	.header__main {
 		line-height:1.2;
 		text-align:left;
+		margin:30px 0 45px;
 	}
 		.header__description {
 			color:#fff;
-			margin-top:60px;
 		}
 			.header__description-title {
 				font-size:3rem;
@@ -255,9 +260,7 @@ a {
 				.header__description-text p {
 					margin:0;
 				}
-		.header__register {
-			margin-bottom:30px;
-		}
+		.header__register {}
 		.header__promo {
 			display:none;
 		}
@@ -581,19 +584,6 @@ a {
 /*  </safety>  */
 
 /*  <career>  */
-.header--career .header__main {
-	padding:95px 0 55px;
-}
-.header--career .header__description {
-	margin-top:0;
-}
-.header--career .header__register {
-	margin-bottom:0;
-}
-.career__title {
-	font-size:2.7rem;
-	font-family:Smedium;
-}
 .career__descr p {
 	line-height:2.4rem;
 	margin:0;
@@ -727,7 +717,7 @@ a.btn {
 			box-shadow:0 0 0 1px #498dea;
 		}
 	.page__title {
-		font-size:3rem;
+		font-size:2.5rem;
 	}
 	.format-text {
 		font-size:1.7rem;
@@ -748,30 +738,36 @@ a.btn {
 			top:20px; left:5px;
 			padding:10px;
 		}
-		.header__nav {
-			display:inline-block;
-			color:#fff;
-			line-height:80px;
-			text-align:right;
-			margin-right:20px;
+		.header__system {
+			height:80px;
 		}
-			.header-nav__item {
-				margin-left:18px;
+			.header__nav {
+				display:inline-block;
+				color:#fff;
+				line-height:80px;
+				text-align:right;
+				margin-right:20px;
 			}
-		.header__login {
-			display:inline-block;
-			color:#fff;
-			font-family:Ssemi;
-			line-height:29px;
-			background-color:rgba(255, 255, 255, .15);
-			border-radius:2px;
-			padding:0 18px;
-		}
-		.header__login.header__login--auth {
-			line-height:29px;
-			background-color:#4878cd;
-			border-radius:3px;
-			padding:0 19px;
+				.header-nav__item {
+					margin-left:18px;
+				}
+			.header__login {
+				display:inline-block;
+				color:#fff;
+				font-family:Ssemi;
+				line-height:29px;
+				background-color:rgba(255, 255, 255, .15);
+				border-radius:2px;
+				padding:0 18px;
+			}
+			.header__login.header__login--auth {
+				line-height:29px;
+				background-color:#4878cd;
+				border-radius:3px;
+				padding:0 19px;
+			}
+		.header__main {
+			margin:30px 0 60px;
 		}
 			.header__description {
 				margin-top:20px;
@@ -781,7 +777,7 @@ a.btn {
 				}
 				.header__description-text {
 					font-size:1.7rem;
-					margin:25px 0 50px;
+					margin:25px 0 30px;
 				}
 			.header__promo {
 				display:block;
@@ -791,7 +787,7 @@ a.btn {
 				line-height:34px;
 				background:url(../i/icons/icon-play.png) no-repeat 0 center;
 				padding-left:48px;
-				margin-bottom:70px;
+				margin-top:40px;
 			}
 	.general-info {
 		display:-webkit-flex;
@@ -987,9 +983,6 @@ a.btn {
 		.safety__descr {
 			line-height:2.7rem;
 		}
-	.career__title {
-		font-size:2.5rem;
-	}
 	.career__tabs {
 		justify-content:center;
 	}

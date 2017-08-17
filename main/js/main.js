@@ -45,6 +45,8 @@
 			$('.js-press').flickity({
 				prevNextButtons: false,
 			});
+		} else {
+			$('.js-press').flickity('destroy');
 		}
 	});
 
