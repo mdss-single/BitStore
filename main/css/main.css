@@ -182,13 +182,16 @@ a {
 .header {
 	position:relative;
 	z-index:5;
+	line-height:60px;
+	text-align:right;
 	background-attachment:fixed;
 	background-repeat:no-repeat;
 	background-position:center 0;
 }
 .header--auth {
 	min-height:60px;
-	text-align:right;
+}
+.header.header--blue {
 	background-color:#3469c6;
 }
 	.burger {
@@ -217,6 +220,7 @@ a {
 	.logo {
 		position:absolute;
 		top:20px; left:70px;
+		line-height:1.2;
 	}
 	.header__nav {
 		display:none;
@@ -230,29 +234,32 @@ a {
 	.header__login--auth {
 		color:#fff;
 		font-family:Ssemi;
-		line-height:60px;
 	}
-	.header__description {
-		color:#fff;
-		margin-top:60px;
+	.header__main {
+		line-height:1.2;
+		text-align:left;
 	}
-		.header__description-title {
-			font-size:3rem;
-			font-family:Smedium;
-			margin:0;
+		.header__description {
+			color:#fff;
+			margin-top:60px;
 		}
-		.header__description-text {
-			margin:20px 0 25px;
-		}
-			.header__description-text p {
+			.header__description-title {
+				font-size:3rem;
+				font-family:Smedium;
 				margin:0;
 			}
-	.header__register {
-		margin-bottom:30px;
-	}
-	.header__promo {
-		display:none;
-	}
+			.header__description-text {
+				margin:20px 0 25px;
+			}
+				.header__description-text p {
+					margin:0;
+				}
+		.header__register {
+			margin-bottom:30px;
+		}
+		.header__promo {
+			display:none;
+		}
 /*  </header>  */
 
 /*  <general-info>  */
@@ -519,7 +526,9 @@ a {
 					left:-9999px;
 				}
 				.auth__remember + label {
+					display:block;
 					position:relative;
+					line-height:2rem;
 					padding-left:28px;
 				}
 					.auth__remember + label::before {
@@ -724,10 +733,10 @@ a.btn {
 			padding:0 18px;
 		}
 		.header__login.header__login--auth {
-			margin:31px 0;
-		}
-		.header__main {
-			text-align:left;
+			line-height:29px;
+			background-color:#4878cd;
+			border-radius:3px;
+			padding:0 19px;
 		}
 			.header__description {
 				margin-top:20px;
@@ -898,6 +907,9 @@ a.btn {
 		z-index:4;
 		background:#f9f9f9 url(../i/auth__bg.jpg) no-repeat center top / cover;
 	}
+	.register {
+		background:#f9f9f9;
+	}
 		.auth__wrap {
 			width:462px;
 			padding:60px;
@@ -905,6 +917,8 @@ a.btn {
 		}
 		.auth .btn {
 			width:auto;
+			font-size:1.5rem;
+			padding:0 30px;
 		}
 	.safety__item {
 		background-repeat:no-repeat;
