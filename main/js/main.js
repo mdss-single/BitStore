@@ -23,7 +23,7 @@
 					$('html').css('overflow','hidden');
 				},
 				threshold:40,
-				excludedElements:$.fn.swipe.defaults.excludedElements+', .press',
+				excludedElements:$.fn.swipe.defaults.excludedElements+', .press, .career__tabs',
 				preventDefaultEvents: false,
 			});
 			$('.menu').swipe({
@@ -40,11 +40,27 @@
 	});
 
 	// press talking
-	if ($(window).width() < 992) {
-		$('.js-press').flickity({
-			prevNextButtons: false,
-		});
-	}
+	$(window).on('load resize', function() {
+		if ($(window).width() < 992) {
+			$('.js-press').flickity({
+				prevNextButtons: false,
+			});
+		}
+	});
+
+	// career tabs
+	$('.career__tabs').each(function(i) {
+		var storage = localStorage.getItem('tab' + i);
+		if (storage) {
+			$(this).find('div').removeClass('career__tab-item--active').eq(storage).addClass('career__tab-item--active').closest('.career__items').find('.career__tab-content').removeClass('career__tab-content--active').eq(storage).addClass('career__tab-content--active');
+		}
+	});
+	$('.career__tabs').on('click', 'div:not(.career__tab-item--active)', function() {
+		$(this).addClass('career__tab-item--active').siblings().removeClass('career__tab-item--active').closest('.career__items').find('.career__tab-content').removeClass('career__tab-content--active').eq($(this).index()).addClass('career__tab-content--active');
+		var ulIndex = $('.career__tabs').index($(this).parents('.career__tabs'));
+		localStorage.removeItem('tab' + ulIndex);
+		localStorage.setItem('tab' + ulIndex, $(this).index());
+	});
 
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
