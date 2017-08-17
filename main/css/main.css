@@ -1070,9 +1070,11 @@ a.btn {
 		.auth__wrap {
 			width:462px;
 			padding:60px;
-			margin:170px auto 80px;
+			margin:182px auto 80px;
 		}
 		.register .auth__wrap {
+			width:510px;
+			padding:60px 90px 54px;
 			margin:138px auto 80px;
 		}
 		.auth .btn {

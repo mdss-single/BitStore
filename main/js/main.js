@@ -12,7 +12,7 @@
 			var menu = $('.menu');
 			$('.burger').click(function(e) {
 				$(menu).addClass('menu--active');
-				$('body').prepend('<div class="menu__cover"></div>');
+				if (!$('.menu__cover').length) $('body').prepend('<div class="menu__cover"></div>');
 				$('html').css('overflow','hidden');
 				e.preventDefault();
 			});
