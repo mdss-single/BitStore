@@ -504,7 +504,7 @@ a {
 		border:1px solid #ececec;
 		border-radius:2px;
 		padding:25px 15px;
-		margin:15px auto 0;
+		margin:15px auto 50px;
 	}
 		.auth__title {
 			font-size:2.7rem;
@@ -563,6 +563,9 @@ a {
 			width:97px; height:30px;
 			background-image:url(../i/auth__safe.png);
 			transform:translateX(-50%);
+		}
+		.auth__safe-desktop {
+			display:none;
 		}
 /*  </auth>  */
 
@@ -939,6 +942,17 @@ a.btn {
 		z-index:4;
 		background:#f9f9f9 url(../i/auth__bg.jpg) no-repeat center top / cover;
 	}
+		.auth__safe {
+			display:none;
+		}
+		.auth__safe-desktop {
+			display:block;
+			position:absolute;
+			bottom:-50px; left:50%;
+			width:97px; height:30px;
+			background-image:url(../i/auth__safe.png);
+			transform:translateX(-50%);
+		}
 	.register {
 		background:#f9f9f9;
 	}
