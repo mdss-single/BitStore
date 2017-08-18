@@ -3,7 +3,8 @@
 
 	$(window).scroll(function() {
 		var scrolledY = $(window).scrollTop();
-		$('.header').css('background-position', 'center ' + ((scrolledY)) + 'px');
+		if ($('.header').attr('style')) $('.header').css('background-position', 'center ' + ((scrolledY)) + 'px');
+		//$('.header').css('background-position', 'center ' + ((scrolledY)) + 'px');
 	});
 
 	// mobile menu
@@ -67,6 +68,36 @@
 		var ulIndex = $('.career__tabs').index($(this).parents('.career__tabs'));
 		localStorage.removeItem('tab' + ulIndex);
 		localStorage.setItem('tab' + ulIndex, $(this).index());
+	});
+
+	// news dropdown
+	$(window).on('load resize', function() {
+		if ($(window).width() < 992) {
+			$('.news__sort-wrap').each(function() {
+				var list = $(this), select = $(document.createElement('select')).addClass('news__sort-select').insertBefore($(this).hide()).wrap('<div class="news__sort-date"></div>');
+				$('> a', this).each(function() {
+					var target = $(this).attr('target');
+					if ($(this).hasClass('news__sort-link--current')) {
+						var option = $(document.createElement('option')).attr('selected', true).appendTo(select).val(this.href).html($(this).html()).click(function(){
+							if(target==='_blank') {
+								window.open($(this).val());
+							} else {
+								window.location.href = $(this).val();
+							}
+						});
+					} else {
+						var option = $(document.createElement('option')).appendTo(select).val(this.href).html($(this).html()).click(function(){
+							if(target==='_blank') {
+								window.open($(this).val());
+							} else {
+								window.location.href = $(this).val();
+							}
+						});
+					}
+				});
+				list.remove();
+			});
+		}
 	});
 
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
