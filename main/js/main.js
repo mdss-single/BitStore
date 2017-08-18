@@ -4,7 +4,6 @@
 	$(window).scroll(function() {
 		var scrolledY = $(window).scrollTop();
 		if ($('.header').attr('style')) $('.header').css('background-position', 'center ' + ((scrolledY)) + 'px');
-		//$('.header').css('background-position', 'center ' + ((scrolledY)) + 'px');
 	});
 
 	// mobile menu
