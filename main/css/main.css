@@ -741,6 +741,11 @@ a {
 			order:3;
 			width:50%;
 		}
+		.news__detail-pic {
+			order:3;
+			width:100%;
+			margin-bottom:30px;
+		}
 		.news__item-date {
 			order:1;
 			color:#949494;
@@ -763,6 +768,18 @@ a {
 			border-radius:3px;
 			padding:0 45px;
 			margin-top:20px;
+		}
+		.news__detail-link {
+			order:5;
+			align-self:flex-start;
+			display:inline-block;
+			width:auto;
+			line-height:28px;
+			background-color:#c7c7c7;
+			border-radius:3px;
+			padding:0 45px;
+			margin-top:35px;
+			margin-bottom:48px;
 		}
 /*  </news>  */
 
