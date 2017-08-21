@@ -783,6 +783,87 @@ a {
 		}
 /*  </news>  */
 
+/*  <about-us>  */
+.about-us__block {
+	margin-top:50px;
+}
+.about-us__block:first-child {
+	margin-top:25px;
+}
+	.about-us__stat {}
+		.about-us__stat-item {
+			margin-top:25px;
+		}
+			.about-us__stat-title {
+				position:relative;
+				font-size:2.7rem;
+				font-family:Smedium;
+				line-height:1;
+				padding-left:16px;
+				margin:0 0 10px;
+			}
+				.about-us__stat-title::before {
+					position:absolute;
+					top:3px; bottom:3px; left:0;
+					width:3px;
+					background-color:#269de9;
+					content:'';
+				}
+			.about-us__stat-descr {
+				margin:0;
+			}
+	.about-us__text {
+		margin-top:-15px;
+	}
+		.about-us__text p {
+			margin:0;
+		}
+	.about-us__lead {
+		display:-webkit-flex;
+		display:-moz-flex;
+		display:-ms-flex;
+		display:-o-flex;
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:space-between;
+	}
+		.about-us__leader {
+			width:45%;
+			margin-bottom:25px;
+		}
+			.about-us__leader-pic {
+				margin-bottom:10px;
+			}
+			.about-us__leader-post {
+				font-family:Smedium;
+				margin:0 0 5px;
+			}
+			.about-us__leader-name {
+				margin:0;
+			}
+.about-us__enjoy {
+	color:#fff;
+	background:url(../i/about-us__enjoy.jpg) no-repeat center 0 / cover;
+	padding-bottom:30px;
+	margin:30px 0 -30px;
+}
+	.about-us__enjoy-descr {
+		margin-top:-15px;
+	}
+		.about-us__enjoy-descr p {
+			margin:0;
+		}
+	.about-us__enjoy-plus {
+		font-family:Smedium;
+	}
+		.about-us__enjoy-plus a {
+			text-decoration:underline;
+		}
+			.about-us__enjoy-plus a:hover {
+				text-decoration:none;
+			}
+/*  </about-us>  */
+
 /*  <elements>  */
 .btn {
 	height:44px;
@@ -1293,6 +1374,61 @@ a.btn {
 		}
 		.news__item-link {
 			display:inline-block;
+		}
+	.about-us__block {
+		margin-top:80px;
+	}
+	.about-us__block:first-child {
+		margin-top:40px;
+	}
+		.about-us__stat {
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:-ms-flex;
+			display:-o-flex;
+			display:flex;
+			justify-content:space-between;
+		}
+			.about-us__stat-item {
+				width:23%;
+				margin-bottom:0;
+			}
+				.about-us__stat-title {
+					padding-left:20px;
+					margin:0 0 20px;
+				}
+					.about-us__stat-title::before {
+						width:5px;
+					}
+				.about-us__stat-descr {
+					margin:0 0 0 20px;
+				}
+		.about-us__text {
+			line-height:2.4rem;
+			margin-top:-10px;
+		}
+	.about-us__leader {
+		width:22%;
+		margin-bottom:45px;
+	}
+		.about-us__leader-pic {
+			margin-bottom:25px;
+		}
+		.about-us__leader-post {
+			margin:0 0 10px;
+		}
+	.about-us__enjoy {
+		padding-top:30px;
+		padding-bottom:70px;
+	}
+		.about-us__enjoy-descr {
+			line-height:2.4rem;
+			margin-top:-5px;
+			margin-bottom:20px;
+		}
+		.about-us__enjoy-plus {
+			font-size:1.7rem;
+			line-height:2;
 		}
 }
 @media screen and (min-width:1200px) {
