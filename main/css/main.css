@@ -943,6 +943,161 @@ a {
 	}
 /*  </reviews>  */
 
+/*  <seller>  */
+.seller {
+	position:relative;
+	background-color:#f8f8f8;
+	padding-bottom:85px;
+	margin:-10px -15px -50px;
+}
+	.seller__title {
+		color:#848484;
+		font-size:1.4rem;
+		background-color:#f8f8f8;
+		border-bottom:1px solid #dfdfdf;
+		padding:15px 15px 5px;
+		margin:0;
+	}
+	.seller__info {
+		position:relative;
+		background-color:#fff;
+		border-bottom:1px solid #dfdfdf;
+		padding:20px 15px 20px 62px;
+	}
+		.seller__avatar {
+			position:absolute;
+			top:20px; left:15px;
+			overflow:hidden;
+			width:36px;
+			border-radius:2px;
+		}
+		.seller__name {
+			margin:0;
+		}
+			.seller__status--reliable {
+				color:#506b27;
+			}
+				.seller__status--reliable::after {
+					color:#000;
+					margin-left:6px;
+					content:'\2714';
+				}
+			.seller__timeout {
+				color:#848484;
+				font-size:1.2rem;
+				margin:0;
+			}
+	.seller__total {
+		background-color:#fff;
+		border-bottom:1px solid #ececec;
+		padding:20px 15px;
+	}
+		.seller__total-table {
+			width:100%;
+		}
+			.seller__total-table tr {
+				display:block;
+				margin-bottom:20px;
+			}
+			.seller__total-table tr:last-child {
+				margin-bottom:0;
+			}
+				.seller__total-table td {
+					display:block;
+				}
+				.seller__total-table td:first-child {
+					color:#a9a9a9;
+					margin-bottom:5px;
+				}
+	.seller__buy-block {
+		background-color:#fff;
+		border-bottom:1px solid #ececec;
+		padding:0 15px;
+	}
+		.seller__buy-table {
+			width:100%;
+			font-size:1.35rem;
+		}
+			.seller__buy-table th {
+				font-weight:normal;
+				font-family:Smedium;
+				text-align:left;
+				border-bottom:1px solid #ececec;
+				padding:10px 0;
+			}
+			.seller__buy-table th:nth-child(3), .seller__buy-table td:nth-child(3) {
+				text-align:right;
+				padding:10px 0 10px 10px;
+			}
+			.seller__buy-table td {
+				vertical-align:top;
+				border-bottom:1px solid #ececec;
+				padding:10px;
+			}
+			.seller__buy-table td:first-child {
+				padding:10px 10px 10px 0;
+			}
+			.seller__buy-table tr:last-child td {
+				border-bottom:0;
+			}
+			.seller__buy-table th:nth-child(4), .seller__buy-table th:nth-child(5), .seller__buy-table td:nth-child(4), .seller__buy-table td:nth-child(5) {
+				display:none;
+			}
+				.seller__buy-avatar {
+					display:none;
+				}
+				.seller__buy-name, .seller__buy-status {
+					color:#157efb;
+					margin:0;
+				}
+	.seller__rating {
+		background-color:#fff;
+		border:solid #ececec;
+		border-width:1px 0;
+		padding:15px;
+		margin-top:15px;
+	}
+		.seller__rating-info {
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:-ms-flex;
+			display:-o-flex;
+			display:flex;
+			justify-content:flex-start;
+			margin-bottom:15px;
+		}
+			.seller__rating-title {
+				font-size:1.6rem;
+				margin:0 10px 0 0;
+			}
+			.seller__rating-main {
+				margin-top:2px;
+			}
+			.seller__rating-count {
+				flex-grow:1;
+				color:#7c7c7c;
+				font-size:1.6rem;
+				text-align:right;
+				margin:0;
+			}
+	.seller__abuse {
+		position:absolute;
+		bottom:18px; left:0;
+		width:100%;
+		color:#c91919;
+		font-size:1.6rem;
+		text-align:center;
+	}
+	.seller__favorite {
+		position:absolute;
+		bottom:52px; left:0;
+		width:100%;
+		color:#157efb;
+		font-size:1.6rem;
+		text-align:center;
+	}
+/*  </seller>  */
+
 /*  <elements>  */
 .btn {
 	height:44px;
@@ -1543,6 +1698,230 @@ a.btn {
 		.review__add {
 			margin-top:15px;
 		}
+	.bg--gray {
+		background-color:#f9f9f9;
+	}
+	.seller {
+		overflow:hidden;
+		background-color:#fff;
+		border:1px solid #ececec;
+		padding:28px 20px;
+		margin:25px 0 0;
+	}
+		.seller__title:first-of-type {
+			display:none;
+		}
+		.seller__info {
+			border-bottom:0;
+			padding:0 0 20px 50px;
+		}
+			.seller__info::before {
+				position:absolute;
+				right:-100%; bottom:0; left:-100%;
+				height:1px;
+				background-color:#ececec;
+				content:'';
+			}
+			.seller__avatar {
+				top:5px; left:0;
+			}
+			.seller__name {
+				font-size:2rem;
+				line-height:1;
+				margin:0 0 8px;
+			}
+				.seller__status--reliable::after {
+					display:inline-block;
+					vertical-align:middle;
+					width:13px; height:10px;
+					background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAKCAMAAABYMCT2AAAARVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADc6ur3AAAAFnRSTlMACOeXPg3iqKOeUEQ489fVv5KNMTAoxh+gAwAAAExJREFUCNdljVcOgDAMQzNKB3v6/kclEaggNT/xs2Sbvuu0/0HCWoETloP4eiBjPolUBqeCONrbIIFYIQ4uYtjNeuMFkxm1OsOz7ewNoIcCU3ikCFcAAAAASUVORK5CYII=);
+					margin-left:8px;
+					content:'';
+				}
+			.seller__timeout {
+				color:#000;
+				font-size:1.3rem;
+			}
+		.seller__abuse, .seller__favorite {
+			top:30px; bottom:auto; left:auto;
+			font-size:1.5rem;
+			font-family:Smedium;
+			line-height:36px;
+			border-radius:2px;
+		}
+		.seller__abuse {
+			right:32px;
+			width:158px;
+			color:#000;
+			background-color:#ededed;
+		}
+		.seller__favorite {
+			right:208px;
+			width:218px;
+			color:#fff;
+			background-color:#417ce4;
+		}
+		.seller__title {
+			color:#000;
+			font-size:2rem;
+			background-color:#fff;
+			border-bottom:0;
+			padding:0;
+			margin:30px 0 15px;
+		}
+		.seller__total {
+			position:relative;
+			border-bottom:0;
+			padding:0 0 30px;
+		}
+			.seller__total::before {
+				position:absolute;
+				right:-100%; bottom:0; left:-100%;
+				height:1px;
+				background-color:#ececec;
+				content:'';
+			}
+			.seller__total-table tr {
+				display:table-row;
+			}
+			.seller__total-table td {
+				display:table-cell;
+				padding-top:7px;
+				padding-bottom:7px;
+			}
+			.seller__total-table td:first-child {
+				width:36%;
+				color:#737373;
+			}
+			.seller__total-table tr:nth-child(1) td:last-child, .seller__total-table tr:nth-child(2) td:last-child {
+				font-family:Ssemi;
+			}
+		.seller__buy-block {
+			padding:0;
+		}
+			.seller__buy-table th {
+				font-size:1.3rem;
+				padding:10px 10px 5px;
+			}
+			.seller__buy-table th:first-child {
+				padding:10px 10px 5px 0;
+			}
+			.seller__buy-table th:nth-child(3) {
+				padding:10px 10px 5px;
+			}
+			.seller__buy-table th:nth-child(4), .seller__buy-table th:nth-child(5), .seller__buy-table td:nth-child(4), .seller__buy-table td:nth-child(5) {
+				display:table-cell;
+			}
+			.seller__buy-table th:nth-child(3), .seller__buy-table td:nth-child(3) {
+				text-align:left;
+			}
+			.seller__buy-table td {
+				vertical-align:middle;
+			}
+			.seller__buy-table td:nth-child(3) {
+				padding:10px;
+			}
+			.seller__buy-table td:last-child {
+				text-align:right;
+				padding:10px 0 10px 10px;
+			}
+				.seller__buy-info {
+					position:relative;
+					padding-left:50px;
+				}
+					.seller__buy-avatar {
+						display:block;
+						position:absolute;
+						top:5px; left:0;
+						width:36px;
+						border-radius:2px;
+					}
+					.seller__buy-name {
+						position:relative;
+						color:#000;
+						font-size:1.5rem;
+						font-family:Ssemi;
+						margin:0 0 5px;
+					}
+					.seller__buy-name--online, .seller__buy-name--offline {
+						padding-left:13px;
+					}
+						.seller__buy-name--online::before, .seller__buy-name--offline::before {
+							position:absolute;
+							top:7px; left:0;
+							width:8px; height:8px;
+							border-radius:50%;
+							content:'';
+						}
+						.seller__buy-name--online::before {
+							background-color:#6f932a;
+						}
+						.seller__buy-name--offline::before {
+							background-color:#c7a930;
+						}
+						.seller__buy--reliable::after {
+							display:inline-block;
+							vertical-align:middle;
+							width:13px; height:10px;
+							background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAKCAMAAABYMCT2AAAARVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADc6ur3AAAAFnRSTlMACOeXPg3iqKOeUEQ489fVv5KNMTAoxh+gAwAAAExJREFUCNdljVcOgDAMQzNKB3v6/kclEaggNT/xs2Sbvuu0/0HCWoETloP4eiBjPolUBqeCONrbIIFYIQ4uYtjNeuMFkxm1OsOz7ewNoIcCU3ikCFcAAAAASUVORK5CYII=);
+							margin:-4px 0 0 6px;
+							content:'';
+						}
+					.seller__buy-status {
+						color:#000;
+						font-size:1.3rem;
+					}
+						.seller__buy-status--reliable {
+							color:#51730f;
+							font-family:Ssemi;
+						}
+						.seller__buy-status--nonreliable {
+							font-family:Ssemi;
+						}
+					.seller__buy--cost {
+						color:#265ea9;
+						font-family:Ssemi;
+					}
+					.seller__buy-btn {
+						display:inline-block;
+						width:101px;
+						line-height:28px;
+						text-align:center;
+						background-color:#ededed;
+						border-radius:2px;
+					}
+		.seller__rating {
+			position:relative;
+			border:0;
+			padding:45px 0 0;
+			margin-top:55px;
+		}
+			.seller__rating::before {
+				position:absolute;
+				top:0; right:-100%; left:-100%;
+				height:1px;
+				background-color:#ececec;
+				content:'';
+			}
+			.seller__rating-info {
+				margin-bottom:10px;
+			}
+				.seller__rating-title {
+					font-size:2rem;
+					margin-right:16px;
+				}
+				.seller__rating-main {
+					margin-top:0;
+				}
+					.seller__rating-main .review-item__rating-item {
+						width:22px; height:22px;
+						-webkit-background-size:22px auto;
+						background-size:22px auto;
+					}
+				.seller__rating-count {
+					color:#8b8b8b;
+					font-size:2rem;
+				}
 }
 @media screen and (min-width:1200px) {
 }
