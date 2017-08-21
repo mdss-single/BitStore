@@ -864,6 +864,85 @@ a {
 			}
 /*  </about-us>  */
 
+/*  <reviews>  */
+.reviews__descr {
+	margin-top:-15px;
+	margin-bottom:25px;
+}
+	.reviews__descr p {
+		margin:0;
+	}
+.reviews__press-title {
+	color:#767676;
+}
+.reviews__main {
+	position:relative;
+	overflow:hidden;
+	padding-top:25px;
+	margin-top:60px;
+}
+	.reviews__main::before {
+		position:absolute;
+		top:0; right:-10000%; left:-10000%;
+		height:1px;
+		background-color:#e7e7e7;
+		content:'';
+	}
+	.reviews__title {
+		font-size:1.6rem;
+		margin:0 0 15px;
+	}
+		.reviews__title--colored {
+			color:#7c7c7c;
+		}
+	.reviews__sort {
+		display:-webkit-flex;
+		display:-moz-flex;
+		display:-ms-flex;
+		display:-o-flex;
+		display:flex;
+		justify-content:space-between;
+		margin-bottom:15px;
+	}
+		.reviews__sort-link {
+			color:#7d7d7d;
+			font-size:1.4rem;
+		}
+		.reviews__sort-link--active {
+			color:#000;
+		}
+	.review__item {
+		border-top:1px solid #e7e7e7;
+		padding:12px 0 15px;
+	}
+		.review-item__date {
+			color:#8d8d8d;
+		}
+		.review-item__rating {
+			margin:5px 0 0;
+		}
+			.review-item__rating-item {
+				display:inline-block;
+				width:16px; height:16px;
+				background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAMAAACxiD++AAAATlBMVEUAAACNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY386MR8AAAAGXRSTlMAWJ1HBe31ahML4LivPCrWzKWLhX1mX1ZUNprszgAAAL9JREFUKM99ktkSgyAMRdMAAi64L/n/H20HphWCzXlh9F49EwAYWoOMUiCDKOfaGC0biGQHEqFsIDJaNsgOpA8oG0SHooiSDdyhXjcmFUz2SoHrSKBzAGCbf3FjkyVMz/kUfuOtT/majzu0PG4HKPBY5uiBs+f5DjU2L9iHQlfMX+eOClxVOMrCURX6FGxbWnue+yYN/92Sho95xc+i2cWfXaww30eTjm+uLtsY7scw8oun2N56ZBdvOYFxLml9A5j6HUNz5LL2AAAAAElFTkSuQmCC) no-repeat 0 0 / 100% auto;
+			}
+			.review-item__rating-item--full {
+				background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAMAAACxiD++AAAAVFBMVEUAAADisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyVSOS8xAAAAG3RSTlMAWJ0F7kj3ahML4LivPCr11syli4V9Zl9WVEKrprDJAAAAxElEQVQoz32SVw7EIAxEvRBaCumV+99zEWgTMFnPD0pm8NMgAxLnQEsIoMUY7fOq4jTBOUETnGM0wTnPIAmeQRM8gyZgBibQDE8oGdfnkScERvLrAt04Qo32M1T/z+5VpNjx3R/tXW9585e0bldju+4gk2G5zwxgbam/QSmVBhSUarL+pa9lGpC6COwu014E2misazxb7BsZy/+eROKaZ7gWyDoMO1Fg8pfU3diPm4plG+zzaQe8eAK9rWFo8eYDkI45nl+KSh9zuZIogQAAAABJRU5ErkJggg==);
+			}
+		.review-item__text p {
+			margin:0;
+		}
+	.review__add {
+		display:inline-block;
+		font-family:Smedium;
+		line-height:35px;
+		background-color:#d6d6d6;
+		border-radius:3px;
+		padding:0 45px;
+		margin-top:35px;
+	}
+/*  </reviews>  */
+
 /*  <elements>  */
 .btn {
 	height:44px;
@@ -968,6 +1047,12 @@ a.btn {
 	.auth__wrap {
 		padding:30px;
 	}
+	.reviews__sort {
+		display:block;
+	}
+		.reviews__sort-link {
+			margin-right:15px;
+		}
 }
 @media screen and (min-width:992px) {
 	.btn {
@@ -1429,6 +1514,34 @@ a.btn {
 		.about-us__enjoy-plus {
 			font-size:1.7rem;
 			line-height:2;
+		}
+	.reviews__press-title {
+		font-size:1.7rem;
+		margin:40px 0 15px;
+	}
+	.reviews__press-title + .press__list {
+		margin-top:0;
+	}
+	.reviews__main {
+		padding-top:35px;
+		margin-top:30px;
+	}
+		.reviews__title {
+			font-size:2rem;
+			margin:0 0 10px;
+		}
+			.reviews__title--colored {
+				color:#000;
+			}
+		.review__item {
+			padding:25px 0 30px;
+		}
+		.review__item:first-child {
+			border-top:0;
+			padding:15px 0 30px;
+		}
+		.review__add {
+			margin-top:15px;
 		}
 }
 @media screen and (min-width:1200px) {

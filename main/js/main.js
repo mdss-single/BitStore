@@ -28,7 +28,7 @@
 					$('html').css('overflow','hidden');
 				},
 				threshold:40,
-				excludedElements:$.fn.swipe.defaults.excludedElements+', .press, .career__tabs',
+				excludedElements:$.fn.swipe.defaults.excludedElements+', .press__list, .career__tabs',
 				preventDefaultEvents: false,
 			});
 			$('.menu').swipe({
@@ -37,7 +37,7 @@
 					$('.menu__cover').remove();
 					$('html').css('overflow','auto');
 				},
-				threshold:40
+				threshold:40,
 			});
 		} else {
 			$('body').swipe('destroy');
