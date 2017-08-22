@@ -1050,6 +1050,9 @@ a {
 					color:#157efb;
 					margin:0;
 				}
+				.seller__buy-reviews {
+					color:#1a6494;
+				}
 	.seller__rating {
 		background-color:#fff;
 		border:solid #ececec;
@@ -1097,6 +1100,136 @@ a {
 		text-align:center;
 	}
 /*  </seller>  */
+
+/*  <deal>  */
+.deal-block {
+	border-top:1px solid #dfdfdf;
+	padding:15px 0;
+}
+.deal-block--user {
+	position:relative;
+}
+	.deal-block--user::after {
+		position:absolute;
+		top:50%; right:0;
+		width:8px; height:15px;
+		background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAeBAMAAADX14MiAAAAGFBMVEUAAACVlZWVlZWVlZWVlZWVlZWVlZWVlZWR0ySuAAAACHRSTlMA/J5Kd0M/Eg5FxR8AAAArSURBVBjTYyhlgAJFBSgjUQjKYBaECRnSWEgEzoBLwRTTQCBRCM3L8EAAADMpB+uKZ/yUAAAAAElFTkSuQmCC);
+		-webkit-background-size:cover;
+		background-size:cover;
+		content:'';
+		transform:translateY(-50%);
+	}
+	.deal-block__title {
+		color:#848484;
+		font-size:1.6rem;
+		margin:0 0 15px;
+	}
+	.deal-block .seller__info {
+		position:relative;
+		border-bottom:0;
+		padding:6px 20px 6px 50px;
+	}
+		.deal-block .seller__avatar {
+			top:8px; left:0;
+		}
+		.deal-block .seller__buy-name {
+			display:inline;
+			color:#000;
+			font-size:1.4rem;
+			margin:0;
+		}
+		.deal-block .seller__buy-status {
+			display:inline;
+			color:#000;
+			font-size:1.4rem;
+		}
+	.deal-block__user-link {
+		position:absolute;
+		top:0; right:0; bottom:0; left:0;
+	}
+	.deal-block__detail {
+		display:-webkit-flex;
+		display:-moz-flex;
+		display:-ms-flex;
+		display:-o-flex;
+		display:flex;
+		flex-wrap:wrap;
+		font-size:1.4rem;
+	}
+		.deal-block__detail-title {
+			width:48%;
+			color:#656565;
+			margin:0 0 10px;
+		}
+		.deal-block__detail-value {
+			width:52%;
+			margin:0 0 10px;
+		}
+		.deal-block__detail p:nth-of-type(2) {
+			font-family:Ssemi;
+		}
+.deal-block__buy {
+	position:relative;
+	margin-top:15px;
+}
+	.deal-block__buy::before {
+		position:absolute;
+		top:-15px; right:-15px; left:-15px;
+		height:17px;
+		background-color:#f8f8f8;
+		border-top:1px solid #e7e7e7;
+		border-bottom:1px solid #dfdfdf;
+		content:'';
+	}
+	.deal-block__buy-wrap {
+		display:-webkit-flex;
+		display:-moz-flex;
+		display:-ms-flex;
+		display:-o-flex;
+		display:flex;
+		justify-content:space-between;
+		position:relative;
+	}
+		.deal-block__buy-wrap::before {
+			position:absolute;
+			top:50%; left:50%;
+			width:20px; height:6px;
+			border:solid #c6c6c6;
+			border-width:1px 0;
+			content:'';
+			transform:translate(-50%, -50%);
+		}
+		.deal-block__amount {
+			position:relative;
+			width:40%;
+		}
+			.deal-block__amount-text {
+				width:100%; height:30px;
+				font-size:1.6rem;
+				background-color:#fff;
+				border:0;
+				padding-right:35px;
+			}
+			.deal-block__amount-value {
+				position:absolute;
+				top:50%; right:0;
+				transform:translateY(-50%);
+			}
+.deal-block__register {
+	text-align:center;
+	border-top:1px solid #dfdfdf;
+	padding:15px 0;
+}
+	.deal-block__register-title {
+		margin:0 0 20px;
+	}
+	.deal-block__register-btn {
+		width:100%;
+	}
+.deal-safety {
+	display:none;
+}
+/*  </deal>  */
 
 /*  <elements>  */
 .btn {
@@ -1922,6 +2055,141 @@ a.btn {
 					color:#8b8b8b;
 					font-size:2rem;
 				}
+	.deal-block {
+		padding:25px 0;
+	}
+		.deal-block--user::after {
+			display:none;
+		}
+		.deal-block__title {
+			display:inline-block;
+			vertical-align:middle;
+			width:232px;
+			color:#000;
+			font-size:1.5rem;
+			font-family:Ssemi;
+			margin:0;
+		}
+		.deal-block__cnt {
+			display:inline-block;
+			vertical-align:middle;
+			width:calc(100% - 232px - .25em);
+		}
+			.deal-block .seller__info {
+				padding:0 0 0 50px;
+			}
+				.deal-block .seller__info::before {
+					display:none;
+				}
+				.deal-block .seller__avatar {
+					top:3px;
+				}
+				.deal-block .seller__buy-name {
+					display:block;
+					margin:0 0 5px;
+				}
+				.deal-block .seller__buy-status {
+					display:block;
+					font-size:1.3rem;
+				}
+		.deal-block__user-link {
+			display:none;
+		}
+		.deal-block--user + .deal-block .deal-block__title {
+			display:none;
+		}
+			.deal-block__detail-title {
+				width:calc(232px + .25em);
+			}
+		.deal-block__buy {
+			margin-top:0;
+		}
+			.deal-block__buy::before {
+				display:none;
+			}
+			.deal-block__buy-wrap {
+				width:360px;
+			}
+				.deal-block__buy-wrap::before {
+					width:8px; height:4px;
+					border-color:#000;
+				}
+				.deal-block__amount {
+					display:inline-block;
+					width:160px;
+				}
+				.deal-block__amount:first-child {
+					margin-right:calc(40px - .25em);
+				}
+					.deal-block__amount-text {
+						height:38px;
+						font-size:1.5rem;
+						border:1px solid #d0d3e4;
+						border-radius:2px;
+						padding-right:55px;
+						padding-left:15px;
+						transition:all .2s;
+					}
+						.deal-block__amount-text:focus {
+							border:1px solid #498dea;
+							box-shadow:0 0 0 1px #498dea;
+						}
+					.deal-block__amount-value {
+						right:15px;
+					}
+	.deal-block__register {
+		text-align:left;
+		border-top:0;
+		margin-left:calc(232px + .25em);
+	}
+		.deal-block__register-title {
+			font-family:Ssemi;
+		}
+		.btn.deal-block__register-btn {
+			width:auto; height:36px;
+			font-size:1.5rem;
+			line-height:36px;
+		}
+	.deal-safety {
+		display:block;
+		background-color:#fcfcfc;
+		border-top:1px solid #f0f0f0;
+		padding:45px 0 140px;
+		margin-bottom:-30px;
+	}
+		.deal-safety__cnt {
+			display:inline-block;
+			vertical-align:top;
+			width:762px;
+			color:#4e4e4e;
+			font-size:1.3rem;
+			padding-right:80px;
+		}
+			.deal-safety__cnt p:first-child {
+				font-family:Ssemi;
+				background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAMAAAD6fQULAAAAbFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0Iv+qAAAAI3RSTlMA9O3oB/r4x3pNQT0N797Ww763mH9zVzohy62ck4+KamMpG4gGO/0AAAB6SURBVAjXXY7ZDoUgDEQHREHAfb370v//RytiNJ6HdiZpToqAbXNE1PyWJJ4/xXnoakErme56SDpIkZyauLRyC+23IErQ8HnfaO/YdcODD5zybrXdYXjKaQrqF2zKq9hcI1RNO5UHbLa38OsnVoNAXnEuR0T+gzYzmAWQiBEfJpnF+gAAAABJRU5ErkJggg==) no-repeat 0 center;
+				padding-left:25px;
+				margin:0 0 22px;
+			}
+		.deal-safety__aside {
+			display:inline-block;
+			vertical-align:top;
+			width:calc(196px - .25em);
+		}
+			.deal-safety__aside-title {
+				color:#4e4e4e;
+				font-size:1.3rem;
+				font-family:Ssemi;
+				background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAdVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5WX1YAAAAJnRSTlMA8X6/Bt/OblQv7KqZNxX5+PXa1Mm4sKOIeWRBGsaTdnJeRiYdAaqoX9kAAACPSURBVBjTNYxZEoMwDENFEghhCZR9697m/kcsdtz3YWksjUD4523oZ+sgvLLAFPYLwjbhT2kAuIRsmt/bUx6A15xpHBQUDrm0dRxSWEiSUmlZwciPyiM2UkjizFUeC2tn3hc2k4xW2IKMHgPpiq1oaKwGaupm+17FwsnK3ZbOaEDkXWASZRD52LlPJ1WT/wFTSxcVlbfkmgAAAABJRU5ErkJggg==) no-repeat 0 center;
+				padding-left:24px;
+				margin:0 0 22px;
+			}
+			.deal-safety__link {
+				display:block;
+				color:#2a5896;
+				font-size:1.3rem;
+				margin-bottom:12px;
+			}
 }
 @media screen and (min-width:1200px) {
 }
