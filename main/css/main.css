@@ -262,6 +262,9 @@ a {
 					margin:0;
 				}
 		.header__register {}
+		.header__register-descr {
+			display:none;
+		}
 		.header__promo {
 			display:none;
 		}
@@ -1231,6 +1234,137 @@ a {
 }
 /*  </deal>  */
 
+/*  <trade-page>  */
+.trade-page__title {
+	color:#595858;
+	margin:-20px 0 40px;
+}
+.trade-page__section {
+	text-align:center;
+}
+	.trade-page__section-link {
+		display:inline-block;
+		color:#8c8c8c;
+		border-bottom:1px solid #fff;
+		padding-bottom:14px;
+	}
+	.trade-page__section-link:first-child {
+		margin-right:30px;
+	}
+	.trade-page__section-link--active {
+		color:#000;
+		border-color:#208afe;
+	}
+.trade-page__filter {}
+	.trade-page__filter-block {
+		border-top:1px solid #dfdfdf;
+		padding:20px 0 14px;
+	}
+		.trade-page__filter-title {
+			color:#a8a7a7;
+			font-size:1.6rem;
+			margin:0 0 10px;
+		}
+		.trade-page__select {
+			width:100%;
+			font-size:1.6rem;
+			background-color:#fff;
+			border:0;
+			margin-left:-.25em;
+			-webkit-appearance:none;
+			-moz-appearance:none;
+			appearance:none;
+		}
+			.trade-page__select option {
+				padding:0;
+			}
+			.trade-page__select option[disabled] {
+				display:none;
+			}
+		.trade-page__input {
+			width:100%;
+			font-size:1.6rem;
+			background-color:#fff;
+			border:0;
+		}
+	.trade-page__sort-verification {
+		text-align:center;
+		background-color:#f8f8f8;
+		border-top:1px solid #dfdfdf;
+		padding:15px 15px 27px;
+		margin:0 -15px;
+	}
+		.trade-page__check {
+			position:absolute;
+			left:-9999px;
+		}
+		.trade-page__check + label {
+			position:relative;
+			font-size:1.6rem;
+			padding-left:24px;
+			margin:auto;
+		}
+			.trade-page__check + label::before {
+				position:absolute;
+				top:2px; left:0;
+				width:18px; height:18px;
+				border:1px solid #d0d3e4;
+				border-radius:3px;
+				content:'';
+			}
+			.trade-page__check:checked + label::after {
+				position:absolute;
+				top:6px; left:4px;
+				width:10px; height:10px;
+				background-color:#0a73ea;
+				border-radius:2px;
+				content:'';
+			}
+	.trade-page__filter-block:last-child {
+		text-align:center;
+		background-color:#f8f8f8;
+		border-top:0;
+		padding:0 15px 35px;
+		margin:0 -15px;
+	}
+		.trade-page__btn {
+			display:inline-block;
+			color:#fff;
+			line-height:35px;
+			background-color:#498dea;
+			border:0;
+			border-radius:2px;
+			padding:0 24px;
+		}
+.trade-page__system {
+	display:none;
+}
+.trade-page__result {}
+	.trade-page__result .seller__buy-table th {
+		padding:10px;
+	}
+	.trade-page__result .seller__buy-table th:first-child {
+		padding:10px 10px 10px 0;
+	}
+	.trade-page__result .seller__buy-table th:nth-child(3), .trade-page__result .seller__buy-table th:nth-child(6), .trade-page__result .seller__buy-table td:nth-child(3), .trade-page__result .seller__buy-table td:nth-child(6) {
+		display:none;
+	}
+	.trade-page__result .seller__buy-table th:nth-child(4), .trade-page__result .seller__buy-table td:nth-child(4) {
+		display:table-cell;
+		text-align:right;
+		padding:10px 0 10px 10px;
+	}
+.trade-page__enjoy {
+	text-align:center;
+	border-top:1px solid #ececec;
+	padding-top:28px;
+	margin-bottom:30px;
+}
+.trade-page__download {
+	display:none;
+}
+/*  </trade-page>  */
+
 /*  <elements>  */
 .btn {
 	height:44px;
@@ -1341,6 +1475,9 @@ a.btn {
 		.reviews__sort-link {
 			margin-right:15px;
 		}
+	.trade-page__section-link:first-child {
+		margin-right:50px;
+	}
 }
 @media screen and (min-width:992px) {
 	.btn {
@@ -1448,6 +1585,11 @@ a.btn {
 					font-size:1.7rem;
 					margin:25px 0 30px;
 				}
+			.header__register-descr {
+				display:inline-block;
+				color:#fff;
+				margin-left:20px;
+			}
 			.header__promo {
 				display:block;
 				color:#fff;
@@ -2155,6 +2297,7 @@ a.btn {
 		background-color:#fcfcfc;
 		border-top:1px solid #f0f0f0;
 		padding:45px 0 140px;
+		margin-top:50px;
 		margin-bottom:-30px;
 	}
 		.deal-safety__cnt {
@@ -2190,6 +2333,174 @@ a.btn {
 				font-size:1.3rem;
 				margin-bottom:12px;
 			}
+	.trade-page {
+		background-image:linear-gradient(#fcfcfc, #fff);
+	}
+		.trade-page__title {
+			margin:-20px 0 60px;
+		}
+		.trade-page__section-link {
+			font-size:1.7rem;
+			font-family:Smedium;
+			border-width:2px;
+		}
+		.trade-page__filter {
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:-ms-flex;
+			display:-o-flex;
+			display:flex;
+			justify-content:space-between;
+			position:relative;
+			background-color:#fff;
+			border:1px solid #ececec;
+			border-radius:1px;
+			padding:34px 32px;
+			margin-bottom:34px;
+		}
+			.trade-page__filter-title {
+				display:none;
+			}
+			.trade-page__filter-block {
+				flex-grow:1;
+				position:relative;
+				border-top:0;
+				padding:0;
+				margin-right:6px;
+			}
+				.trade-page__filter-block:nth-child(1)::before, .trade-page__filter-block:nth-child(3)::before, .trade-page__filter-block:nth-child(4)::before, .trade-page__filter-block:nth-child(5)::before {
+					position:absolute;
+					top:50%; right:12px;
+					width:10px; height:5px;
+					background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAMAAABLuo1aAAAASFBMVEUAAAAGBgYAAAAAAAAAAAAAAAAAAAAhISEAAAAeHh4QEBAfHx8TExMjIyMlJSUwMDAAAAAmJiYxMTEAAAAAAAAAAAAAAAAAAAAiVrijAAAAGHRSTlMArC+wpZuaiId+c2lgV05KRD8xIh8TEQiwaWmlAAAAMUlEQVQI12Pg5GcAAyF2BiZGXhBLkFGAgUGEkZuBgY+ZCSQgxsrFwyIMUSbOwSYKpAAcigEZ+FtJoQAAAABJRU5ErkJggg==);
+					content:'';
+					transform:translateY(-50%);
+				}
+			.trade-page__filter-block:last-child {
+				flex-grow:0;
+				text-align:left;
+				background-color:#fff;
+				padding:0;
+				margin:0;
+			}
+				.trade-page__select, .trade-page__input {
+					height:38px;
+					white-space:nowrap;
+					border:1px solid #ececec;
+					border-radius:1px;
+					font-size:1.5rem;
+					padding:0 30px 0 13px;
+				}
+				.trade-page__filter-block:nth-child(1) .trade-page__select {
+					width:140px;
+				}
+				.trade-page__filter-block:nth-child(3) .trade-page__select {
+					width:190px;
+				}
+				.trade-page__filter-block:nth-child(4) .trade-page__select {
+					width:160px;
+				}
+				.trade-page__filter-block:nth-child(5) .trade-page__select {
+					width:160px;
+				}
+				.trade-page__input {
+					width:130px;
+					padding:0 13px;
+				}
+				.trade-page__btn {
+					height:38px;
+					color:#000;
+					font-family:Ssemi;
+					background-color:#fff;
+					border:1px solid #dfdfdf;
+					border-radius:1px;
+				}
+			.trade-page__sort-verification {
+				position:absolute;
+				bottom:-54px; right:50px;
+				background-color:#fff;
+				border-top:0;
+				padding:0;
+			}
+				.trade-page__check + label {
+					font-size:1.5rem;
+				}
+					.trade-page__check + label::before {
+						width:16px; height:16px;
+						border-color:#d0d3e4;
+						border-radius:1px;
+					}
+					.trade-page__check:checked + label::after {
+						top:6px; left:4px;
+						width:8px; height:8px;
+						border-radius:1px;
+					}
+		.trade-page__system {
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:-ms-flex;
+			display:-o-flex;
+			display:flex;
+			justify-content:space-between;
+			margin-right:310px;
+		}
+			.trade-page__result-title {
+				color:#676b73;
+				margin:0 0 0 10px;
+			}
+			.trade-page__sort {}
+				.trade-page__sort-link {
+					color:#848484;
+					margin-left:15px;
+				}
+				.trade-page__sort-link--active {
+					color:#000;
+				}
+		.trade-page__result {
+			background-color:#fff;
+			border:1px solid #ececec;
+			border-radius:1px;
+			margin-top:12px;
+		}
+			.trade-page__result .seller__buy-table th {
+				font-size:1.5rem;
+				font-family:Smedium;
+				padding:5px 10px;
+			}
+			.trade-page__result .seller__buy-table th:first-child {
+				padding:5px 10px 5px 32px;
+			}
+			.trade-page__result .seller__buy-table th:last-child {
+				padding:5px 22px 5px 10px;
+			}
+			.trade-page__result .seller__buy-table th:nth-child(4) {
+				padding:5px 10px;
+			}
+			.trade-page__result .seller__buy-table th:nth-child(3), .trade-page__result .seller__buy-table th:nth-child(6), .trade-page__result .seller__buy-table td:nth-child(3), .trade-page__result .seller__buy-table td:nth-child(6) {
+				display:table-cell;
+			}
+			.trade-page__result .seller__buy-table th:nth-child(4), .trade-page__result .seller__buy-table td:nth-child(4) {
+				text-align:left;
+			}
+			.trade-page__result .seller__buy-table td, .trade-page__result .seller__buy-table td:nth-child(4) {
+				padding:14px 10px;
+			}
+			.trade-page__result .seller__buy-table td:first-child {
+				padding:14px 10px 14px 32px;
+			}
+			.trade-page__result .seller__buy-table td:last-child {
+				padding:14px 22px 14px 10px;
+			}
+		.trade-page__enjoy {
+			padding-top:46px;
+			margin-bottom:58px;
+		}
+		.trade-page__download {
+			display:block;
+		}
+		.trade-page__enjoy-block {
+			display:none;
+		}
 }
 @media screen and (min-width:1200px) {
 }
