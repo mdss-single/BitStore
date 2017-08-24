@@ -422,11 +422,18 @@ a {
 			box-shadow:0 3px 7px rgba(0, 0, 0, .28);
 			transform:translate(-355px, -44px);
 		}
+		.modal-small {
+			width:250px;
+			transform:translate(-265px, -30px);
+		}
 			.settings__modal-item {
 				display:block;
 				font-size:1.7rem;
 				font-family:Sregular;
 				padding:12px 30px;
+			}
+			.modal-small .settings__modal-item {
+				font-size:1.5rem;
 			}
 			.table .settings__modal-item {
 				color:#000;
@@ -626,3 +633,10 @@ a {
 		background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAaVBMVEUAAADgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXgkyXaFKXCAAAAInRSTlMACreuKGtX+fLl3sKlnGUiFxP379LGw7Kok4hcUEdEOzAdE1luRAAAAGxJREFUCNdVzlkOgzAMBFDHCWGnpWXfmfsfEiUxEsyH5fczNoV8Vnqmyl8sYvNQnSIKm3LDAqw8FmY9ZMCPdc8TqSjBHW3cER2QzdLknewi1TjGVrgBbQkUwhFlTTb9n17f3L9guirQSMVBdAGjuAdTu5/M/gAAAABJRU5ErkJggg==);
 	}
 /*  </rating>  */
+
+/*  <users>  */
+.users__title {
+	font-size:2.5rem;
+	margin:20px 20px 20px 34px;
+}
+/*  </users>  */
