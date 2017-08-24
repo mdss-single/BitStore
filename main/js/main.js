@@ -99,6 +99,9 @@
 		}
 	});
 
+	// trade page custom select
+	$('.js-trade-select').styler();
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
