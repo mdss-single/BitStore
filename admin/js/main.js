@@ -27,6 +27,10 @@
 		e.stopPropagation();
 	});
 
+	$('.support-ticket__attach').change(function() {
+		$('label[for="' + this.id + '"]').text($(this).val());
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
