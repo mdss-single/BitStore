@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>BitStore</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+</head>
+<body>
+	<header class="header">
+		<a href="#" class="logo"><img src="i/logo.png" alt=""></a>
+		<div class="header__rates">
+			<div class="header__rate-item header__rate-item--down">1 USD = 62.87 RUB</div>
+			<div class="header__rate-item header__rate-item--down">1 BTC = 157500.8271 RUB</div>
+			<div class="header__rate-item header__rate-item--up">1 ETH = 12497.9233 RUB</div>
+			<div class="header__rate-item header__rate-item--up">1 LTC = 3034.1574 RUB</div>
+			<div class="header__rate-item header__rate-item--up">1 DSH = 10665.0781 RUB</div>
+			<div class="header__rate-item header__rate-item--up">1 NVC = 42.0098 RUB</div>
+		</div>
+		<a href="#" class="header__notice-link"></a>
+		<a href="#" class="header__logout"></a>
+		<a href="#" class="header__avatar"><img src="i/avatar.jpg" alt="%username%"></a>
+	</header>
+	<main class="main">
+		<aside class="sidebar">
+			<nav class="nav">
+				<a href="#" class="nav__item">Статистика</a>
+				<a href="#" class="nav__item">Транзакции</a>
+				<a href="#" class="nav__item">Пользователи</a>
+				<a href="#" class="nav__item">Курсы</a>
+				<a href="#" class="nav__item">Настройки</a>
+				<a href="#" class="nav__item">Поддержка</a>
+				<a href="#" class="nav__item">Контент</a>
+			</nav>
+			<div class="quick-stat">
+				<p class="quick-stat__title">За последние сутки</p>
+				<p class="quick-stat__value"><span class="quick-stat__value--count">50 120</span>  переводов</p>
+				<p class="quick-stat__value"><span class="quick-stat__value--count">12 450</span>  сделок</p>
+			</div>
+		</aside>
+		<div class="content">
+			<div class="admin-block">
+				<nav class="support__nav">
+					<a href="#" class="support__nav-item">Тикеты</a>
+					<a href="#" class="support__nav-item support__nav-item--active">Трейд <span class="support__nav-item--counter">16</span></a>
+				</nav>
+			</div>
+			<div class="admin-block">
+				<div class="tabs">
+					<div class="search">
+						<form action="">
+							<input type="text" name="" id="" class="search__text" placeholder="Поиск тикета">
+						</form>
+					</div>
+					<div class="tabs__nav">
+						<div class="tabs__nav-item tabs__nav-item--active">Все</div>
+						<div class="tabs__nav-item">Новые <span class="tabs__nav-item-counter">1</span></div>
+						<div class="tabs__nav-item">В обработке</div>
+						<div class="tabs__nav-item">Решённые</div>
+					</div>
+					<div class="tab__content tab__content--active">
+						<div class="settings">
+							<table class="table">
+								<tr>
+									<th>Дата</th>
+									<th>Номер сделки</th>
+									<th>Сумма</th>
+									<th>Направление</th>
+									<th>Логин истца</th>
+									<th>Логин ответчика</th>
+									<th>Решение</th>
+									<th></th>
+								</tr>
+								<tr class="support__ticket-new">
+									<td>17.07.2017<br>18:00</td>
+									<td>0029277</td>
+									<td>2.2828222334 BTC</td>
+									<td>QIWI > BTC</td>
+									<td>Kupi</td>
+									<td>Proday</td>
+									<td>В пользу ответчика</td>
+									<td>
+										<a href="#" class="settings__modal-link js-modal"></a>
+										<div class="settings__modal">
+											<a href="#" class="settings__modal-item">Редактировать</a>
+											<a href="#" class="settings__modal-item">Ответить</a>
+											<a href="#" class="settings__modal-item">Удалить</a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>17.07.2017<br>18:00</td>
+									<td>0029277</td>
+									<td>2.2828222334 BTC</td>
+									<td>QIWI > BTC</td>
+									<td>Kupi</td>
+									<td>Proday</td>
+									<td>В пользу ответчика</td>
+									<td>
+										<a href="#" class="settings__modal-link js-modal"></a>
+										<div class="settings__modal">
+											<a href="#" class="settings__modal-item">Редактировать</a>
+											<a href="#" class="settings__modal-item">Ответить</a>
+											<a href="#" class="settings__modal-item">Удалить</a>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="tab__content">
+						<div class="settings">
+							<table class="table">
+								<tr>
+									<th>Дата</th>
+									<th>Номер сделки</th>
+									<th>Сумма</th>
+									<th>Направление</th>
+									<th>Логин истца</th>
+									<th>Логин ответчика</th>
+									<th>Решение</th>
+									<th></th>
+								</tr>
+								<tr class="support__ticket-new">
+									<td>17.07.2017<br>18:00</td>
+									<td>0029277</td>
+									<td>2.2828222334 BTC</td>
+									<td>QIWI > BTC</td>
+									<td>Kupi</td>
+									<td>Proday</td>
+									<td>В пользу ответчика</td>
+									<td>
+										<a href="#" class="settings__modal-link js-modal"></a>
+										<div class="settings__modal">
+											<a href="#" class="settings__modal-item">Редактировать</a>
+											<a href="#" class="settings__modal-item">Ответить</a>
+											<a href="#" class="settings__modal-item">Удалить</a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>17.07.2017<br>18:00</td>
+									<td>0029277</td>
+									<td>2.2828222334 BTC</td>
+									<td>QIWI > BTC</td>
+									<td>Kupi</td>
+									<td>Proday</td>
+									<td>В пользу ответчика</td>
+									<td>
+										<a href="#" class="settings__modal-link js-modal"></a>
+										<div class="settings__modal">
+											<a href="#" class="settings__modal-item">Редактировать</a>
+											<a href="#" class="settings__modal-item">Ответить</a>
+											<a href="#" class="settings__modal-item">Удалить</a>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="tab__content">
+						<div class="settings">
+							<table class="table">
+								<tr>
+									<th>Дата</th>
+									<th>Номер сделки</th>
+									<th>Сумма</th>
+									<th>Направление</th>
+									<th>Логин истца</th>
+									<th>Логин ответчика</th>
+									<th>Решение</th>
+									<th></th>
+								</tr>
+								<tr class="support__ticket-new">
+									<td>17.07.2017<br>18:00</td>
+									<td>0029277</td>
+									<td>2.2828222334 BTC</td>
+									<td>QIWI > BTC</td>
+									<td>Kupi</td>
+									<td>Proday</td>
+									<td>В пользу ответчика</td>
+									<td>
+										<a href="#" class="settings__modal-link js-modal"></a>
+										<div class="settings__modal">
+											<a href="#" class="settings__modal-item">Редактировать</a>
+											<a href="#" class="settings__modal-item">Ответить</a>
+											<a href="#" class="settings__modal-item">Удалить</a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>17.07.2017<br>18:00</td>
+									<td>0029277</td>
+									<td>2.2828222334 BTC</td>
+									<td>QIWI > BTC</td>
+									<td>Kupi</td>
+									<td>Proday</td>
+									<td>В пользу ответчика</td>
+									<td>
+										<a href="#" class="settings__modal-link js-modal"></a>
+										<div class="settings__modal">
+											<a href="#" class="settings__modal-item">Редактировать</a>
+											<a href="#" class="settings__modal-item">Ответить</a>
+											<a href="#" class="settings__modal-item">Удалить</a>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="tab__content">
+						<div class="settings">
+							<table class="table">
+								<tr>
+									<th>Дата</th>
+									<th>Номер сделки</th>
+									<th>Сумма</th>
+									<th>Направление</th>
+									<th>Логин истца</th>
+									<th>Логин ответчика</th>
+									<th>Решение</th>
+									<th></th>
+								</tr>
+								<tr class="support__ticket-new">
+									<td>17.07.2017<br>18:00</td>
+									<td>0029277</td>
+									<td>2.2828222334 BTC</td>
+									<td>QIWI > BTC</td>
+									<td>Kupi</td>
+									<td>Proday</td>
+									<td>В пользу ответчика</td>
+									<td>
+										<a href="#" class="settings__modal-link js-modal"></a>
+										<div class="settings__modal">
+											<a href="#" class="settings__modal-item">Редактировать</a>
+											<a href="#" class="settings__modal-item">Ответить</a>
+											<a href="#" class="settings__modal-item">Удалить</a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>17.07.2017<br>18:00</td>
+									<td>0029277</td>
+									<td>2.2828222334 BTC</td>
+									<td>QIWI > BTC</td>
+									<td>Kupi</td>
+									<td>Proday</td>
+									<td>В пользу ответчика</td>
+									<td>
+										<a href="#" class="settings__modal-link js-modal"></a>
+										<div class="settings__modal">
+											<a href="#" class="settings__modal-item">Редактировать</a>
+											<a href="#" class="settings__modal-item">Ответить</a>
+											<a href="#" class="settings__modal-item">Удалить</a>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<p class="copyright">© BitStore 2017</p>
+		<nav class="footer__nav">
+			<a href="#" class="footer__nav-item">Комиссии</a>
+			<a href="#" class="footer__nav-item">Условия обслуживания</a>
+			<a href="#" class="footer__nav-item">Безопасность</a>
+			<a href="#" class="footer__nav-item">Партнерская программа</a>
+		</nav>
+		<a href="#" class="language language--ru">Ru</a>
+	</footer>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
