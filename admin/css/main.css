@@ -640,3 +640,43 @@ a {
 	margin:20px 20px 20px 34px;
 }
 /*  </users>  */
+
+/*  <transaction>  */
+.transaction__table {}
+	.transaction__table th.tr {
+		text-align:right;
+	}
+		.transaction__table td p {
+			margin:6px 0 0;
+		}
+		.transaction__table td p:first-of-type {
+			margin:0;
+		}
+.transaction__status {
+	position:relative;
+	padding-left:52px;
+}
+	.transaction__icon {
+		position:absolute;
+		top:50%; left:0;
+		width:32px; height:32px;
+		background-repeat:no-repeat;
+		background-position:center center;
+		transform:translateY(-50%);
+	}
+	.transaction__icon--delivered {
+		background-image:url(../i/icons/icon-delivered.png);
+	}
+	.transaction__status-title {
+		font-family:Ssemi;
+	}
+.transaction__address a {
+	font-family:Ssemi;
+}
+.transaction__address span {
+	color:#6c6c6c;
+}
+.transaction__summ {
+	font-family:Ssemi;
+}
+/*  </transaction>  */
