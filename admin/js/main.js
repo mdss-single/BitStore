@@ -18,6 +18,19 @@
 		localStorage.setItem('tab' + ulIndex, $(this).index());
 	});
 
+	$('.stat-block__nav').each(function(i) {
+		var storage = localStorage.getItem('stab' + i);
+		if (storage) {
+			$(this).find('div').removeClass('stat-block__nav-item--active').eq(storage).addClass('stat-block__nav-item--active').closest('.stat-block').find('.stat-block__content').removeClass('stat-block__content--active').eq(storage).addClass('stat-block__content--active');
+		}
+	});
+	$('.stat-block__nav').on('click', 'div:not(.stat-block__nav-item--active)', function() {
+		$(this).addClass('stat-block__nav-item--active').siblings().removeClass('stat-block__nav-item--active').closest('.stat-block').find('.stat-block__content').removeClass('stat-block__content--active').eq($(this).index()).addClass('stat-block__content--active');
+		var ulIndex = $('.stat-block__nav').index($(this).parents('.stat-block__nav'));
+		localStorage.removeItem('stab' + ulIndex);
+		localStorage.setItem('stab' + ulIndex, $(this).index());
+	});
+
 	$('.js-modal').on('click', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
