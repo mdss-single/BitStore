@@ -633,3 +633,148 @@ a {
 		padding:0 31px;
 	}
 /*  </hello>  */
+
+/*  <send>  */
+.send {
+	display:none;
+}
+.send--active {
+	display:block;
+	animation:fadein .5s;
+	position:fixed;
+	top:133px; left:50%;
+	z-index:16;
+	width:655px;
+	background-color:#fff;
+	border-radius:5px;
+	padding:35px 55px 50px 60px;
+	transform:translateX(-50%);
+}
+	.send__close {
+		position:absolute;
+		top:12px; right:12px;
+		width:22px; height:22px;
+	}
+		.send__close::before, .send__close::after {
+			position:absolute;
+			top:50%; right:0; left:0;
+			height:1px;
+			background-color:#414141;
+			content:'';
+			transition:all .2s;
+		}
+		.send__close::before {
+			transform:rotate(45deg);
+		}
+		.send__close::after {
+			transform:rotate(-45deg);
+		}
+			.send__close:hover::before, .send__close:hover::after {
+				background-color:#000;
+			}
+	.send__title {
+		font-size:3rem;
+		margin:0 0 30px;
+	}
+	.send__settings {
+		margin-bottom:15px;
+	}
+		.send__settings-row {
+			position:relative;
+			margin-bottom:26px;
+		}
+			.send__settings-title {
+				font-size:1.7rem;
+				font-family:Smedium;
+				margin:0 0 10px;
+			}
+				.send__settings-title--aviable {
+					color:#9c9c9c;
+					font-family:Sregular;
+					margin-left:5px;
+				}
+			.send__qr {
+				position:absolute;
+				right:13px; bottom:6px;
+			}
+			.js-send-auto, .js-send-custom {
+				display:none;
+			}
+			.js-send-auto.send__settings--active, .js-send-custom.send__settings--active {
+				display:-webkit-flex;
+				display:-moz-flex;
+				display:-ms-flex;
+				display:-o-flex;
+				display:flex;
+				justify-content:space-between;
+				animation:fadein .5s;
+			}
+			.send__settings-summ {
+				display:-webkit-flex;
+				display:-moz-flex;
+				display:-ms-flex;
+				display:-o-flex;
+				display:flex;
+				justify-content:space-between;
+			}
+				.send-settings__item {
+					position:relative;
+					width:45%;
+				}
+					.send-settings__currency {
+						position:absolute;
+						top:50%; right:20px;
+						transform:translateY(-50%);
+					}
+					.send-settings__comission {
+						margin:0 0 5px;
+					}
+					.send-settings__comission-link {
+						color:#4978b7;
+					}
+				.send-settings__delimiter {
+					color:#8c8c8c;
+					line-height:44px;
+				}
+	.btn.send__btn {
+		width:100%; height:52px;
+		font-size:2rem;
+	}
+.modal__bg {
+	position:fixed;
+	top:0; right:0; bottom:0; left:0;
+	z-index:15;
+	background-color:rgba(39, 40, 46, .6);
+}
+/*  </send>  */
+
+/*  <elements>  */
+.select {
+	width:100%;
+}
+.input-text {
+	width:100%; height:44px;
+	background-color:#fff;
+	border:1px solid #d0d3e4;
+	border-radius:1px;
+	padding:0 13px;
+	transition:all .2s;
+}
+	.input-text:focus {
+		border-color:#498dea;
+	}
+.btn {
+	height:44px;
+	color:#fff;
+	font-size:1.6rem;
+	font-family:Smedium;
+	background-color:#498dea;
+	border:0;
+	border-radius:4px;
+	padding:0 45px;
+}
+a.btn {
+	display:inline-block;
+	line-height:44px;
+}
+/*  </elements>  */

@@ -107,7 +107,7 @@
 				</div>
 			</div>
 			<button class="wallet__send-btn js-wallet-send">Отправить</button>
-			<button class="wallet__get-btn">Получить <i class="wallet__get-btn--copy" onclick="alert('test');"></i></button>
+			<button class="wallet__get-btn js-wallet-get">Получить <i class="wallet__get-btn--copy"></i></button>
 		</div>
 		<aside class="sidebar">
 			<nav class="nav">
@@ -268,6 +268,58 @@
 		</div>
 		<a href="#" class="hello__skip js-hello-skip">Пропустить</a>
 		<a href="#" class="hello__next js-hello-next">Далее</a>
+	</div>
+	<div class="send">
+		<a href="#" class="send__close"></a>
+		<p class="send__title">Отправить</p>
+		<div class="send__settings">
+			<div class="send__settings-row">
+				<p class="send__settings-title">Кому</p>
+				<input type="text" name="" id="" class="input-text" placeholder="Адрес или почта" autofocus>
+				<img src="i/send__qr.png" alt="QR code" class="send__qr">
+			</div>
+			<div class="send__settings-row">
+				<p class="send__settings-title">Сумма <span class="send__settings-title--aviable">доступно: 23.252452246624 BTC</span></p>
+				<div class="send__settings-summ">
+					<div class="send-settings__item">
+						<input type="text" name="" id="" class="input-text" placeholder="0">
+						<span class="send-settings__currency">BTC</span>
+					</div>
+					<span class="send-settings__delimiter">или</span>
+					<div class="send-settings__item">
+						<input type="text" name="" id="" class="input-text" placeholder="0">
+						<span class="send-settings__currency">RUR</span>
+					</div>
+				</div>
+			</div>
+			<div class="send__settings-row">
+				<p class="send__settings-title">Комиссия</p>
+				<div class="send__settings--active js-send-auto">
+					<div class="send-settings__item">
+						<select name="" id="" class="select">
+							<option value="">Обычный приоритет</option>
+							<option value="">Необычный приоритет</option>
+							<option value="">Ультра приоритет</option>
+						</select>
+					</div>
+					<div class="send-settings__item tr">
+						<p class="send-settings__comission">0.00000124 BTC (20 RUR)</p>
+						<a href="#" class="send-settings__comission-link js-send-custom-link">Указать комиссию вручную</a>
+					</div>
+				</div>
+				<div class="js-send-custom">
+					<div class="send-settings__item">
+						<input type="text" name="" id="" class="input-text" placeholder="0">
+						<span class="send-settings__currency">sat/b</span>
+					</div>
+					<div class="send-settings__item tr">
+						<p class="send-settings__comission">0.00000124 BTC (20 RUR)</p>
+						<a href="#" class="send-settings__comission-link js-send-custom-cancel">отменить</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn send__btn">Отправить</button>
 	</div>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 	<script src="js/plugins.js"></script>
