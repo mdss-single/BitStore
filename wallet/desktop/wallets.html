@@ -107,7 +107,8 @@
 				</div>
 			</div>
 			<button class="wallet__send-btn js-wallet-send">Отправить</button>
-			<button class="wallet__get-btn js-wallet-get">Получить <i class="wallet__get-btn--copy"></i></button>
+			<button class="wallet__get-btn js-wallet-get">Получить</button>
+			<button class="wallet__copy-btn js-wallet-copy" data-clipboard-text="1231231231"></button>
 		</div>
 		<aside class="sidebar">
 			<nav class="nav">
@@ -320,6 +321,127 @@
 			</div>
 		</div>
 		<button class="btn send__btn">Отправить</button>
+		<!--
+		<a href="#" class="send__close"></a>
+		<p class="send__title">Подтверждение</p>
+		<div class="send__confirm">
+			<div class="send__confirm-info">
+				<div class="send-confirm__row">
+					<div class="send-confirm__title">От кого:</div>
+					<div class="send-confirm__value">Мой кошелек Bitcoin</div>
+				</div>
+				<div class="send-confirm__row">
+					<div class="send-confirm__title">Кому:</div>
+					<div class="send-confirm__value">1FYjuDGmj3QESF1LAMLLAgGXBBtibkRqmx</div>
+				</div>
+				<div class="send-confirm__row">
+					<div class="send-confirm__title">Сумма:</div>
+					<div class="send-confirm__value">0.00093898 BTC (133.76 RUB)</div>
+				</div>
+			</div>
+			<div class="send__confirm-summ">
+				<p class="send-confirm__summ-title">Cумма с учётом комиссии:</p>
+				<p class="send-confirm__summ-value">0.00093898 BTC (142 RUB)</p>
+			</div>
+		</div>
+		<button class="btn send__btn">Подтвердить</button>
+		-->
+		<!--
+		<a href="#" class="send__close"></a>
+		<p class="send__title">Подтверждение</p>
+		<div class="send__google">
+			<p class="send__google-title">Укажите в поле ниже 6-значный код, полученный из приложения Google Authenticator</p>
+			<div class="send__google-inputs">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+			</div>
+		</div>
+		<button class="btn send__btn">Подтвердить</button>
+		<a href="#" class="send__google-cancel">Назад</a>
+		-->
+		<!--
+		<a href="#" class="send__close"></a>
+		<p class="send__title">Подтверждение</p>
+		<div class="send__google">
+			<p class="send__google-title">Укажите 4-х значный пин-код.</p>
+			<div class="send__pin-inputs">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+			</div>
+		</div>
+		<button class="btn send__btn">Подтвердить</button>
+		<a href="#" class="send__google-cancel">Назад</a>
+		-->
+		<!--
+		<a href="#" class="send__close"></a>
+		<p class="send__title">Подтверждение</p>
+		<div class="send__google">
+			<p class="send__google-title">Укажите 4-х код, отправленный в СМС на номер: *********55</p>
+			<div class="send__pin-inputs">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+			</div>
+			<p class="send__resend">Отправить ещё раз через <span class="js-send-resend">60</span> сек.</p>
+		</div>
+		<button class="btn send__btn">Подтвердить</button>
+		<a href="#" class="send__google-cancel">Назад</a>
+		-->
+		<!--
+		<div class="send__success">
+			<p class="send__success-title">Успешно отправлено</p>
+			<div class="send__success-links">
+				<p><a href="#">На страницу статуса</a></p>
+				<p><a href="#">Скопировать хэш</a></p>
+				<p><a href="#" class="js-send-close">Закрыть окно</a></p>
+			</div>
+		</div>
+		-->
+	</div>
+	<div class="get">
+		<a href="#" class="get__close"></a>
+		<p class="get__title">Получить</p>
+		<p class="get__descr">Чтобы получить перевод на свой кошёк — отправьте его адрес отправителю</p>
+		<div class="get__wallets">
+			<div class="get-wallets__current">
+				<p class="get-wallets__current-name">Bitcoin</p>
+				<p class="get-wallets__current-value">22.387639 BTC</p>
+				<img src="i/get__qr.png" alt="QR code" class="get-wallets__current-qr">
+			</div>
+			<div class="get-wallets__list">
+				<div class="get-wallets__list-item get-wallets__list-item--active">
+					<p class="get-wallets__current-name">Bitcoin</p>
+					<p class="get-wallets__current-value">22.387639 BTC</p>
+					<img src="i/get__qr.png" alt="QR code" class="get-wallets__current-qr">
+				</div>
+				<div class="get-wallets__list-item">
+					<p class="get-wallets__current-name">Litecoin</p>
+					<p class="get-wallets__current-value">22.387639 LTC</p>
+					<img src="https://smallbiztrends.com/wp-content/uploads/2015/05/qr-code-sample.jpg" alt="QR code" class="get-wallets__current-qr">
+				</div>
+			</div>
+			<div class="get-wallets__content get-wallets__content--active">
+				<p class="get-wallets__content-title">Адрес кошелька</p>
+				<div class="get-wallets__content-text">
+					2Hwfb36AEFHJB3272FJWHBEF23
+					<span class="get-wallets__content-link js-wallet-copy" data-clipboard-text="2Hwfb36AEFHJB3272FJWHBEF23">Копировать</span>
+				</div>
+			</div>
+			<div class="get-wallets__content">
+				<p class="get-wallets__content-title">Адрес кошелька</p>
+				<div class="get-wallets__content-text">
+					2Hwfb36AEFHasdasdJB3272FJWHBEF23
+					<span class="get-wallets__content-link js-wallet-copy" data-clipboard-text="2Hwfb36AEFHasdasdJB3272FJWHBEF23">Копировать</span>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 	<script src="js/plugins.js"></script>

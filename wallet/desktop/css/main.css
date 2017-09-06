@@ -316,7 +316,7 @@ a {
 					.balance-item__sub-name--LTC {
 						background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAMAAACeyVWkAAAAe1BMVEXHx8cCAgLU1NTAwMCgoKAhISG0tLSdnZ1/f395eXlCQkIzMzMHBwevr6+ZmZmWlpaRkZGNjY2JiYl2dnZ0dHRcXFxOTk5LS0s+Pj4nJyccHBwYGBgVFRW5ubm4uLimpqaTk5OIiIiFhYWBgYFsbGxkZGRTU1MsLCwNDQ2S+TM8AAAAgUlEQVQY053PRxKDMBBE0WksIRRsMgaDc7z/CQ07JM2Kv3xVUzVNCUXNtinx4bTHI8YMkOcQ0xOANtQj3ASo4N51pWqG72WNu7qo+rHN9cHTl8Tcz/iaDVgywtNnrkfYW1XQOiUbUV47m5KXhn1PTsQPAzUx4wzF3eWemDxkSzj7A6MABTwObGSQAAAAAElFTkSuQmCC);
 					}
-	.wallet__send-btn, .wallet__get-btn {
+	.wallet__send-btn, .wallet__get-btn, .wallet__copy-btn {
 		position:absolute;
 		top:26px;
 		height:41px;
@@ -325,25 +325,22 @@ a {
 		background-color:#5281d5;
 		border:0;
 		border-radius:3px;
-		padding:0 37px;
 	}
 	.wallet__send-btn {
 		right:260px;
+		width:161px;
 	}
 	.wallet__get-btn {
-		right:34px;
-		padding:0 77px 0 43px;
+		width:154px;
+		right:77px;
+		border-radius:3px 0 0 3px;
 	}
-		.wallet__get-btn--copy {
-			position:absolute;
-			top:0; right:0;
-			width:42px; height:100%;
-			background:url(../i/icons/icon-copy.png) no-repeat center center;
-			border-left:1px solid #3469c6;
-		}
-			.wallet__get-btn:active .wallet__get-btn--copy {
-				transform:translateY(1px);
-			}
+	.wallet__copy-btn {
+		right:34px;
+		width:42px;
+		background:#5281d5 url(../i/icons/icon-copy.png) no-repeat center center;
+		border-radius:0 3px 3px 0;
+	}
 /*  </wallet__info>  */
 
 /*  <sidebar>  */
@@ -740,6 +737,105 @@ a {
 		width:100%; height:52px;
 		font-size:2rem;
 	}
+	.send__confirm {
+		margin-bottom:60px;
+	}
+		.send__confirm-info {
+			margin-bottom:35px;
+		}
+			.send-confirm__row {
+				display:-webkit-flex;
+				display:-moz-flex;
+				display:-ms-flex;
+				display:-o-flex;
+				display:flex;
+				justify-content:flex-start;
+				font-size:1.7rem;
+				margin-bottom:20px;
+			}
+				.send-confirm__title {
+					width:100px;
+					color:#616161;
+				}
+				.send-confirm__value {
+					font-family:Ssemi;
+				}
+		.send__confirm-summ {
+			text-align:center;
+			background-color:#fafafa;
+			padding:20px 0 30px;
+		}
+			.send-confirm__summ-title {
+				font-size:1.7rem;
+				margin:0 0 8px;
+			}
+			.send-confirm__summ-value {
+				font-size:2.5rem;
+				font-family:Ssemi;
+				margin:0;
+			}
+	.send__google {
+		font-size:1.7rem;
+		margin-bottom:58px;
+	}
+		.send__google-title {
+			line-height:3rem;
+			margin:0 0 30px;
+		}
+		.send__google-inputs {
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:-ms-flex;
+			display:-o-flex;
+			display:flex;
+			justify-content:space-between;
+		}
+			.input-text.send__google-input {
+				width:62px;
+			}
+		.send__pin-inputs {
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:-ms-flex;
+			display:-o-flex;
+			display:flex;
+			justify-content:center;
+		}
+			.send__pin-inputs .input-text.send__google-input {
+				margin:0 17px;
+			}
+	.send__google-cancel {
+		display:block;
+		color:#346fbf;
+		font-size:1.7rem;
+		line-height:60px;
+		text-align:center;
+	}
+		.send__resend {
+			color:#7e7e7e;
+			margin:34px 0 0;
+		}
+			.send__resend-link {
+				color:#346fbf;
+			}
+	.send__success {
+		text-align:center;
+		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAMAAAArteDzAAAAS1BMVEUAAABNrlFQr1BLr1BMr1BMsFBNrlFLr1BMs1FLtEtMr1BMr1BLr1BNr1BMr1BMr1BMrU9OsVJmzGZMr1DM/5BjvVvC+YuM13CH1G0mwj34AAAAE3RSTlMAwiHpr6J7ZjIR+NmpnJBsVDsFcPopUAAAAd1JREFUWMPN2Vty2zAMBVCAFPW0Isk3Trz/lbYz9Uw7gVQQAqrm/vN88E2Q1KS1LTzlERjzxKVdE/mSuluGSL51p+FhYRyGl+EE2c9QMvdGcmtQkWazdGVBZUp157YwpK3rTIYp3OtmB3M6zXzDibz9lbw3OJXmfmwOjJPhQTFD1TvDEd7vgQauNOq4B82BDu50Yh0hIP0XlCNQduwhlbtLQlDSH2iJQstvc0NYtoBp/3geLYH+vPnx/nkwrWaH+f5VnV+bk8eU6q/tavGYUl2UxaSarzzFskpu8+MhFkDnN+VmdQs2cfuJ5mATmSj5TbmrrOEmVmrDTbRUwk0U4nATTFO4ielwRj0fZ01kGrGbT9Go2sRIB6ZoVm8CtG+KhhYTNO6ZoqnJHPcG6ikam0xkmpThsJuYiKGoZhNMBZpqNVGohaoaTbS0QldtJlZK0FXNlFe/rKs2M8uDT6q6KQ++Doqqm/KITtBU3ZS3aVZUo8nigiZVq4lFXiWlajQxvC69imoyZ/16/lJ1U776GkU1mE3tk+dRb2L7h4+z+Gdk/IM3/ml+QREhptxxTWHGX0K6qNjlL8tdU0D0lzovLMr6y8fxhe7rS/L+zwP/N8f//5Cp+Tr6Pp9c57/jfgB1LJymT2RkDwAAAABJRU5ErkJggg==) no-repeat center 55px;
+		padding-top:154px;
+	}
+		.send__success-title {
+			color:#9a9a9a;
+			font-size:3rem;
+			margin:0 0 38px;
+		}
+		.send__success-links p {
+			color:#0b76e4;
+			font-size:1.7rem;
+			margin:0 0 15px;
+		}
+		.send__success-links p:last-child {
+			margin:55px 0 0;
+		}
 .modal__bg {
 	position:fixed;
 	top:0; right:0; bottom:0; left:0;
@@ -747,6 +843,161 @@ a {
 	background-color:rgba(39, 40, 46, .6);
 }
 /*  </send>  */
+
+/*  <get>  */
+.get {
+	display:none;
+}
+.get--active {
+	display:block;
+	animation:fadein .5s;
+	position:fixed;
+	top:133px; left:50%;
+	z-index:16;
+	width:694px;
+	background-color:#fff;
+	border-radius:5px;
+	padding:50px 122px 86px 72px;
+	transform:translateX(-50%);
+}
+	.get__close {
+		position:absolute;
+		top:20px; right:18px;
+		width:22px; height:22px;
+	}
+		.get__close::before, .get__close::after {
+			position:absolute;
+			top:50%; right:0; left:0;
+			height:1px;
+			background-color:#414141;
+			content:'';
+			transition:all .2s;
+		}
+		.get__close::before {
+			transform:rotate(45deg);
+		}
+		.get__close::after {
+			transform:rotate(-45deg);
+		}
+			.get__close:hover::before, .get__close:hover::after {
+				background-color:#000;
+			}
+	.get__title {
+		font-size:3rem;
+		margin:0 0 15px;
+	}
+	.get__descr {
+		font-size:1.7rem;
+		line-height:3rem;
+		margin:0 0 15px;
+	}
+	.get-wallets__current {
+		display:-webkit-flex;
+		display:-moz-flex;
+		display:-ms-flex;
+		display:-o-flex;
+		display:flex;
+		justify-content:space-between;
+		position:relative;
+		height:43px;
+		font-size:1.7rem;
+		line-height:41px;
+		border:1px solid #498dea;
+		border-radius:1px;
+		padding:0 45px 0 19px;
+		margin-bottom:30px;
+	}
+		.get-wallets__current::before {
+			position:absolute;
+			top:50%; right:17px;
+			z-index:-1;
+			width:15px; height:8px;
+			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAIBAMAAADU/bjBAAAALVBMVEUAAACQlKeQlKeQlKeQlKeQlKeQlKeQlKeQlKeQlKeQlKeQlKeQlKeQlKeQlKfJgnBHAAAAD3RSTlMAWOfjPWNHT7VtatnWfnqK5VlVAAAAOUlEQVQI12O4yAACjA8YhASANIhkVwXSrOZAoiiAgSE4Achg02LgMgMrTJ4w2QHMYNlxhAECPEACAB3ICBL2pCn1AAAAAElFTkSuQmCC);
+			content:'';
+			transform:translateY(-50%);
+		}
+		.get-wallets__current-name {
+			font-family:Smedium;
+			margin:0;
+		}
+		.get-wallets__current-value {
+			margin:0;
+		}
+		.get-wallets__current-qr {
+			position:absolute;
+			top:50%; right:-40px;
+			width:28px; height:28px;
+			transform:translateY(-50%);
+			transition:all .2s;
+		}
+			.get-wallets__current-qr:hover {
+				background-color:#fff;
+				border:1px solid #498dea;
+				padding:3px;
+				transform:translateY(-50%) scale(5);
+			}
+	.get-wallets__list {
+		display:none;
+	}
+	.get-wallets__list--active {
+		display:block;
+		animation:fadein .5s;
+		position:absolute;
+		width:500px;
+		font-size:1.7rem;
+		background-color:#fff;
+		border:solid #d0d3e4;
+		border-width:0 1px 1px;
+		transform:translateY(-28px);
+	}
+		.get-wallets__list-item {
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:-ms-flex;
+			display:-o-flex;
+			display:flex;
+			justify-content:space-between;
+			line-height:42px;
+			border-top:1px solid #d0d3e4;
+			padding:0 15px;
+			transition:all .2s;
+		}
+			.get-wallets__list-item:hover {
+				color:#fff;
+				background-color:#297cec;
+				cursor:pointer;
+			}
+			.get-wallets__list-item .get-wallets__current-qr {
+				display:none;
+			}
+	.get-wallets__content {
+		display:none;
+	}
+	.get-wallets__content--active {
+		display:block;
+		animation:fadein .5s;
+		font-size:1.7rem;
+	}
+		.get-wallets__content-title {
+			color:#a5a5a5;
+			margin:0 0 8px;
+		}
+		.get-wallets__content-text {
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:-ms-flex;
+			display:-o-flex;
+			display:flex;
+			justify-content:space-between;
+			line-height:41px;
+			background-color:#eaeaea;
+			padding:0 22px 0 15px;
+		}
+		.get-wallets__content-link {
+			color:#297cec;
+			cursor:pointer;
+		}
+/*  </get>  */
 
 /*  <elements>  */
 .select {
