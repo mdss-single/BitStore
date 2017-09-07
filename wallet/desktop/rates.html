@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>BitStore</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+</head>
+<body>
+	<header class="header">
+		<a href="#" class="logo"><img src="i/logo.png" alt=""></a>
+		<div class="header__rates">
+			<div class="header__rate-item header__rate-item--down">1 USD = 62.87 RUB</div>
+			<div class="header__rate-item header__rate-item--down">1 BTC = 157500.8271 RUB</div>
+			<div class="header__rate-item header__rate-item--up">1 ETH = 12497.9233 RUB</div>
+			<div class="header__rate-item header__rate-item--up">1 LTC = 3034.1574 RUB</div>
+			<div class="header__rate-item header__rate-item--up">1 DSH = 10665.0781 RUB</div>
+			<div class="header__rate-item header__rate-item--up">1 NVC = 42.0098 RUB</div>
+		</div>
+		<a href="#" class="header__notice-link js-header-notice"></a>
+		<div class="header__notice">
+			<div class="header__notice-head">
+				Уведомления
+				<a href="#" class="header__notice-clear">Очистить</a>
+			</div>
+			<div class="header__notice-content">
+				<div class="header__notice-item">
+					<p class="notice-item__time">Сегодня, 19:30</p>
+					<div class="header__notice-text">
+						Транзакция (2.183772 BTC) подтверждена
+					</div>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">Сегодня, 10:00</p>
+					<div class="header__notice-text">
+						Новое сообщение в сделке 271665
+					</div>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">Вчера, 11:30</p>
+					<div class="header__notice-text">
+						Транзакция (2.183772 BTC) подтверждена
+					</div>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">20.07.17, 09:50</p>
+					<div class="header__notice-text">
+						Новое сообщение в сделке 271665
+					</div>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">Сегодня, 19:30</p>
+					<div class="header__notice-text">
+						Транзакция (2.183772 BTC) подтверждена
+					</div>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">Сегодня, 10:00</p>
+					<div class="header__notice-text">
+						Новое сообщение в сделке 271665
+					</div>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">Вчера, 11:30</p>
+					<div class="header__notice-text">
+						Транзакция (2.183772 BTC) подтверждена
+					</div>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">20.07.17, 09:50</p>
+					<div class="header__notice-text">
+						Новое сообщение в сделке 271665
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="header__logout"></a>
+		<a href="#" class="header__avatar"><img src="i/avatar.jpg" alt="%username%"></a>
+	</header>
+	<main class="main">
+		<div class="wallet__info">
+			<div class="wallet__balance">
+				<div class="wallet__balance-item">
+					<p class="balance-item__title">Основной кошелёк</p>
+					<div class="balance-item__value balance-item__value--several">
+						8.7543687 BTC
+						<div class="balance-item__sub">
+							<div class="balance-item__sub-row">
+								<div class="balance-item__sub-name balance-item__sub-name--BTC">Bitcoin (BTC)</div>
+								<div class="balance-item__sub-value">0.000123124</div>
+							</div>
+							<div class="balance-item__sub-row">
+								<div class="balance-item__sub-name balance-item__sub-name--LTC">Litecoin (LTC)</div>
+								<div class="balance-item__sub-value">0.000123124</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wallet__balance-item">
+					<p class="balance-item__title">Не подтверждённые <i class="balance-item__help" data-tooltip="Универсальный тултип">?</i></p>
+					<div class="balance-item__value">0.002312 BTC</div>
+				</div>
+				<div class="wallet__balance-item">
+					<p class="balance-item__title">Общий баланс кошельков</p>
+					<div class="balance-item__value">~ 167 727 RUB</div>
+				</div>
+			</div>
+			<button class="wallet__send-btn js-wallet-send">Отправить</button>
+			<button class="wallet__get-btn js-wallet-get">Получить</button>
+			<button class="wallet__copy-btn js-wallet-copy" data-clipboard-text="1231231231"></button>
+		</div>
+		<aside class="sidebar">
+			<nav class="nav">
+				<a href="#" class="nav__item nav__item--wallets">Кошельки</a>
+				<a href="#" class="nav__item nav__item--transactions">Транзакции</a>
+				<a href="#" class="nav__item nav__item--buy">Купить Bitcoin</a>
+				<a href="#" class="nav__item nav__item--rates">Курсы</a>
+				<a href="#" class="nav__item nav__item--settings">Настройки</a>
+				<a href="#" class="nav__item nav__item--help">Помощь</a>
+			</nav>
+			<div class="quick-stat">
+				<p class="quick-stat__title">За последние сутки</p>
+				<p class="quick-stat__value"><span class="quick-stat__value--count">50 120</span>  переводов</p>
+				<p class="quick-stat__value"><span class="quick-stat__value--count">12 450</span>  сделок</p>
+			</div>
+		</aside>
+		<div class="content">
+			<div class="wallet__rates wallet__white">
+				<p class="wallet-rates__title">Курсы криптовалют</p>
+				<div class="wallet-rates__section">
+					<p class="wallet-rates__section-title">Биржи</p>
+					<div class="wallet-rates__exchange">
+						<a href="#" class="wallet-rates__exchange-item wallet-rates__exchange-item--active">Биржа 1</a>
+						<a href="#" class="wallet-rates__exchange-item">Биржа 2</a>
+						<a href="#" class="wallet-rates__exchange-item">Биржа 3</a>
+						<a href="#" class="wallet-rates__exchange-item">Биржа 4</a>
+						<a href="#" class="wallet-rates__exchange-item">Биржа 5</a>
+						<a href="#" class="wallet-rates__exchange-item">Биржа 6</a>
+						<a href="#" class="wallet-rates__exchange-item">Биржа 7</a>
+					</div>
+				</div>
+				<div class="wallet-rates__section">
+					<p class="wallet-rates__section-title">Основная валюта</p>
+					<div class="wallet-rates__currency">
+						<a href="#" class="wallet-rates__currency-item wallet-rates__currency-item--active">USD</a>
+						<a href="#" class="wallet-rates__currency-item">RUB</a>
+						<a href="#" class="wallet-rates__currency-item">EUR</a>
+					</div>
+				</div>
+				<div class="wallet-rates__section">
+					<p class="wallet-rates__section-title">Соотношения к валютам</p>
+					<div class="wallet-rates__ratio">
+						<table class="wallet-rates__ratio-table">
+							<tr>
+								<td>USD/BTC = 2600</td>
+								<td>USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+							</tr>
+							<tr>
+								<td>USD/BTC = 2600</td>
+								<td>USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+								<td class="wallets-rates__ratio--down">USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+							</tr>
+							<tr>
+								<td>USD/BTC = 2600</td>
+								<td>USD/ETH = 1100</td>
+								<td class="wallets-rates__ratio--up">USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+								<td>USD/ETH = 1100</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="wallet-rates__wrap">
+				<div class="wallet-rates__main">
+					<div class="wallet-rates__converter wallet__white">
+						<p class="wallet-rates__converter-title">Конвертёр валют</p>
+						<div class="wallet-converter__wrap">
+							<div class="wallet-converter__block">
+								<input type="text" name="" id="" class="input-text" placeholder="0">
+								<select name="" id="" class="select wallet-converter__select">
+									<option value="">BTC</option>
+									<option value="">LTC</option>
+									<option value="">RUR</option>
+								</select>
+							</div>
+							<span class="wallet-converter__delimiter">=</span>
+							<div class="wallet-converter__block">
+								<input type="text" name="" id="" class="input-text" placeholder="0">
+								<select name="" id="" class="select wallet-converter__select">
+									<option value="">RUR</option>
+									<option value="">BTC</option>
+									<option value="">LTC</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="wallet-rates__graph wallet__white">
+						<div class="wallet-graph__currency">
+							USD к
+							<span class="wallet-graph__currency-item wallet-graph__currency-item--active">BTC</span>
+							<span class="wallet-graph__currency-item">LTC</span>
+							<span class="wallet-graph__currency-item">EHT</span>
+							<span class="wallet-graph__currency-item">DSH</span>
+							<span class="wallet-graph__currency-item">NVC</span>
+						</div>
+						<div class="wallet-graph__date">
+							<span class="wallet-graph-date-item wallet-graph-date-item--active">Сегодня</span>
+							<span class="wallet-graph-date-item">Вчера</span>
+							<span class="wallet-graph-date-item">Неделя</span>
+						</div>
+						<div class="wallet-graph__main">
+							<div class="wallet__graph"></div>
+						</div>
+					</div>
+				</div>
+				<div class="wallet-rates__timeline wallet__white">
+					<table class="wallet-timeline__table">
+						<tr>
+							<th>Время</th>
+							<th>Курс</th>
+							<th>Разница</th>
+						</tr>
+						<tr>
+							<td>13:30</td>
+							<td>0,00175831 USD</td>
+							<td class="wallet-timeline--down">-0.0000124</td>
+						</tr>
+						<tr>
+							<td>13:30</td>
+							<td>0,00175831 USD</td>
+							<td class="wallet-timeline--up">+0.0000124</td>
+						</tr>
+						<tr>
+							<td>13:30</td>
+							<td>0,00175831 USD</td>
+							<td class="wallet-timeline--up">+0.0000124</td>
+						</tr>
+						<tr>
+							<td>13:30</td>
+							<td>0,00175831 USD</td>
+							<td class="wallet-timeline--up">+0.0000124</td>
+						</tr>
+						<tr>
+							<td>13:30</td>
+							<td>0,00175831 USD</td>
+							<td class="wallet-timeline--up">+0.0000124</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<p class="copyright">© BitStore 2017</p>
+		<nav class="footer__nav">
+			<a href="#" class="footer__nav-item">Комиссии</a>
+			<a href="#" class="footer__nav-item">Условия обслуживания</a>
+			<a href="#" class="footer__nav-item">Безопасность</a>
+			<a href="#" class="footer__nav-item">Партнерская программа</a>
+		</nav>
+		<a href="#" class="language language--ru">Ru</a>
+	</footer>
+	<div class="hello">
+		<div class="hello__wrap js-hello">
+			<div class="hello__item">
+				<p class="hello__title">Добро пожаловать на BitStore</p>
+				<div class="hello__text">
+					Первый в Мире кошелёк, где вы легко сможете хранить, покупать и продавать криптовалюту.
+				</div>
+			</div>
+			<div class="hello__item">
+				<p class="hello__title">Бесплатные переводы</p>
+				<div class="hello__text">
+					Отправляйте криптовалюту внутри системы BitStore Instant бесплатно
+				</div>
+			</div>
+			<div class="hello__item">
+				<p class="hello__title">Все криптовалюты в одном месте</p>
+				<div class="hello__text">
+					Используйте все известные криптовалюты в одном кошельке
+				</div>
+			</div>
+			<div class="hello__item">
+				<p class="hello__title">Простой и мощный торговый модуль</p>
+				<div class="hello__text">
+					<p>Торговать криптовалютой стало ещё проще.</p>
+					<p>Начните зарабатывать уже сейчас в торговом модуле BitStore</p>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="hello__skip js-hello-skip">Пропустить</a>
+		<a href="#" class="hello__next js-hello-next">Далее</a>
+	</div>
+	<div class="send">
+		<a href="#" class="send__close"></a>
+		<p class="send__title">Отправить</p>
+		<div class="send__settings">
+			<div class="send__settings-row">
+				<p class="send__settings-title">Кому</p>
+				<input type="text" name="" id="" class="input-text" placeholder="Адрес или почта" autofocus>
+				<img src="i/send__qr.png" alt="QR code" class="send__qr">
+			</div>
+			<div class="send__settings-row">
+				<p class="send__settings-title">Сумма <span class="send__settings-title--aviable">доступно: 23.252452246624 BTC</span></p>
+				<div class="send__settings-summ">
+					<div class="send-settings__item">
+						<input type="text" name="" id="" class="input-text" placeholder="0">
+						<span class="send-settings__currency">BTC</span>
+					</div>
+					<span class="send-settings__delimiter">или</span>
+					<div class="send-settings__item">
+						<input type="text" name="" id="" class="input-text" placeholder="0">
+						<span class="send-settings__currency">RUR</span>
+					</div>
+				</div>
+			</div>
+			<div class="send__settings-row">
+				<p class="send__settings-title">Комиссия</p>
+				<div class="send__settings--active js-send-auto">
+					<div class="send-settings__item">
+						<select name="" id="" class="select">
+							<option value="">Обычный приоритет</option>
+							<option value="">Необычный приоритет</option>
+							<option value="">Ультра приоритет</option>
+						</select>
+					</div>
+					<div class="send-settings__item tr">
+						<p class="send-settings__comission">0.00000124 BTC (20 RUR)</p>
+						<a href="#" class="send-settings__comission-link js-send-custom-link">Указать комиссию вручную</a>
+					</div>
+				</div>
+				<div class="js-send-custom">
+					<div class="send-settings__item">
+						<input type="text" name="" id="" class="input-text" placeholder="0">
+						<span class="send-settings__currency">sat/b</span>
+					</div>
+					<div class="send-settings__item tr">
+						<p class="send-settings__comission">0.00000124 BTC (20 RUR)</p>
+						<a href="#" class="send-settings__comission-link js-send-custom-cancel">отменить</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn send__btn">Отправить</button>
+		<!--
+		<a href="#" class="send__close"></a>
+		<p class="send__title">Подтверждение</p>
+		<div class="send__confirm">
+			<div class="send__confirm-info">
+				<div class="send-confirm__row">
+					<div class="send-confirm__title">От кого:</div>
+					<div class="send-confirm__value">Мой кошелек Bitcoin</div>
+				</div>
+				<div class="send-confirm__row">
+					<div class="send-confirm__title">Кому:</div>
+					<div class="send-confirm__value">1FYjuDGmj3QESF1LAMLLAgGXBBtibkRqmx</div>
+				</div>
+				<div class="send-confirm__row">
+					<div class="send-confirm__title">Сумма:</div>
+					<div class="send-confirm__value">0.00093898 BTC (133.76 RUB)</div>
+				</div>
+			</div>
+			<div class="send__confirm-summ">
+				<p class="send-confirm__summ-title">Cумма с учётом комиссии:</p>
+				<p class="send-confirm__summ-value">0.00093898 BTC (142 RUB)</p>
+			</div>
+		</div>
+		<button class="btn send__btn">Подтвердить</button>
+		-->
+		<!--
+		<a href="#" class="send__close"></a>
+		<p class="send__title">Подтверждение</p>
+		<div class="send__google">
+			<p class="send__google-title">Укажите в поле ниже 6-значный код, полученный из приложения Google Authenticator</p>
+			<div class="send__google-inputs">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+			</div>
+		</div>
+		<button class="btn send__btn">Подтвердить</button>
+		<a href="#" class="send__google-cancel">Назад</a>
+		-->
+		<!--
+		<a href="#" class="send__close"></a>
+		<p class="send__title">Подтверждение</p>
+		<div class="send__google">
+			<p class="send__google-title">Укажите 4-х значный пин-код.</p>
+			<div class="send__pin-inputs">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+			</div>
+		</div>
+		<button class="btn send__btn">Подтвердить</button>
+		<a href="#" class="send__google-cancel">Назад</a>
+		-->
+		<!--
+		<a href="#" class="send__close"></a>
+		<p class="send__title">Подтверждение</p>
+		<div class="send__google">
+			<p class="send__google-title">Укажите 4-х код, отправленный в СМС на номер: *********55</p>
+			<div class="send__pin-inputs">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+				<input type="text" name="" id="" class="input-text send__google-input" maxlength="1" placeholder="0">
+			</div>
+			<p class="send__resend">Отправить ещё раз через <span class="js-send-resend">60</span> сек.</p>
+		</div>
+		<button class="btn send__btn">Подтвердить</button>
+		<a href="#" class="send__google-cancel">Назад</a>
+		-->
+		<!--
+		<div class="send__success">
+			<p class="send__success-title">Успешно отправлено</p>
+			<div class="send__success-links">
+				<p><a href="#">На страницу статуса</a></p>
+				<p><a href="#">Скопировать хэш</a></p>
+				<p><a href="#" class="js-send-close">Закрыть окно</a></p>
+			</div>
+		</div>
+		-->
+	</div>
+	<div class="get">
+		<a href="#" class="get__close"></a>
+		<p class="get__title">Получить</p>
+		<p class="get__descr">Чтобы получить перевод на свой кошёк — отправьте его адрес отправителю</p>
+		<div class="get__wallets">
+			<div class="get-wallets__current">
+				<p class="get-wallets__current-name">Bitcoin</p>
+				<p class="get-wallets__current-value">22.387639 BTC</p>
+				<img src="i/get__qr.png" alt="QR code" class="get-wallets__current-qr">
+			</div>
+			<div class="get-wallets__list">
+				<div class="get-wallets__list-item get-wallets__list-item--active">
+					<p class="get-wallets__current-name">Bitcoin</p>
+					<p class="get-wallets__current-value">22.387639 BTC</p>
+					<img src="i/get__qr.png" alt="QR code" class="get-wallets__current-qr">
+				</div>
+				<div class="get-wallets__list-item">
+					<p class="get-wallets__current-name">Litecoin</p>
+					<p class="get-wallets__current-value">22.387639 LTC</p>
+					<img src="https://smallbiztrends.com/wp-content/uploads/2015/05/qr-code-sample.jpg" alt="QR code" class="get-wallets__current-qr">
+				</div>
+			</div>
+			<div class="get-wallets__content get-wallets__content--active">
+				<p class="get-wallets__content-title">Адрес кошелька</p>
+				<div class="get-wallets__content-text">
+					2Hwfb36AEFHJB3272FJWHBEF23
+					<span class="get-wallets__content-link js-wallet-copy" data-clipboard-text="2Hwfb36AEFHJB3272FJWHBEF23">Копировать</span>
+				</div>
+			</div>
+			<div class="get-wallets__content">
+				<p class="get-wallets__content-title">Адрес кошелька</p>
+				<div class="get-wallets__content-text">
+					2Hwfb36AEFHasdasdJB3272FJWHBEF23
+					<span class="get-wallets__content-link js-wallet-copy" data-clipboard-text="2Hwfb36AEFHasdasdJB3272FJWHBEF23">Копировать</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function($){
+			var data = [],
+			totalPoints = 300;
+			function getRandomData() {
+				if (data.length > 0)
+					data = data.slice(1);
+				// Do a random walk
+				while (data.length < totalPoints) {
+					var prev = data.length > 0 ? data[data.length - 1] : 50,
+					y = prev + Math.random() * 10 - 5;
+					if (y < 0) {
+						y = 0;
+					} else if (y > 100) {
+						y = 100;
+					}
+					data.push(y);
+				}
+				// Zip the generated y values with the x values
+				var res = [];
+				for (var i = 0; i < data.length; ++i) {
+					res.push([i, data[i]])
+				}
+				return res;
+			}
+			// Set up the control widget
+			var updateInterval = 30;
+			var plot = $.plot(".wallet__graph", [ getRandomData() ], {
+				legend: {
+					show: false,
+				},
+				series: {
+					shadowSize: 0// Drawing is faster without shadows
+				},
+
+				xaxis: {
+					show: false
+				}
+			});
+			function update() {
+				plot.setData([getRandomData()]);
+				// Since the axes don't change, we don't need to call plot.setupGrid()
+				plot.draw();
+				setTimeout(update, updateInterval);
+			}
+			update();
+		})(jQuery);
+	</script>
+</body>
+</html>
