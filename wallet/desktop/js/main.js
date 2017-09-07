@@ -21,6 +21,9 @@
 	});
 
 	new Clipboard('.js-wallet-copy');
+	$('.js-wallet-copy').click(function(e) {
+		e.preventDefault();
+	});
 
 	$('.js-wallet-menu').on('click', function(e) {
 		e.preventDefault();
@@ -103,6 +106,8 @@
 		var storage = localStorage.getItem('tab' + i);
 		if (storage) {
 			$(this).find('div').removeClass('get-wallets__list-item--active').eq(storage).addClass('get-wallets__list-item--active').closest('.get__wallets').find('.get-wallets__content').removeClass('get-wallets__content--active').eq(storage).addClass('get-wallets__content--active');
+			var thisContent = $(this).find('.get-wallets__list-item--active').html();
+			$('.get-wallets__current').html(thisContent);
 		}
 	});
 	$('.get-wallets__list').on('click', 'div:not(.get-wallets__list-item--active)', function() {
