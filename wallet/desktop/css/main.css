@@ -1048,4 +1048,34 @@ a.btn {
 	display:inline-block;
 	line-height:44px;
 }
+[data-tooltip] {
+	position:relative;
+}
+	[data-tooltip]:hover::before {
+		animation:fadein .5s;
+		position:absolute;
+		top:0; left:50%;
+		color:#000;
+		font-size:1.5rem;
+		font-family:Sregular;
+		line-height:32px;
+		white-space:nowrap;
+		background-color:#fafafa;
+		border:1px solid #e6e6e6;
+		border-radius:2px;
+		padding:0 16px;
+		cursor:default;
+		content:attr(data-tooltip);
+		transform:translate(-50%, calc(-100% - 9px));
+	}
+	[data-tooltip]:hover::after {
+		animation:fadein .5s;
+		position:absolute;
+		top:0; left:50%;
+		width:0; height:0;
+		border:5px solid transparent;
+		border-top-color:#fafafa;
+		content:'';
+		transform:translate(-50%, -100%);
+	}
 /*  </elements>  */
