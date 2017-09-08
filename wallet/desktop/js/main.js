@@ -70,10 +70,11 @@
 		$('.send').find('input[autofocus]').focus();
 		$('.select').trigger('refresh');
 	});
-	$('body').on('click', '.send__close, .modal__bg, .js-send-close, .get__close', function(e) {
+	$('body').on('click', '.send__close, .modal__bg, .js-send-close, .get__close, .twostep__cancel', function(e) {
 		$('.modal__bg').remove();
 		$('.send--active').removeClass('send--active');
 		$('.get--active').removeClass('get--active');
+		$('.twostep--active').removeClass('twostep--active');
 		e.preventDefault();
 	});
 
@@ -119,6 +120,38 @@
 	$('.get-wallets__list-item').click(function() {
 		var thisContent = $(this).html();
 		$('.get-wallets__current').html(thisContent);
+	});
+
+	$('.settings__nav').each(function(i) {
+		var storage = localStorage.getItem('stab' + i);
+		if (storage) {
+			$(this).find('div').removeClass('settings-nav__item--active').eq(storage).addClass('settings-nav__item--active').closest('.settings').find('.settings__content').removeClass('settings__content--active').eq(storage).addClass('settings__content--active');
+		}
+	});
+	$('.settings__nav').on('click', 'div:not(.settings-nav__item--active)', function() {
+		$(this).addClass('settings-nav__item--active').siblings().removeClass('settings-nav__item--active').closest('.settings').find('.settings__content').removeClass('settings__content--active').eq($(this).index()).addClass('settings__content--active');
+		var ulIndex = $('.settings__nav').index($(this).parents('.settings__nav'));
+		localStorage.removeItem('stab' + ulIndex);
+		localStorage.setItem('stab' + ulIndex, $(this).index());
+	});
+
+	$('.js-twostep-link').click(function(e) {
+		$('body').prepend('<div class="modal__bg"></div>');
+		$('.twostep').addClass('twostep--active');
+		e.preventDefault();
+	});
+
+	$('.twostep__tabs').each(function(i) {
+		var storage = localStorage.getItem('ttab' + i);
+		if (storage) {
+			$(this).find('div').removeClass('twostep__tab--active').eq(storage).addClass('twostep__tab--active').closest('.twostep').find('.twostep__content').removeClass('twostep__content--active').eq(storage).addClass('twostep__content--active');
+		}
+	});
+	$('.twostep__tabs').on('click', 'div:not(.twostep__tab__item--active)', function() {
+		$(this).addClass('twostep__tab--active').siblings().removeClass('twostep__tab--active').closest('.twostep').find('.twostep__content').removeClass('twostep__content--active').eq($(this).index()).addClass('twostep__content--active');
+		var ulIndex = $('.twostep__tabs').index($(this).parents('.twostep__tabs'));
+		localStorage.removeItem('ttab' + ulIndex);
+		localStorage.setItem('ttab' + ulIndex, $(this).index());
 	});
 
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
