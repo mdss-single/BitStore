@@ -154,6 +154,11 @@
 		localStorage.setItem('ttab' + ulIndex, $(this).index());
 	});
 
+	$('.js-partner-link').click(function(e) {
+		$('.partner__link-link').toggleClass('partner__link-link--active');
+		e.preventDefault();
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
