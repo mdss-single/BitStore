@@ -126,6 +126,7 @@
 		var storage = localStorage.getItem('stab' + i);
 		if (storage) {
 			$(this).find('div').removeClass('settings-nav__item--active').eq(storage).addClass('settings-nav__item--active').closest('.settings').find('.settings__content').removeClass('settings__content--active').eq(storage).addClass('settings__content--active');
+			$('.select').trigger('refresh');
 		}
 	});
 	$('.settings__nav').on('click', 'div:not(.settings-nav__item--active)', function() {
@@ -133,6 +134,7 @@
 		var ulIndex = $('.settings__nav').index($(this).parents('.settings__nav'));
 		localStorage.removeItem('stab' + ulIndex);
 		localStorage.setItem('stab' + ulIndex, $(this).index());
+		$('.select').trigger('refresh');
 	});
 
 	$('.js-twostep-link').click(function(e) {
