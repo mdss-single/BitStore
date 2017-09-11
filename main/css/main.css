@@ -583,7 +583,8 @@ a {
 	}
 		.safety__title {
 			font-size:2.7rem;
-			margin:0 0 10px;
+			font-family:Smedium;
+			margin:0 0 15px;
 		}
 /*  </safety>  */
 
@@ -1550,6 +1551,10 @@ a.btn {
 				border-radius:2px;
 				padding:0 18px;
 			}
+				a:hover.header__login {
+					text-decoration:none;
+					background-color:rgba(255, 255, 255, .1);
+				}
 			.header__login.header__login--auth {
 				line-height:29px;
 				background-color:#4878cd;
@@ -1765,8 +1770,9 @@ a.btn {
 	.safety__item {
 		background-repeat:no-repeat;
 		background-position:0 8px;
-		padding-left:93px;
+		/*padding-left:93px;*/
 	}
+	/*
 	.safety__item--encrypt {
 		background-image:url(../i/safety__encrypt.png);
 		background-position:3px 8px;
@@ -1776,9 +1782,9 @@ a.btn {
 	}
 	.safety__item--unknown {
 		background-image:url(../i/safety__unknown.png);
-	}
+	}*/
 		.safety__title {
-			font-size:2.5rem;
+			font-size:3rem;
 		}
 		.safety__descr {
 			line-height:2.7rem;
@@ -1954,6 +1960,9 @@ a.btn {
 			border-top:0;
 			padding:15px 0 30px;
 		}
+		.review__item:last-child {
+			padding:25px 0 0;
+		}
 		.review__add {
 			margin-top:15px;
 		}
@@ -2014,12 +2023,20 @@ a.btn {
 			color:#000;
 			background-color:#ededed;
 		}
+			a:hover.seller__abuse {
+				text-decoration:none;
+				background-color:#ddd;
+			}
 		.seller__favorite {
 			right:208px;
 			width:218px;
 			color:#fff;
 			background-color:#417ce4;
 		}
+			a:hover.seller__favorite {
+				text-decoration:none;
+				background-color:#2d69d2;
+			}
 		.seller__title {
 			color:#000;
 			font-size:2rem;
@@ -2031,15 +2048,8 @@ a.btn {
 		.seller__total {
 			position:relative;
 			border-bottom:0;
-			padding:0 0 30px;
+			padding:0;
 		}
-			.seller__total::before {
-				position:absolute;
-				right:-100%; bottom:0; left:-100%;
-				height:1px;
-				background-color:#ececec;
-				content:'';
-			}
 			.seller__total-table tr {
 				display:table-row;
 			}
@@ -2056,6 +2066,7 @@ a.btn {
 				font-family:Ssemi;
 			}
 		.seller__buy-block {
+			border-bottom:0;
 			padding:0;
 		}
 			.seller__buy-table th {
@@ -2149,19 +2160,16 @@ a.btn {
 						background-color:#ededed;
 						border-radius:2px;
 					}
+						a:hover.seller__buy-btn {
+							text-decoration:none;
+							background-color:#ddd;
+						}
 		.seller__rating {
 			position:relative;
 			border:0;
-			padding:45px 0 0;
-			margin-top:55px;
+			padding:0;
+			margin:0;
 		}
-			.seller__rating::before {
-				position:absolute;
-				top:0; right:-100%; left:-100%;
-				height:1px;
-				background-color:#ececec;
-				content:'';
-			}
 			.seller__rating-info {
 				margin-bottom:10px;
 			}
