@@ -1388,6 +1388,149 @@ a {
 		}
 /*  </support>  */
 
+/*  <transactions>  */
+.transactions {
+	margin-right:-35px;
+}
+	.transactions__nav {
+		display:-webkit-flex;
+		display:-moz-flex;
+		display:-ms-flex;
+		display:-o-flex;
+		display:flex;
+		justify-content:flex-start;
+		font-size:1.7rem;
+		background-color:#eaeaea;
+		border-bottom:1px solid #ececec;
+	}
+		.transactions__nav-item {
+			color:#6e6e6e;
+			line-height:49px;
+			border-right:1px solid #e2e2e2;
+		}
+			.transactions__nav-item a {
+				display:block;
+				padding:0 30px;
+			}
+		.transactions__nav-item--active {
+			color:#000;
+			font-family:Smedium;
+			background-color:#fff;
+			border-bottom:1px solid #fff;
+			margin-bottom:-1px;
+		}
+		.transactions__nav-item--secondary {
+			background-color:#f1f1f1;
+		}
+			.select.transactions__nav-wallets, .select.transactions__nav-period {
+				width:200px;
+				margin:0 24px;
+			}
+			.transactions__nav-wallets .jq-selectbox__select, .transactions__nav-period .jq-selectbox__select {
+				height:49px;
+				line-height:49px;
+				border:0;
+				padding:0 42px 0 37px;
+			}
+			.transactions__nav-wallets .jq-selectbox__select {
+				background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAATCAMAAABSrFY3AAAAXVBMVEW+xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM8AAAC+xM++xM++xM++xM++xM++xM++xM9VLYPNAAAAHnRSTlOo6Par8EUR4JJ1aUvr5MyyoyLTjF9BLAC6not7MgP3+ACgAAAAeElEQVQY03XRyxaDMAgE0BFCEhONUWvtk///zO4rsOQu4MwgjmD8D2OMyGrPjtmRhMmRgMHe02RJK3Ic1ZBlvfECXCXdu7ZN6SqvqvkbH4aUEup5vg3ZRXn9NLLuPDUNSvZv4N4N0a2ISHUyIAp+bm7Ws9tP9jv9Adw/Kyu3lKUiAAAAAElFTkSuQmCC) no-repeat 0 center;
+			}
+			.transactions__nav-period .jq-selectbox__select {
+				background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAALVBMVEW+xM++xM8AAAC+xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM/B6Xh6AAAADnRSTlNAgADA4KDv0CCfcF8wEFIzcaUAAABySURBVAjXY1BSMmFSUlJwVlJi0BY0NBQUFBYW3MRw7p3hOyAQfveGge9dCojp9u4BkAkBQOYFBijgRRJFZToGCxuaioCZRoyKQgLKENHJwoaWENGCpawBUezoCpJLTJzdzVBFEUwctvXBmC8YNGAuawIA9Wpk4B6z6lUAAAAASUVORK5CYII=) no-repeat 0 center;
+			}
+				.transactions__nav-wallets.jq-selectbox .placeholder, .transactions__nav-period.jq-selectbox .placeholder {
+					color:#545961;
+				}
+				.transactions__nav-wallets .jq-selectbox__trigger-arrow, .transactions__nav-period .jq-selectbox__trigger-arrow {
+					width:0; height:0;
+					background:none;
+					border:solid transparent;
+					border-width:7px 7px 0;
+					border-top-color:#bec4cf;
+					transition:all .2s;
+				}
+					.transactions__nav-wallets:hover .jq-selectbox__trigger-arrow, .transactions__nav-period:hover .jq-selectbox__trigger-arrow {
+						border-top-color:#545961;
+					}
+	.transactions__table {
+		width:100%;
+		font-size:1.7rem;
+	}
+		.transactions__table tr {
+			border-top:1px solid #f0f0f0;
+		}
+		.transactions__table tr:first-child {
+			border-top:0;
+		}
+			.transactions__table th {
+				color:#909090;
+				font-weight:normal;
+				font-family:Smedium;
+				text-align:left;
+				padding:30px 34px 10px;
+			}
+			.transactions__table tr:first-child th {
+				padding:20px 34px 10px;
+			}
+			.transactions__table td {
+				line-height:2.7rem;
+				padding:20px 34px;
+			}
+			.transactions__table td:last-child {
+				text-align:right;
+			}
+				.transactions__table td p {
+					margin:0;
+				}
+				.transactions-table__status {
+					background-repeat:no-repeat;
+					background-position:0 center;
+					padding-left:61px;
+				}
+					.transactions-table__status-title {
+						font-family:Smedium;
+					}
+					.transactions-table__status-date {
+						color:#969696;
+					}
+				.transactions-table__status--received {
+					background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAASFBMVEUAAABCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxnFx++wAAAAF3RSTlMAw/MX0EYGppZ94t3atphxYzgDjy3TEI9OHJYAAADoSURBVDjLhZNZksIwDEQlOd6yETxA3/+mgwkFnaSC/Wk9qbXK9wU/62g26uyDHJ9LBgwaow6AJbczh2yYFvdmlwmWw8ZdoVf+uCqUgtx6XPaSF/S3j39v/piUt9699RVkJwK65pEp/k4lvwRM2Y2DqVWRBM6/67gWJJFgk5wBMlkQj+UcWOBlhjsHHGbRQc4BGVRG/QXoKBZ/AdGaAEkUV1agOJKgJB+IpQIl4kFJUpl/T6LrnvbEZdZGEXG/Vzs3qraaCABp0+p1WEykzbAO4855O+7WwjRXrrW0zbVvH0779NrH2zz/fygjDFEc689cAAAAAElFTkSuQmCC);
+				}
+				.transactions-table__status--wait {
+					background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAASFBMVEUAAAB+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn6vZcj7AAAAF3RSTlMAw/MX0EYGppZ94t3atphxYzgDjy3TEI9OHJYAAADoSURBVDjLhZNZksIwDEQlOd6yETxA3/+mgwkFnaSC/Wk9qbXK9wU/62g26uyDHJ9LBgwaow6AJbczh2yYFvdmlwmWw8ZdoVf+uCqUgtx6XPaSF/S3j39v/piUt9699RVkJwK65pEp/k4lvwRM2Y2DqVWRBM6/67gWJJFgk5wBMlkQj+UcWOBlhjsHHGbRQc4BGVRG/QXoKBZ/AdGaAEkUV1agOJKgJB+IpQIl4kFJUpl/T6LrnvbEZdZGEXG/Vzs3qraaCABp0+p1WEykzbAO4855O+7WwjRXrrW0zbVvH0779NrH2zz/fygjDFEc689cAAAAAElFTkSuQmCC);
+				}
+				.transactions-table__status--sended {
+					background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAASFBMVEUAAABCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxnFx++wAAAAF3RSTlMAw/MX0EYGppZ94t3atphxYzgDjy3TEI9OHJYAAADtSURBVDjLhZNJAsMgCEUBo8ZMTdOB+9+0phPfZAErhafMZJLiwpPIxEtMdJbQi+rIOfOoKn04mFMRndfwZddZpaTmOStfUXGtCvjkPuiFDnLR4f5/P0ikk0QZwtc/q9mRUP7EUfD/1kt5OxAGZSlwYdmd9Arx31R7yGW/JJkbe0PMkijqCvb8eGQgVo20aAD71nUbEEEX4vF3e1Y7dR1V4vnTjUzTP4ctbFSB/WB5TCSZUCqAksUFzAUC4AKCRMCCtDQRgDStUABgoazUAGCprVkGYLNO7Y6xbbc3MO7IeUPrjr2/OP7q+cvrrv8LrtkMURPMZgcAAAAASUVORK5CYII=);
+				}
+				.transactions-table__copy {
+					display:inline-block;
+					vertical-align:middle;
+					visibility:hidden;
+					width:30px; height:30px;
+					background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAAZlBMVEUAAACgqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLaRzEHpAAAAIXRSTlMA7PG2hT/3E4teWFEgBdHMvq5JLqd4OSYbB8eYMyrg3g8kbNchAAAArUlEQVQY01XQ2xIDEQwGYGGx1C72fGyb93/J0ho0N2a+Ef6E1GVaQDf80Xjg4al4VHT32EiioS+0Wmy6cE6YSfof7awYRy+3gEq4bOrJG1iIppSX55YWmdSCpm/fXN0k0DgjJFonfPEGGXdohxTVouex0czKJIpRw61lKzPGqAb85eZsJ7Yd2S/ZosoG/bdHY2+yIdsjUah25KgmnaK03tAg4JwERCr1sEIwXssHoxQJ3m+3AdUAAAAASUVORK5CYII=) no-repeat center center;
+					margin-right:45px;
+				}
+					.transactions__table tr:hover .transactions-table__copy {
+						visibility:visible;
+						animation:fadein .5s;
+					}
+				.transactions-table__summ {
+					display:inline-block;
+					vertical-align:middle;
+				}
+					.transactions-table__summ-value {
+						font-family:Smedium;
+					}
+					.transactions-table__summ-ok {
+						background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAATlBMVEUAAACCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmQXvBvUAAAAGXRSTlMAtPdw5iaACdLEu389Lxvy6OPLpqSQdFpDuaUTjwAAAG1JREFUGNNlj1cOwCAMQyGsLugevv9F25CKVuL92VGcWDHOa2u1d+rFEDJkRGsUdJ7jh3n2qai1BTnli95UB/RfQhf2nGKBhs0mHGxbNtpgaE4nxODpkoZ4kRyW0GmIIzK9nC2Qqx6rXq/KVfVvENQPMeqSTYwAAAAASUVORK5CYII=) no-repeat 0 center;
+						padding-left:24px;
+					}
+					.transactions-table__summ-wait {
+						background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAALVBMVEUAAADSrzbSrzbSrzbSrzbSrzbSrzbSrzbSrzbSrzbSrzbSrzbSrzbSrzbSrzasbVCwAAAADnRSTlMAcPd/5rMmtXho256OLeOmyDcAAABlSURBVAjXY2BgSA5xNWMAAka9d+8eCQAZde8e6b17DhR49+6x3bt3AgxJ7949lHv3To3BDsJ4zBAHYTxl8IMwnoAZN+cAGUCpVx3dQCmgYhB4DNQOBmpAA8FAAGQFEDxHWAp3BgAEi0yD8NCOywAAAABJRU5ErkJggg==) no-repeat 0 center;
+						padding-left:24px;
+					}
+/*  </transactions>  */
+
 /*  <footer>  */
 .footer {
 	position:relative;
