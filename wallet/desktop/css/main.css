@@ -1531,6 +1531,254 @@ a {
 					}
 /*  </transactions>  */
 
+/*  <trade>  */
+.trade__search-head {
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:-o-flex;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	height:60px;
+	border-bottom:1px solid #ececec;
+	padding:0 24px 0 35px;
+}
+	.trade-nav__item {
+		color:#8c8c8c;
+		font-size:1.7rem;
+		margin-right:30px;
+	}
+	.trade-nav__item--active {
+		color:#000;
+		font-family:Smedium;
+	}
+	.trade-search__btns {
+		text-align:right;
+	}
+	.btn.trade__add-btn {
+		vertical-align:middle;
+		height:36px;
+		line-height:36px;
+		padding:0 24px;
+	}
+	.trade__search-settings {
+		display:inline-block;
+		vertical-align:middle;
+		width:36px; height:36px;
+		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAS1BMVEUAAACzu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8iYAJsLAAAAGHRSTlMA0JNBosI3Eg67Cffx7OaWr6vk48SukhV5KoymAAAAnUlEQVQY023RCQrEIAwF0Ghcqm3t3vn3P+k4UQcLfSBI0Bi+1CzjqKk35KUAK9tKWyY/AbMntvX4DSSjkCmTgFvuBjwE6eB2dHZHwqBjpBQ/0m9lXqXvEIkWNSHbKJPqpBZCwb8io3gvaju361GGm2X+8tDFfJWHSGzPkYRL6CQZ3p94OL2EBBwtkAPQNbrgWnQu/JOONeS6pdfv+AJYTxKzDD81CAAAAABJRU5ErkJggg==) no-repeat center center;
+		margin-left:10px;
+	}
+.trade__search-filter {
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:-o-flex;
+	display:flex;
+	justify-content:space-between;
+	padding:32px 24px 36px 32px;
+}
+	.trade-search__filter-block {
+		flex:1;
+		margin-right:11px;
+	}
+	.trade-search__filter-block:last-child {
+		flex:0;
+		margin-right:0;
+	}
+		.trade-search__select .jq-selectbox__select {
+			height:39px;
+			line-height:37px;
+			border:1px solid #dfdfdf;
+			border-radius:1px;
+		}
+			.trade-search__select.jq-selectbox .placeholder {
+				color:#000;
+			}
+			.trade-search__select .jq-selectbox__trigger-arrow {
+				right:12px;
+				width:10px; height:5px;
+				-webkit-background-size:cover;
+				background-size:cover;
+			}
+		.trade-search__input.input-text {
+			height:39px;
+		}
+			.trade-search__input.input-text::placeholder {
+				color:#000;
+				opacity:1;
+			}
+		.trade-search__btn {
+			height:39px;
+			font-family:Ssemi;
+			background-color:#fff;
+			border:1px solid #dfdfdf;
+			border-radius:1px;
+			padding:0 30px;
+		}
+.trade__search-system {
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:-o-flex;
+	display:flex;
+	justify-content:space-between;
+	margin:0 25px 10px 35px;
+}
+	.trade__search-title {
+		flex:1;
+		color:#676b73;
+		margin:0;
+	}
+	.trade__search-sort {
+		margin-right:45px;
+	}
+		.trade-search__sort-link {
+			color:#848484;
+			margin:0 7px;
+		}
+		.trade-search__sort-link--active {
+			color:#000;
+		}
+		.trade-search__check {
+			position:absolute;
+			left:-9999px;
+		}
+			.trade-search__check + label {
+				display:inline-block;
+				position:relative;
+				padding-left:22px;
+			}
+				.trade-search__check + label::before {
+					position:absolute;
+					top:50%; left:0;
+					width:15px; height:15px;
+					background-color:#fff;
+					border:1px solid #d0d3e4;
+					content:'';
+					transform:translateY(-50%);
+					cursor:pointer;
+				}
+			.trade-search__check + label::after {
+				display:none;
+				cursor:pointer;
+			}
+				.trade-search__check:checked + label::after {
+					display:block;
+					animation:fadein .2s;
+					position:absolute;
+					top:50%; left:3px;
+					width:9px; height:9px;
+					background-color:#498dea;
+					content:'';
+					transform:translateY(-50%);
+				}
+.trade-search__table {
+	width:100%;
+}
+	.trade-search__table tr {
+		border-bottom:1px solid #eee;
+	}
+	.trade-search__table tr:last-child {
+		border-bottom:0;
+	}
+		.trade-search__table th {
+			font-weight:normal;
+			font-family:Smedium;
+			text-align:left;
+			padding:9px 10px 5px;
+		}
+		.trade-search__table th:first-child {
+			padding:9px 10px 5px 32px;
+		}
+		.trade-search__table th:last-child {
+			padding:9px 22px 5px 10px;
+		}
+		.trade-search__table td {
+			padding:14px 10px;
+		}
+		.trade-search__table td:first-child {
+			padding:14px 10px 14px 32px;
+		}
+		.trade-search__table td:last-child {
+			text-align:right;
+			padding:14px 22px 14px 10px;
+		}
+		.trade-search__table td:nth-child(3) {
+			font-family:Ssemi;
+		}
+			.seller__buy-info {
+				position:relative;
+				padding-left:50px;
+			}
+				.seller__buy-avatar {
+					display:block;
+					position:absolute;
+					top:5px; left:0;
+					width:36px;
+					border-radius:2px;
+				}
+				.seller__buy-name {
+					position:relative;
+					color:#000;
+					font-size:1.5rem;
+					font-family:Ssemi;
+					margin:0 0 5px;
+				}
+				.seller__buy-name--online, .seller__buy-name--offline {
+					padding-left:13px;
+				}
+					.seller__buy-name--online::before, .seller__buy-name--offline::before {
+						position:absolute;
+						top:7px; left:0;
+						width:8px; height:8px;
+						border-radius:50%;
+						content:'';
+					}
+					.seller__buy-name--online::before {
+						background-color:#6f932a;
+					}
+					.seller__buy-name--offline::before {
+						background-color:#c7a930;
+					}
+					.seller__buy--reliable::after {
+						display:inline-block;
+						vertical-align:middle;
+						width:13px; height:10px;
+						background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAKCAMAAABYMCT2AAAARVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADc6ur3AAAAFnRSTlMACOeXPg3iqKOeUEQ489fVv5KNMTAoxh+gAwAAAExJREFUCNdljVcOgDAMQzNKB3v6/kclEaggNT/xs2Sbvuu0/0HCWoETloP4eiBjPolUBqeCONrbIIFYIQ4uYtjNeuMFkxm1OsOz7ewNoIcCU3ikCFcAAAAASUVORK5CYII=);
+						margin:-4px 0 0 6px;
+						content:'';
+					}
+				.seller__buy-status {
+					color:#000;
+					font-size:1.3rem;
+					margin:0;
+				}
+					.seller__buy-status--reliable {
+						color:#51730f;
+						font-family:Ssemi;
+					}
+					.seller__buy-status--nonreliable {
+						font-family:Ssemi;
+					}
+				.seller__buy--cost {
+					color:#257af2;
+					font-family:Ssemi;
+				}
+				.seller__buy-btn {
+					display:inline-block;
+					width:101px;
+					line-height:28px;
+					text-align:center;
+					background-color:#ededed;
+					border-radius:2px;
+				}
+					a:hover.seller__buy-btn {
+						text-decoration:none;
+						background-color:#ddd;
+					}
+/*  </trade>  */
+
 /*  <footer>  */
 .footer {
 	position:relative;
@@ -2144,6 +2392,10 @@ a.btn {
 	display:inline-block;
 	line-height:44px;
 }
+	a:hover.btn, .btn:hover {
+		text-decoration:none;
+		background-color:#4482da;
+	}
 [data-tooltip] {
 	position:relative;
 }
