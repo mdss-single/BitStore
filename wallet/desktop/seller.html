@@ -123,81 +123,59 @@
 			</nav>
 			<div class="quick-stat">
 				<p class="quick-stat__title">За последние сутки</p>
-				<p class="quick-stat__value"><span class="quick-stat__value--count">50 120</span> переводов</p>
-				<p class="quick-stat__value"><span class="quick-stat__value--count">12 450</span> сделок</p>
+				<p class="quick-stat__value"><span class="quick-stat__value--count">50 120</span>  переводов</p>
+				<p class="quick-stat__value"><span class="quick-stat__value--count">12 450</span>  сделок</p>
 			</div>
 		</aside>
 		<div class="content">
 			<div class="wallet__white">
-				<div class="trade__search-head">
-					<div class="trade__nav">
-						<a href="#" class="trade-nav__item trade-nav__item--active">Быстрая покупка</a>
-						<a href="#" class="trade-nav__item">Быстря продажа</a>
-						<a href="#" class="trade-nav__item">Мои сделки</a>
-						<a href="#" class="trade-nav__item">Избранное</a>
-					</div>
-					<div class="trade-search__btns">
-						<a href="#" class="btn trade__add-btn">Разместить объявление</a>
-						<a href="#" class="trade__search-settings"></a>
-					</div>
+				<div class="seller__info">
+					<div class="seller__avatar"><img src="i/avatar.jpg" alt="BitcoinStore2000"></div>
+					<p class="seller__name">BitcoinStore2000 <span class="seller__status seller__status--reliable">Надёжный</span></p>
+					<p class="seller__timeout">Был в сети 3 часа назад</p>
+					<a href="#" class="seller__abuse">Пожаловаться</a>
+					<a href="#" class="seller__favorite">Добавить в избранное</a>
 				</div>
-				<div class="trade__search-filter">
-					<div class="trade-search__filter-block">
-						<select name="" id="" class="trade-search__select select" data-placeholder="Хочу купить">
-							<option></option>
-							<option value="">RUB</option>
-							<option value="">BTC</option>
-						</select>
-					</div>
-					<div class="trade-search__filter-block">
-						<input type="tel" name="" id="" class="trade-search__input input-text" placeholder="Сумма">
-					</div>
-					<div class="trade-search__filter-block">
-						<select name="" id="" class="trade-search__select select" data-placeholder="Оплачиваю валютой">
-							<option></option>
-							<option value="">RUB</option>
-							<option value="">BTC</option>
-						</select>
-					</div>
-					<div class="trade-search__filter-block">
-						<select name="" id="" class="trade-search__select select" data-placeholder="Страна покупки">
-							<option></option>
-							<option value="">Россия</option>
-							<option value="">Украина</option>
-						</select>
-					</div>
-					<div class="trade-search__filter-block">
-						<select name="" id="" class="trade-search__select select" data-placeholder="Способ оплаты">
-							<option></option>
-							<option value="">Рубль</option>
-							<option value="">Доллар</option>
-							<option value="">Евро</option>
-							<option value="">Гривна</option>
-						</select>
-					</div>
-					<div class="trade-search__filter-block">
-						<button class="trade-search__btn">Найти</button>
-					</div>
-				</div>
-			</div>
-			<div class="trade__search-system">
-				<p class="trade__search-title">Найдено 12577 торгов</p>
-				<div class="trade__search-sort">
-					Сортировка:
-					<a href="#" class="trade-search__sort-link trade-search__sort-link--active">по новизне</a>
-					<a href="#" class="trade-search__sort-link">по цене</a>
-				</div>
-				<div class="trade-search__sort-verification">
-					<input name="" id="tradePage" class="trade-search__check" type="checkbox">
-					<label for="tradePage">сначала верифицированные</label>
+				<div class="seller__total">
+					<p class="seller__total-title">Сводная информация</p>
+					<table class="seller__total-table">
+						<tr>
+							<td>Объём сделок</td>
+							<td>138456.00 RUB / 1.0024124 BTC</td>
+						</tr>
+						<tr>
+							<td>Количество сделок</td>
+							<td>203</td>
+						</tr>
+						<tr>
+							<td>Среднее время ответа на сообщение</td>
+							<td>20 минут</td>
+						</tr>
+						<tr>
+							<td>Среднее время подтверждения оплаты</td>
+							<td>12 минут</td>
+						</tr>
+						<tr>
+							<td>Верификация в системе</td>
+							<td>Верифицирован</td>
+						</tr>
+						<tr>
+							<td>Зарегистрирован</td>
+							<td>4 года назад</td>
+						</tr>
+						<tr>
+							<td>Язык</td>
+							<td>Русский</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 			<div class="wallet__white">
+				<p class="seller__title">Купить биткоины у BitcoinStore2000</p>
 				<table class="trade-search__table">
 					<tr>
 						<th>Продавец</th>
 						<th>Способ оплаты</th>
-						<th>Покупка</th>
 						<th>Цена</th>
 						<th>Ограничения</th>
 						<th></th>
@@ -211,10 +189,34 @@
 							</div>
 						</td>
 						<td>Банковский перевод внутри страны</td>
-						<td><span class="seller__buy--currency">BTC</span></td>
 						<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
 						<td>50 - 5000 USD</td>
 						<td><a href="#" class="seller__buy-btn">Купить</a></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="seller__buy-info">
+								<a href="#"><img src="i/avatar.jpg" alt="BitcoinStore2000" class="seller__buy-avatar"></a>
+								<p class="seller__buy-name seller__buy-name--offline"><a href="#">BitcoinStore2000</a></p>
+								<p class="seller__buy-status">Новичок 9.3 (210 сделок)</p>
+							</div>
+						</td>
+						<td>Банковский перевод внутри страны</td>
+						<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
+						<td>50 - 5000 USD</td>
+						<td><a href="#" class="seller__buy-btn">Купить</a></td>
+					</tr>
+				</table>
+			</div>
+			<div class="wallet__white">
+				<p class="seller__title">Продать биткоины BitcoinStore2000</p>
+				<table class="trade-search__table">
+					<tr>
+						<th>Продавец</th>
+						<th>Способ оплаты</th>
+						<th>Цена</th>
+						<th>Ограничения</th>
+						<th></th>
 					</tr>
 					<tr>
 						<td>
@@ -225,12 +227,86 @@
 							</div>
 						</td>
 						<td>Банковский перевод внутри страны</td>
-						<td><span class="seller__buy--currency">BTC</span></td>
+						<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
+						<td>50 - 5000 USD</td>
+						<td><a href="#" class="seller__buy-btn">Купить</a></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="seller__buy-info">
+								<a href="#"><img src="i/avatar.jpg" alt="BitcoinStore2000" class="seller__buy-avatar"></a>
+								<p class="seller__buy-name seller__buy-name--offline"><a href="#">BitcoinStore2000</a></p>
+								<p class="seller__buy-status">Новичок 9.3 (210 сделок)</p>
+							</div>
+						</td>
+						<td>Банковский перевод внутри страны</td>
 						<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
 						<td>50 - 5000 USD</td>
 						<td><a href="#" class="seller__buy-btn">Купить</a></td>
 					</tr>
 				</table>
+			</div>
+			<div class="wallet__white">
+				<div class="seller__rating">
+					<div class="seller__rating-info">
+						<p class="seller__rating-title">Рейтинг: 8.7</p>
+						<div class="seller__rating-main">
+							<span class="seller__rating-item seller__rating-item--full"></span>
+							<span class="seller__rating-item seller__rating-item--full"></span>
+							<span class="seller__rating-item seller__rating-item--full"></span>
+							<span class="seller__rating-item seller__rating-item--full"></span>
+							<span class="seller__rating-item"></span>
+						</div>
+						<p class="seller__rating-count">3 отзыва</p>
+					</div>
+					<div class="reviews__sort">
+						<a href="#" class="reviews__sort-link reviews__sort-link--active">Все отзывы</a>
+						<a href="#" class="reviews__sort-link">по новизне</a>
+						<a href="#" class="reviews__sort-link">хорошие</a>
+						<a href="#" class="reviews__sort-link">плохие</a>
+					</div>
+					<div class="review__items">
+						<div class="review__item">
+							<time datetime="2017-02-28T22:21" class="review-item__date">28 февраля 2017 г. 22:21</time>
+							<div class="review-item__rating">
+								<span class="review-item__rating-item review-item__rating-item--full"></span>
+								<span class="review-item__rating-item review-item__rating-item--full"></span>
+								<span class="review-item__rating-item review-item__rating-item--full"></span>
+								<span class="review-item__rating-item review-item__rating-item--full"></span>
+								<span class="review-item__rating-item"></span>
+							</div>
+							<div class="review-item__text">
+								 +++ отличный продавец
+							</div>
+						</div>
+						<div class="review__item">
+							<time datetime="2017-02-28T22:21" class="review-item__date">28 февраля 2017 г. 22:21</time>
+							<div class="review-item__rating">
+								<span class="review-item__rating-item review-item__rating-item--full"></span>
+								<span class="review-item__rating-item review-item__rating-item--full"></span>
+								<span class="review-item__rating-item review-item__rating-item--full"></span>
+								<span class="review-item__rating-item review-item__rating-item--full"></span>
+								<span class="review-item__rating-item"></span>
+							</div>
+							<div class="review-item__text">
+								 +++ отличный продавец
+							</div>
+						</div>
+						<div class="review__item">
+							<time datetime="2017-02-28T22:21" class="review-item__date">28 февраля 2017 г. 22:21</time>
+							<div class="review-item__rating">
+								<span class="review-item__rating-item review-item__rating-item--full"></span>
+								<span class="review-item__rating-item review-item__rating-item--full"></span>
+								<span class="review-item__rating-item review-item__rating-item--full"></span>
+								<span class="review-item__rating-item review-item__rating-item--full"></span>
+								<span class="review-item__rating-item"></span>
+							</div>
+							<div class="review-item__text">
+								 +++ отличный продавец
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>

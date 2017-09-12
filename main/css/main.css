@@ -1976,7 +1976,7 @@ a.btn {
 		padding:28px 20px;
 		margin:25px 0 0;
 	}
-		.seller__title:first-of-type {
+		.seller:first-of-type .seller__title {
 			display:none;
 		}
 		.seller__info {
@@ -2043,7 +2043,7 @@ a.btn {
 			background-color:#fff;
 			border-bottom:0;
 			padding:0;
-			margin:30px 0 15px;
+			margin:0 0 15px;
 		}
 		.seller__total {
 			position:relative;
