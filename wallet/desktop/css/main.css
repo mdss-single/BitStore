@@ -1705,9 +1705,6 @@ a {
 			text-align:right;
 			padding:14px 22px 14px 10px;
 		}
-		.trade-search__table td:nth-child(3) {
-			font-family:Ssemi;
-		}
 			.seller__buy-info {
 				position:relative;
 				padding-left:50px;
@@ -1762,6 +1759,9 @@ a {
 					.seller__buy-status--nonreliable {
 						font-family:Ssemi;
 					}
+				.seller__buy--currency {
+					font-family:Ssemi;
+				}
 				.seller__buy--cost {
 					color:#257af2;
 					font-family:Ssemi;
@@ -1782,6 +1782,9 @@ a {
 	color:#8d8d8d;
 }
 .trade-fav__trades {
+	color:#1964cc;
+}
+.trade-history__number {
 	color:#1964cc;
 }
 /*  </trade>  */
@@ -2465,4 +2468,7 @@ a.btn {
 	.switcher:checked + label::before {
 		transform:translateX(26px);
 	}
+.nomargin {
+	margin:0;
+}
 /*  </elements>  */
