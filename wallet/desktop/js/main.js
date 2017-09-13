@@ -70,11 +70,12 @@
 		$('.send').find('input[autofocus]').focus();
 		$('.select').trigger('refresh');
 	});
-	$('body').on('click', '.send__close, .modal__bg, .js-send-close, .get__close, .twostep__cancel', function(e) {
+	$('body').on('click', '.send__close, .modal__bg, .js-send-close, .get__close, .twostep__cancel, .verification__close', function(e) {
 		$('.modal__bg').remove();
 		$('.send--active').removeClass('send--active');
 		$('.get--active').removeClass('get--active');
 		$('.twostep--active').removeClass('twostep--active');
+		$('.verification--active').removeClass('verification--active');
 		e.preventDefault();
 	});
 
@@ -172,6 +173,35 @@
 	$('.js-partner-link').click(function(e) {
 		$('.partner__link-link').toggleClass('partner__link-link--active');
 		e.preventDefault();
+	});
+
+	$('.js-adplace-currency').styler({
+		onFormStyled: function() {
+			var newVal = $('.js-adplace-currency').find('li.selected').attr('data-adplacevalue');
+			var curVal = $('.js-adplace-currency').find('.jq-selectbox__select-text').text();
+			$('.js-adplace-currency').find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
+		},
+		onSelectClosed: function() {
+			var newVal = $(this).find('li.selected').attr('data-adplacevalue');
+			var curVal = $(this).find('.jq-selectbox__select-text').text();
+			$(this).find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
+		}
+	});
+
+	$('.deal-chat__file').change(function() {
+		$('label[for="' + this.id + '"]').text($(this).val());
+	});
+
+	$('.verification-code__text').keyup(function() {
+		if (this.value.length == this.maxLength) {
+			$(this).next().focus();
+		}
+	});
+
+	$('.js-verification-btn').click(function(e) {
+		e.preventDefault();
+		$('.verification').addClass('verification--active');
+		$('body').prepend('<div class="modal__bg"></div>');
 	});
 
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
