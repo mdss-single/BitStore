@@ -1575,6 +1575,9 @@ a {
 		font-size:1.7rem;
 		margin-right:30px;
 	}
+	.trade-nav__item:last-child {
+		margin-right:0;
+	}
 	.trade-nav__item--active {
 		color:#000;
 		font-family:Smedium;
@@ -2346,6 +2349,9 @@ a {
 			color:#3175d2;
 			cursor:pointer;
 		}
+			.deal-chat__file + label:hover {
+				text-decoration:underline;
+			}
 	.deal-chat__text {
 		flex:1;
 		border-left:1px solid #f2f2f2;
