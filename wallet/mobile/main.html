@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>BitStore</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+</head>
+<body>
+	<div class="menu">
+		<a href="#" class="menu__logo"><img src="i/logo.png" alt=""></a>
+		<a href="#" class="menu__login">Войти</a>
+		<nav class="menu__nav">
+			<a href="#" class="menu-nav__item menu-nav__item--wallet">Кошелёк</a>
+			<a href="#" class="menu-nav__item menu-nav__item--buy">Купить криптовалюту</a>
+			<a href="#" class="menu-nav__item menu-nav__item--courses">Курсы</a>
+			<a href="#" class="menu-nav__item menu-nav__item--help">Помощь</a>
+		</nav>
+		<a href="#" class="menu__link-full">Полная версия</a>
+		<a href="#" class="menu__link-appstore">Приложение для iPhone</a>
+		<span class="menu__copyright">BitStore 2017</span>
+	</div>
+	<header class="header">
+		<a href="#" class="burger"><span></span></a>
+		<a href="#" class="logo"><img src="i/logo.png" alt=""></a>
+		<div class="header__wallets js-wallets-list">
+			<div class="header__wallet">
+				<p class="header__wallet-title">Основной Bitcoin счёт</p>
+				<p class="header__wallet-value">92.534435 BTC</p>
+			</div>
+			<div class="header__wallet">
+				<p class="header__wallet-title">Основной Litecoin счёт</p>
+				<p class="header__wallet-value">92.534435 LTC</p>
+			</div>
+			<div class="header__wallet">
+				<p class="header__wallet-title">Основной Bitcoin счёт</p>
+				<p class="header__wallet-value">92.534435 BTC</p>
+			</div>
+			<div class="header__wallet">
+				<p class="header__wallet-title">Основной Bitcoin счёт</p>
+				<p class="header__wallet-value">92.534435 BTC</p>
+			</div>
+		</div>
+		<div class="header__btns">
+			<a href="#" class="btn">Отправить</a>
+			<a href="#" class="btn">Получить</a>
+		</div>
+	</header>
+	<main class="main">
+		<div class="home-wallets">
+			<p class="home-wallets-title">Мои кошельки</p>
+			<a href="#" class="home-wallets__add js-wallet-add"></a>
+			<div class="home-wallets__list">
+				<div class="home-wallets__item">
+					<div class="home-wallets__item-prefix">BTC</div>
+					<p class="home-wallets__item-value">92.534435 BTC</p>
+					<p class="home-wallets__item-descr">Основной счёт Bitcoin</p>
+					<i class="home-wallets__item-icon home-wallets__item-icon--wait"></i>
+					<a href="#" class="home-wallets__item-link"></a>
+				</div>
+				<div class="home-wallets__item">
+					<div class="home-wallets__item-prefix">LTC</div>
+					<p class="home-wallets__item-value">2.534435 LTC</p>
+					<p class="home-wallets__item-descr">Litecoin</p>
+					<a href="#" class="home-wallets__item-link"></a>
+				</div>
+				<div class="home-wallets__item">
+					<div class="home-wallets__item-prefix">LTC</div>
+					<p class="home-wallets__item-value">2.534435 LTC</p>
+					<p class="home-wallets__item-descr">Litecoin</p>
+					<a href="#" class="home-wallets__item-link"></a>
+				</div>
+				<div class="home-wallets__item">
+					<div class="home-wallets__item-prefix">LTC</div>
+					<p class="home-wallets__item-value">2.534435 LTC</p>
+					<p class="home-wallets__item-descr">Litecoin</p>
+					<a href="#" class="home-wallets__item-link"></a>
+				</div>
+			</div>
+			<div class="home-wallets__show-all home-wallets__show-all--active js-home-wallets-show">
+				<span>Показать скрытые пошельки</span>
+				<span class="js-home-wallets-counter">1</span>
+			</div>
+		</div>
+		<div class="home-rates">
+			<table class="home-rates__table">
+				<tr>
+					<th>Курсы</th>
+					<th>USD</th>
+					<th>Рубли</th>
+				</tr>
+				<tr>
+					<td>Bitcoin</td>
+					<td>2060 <span class="home-rates__change home-rates__change--down">-50</span></td>
+					<td>150477 <span class="home-rates__change home-rates__change--down">-3560</span></td>
+				</tr>
+				<tr>
+					<td>Litecoin</td>
+					<td>236 <span class="home-rates__change home-rates__change--up">+5</span></td>
+					<td>3020 <span class="home-rates__change home-rates__change--up">+160</span></td>
+				</tr>
+			</table>
+		</div>
+		<div class="home-events">
+			<p class="home-events__title">Последние действия</p>
+			<a href="#" class="home-event__all">Все</a>
+			<div class="home-events__item">
+				<div class="home-events__item-name">Отправление 92.523456 BTC</div>
+				<div class="home-events__item-time">20 минут назад</div>
+			</div>
+			<div class="home-events__item">
+				<div class="home-events__item-name">Изменён пароль</div>
+				<div class="home-events__item-time">Час назад</div>
+			</div>
+			<div class="home-events__item">
+				<div class="home-events__item-name">Добавлен BTC кошелёк</div>
+				<div class="home-events__item-time">21.07.2017</div>
+			</div>
+		</div>
+	</main>
+	<div class="add-wallet">
+		<p class="add-wallet__title">Добавить кошелёк</p>
+		<input type="text" name="" id="" class="input-text" placeholder="Название кошелька">
+		<div class="add-wallet__currency">
+			<p class="add-wallet__currency-title">Выберите валюту</p>
+			<input type="radio" name="a" id="a1" class="add-wallet__radio" checked>
+			<label for="a1">BTC</label>
+			<input type="radio" name="a" id="a2" class="add-wallet__radio">
+			<label for="a2">LTC</label>
+			<input type="radio" name="a" id="a3" class="add-wallet__radio">
+			<label for="a3">NVC</label>
+			<input type="radio" name="a" id="a4" class="add-wallet__radio">
+			<label for="a4">ETH</label>
+			<input type="radio" name="a" id="a5" class="add-wallet__radio">
+			<label for="a5">DSH</label>
+		</div>
+		<div class="add-wallet__btns">
+			<button class="btn add-wallet__btn-cancel">Отменить</button>
+			<button class="btn">Добавить</button>
+		</div>
+	</div>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

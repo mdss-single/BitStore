@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>BitStore</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+</head>
+<body>
+	<div class="menu">
+		<a href="#" class="menu__logo"><img src="i/logo.png" alt=""></a>
+		<a href="#" class="menu__login">Войти</a>
+		<nav class="menu__nav">
+			<a href="#" class="menu-nav__item menu-nav__item--wallet">Кошелёк</a>
+			<a href="#" class="menu-nav__item menu-nav__item--buy">Купить криптовалюту</a>
+			<a href="#" class="menu-nav__item menu-nav__item--courses">Курсы</a>
+			<a href="#" class="menu-nav__item menu-nav__item--help">Помощь</a>
+		</nav>
+		<a href="#" class="menu__link-full">Полная версия</a>
+		<a href="#" class="menu__link-appstore">Приложение для iPhone</a>
+		<span class="menu__copyright">BitStore 2017</span>
+	</div>
+	<header class="header">
+		<a href="#" class="header__back"></a>
+		<p class="header__title">Получить</p>
+	</header>
+	<main class="main">
+		<div class="get-wallet">
+			<p class="get-wallet__title">Получить на кошелёк</p>
+			<select name="" id="" class="select">
+				<option value="">Bitcoin 0.3281713 BTC</option>
+				<option value="">Litecoin 0.3281713 BTC</option>
+			</select>
+		</div>
+		<div class="get-wallet__address">
+			<p class="get-wallet__address-title">Чтобы получить перевод на свой кошелёк — отправьте его адрес отправителю</p>
+			<a href="#" class="get-wallet__address-item get-wallet__address-item--copy js-wallet-copy" data-clipboard-text="123123">Скопировать адрес</a>
+			<a href="#" class="get-wallet__address-item get-wallet__address-item--send">Отправить адрес</a>
+		</div>
+		<a href="#" class="get-wallet__qr-link js-send-qr">Отправить QR код</a>
+		<div class="get-wallet__qr">
+			<p class="get-wallet__qr-title">QR код вашего кошелька</p>
+			<div class="get-wallet__qr-main">
+				<img src="i/qr.png" alt="qr">
+			</div>
+			<div class="get-wallet__qr-btns">
+				<a href="#" class="get-wallet__qr-btn js-wallet-copy" data-clipboard-text="<img src=&quot;http://bitstore.app/i/qr.png&quot;>">Копировать</a>
+				<a href="#" class="get-wallet__qr-btn">Поделиться</a>
+			</div>
+		</div>
+	</main>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

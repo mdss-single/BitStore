@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>BitStore</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+</head>
+<body>
+	<div class="menu">
+		<a href="#" class="menu__logo"><img src="i/logo.png" alt=""></a>
+		<a href="#" class="menu__login">Войти</a>
+		<nav class="menu__nav">
+			<a href="#" class="menu-nav__item menu-nav__item--wallet">Кошелёк</a>
+			<a href="#" class="menu-nav__item menu-nav__item--buy">Купить криптовалюту</a>
+			<a href="#" class="menu-nav__item menu-nav__item--courses">Курсы</a>
+			<a href="#" class="menu-nav__item menu-nav__item--help">Помощь</a>
+		</nav>
+		<a href="#" class="menu__link-full">Полная версия</a>
+		<a href="#" class="menu__link-appstore">Приложение для iPhone</a>
+		<span class="menu__copyright">BitStore 2017</span>
+	</div>
+	<header class="header">
+		<a href="#" class="header__back"></a>
+		<p class="header__title">Отправить</p>
+	</header>
+	<main class="main">
+		<div class="send-wallet__block">
+			<p class="send-wallet__block-title">От кого</p>
+			<select name="" id="" class="select">
+				<option value="">Мой BTC</option>
+				<option value="">Мой LTC</option>
+			</select>
+		</div>
+		<div class="send-wallet__block">
+			<p class="send-wallet__block-title">Кому</p>
+			<input type="text" name="" id="" class="send-wallet__input-text" placeholder="Вставьте или сканируйте адрес">
+			<a href="#" class="send-wallet__qr-link"></a>
+		</div>
+		<div class="send-wallet__block">
+			<p class="send-wallet__block-title">Сумма</p>
+			<div class="send-wallet__summ">
+				<input type="text" name="" id="" class="send-wallet__summ-text" placeholder="0">
+				<input type="text" name="" id="" class="send-wallet__summ-text" placeholder="0">
+			</div>
+		</div>
+		<div class="send-wallet__block">
+			<p class="send-wallet__block-title">Сумма</p>
+			<div class="send-wallet__priority">
+				<select name="" id="" class="select">
+					<option value="">Обычный</option>
+					<option value="">Высокий</option>
+				</select>
+				<span class="send-wallet__priority-tax">0.002334 BTC (2300 RUR)</span>
+			</div>
+		</div>
+		<div class="send-wallet__total">
+			0.002334 BTC (2300 RUR)
+		</div>
+		<p class="send-wallet__notice">Включая комиссию</p>
+		<button class="btn send-wallet__btn">Отправить</button>
+	</main>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
