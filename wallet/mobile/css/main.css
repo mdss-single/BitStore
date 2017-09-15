@@ -277,6 +277,14 @@ a {
 		line-height:60px;
 		margin:0;
 	}
+	.header__copy {
+		position:absolute;
+		top:15px; right:20px;
+		width:18px; height:25px;
+		background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAyBAMAAADGoWQtAAAAG1BMVEUAAAD////////////////////////////////rTT7CAAAACHRSTlMAGNeyyda7FvdO3ccAAAB1SURBVCjPY4AB9gIGdCAaiC7CqNEkgCYk1NGhiK5IowlNmVCTRKOGIqoiRY4GIRRlQB5HAyOyMhCHo4EBWRkLkM3RAJRxgAuxOTKAhBhEEpAMAwsBAdWFOkDAACLEDOZgFULXOOKFmA2QhGBgVAhTCB1gEwIAOYhWROe/7lYAAAAASUVORK5CYII=);
+		-webkit-background-size:cover;
+		background-size:cover;
+	}
 /*  </header>  */
 
 /*  <homepage>  */
