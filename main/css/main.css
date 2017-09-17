@@ -123,6 +123,10 @@ a {
 		padding:0 45px;
 		transform:translateX(-50%);
 	}
+		a:hover.menu__login {
+			text-decoration:none;
+			background-color:#4174cd;
+		}
 	.menu__nav {
 		background-color:#fff;
 		padding:20px 20px 10px 32px;
@@ -256,6 +260,7 @@ a {
 				margin:0;
 			}
 			.header__description-text {
+				line-height:2.5rem;
 				margin:20px 0 25px;
 			}
 				.header__description-text p {
@@ -296,7 +301,8 @@ a {
 			margin:0 0 8px;
 		}
 		.general-info__item-descr {
-			color:#595858;
+			color:#5f5f5f;
+			line-height:2.4rem;
 		}
 /*  </general-info>  */
 
@@ -315,16 +321,24 @@ a {
 			margin:0 0 15px;
 		}
 		.about-crypto__text-descr {
+			line-height:2.4rem;
 			margin:0 0 15px;
 		}
+			.about-crypto__text-descr p {
+				margin:0;
+			}
 		.about-crypto__text-link {
 			display:inline-block;
 			font-family:Smedium;
 			line-height:42px;
-			background-color:#72a5ec;
+			background-color:#639ff2;
 			border-radius:4px;
 			padding:0 45px;
 		}
+			a:hover.about-crypto__text-link {
+				text-decoration:none;
+				background-color:#7daef1;
+			}
 	.about-crypto__video {
 		display:none;
 	}
@@ -442,13 +456,22 @@ a {
 		padding-top:70px;
 		padding-bottom:90px;
 	}
+		.footer__logo {
+			display:none;
+		}
 		.copyright {
 			position:absolute;
 			bottom:15px; left:15px;
 			color:#c6c6c6;
 		}
+		.copyright:last-of-type {
+			display:none;
+		}
 		.footer__nav {
 			margin:0 0 20px;
+		}
+		.footer__nav:last-of-type {
+			display:none;
 		}
 			.footer-nav__item {
 				display:block;
@@ -496,8 +519,37 @@ a {
 				transform:translateY(-50%);
 			}
 		.footer__language--ru {
-			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAgBAMAAACfnVd0AAAAKlBMVEXX2uDPQi3h4eL/PQA+UbXf4OL/PADV1+DPQi3g4eH/PQA/UbXg4eL/PQAyL8FyAAAAC3RSTlPV1Z+f6urqxsaSkly90qIAAAA2SURBVCjPY5ikhA1oMsScwQaODnnxAgZsgJ3Bezc2sGXYijcKYgMSDLl3sYFrQ158sTE2YAUAuTH9uxFxqZoAAAAASUVORK5CYII=);
+			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAWCAMAAACWh252AAAAM1BMVEV9gbmASYP09PT/SlUAAAD/S1X19fX/S1X29vb/TFX19fX/S1X39/f/TVVBR5v19fX/S1VHYFqUAAAADnRSTlPAwHh4AP3V1W9vY2MeHmxRhCgAAABBSURBVCjP1cq3EQAgDATBB4S3/VdLBegzzbDpHWQU/1SGoG1VQ9KHhE1YDNQi/hgcgUNYDFnvGT1qPXbIrOGpTrkcdCJ5mexPJwAAAABJRU5ErkJggg==);
 		}
+		.footer__language-list {
+			display:none;
+			position:absolute;
+			top:-100px; left:15px;
+			z-index:10;
+			background-color:#fff;
+			padding:5px 0;
+			border-radius:2px;
+			box-shadow:0 3px 7px rgba(0, 0, 0, .28);
+		}
+		.footer__language-list--active {
+			display:block;
+			animation:fadein .5s;
+		}
+			.footer__language-item {
+				display:block;
+				background-repeat:no-repeat;
+				background-position:15px center;
+				padding:8px 25px 8px 60px;
+			}
+			.footer__language-item--en {
+				background-image:url(../i/flags/us.png);
+			}
+			.footer__language-item--ru {
+				background-image:url(../i/flags/ru.png);
+			}
+			.footer__language-item--cn {
+				background-image:url(../i/flags/cn.png);
+			}
 /*  </footer>  */
 
 /*  <auth>  */
@@ -611,8 +663,9 @@ a {
 			border-bottom:1px solid #fff;
 			padding-bottom:6px;
 			margin-right:27px;
+			transition:all .2s;
 		}
-		.career__tab-item--active {
+		.career__tab-item--active, .career__tab-item:hover {
 			color:#000;
 			border-color:#208afe;
 		}
@@ -779,12 +832,16 @@ a {
 			display:inline-block;
 			width:auto;
 			line-height:28px;
-			background-color:#c7c7c7;
+			background-color:#e7e7e7;
 			border-radius:3px;
 			padding:0 45px;
 			margin-top:35px;
 			margin-bottom:48px;
 		}
+			a:hover.news__detail-link {
+				text-decoration:none;
+				background-color:#ddd;
+			}
 /*  </news>  */
 
 /*  <about-us>  */
@@ -1468,6 +1525,10 @@ a.btn {
 	.btn {
 		font-size:1.8rem;
 	}
+		a:hover.btn, .btn:hover {
+			text-decoration:none;
+			background-color:#3984ea;
+		}
 	.input-text, .textarea {
 		height:36px;
 		color:#000;
@@ -1562,7 +1623,7 @@ a.btn {
 				padding:0 19px;
 			}
 		.header__main {
-			margin:30px 0 60px;
+			margin:30px 0 100px;
 		}
 			.header__description {
 				margin-top:20px;
@@ -1572,7 +1633,7 @@ a.btn {
 				}
 				.header__description-text {
 					font-size:1.7rem;
-					margin:25px 0 30px;
+					margin:25px 0 50px;
 				}
 			.header__register-descr {
 				display:inline-block;
@@ -1580,14 +1641,12 @@ a.btn {
 				margin-left:20px;
 			}
 			.header__promo {
-				display:block;
+				display:inline-block;
 				color:#fff;
 				font-size:1.7rem;
 				font-family:Smedium;
 				line-height:34px;
-				background:url(../i/icons/icon-play.png) no-repeat 0 center;
-				padding-left:48px;
-				margin-top:40px;
+				margin-left:28px;
 			}
 	.general-info {
 		display:-webkit-flex;
@@ -1635,14 +1694,22 @@ a.btn {
 				margin:0 0 35px;
 			}
 		.about-crypto__video {
-			display:block;
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:-ms-flex;
+			display:-o-flex;
+			display:flex;
 			position:absolute;
 			top:0; right:0; bottom:0; left:55%;
 			background-color:#e6e6e6;
 		}
-			.about-crypto__video iframe {
+			.about-crypto__video-wrap {
 				height:100%;
+				margin-left:auto;
 			}
+				.about-crypto__video iframe {
+					height:100%;
+				}
 	.crypto-counter {
 		display:-webkit-flex;
 		display:-moz-flex;
@@ -1693,45 +1760,74 @@ a.btn {
 			font-size:3rem;
 		}
 	.footer .full {
-		line-height:90px;
-		padding-top:0;
-		padding-bottom:0;
+		height:400px;
 	}
+		.footer__logo {
+			display:block;
+			position:absolute;
+			top:56px; left:15px;
+		}
 		.copyright {
-			display:inline-block;
+			display:none;
 			position:static;
 			color:#b1b1b1;
-			margin:0 20px 0 0;
+			line-height:2.6rem;
 		}
+		.copyright+.copyright {
+			display:block;
+			position:absolute;
+			top:105px; left:15px;
+		}
+			.copyright p {
+				margin:0;
+			}
+			.copyright p:last-child {
+				margin-top:30px;
+			}
 		.footer__nav {
-			display:inline-block;
+			position:absolute;
+			top:56px; left:535px;
 			margin:0;
 		}
+		.footer__nav:last-of-type {
+			display:block;
+			left:705px;
+		}
 			.footer-nav__item {
-				display:inline;
-				color:#838991;
+				color:#333;
 				margin-right:18px;
 			}
 		.footer__social {
-			display:inline-block;
-			margin-left:20px;
+			position:absolute;
+			top:320px; left:535px;
 		}
 			.social__item {
 				vertical-align:middle;
-				width:24px; height:24px;
-				margin:-2px 4px 0 0;
+				margin-right:15px;
 			}
 		.footer__language {
-			top:50%; right:15px; left:auto;
+			top:320px;
 			background-color:#f4f4f4;
-			background-position:10px center;
+			-webkit-background-size:32px auto;
+			background-size:32px auto;
+			background-position:18px center;
 			border-radius:2px;
-			padding:10px 27px 10px 44px;
-			transform:translateY(-50%);
+			padding:12px 36px 12px 56px;
 		}
 			.footer__language::before {
-				right:10px;
+				right:20px;
 			}
+			a:hover.footer__language {
+				text-decoration:none;
+				background-color:#d7d7d7;
+			}
+			a:hover.footer__language-item {
+				text-decoration:none;
+				background-color:#f4f4f4;
+			}
+		.footer__language-list {
+			top:185px;
+		}
 	.auth {
 		position:fixed;
 		top:0; right:0; left:0; bottom:0;
@@ -1798,6 +1894,9 @@ a.btn {
 			padding-bottom:10px;
 			margin:0 28px;
 		}
+			.career__tab-item:hover {
+				cursor:pointer;
+			}
 	.career__tab-content--active {
 		font-size:1.7rem;
 	}
@@ -1811,7 +1910,7 @@ a.btn {
 		display:-o-flex;
 		display:flex;
 		justify-content:space-between;
-		margin:40px 0 85px;
+		margin:60px 0 75px;
 	}
 		.newscomer__plus {
 			width:48%;
@@ -1826,6 +1925,7 @@ a.btn {
 			}
 	.newcomer__cost {
 		text-align:left;
+		margin-top:-50px;
 	}
 		.newcomer__cost .full {
 			background-position:100px bottom;
@@ -1853,6 +1953,10 @@ a.btn {
 			color:#92b0d9;
 			margin-left:10px;
 		}
+			a:hover.news__sort-link {
+				color:#fff;
+				text-decoration:none;
+			}
 		.news__sort-link--current {
 			color:#fff;
 		}
@@ -1866,9 +1970,9 @@ a.btn {
 			content:'';
 		}
 		.news__item-pic {
-			float:right;
+			float:left;
 			width:auto;
-			margin:10px 0 0 150px;
+			margin:3px 30px 0 0;
 		}
 		.news__item-name {
 			font-size:2rem;
@@ -1879,7 +1983,12 @@ a.btn {
 		}
 		.news__item-link {
 			display:inline-block;
+			background-color:#e7e7e7;
 		}
+			a:hover.news__item-link {
+				text-decoration:none;
+				background-color:#ddd;
+			}
 	.about-us__block {
 		margin-top:80px;
 	}
@@ -1924,17 +2033,42 @@ a.btn {
 		}
 	.about-us__enjoy {
 		padding-top:30px;
-		padding-bottom:70px;
+		padding-bottom:50px;
 	}
 		.about-us__enjoy-descr {
 			line-height:2.4rem;
 			margin-top:-5px;
-			margin-bottom:20px;
+			margin-bottom:40px;
 		}
 		.about-us__enjoy-plus {
 			font-size:1.7rem;
+			font-family:Sregular;
 			line-height:2;
 		}
+	.reviews__descr {
+		line-height:2rem;
+		margin-top:20px;
+	}
+		.reviews__descr p:last-child {
+			margin-top:15px;
+		}
+		.reviews__descr a {
+			display:inline-block;
+			position:relative;
+		}
+			.reviews__descr a:hover {
+				text-decoration:none;
+			}
+			.reviews__descr a::before {
+				position:absolute;
+				right:0; bottom:0; left:0;
+				height:1px;
+				background-color:#bfbfbf;
+				content:'';
+			}
+				.reviews__descr a:hover::before {
+					display:none;
+				}
 	.reviews__press-title {
 		font-size:1.7rem;
 		margin:40px 0 15px;
@@ -1943,8 +2077,8 @@ a.btn {
 		margin-top:0;
 	}
 	.reviews__main {
-		padding-top:35px;
-		margin-top:30px;
+		padding-top:50px;
+		margin-top:60px;
 	}
 		.reviews__title {
 			font-size:2rem;
@@ -1964,8 +2098,13 @@ a.btn {
 			padding:25px 0 0;
 		}
 		.review__add {
+			background-color:#e7e7e7;
 			margin-top:15px;
 		}
+			a:hover.review__add {
+				text-decoration:none;
+				background-color:#ddd;
+			}
 	.bg--gray {
 		background-color:#f9f9f9;
 	}
@@ -2148,6 +2287,9 @@ a.btn {
 						.seller__buy-status--nonreliable {
 							font-family:Ssemi;
 						}
+					.seller__buy-currency {
+						font-family:Ssemi;
+					}
 					.seller__buy--cost {
 						color:#265ea9;
 						font-family:Ssemi;
@@ -2354,24 +2496,36 @@ a.btn {
 				display:none;
 			}
 			.trade-page__filter-block {
-				flex-grow:1;
+				flex:1;
 				position:relative;
 				border-top:0;
 				padding:0;
-				margin-right:6px;
+				margin-right:12px;
 			}
-			.trade-page__filter-block:last-child {
-				flex-grow:0;
+			.trade-page__filter-block:last-of-type {
+				flex:0;
 				text-align:left;
 				background-color:#fff;
 				padding:0;
-				margin:0;
+				margin-right:0;
+				margin-left:12px;
+			}
+			.trade-page__filter-block:nth-child(4) {
+				margin-right:0;
 			}
 				.trade-page__select {
 					width:100%;
 				}
+				.trade-page__filter-block:nth-child(4) .trade-page__select {
+					width:220px;
+				}
+				.trade-page__select.trade-page__select-currency {
+					position:absolute;
+					top:1px; right:1px; bottom:1px;
+					width:110px;
+				}
 					.trade-page__select .jq-selectbox__select {
-						height:38px;
+						height:36px;
 						color:#000;
 						font:inherit;
 						line-height:36px;
@@ -2383,6 +2537,12 @@ a.btn {
 						box-shadow:none;
 						transition:all .2s;
 					}
+					.trade-page__select.trade-page__select-currency .jq-selectbox__select, .jq-selectbox.focused.trade-page__select-currency .jq-selectbox__select {
+						border:0;
+					}
+						.trade-page__select.trade-page__select-currency .jq-selectbox__select:hover {
+							border:0;
+						}
 						.trade-page__select .jq-selectbox__select:hover {
 							border-color:#208afe;
 							background-image:none;
@@ -2428,26 +2588,18 @@ a.btn {
 					border:1px solid #ececec;
 					border-radius:1px;
 					font-size:1.5rem;
-					padding:0 30px 0 13px;
-				}
-				.trade-page__filter-block:nth-child(1) .trade-page__select {
-					width:140px;
-				}
-				.trade-page__filter-block:nth-child(3) .trade-page__select {
-					width:190px;
-				}
-				.trade-page__filter-block:nth-child(4) .trade-page__select {
-					width:160px;
-				}
-				.trade-page__filter-block:nth-child(5) .trade-page__select {
-					width:160px;
-				}
-				.trade-page__input {
-					width:130px;
 					padding:0 13px;
+					transition:all .2s;
 				}
+					.trade-page__filter-block:nth-child(2) .trade-page__input {
+						width:220px;
+						padding:0 120px 0 13px;
+					}
+					.trade-page__input:focus {
+						border-color:#5794bf;
+					}
 				.trade-page__btn {
-					height:38px;
+					height:36px;
 					color:#000;
 					font-family:Ssemi;
 					background-color:#fff;
@@ -2535,11 +2687,15 @@ a.btn {
 			padding-top:46px;
 			margin-bottom:58px;
 		}
+			.trade-page__enjoy .btn {
+				color:#000;
+				background-color:#e7e7e7;
+			}
+				.trade-page__enjoy a:hover.btn {
+					background-color:#ddd;
+				}
 		.trade-page__download {
 			display:block;
-		}
-		.trade-page__enjoy-block {
-			display:none;
 		}
 }
 @media screen and (min-width:1200px) {
