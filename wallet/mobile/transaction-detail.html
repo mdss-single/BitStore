@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>BitStore</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+</head>
+<body>
+	<div class="menu">
+		<a href="#" class="menu__logo"><img src="i/logo.png" alt=""></a>
+		<a href="#" class="menu__login">Войти</a>
+		<nav class="menu__nav">
+			<a href="#" class="menu-nav__item menu-nav__item--wallet">Кошелёк</a>
+			<a href="#" class="menu-nav__item menu-nav__item--buy">Купить криптовалюту</a>
+			<a href="#" class="menu-nav__item menu-nav__item--courses">Курсы</a>
+			<a href="#" class="menu-nav__item menu-nav__item--help">Помощь</a>
+		</nav>
+		<a href="#" class="menu__link-full">Полная версия</a>
+		<a href="#" class="menu__link-appstore">Приложение для iPhone</a>
+		<span class="menu__copyright">BitStore 2017</span>
+	</div>
+	<header class="header">
+		<a href="#" class="header__back"></a>
+		<p class="header__title">Информация о транзакции</p>
+		<a href="#" class="header__copy js-wallet-copy" data-clipboard-text="124321"></a>
+	</header>
+	<main class="main">
+		<div class="transaction-detail">
+			<p class="transaction-detail__title">Статус</p>
+			<div class="transaction-detail__block">
+				<div class="transaction-detail__status transaction-detail__status--wait">2 подтверждения</div>
+			</div>
+			<p class="transaction-detail__title">Информация</p>
+			<div class="transaction-detail__block">
+				<table class="transaction-detail__table">
+					<tr>
+						<td>От кого</td>
+						<td>dg34w433333334234234234</td>
+						<td><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
+					</tr>
+					<tr>
+						<td>Кому</td>
+						<td>dg34w433333334234234234</td>
+						<td><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
+					</tr>
+					<tr>
+						<td>Сумма</td>
+						<td colspan="2">2.992844 BTC</td>
+					</tr>
+					<tr>
+						<td>Дата и время</td>
+						<td colspan="2">27.07.2017, 16:35</td>
+					</tr>
+					<tr>
+						<td>Хэш</td>
+						<td colspan="2"><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</main>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

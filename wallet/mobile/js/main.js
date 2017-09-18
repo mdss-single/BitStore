@@ -73,6 +73,14 @@
 		$(this).next().addClass('get-wallet__qr--active');
 	});
 
+	$('.help__section-title').click(function() {
+		$(this).addClass('help__section-title--active').siblings().removeClass('help__section-title--active').closest('.help').find('.help__section').removeClass('help__section--active');
+		$(this).next().toggleClass('help__section--active');
+	});
+	$('.help-section__question').click(function() {
+		$(this).next().toggleClass('help-section__answer--active');
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>BitStore</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+</head>
+<body>
+	<div class="menu">
+		<a href="#" class="menu__logo"><img src="i/logo.png" alt=""></a>
+		<a href="#" class="menu__login">Войти</a>
+		<nav class="menu__nav">
+			<a href="#" class="menu-nav__item menu-nav__item--wallet">Кошелёк</a>
+			<a href="#" class="menu-nav__item menu-nav__item--buy">Купить криптовалюту</a>
+			<a href="#" class="menu-nav__item menu-nav__item--courses">Курсы</a>
+			<a href="#" class="menu-nav__item menu-nav__item--help">Помощь</a>
+		</nav>
+		<a href="#" class="menu__link-full">Полная версия</a>
+		<a href="#" class="menu__link-appstore">Приложение для iPhone</a>
+		<span class="menu__copyright">BitStore 2017</span>
+	</div>
+	<header class="header">
+		<a href="#" class="header__back"></a>
+		<p class="header__title">Разместить объявление</p>
+	</header>
+	<main class="main">
+		<div class="add-block">
+			<p class="add-block__title">Валюта сделки</p>
+			<select name="" id="" class="select">
+				<option class="select__placeholder" selected>Выберите кошелёк</option>
+				<option value="">BTC wallet</option>
+				<option value="">LTC wallet</option>
+			</select>
+		</div>
+		<div class="add-block">
+			<p class="add-block__title">Тип сделки</p>
+			<div class="add-block__row">
+				<input type="checkbox" name="" id="a1" class="checkbox"><label for="a1">Продать за наличный рассчёт</label>
+			</div>
+			<div class="add-block__row">
+				<input type="checkbox" name="" id="a2" class="checkbox"><label for="a2">Купить за наличный рассчёт</label>
+			</div>
+			<div class="add-block__row">
+				<input type="checkbox" name="" id="a3" class="checkbox"><label for="a3">Продать онлайн</label>
+			</div>
+			<div class="add-block__row">
+				<input type="checkbox" name="" id="a4" class="checkbox"><label for="a4">Купить онлайн</label>
+			</div>
+		</div>
+		<div class="add-block">
+			<p class="add-block__title">Регион сделки</p>
+			<a href="#" class="add-block__location-link"></a>
+			<div class="add-block__row">
+				<input type="text" name="" id="b1" class="input-text" required>
+				<label for="b1">Страна</label>
+			</div>
+			<div class="add-block__row">
+				<input type="text" name="" id="b2" class="input-text" required>
+				<label for="b2">Город</label>
+			</div>
+		</div>
+		<div class="add-block">
+			<p class="add-block__title">Способ оплаты</p>
+			<select name="" id="" class="select">
+				<option class="select__placeholder" selected>Каким способ вы будете оплачивать сделку?</option>
+				<option value="">BTC wallet</option>
+				<option value="">LTC wallet</option>
+			</select>
+		</div>
+		<div class="add-block">
+			<p class="add-block__title">Лимиты сделки</p>
+			<div class="add-block__limits">
+				<div class="add-block__limit">
+					<input type="tel" name="" id="c1" class="input-text" required>
+					<label for="c1">От</label>
+				</div>
+				<div class="add-block__limit">
+					<input type="tel" name="" id="c2" class="input-text" required>
+					<label for="c2">До</label>
+				</div>
+			</div>
+		</div>
+		<div class="add-block">
+			<div class="add-block__title add-block__title--course">
+				Привязка курса к бирже
+				<a href="#">указать вручную</a>
+			</div>
+			<div class="add-block__row">
+				<input type="text" name="" id="d1" class="input-text" required>
+				<label for="d1">Валюта</label>
+			</div>
+			<div class="add-block__row">
+				<input type="text" name="" id="d2" class="input-text" required>
+				<label for="d2">Биржа</label>
+			</div>
+			<div class="add-block__row add-block__row--course">
+				<input type="tel" name="" id="d3" class="input-text" required>
+				<label for="d3">Наценка</label>
+			</div>
+		</div>
+		<div class="add-block">
+			<p class="add-block__title">Ваш комментарий к сделке</p>
+			<div class="add-block__row">
+				<input type="text" name="" id="e1" class="input-text" required>
+				<label for="e1">Укажите комментарий</label>
+			</div>
+		</div>
+		<div class="add-block__accept">
+			<input type="checkbox" name="" id="addAccept" class="checkbox"><label for="addAccept">Размещая объявление, я принимаю <a href="#">Пользовательское соглашение</a> сервиса</label>
+		</div>
+		<div class="add-block__btn">
+			<button class="btn btn--fullwidth">Разместить объявление</button>
+		</div>
+	</main>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
