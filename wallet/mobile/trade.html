@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>BitStore</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+</head>
+<body>
+	<div class="menu">
+		<a href="#" class="menu__logo"><img src="i/logo.png" alt=""></a>
+		<a href="#" class="menu__login">Войти</a>
+		<nav class="menu__nav">
+			<a href="#" class="menu-nav__item menu-nav__item--wallet">Кошелёк</a>
+			<a href="#" class="menu-nav__item menu-nav__item--buy">Купить криптовалюту</a>
+			<a href="#" class="menu-nav__item menu-nav__item--courses">Курсы</a>
+			<a href="#" class="menu-nav__item menu-nav__item--help">Помощь</a>
+		</nav>
+		<a href="#" class="menu__link-full">Полная версия</a>
+		<a href="#" class="menu__link-appstore">Приложение для iPhone</a>
+		<span class="menu__copyright">BitStore 2017</span>
+	</div>
+	<header class="header">
+		<a href="#" class="burger"><span></span></a>
+		<a href="#" class="logo"><img src="i/logo.png" alt=""></a>
+		<a href="#" class="header__settings"></a>
+		<div class="header__wallets js-wallets-list">
+			<div class="header__wallet">
+				<p class="header__wallet-title">Основной Bitcoin счёт</p>
+				<p class="header__wallet-value">92.534435 BTC</p>
+			</div>
+			<div class="header__wallet">
+				<p class="header__wallet-title">Основной Litecoin счёт</p>
+				<p class="header__wallet-value">92.534435 LTC</p>
+			</div>
+			<div class="header__wallet">
+				<p class="header__wallet-title">Основной Bitcoin счёт</p>
+				<p class="header__wallet-value">92.534435 BTC</p>
+			</div>
+			<div class="header__wallet">
+				<p class="header__wallet-title">Основной Bitcoin счёт</p>
+				<p class="header__wallet-value">92.534435 BTC</p>
+			</div>
+		</div>
+		<div class="header__btns header__btns--single">
+			<a href="#" class="btn">Разместить объявление</a>
+		</div>
+		<div class="header__trade-sort">
+			<a href="#" class="header__trade-item header__trade-item--active">Купить</a>
+			<a href="#" class="header__trade-item">Продать</a>
+			<a href="#" class="header__trade-item">Мои сделки</a>
+		</div>
+	</header>
+	<!--
+	<header class="header header--unauth">
+		<a href="#" class="burger"><span></span></a>
+		<a href="#" class="logo"><img src="i/logo.png" alt=""></a>
+		<div class="header__unauth-text">
+			Покупайте и продавайте криптовалюту прямо в своём кошелке
+		</div>
+		<div class="header__btns header__btns--single">
+			<a href="#" class="btn">Разместить объявление</a>
+		</div>
+		<div class="header__trade-sort">
+			<a href="#" class="header__trade-item header__trade-item--active">Купить</a>
+			<a href="#" class="header__trade-item">Продать</a>
+		</div>
+	</header>
+	-->
+	<main class="main">
+		<div class="send-wallet__block">
+			<p class="send-wallet__block-title">Хочу купить</p>
+			<select name="" id="" class="select">
+				<option value="">BTC</option>
+				<option value="">LTC</option>
+			</select>
+		</div>
+		<div class="send-wallet__block">
+			<p class="send-wallet__block-title">Сумму</p>
+			<div class="send-wallet__summ">
+				<input name="" id="" class="send-wallet__summ-text" placeholder="0" type="text">
+				<input name="" id="" class="send-wallet__summ-text" placeholder="0" type="text">
+			</div>
+		</div>
+		<div class="send-wallet__block">
+			<p class="send-wallet__block-title">Оплачиваю валютой</p>
+			<select name="" id="" class="select">
+				<option value="">Рубли</option>
+				<option value="">Доллары</option>
+			</select>
+		</div>
+		<div class="send-wallet__block">
+			<p class="send-wallet__block-title">Страна покупки</p>
+			<select name="" id="" class="select">
+				<option value="">Россия</option>
+				<option value="">Украина</option>
+			</select>
+		</div>
+		<div class="send-wallet__block">
+			<p class="send-wallet__block-title">Способ оплаты</p>
+			<select name="" id="" class="select">
+				<option value="">QIWI</option>
+				<option value="">Банковская карта</option>
+			</select>
+		</div>
+		<div class="add-block__accept">
+			<input name="" id="addAccept" class="checkbox" type="checkbox"><label for="addAccept">Только верифицированные пользователи</label>
+		</div>
+		<div class="form__row">
+			<button class="btn btn--fullwidth">Показать 12000 объявлений</button>
+		</div>
+		<div class="user__block user-block--deal form__row">
+			<table class="user-deal__table">
+				<tbody><tr>
+					<th>Продавец</th>
+					<th>Принимаю</th>
+					<th>Стоимость</th>
+				</tr>
+				<tr>
+					<td>
+						<p><a href="#">BitocinShop</a></p>
+						<p><a href="#">(100+ сделок)</a></p>
+						<p><a href="#">Новичок, 9.5</a></p>
+					</td>
+					<td>Банковский перевод внутри страны</td>
+					<td>
+						<p>1600$</p>
+						<p>160000RUR</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><a href="#">Hoooper</a></p>
+						<p><a href="#">(20+ сделок)</a></p>
+						<p><a href="#">Новичок, 9.5</a></p>
+					</td>
+					<td>QIWI, Paypal</td>
+					<td>
+						<p>1650$</p>
+						<p>160000RUR</p>
+					</td>
+				</tr>
+			</tbody></table>
+		</div>
+	</main>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -81,6 +81,12 @@
 		$(this).next().toggleClass('help-section__answer--active');
 	});
 
+	$('.js-favorite-select').click(function(e) {
+		e.preventDefault();
+		$(this).toggleClass('favorite__select--selected');
+		$('.favorite__item').toggleClass('favorite__item--active');
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
