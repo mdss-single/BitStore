@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>BitStore</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+</head>
+<body>
+	<div class="menu">
+		<a href="#" class="menu__logo"><img src="i/logo.png" alt=""></a>
+		<a href="#" class="menu__login">Войти</a>
+		<nav class="menu__nav">
+			<a href="#" class="menu-nav__item menu-nav__item--wallet">Кошелёк</a>
+			<a href="#" class="menu-nav__item menu-nav__item--buy">Купить криптовалюту</a>
+			<a href="#" class="menu-nav__item menu-nav__item--courses">Курсы</a>
+			<a href="#" class="menu-nav__item menu-nav__item--help">Помощь</a>
+		</nav>
+		<a href="#" class="menu__link-full">Полная версия</a>
+		<a href="#" class="menu__link-appstore">Приложение для iPhone</a>
+		<span class="menu__copyright">BitStore 2017</span>
+	</div>
+	<header class="header">
+		<a href="#" class="header__back"></a>
+		<p class="header__title">Поиск сделки</p>
+	</header>
+	<main class="main">
+		<div class="transaction__filter">
+			<input type="text" name="" id="" class="history__search-input" placeholder="Пользователь, сумма или дата">
+			<p class="transaction__filter-title">Период</p>
+			<div class="transaction__filter-wrap">
+				<div class="transaction__filter-item">
+					<input type="checkbox" name="" id="a4" checked><label for="a4">Сутки</label>
+				</div>
+				<div class="transaction__filter-item">
+					<input type="checkbox" name="" id="a5"><label for="a5">Неделя</label>
+				</div>
+				<div class="transaction__filter-item">
+					<input type="checkbox" name="" id="a6"><label for="a6">Месяц</label>
+				</div>
+				<div class="transaction__filter-item">
+					<input type="checkbox" name="" id="a7"><label for="a7">Год</label>
+				</div>
+				<div class="transaction__filter-item">
+					<p class="transaction-filter__period-link">Указать период</p>
+				</div>
+			</div>
+		</div>
+		<div class="transaction__filter">
+			<button class="btn btn--fullwidth">Показать</button>
+		</div>
+	</main>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
