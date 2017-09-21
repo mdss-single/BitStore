@@ -8,6 +8,7 @@
 		$('.header__notice-link').removeClass('header__notice-link--active');
 		$('.header__notice--active').removeClass('header__notice--active');
 		$('.get-wallets__list--active').removeClass('get-wallets__list--active');
+		$('.footer__language-list--active').removeClass('footer__language-list--active');
 	});
 	
 	$('.js-header-notice').click(function(e) {
@@ -20,9 +21,20 @@
 		e.stopPropagation();
 	});
 
-	new Clipboard('.js-wallet-copy');
+	var clipboard = new Clipboard('.js-wallet-copy');
 	$('.js-wallet-copy').click(function(e) {
 		e.preventDefault();
+	});
+	$('[data-clipboard-text]').hover(function() {
+		var thisPos = $(this).position();
+		$('<span class="clipboard-tooltip" style="top:'+thisPos.top+'px;left:'+thisPos.left+'px">Копировать адрес</span>').insertBefore(this);
+		if ($(window).width() < thisPos.left+160) $('.clipboard-tooltip').addClass('clipboard-tooltip--left');
+	}, function() {
+		$('.clipboard-tooltip').remove();
+	});
+	clipboard.on('success', function(e) {
+		$('.clipboard-tooltip').text('Скопировано в буфер');
+		e.clearSelection();
 	});
 
 	$('.js-wallet-menu').on('click', function(e) {
@@ -40,13 +52,13 @@
 	});
 	var storage = localStorage.getItem('hello');
 	if (!storage) {
-		$('body').prepend('<div class="hello__bg"></div>');
-		$('.hello').addClass('hello--active');
+		$('body').prepend('<div class="modal__bg"></div>');
+		$('.hello').addClass('modal--active');
 		helloCarousel.flickity('resize');
 	}
 	$('.js-hello-skip').click(function() {
-		$('.hello__bg').remove();
-		$('.hello').removeClass('hello--active');
+		$('.modal__bg').remove();
+		$('.hello').removeClass('modal--active');
 		localStorage.setItem('hello', true);
 	});
 	$('.js-hello-next').click(function() {
@@ -66,17 +78,14 @@
 
 	$('.js-wallet-send').click(function() {
 		$('body').prepend('<div class="modal__bg"></div>');
-		$('.send').addClass('send--active');
+		$('.send').addClass('modal--active');
 		$('.send').find('input[autofocus]').focus();
 		$('.select').trigger('refresh');
 	});
-	$('body').on('click', '.send__close, .modal__bg, .js-send-close, .get__close, .twostep__cancel, .verification__close', function(e) {
-		$('.modal__bg').remove();
-		$('.send--active').removeClass('send--active');
-		$('.get--active').removeClass('get--active');
-		$('.twostep--active').removeClass('twostep--active');
-		$('.verification--active').removeClass('verification--active');
+	$('body').on('click', '.modal__close, .modal__bg, .js-modal-close', function(e) {
 		e.preventDefault();
+		$('.modal__bg').remove();
+		$('.modal--active').removeClass('modal--active');
 	});
 
 	$('.send__google-input').keyup(function() {
@@ -97,7 +106,7 @@
 
 	$('.js-wallet-get').click(function() {
 		$('body').prepend('<div class="modal__bg"></div>');
-		$('.get').addClass('get--active');
+		$('.get').addClass('modal--active');
 	});
 	$('.get-wallets__current').click(function(e) {
 		e.preventDefault();
@@ -139,9 +148,9 @@
 	});
 
 	$('.js-twostep-link').click(function(e) {
-		$('body').prepend('<div class="modal__bg"></div>');
-		$('.twostep').addClass('twostep--active');
 		e.preventDefault();
+		$('body').prepend('<div class="modal__bg"></div>');
+		$('.twostep').addClass('modal--active');
 	});
 
 	$('.twostep__tabs').each(function(i) {
@@ -171,8 +180,8 @@
 	});
 
 	$('.js-partner-link').click(function(e) {
-		$('.partner__link-link').toggleClass('partner__link-link--active');
 		e.preventDefault();
+		$('.partner__link-link').toggleClass('partner__link-link--active');
 	});
 
 	$('.js-adplace-currency').styler({
@@ -200,8 +209,17 @@
 
 	$('.js-verification-btn').click(function(e) {
 		e.preventDefault();
-		$('.verification').addClass('verification--active');
 		$('body').prepend('<div class="modal__bg"></div>');
+		$('.verification').addClass('modal--active');
+	});
+
+	$('.js-footer-language').click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).next().toggleClass('footer__language-list--active');
+	});
+	$('.footer__language-list').click(function(e) {
+		e.stopPropagation();
 	});
 
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')

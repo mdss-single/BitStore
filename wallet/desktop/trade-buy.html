@@ -236,15 +236,29 @@
 	</main>
 	<footer class="footer">
 		<p class="copyright">© BitStore 2017</p>
+		<a href="#" class="language language--ru js-footer-language">Ru</a>
+		<div class="footer__language-list">
+			<a href="#" class="footer__language-item footer__language-item--en">English</a>
+			<a href="#" class="footer__language-item footer__language-item--ru">Русский</a>
+			<a href="#" class="footer__language-item footer__language-item--cn">中国</a>
+		</div>
+		<nav class="footer__nav">
+			<a href="#" class="footer__nav-item">Приложение</a>
+			<a href="#" class="footer__nav-item">О компании</a>
+			<a href="#" class="footer__nav-item">Безопасность</a>
+			<a href="#" class="footer__nav-item">Партнёрам</a>
+			<a href="#" class="footer__nav-item">Карьера</a>
+			<a href="#" class="footer__nav-item">Поддержка</a>
+			<a href="#" class="footer__nav-item">Отзывы</a>
+		</nav>
 		<nav class="footer__nav">
 			<a href="#" class="footer__nav-item">Комиссии</a>
-			<a href="#" class="footer__nav-item">Условия обслуживания</a>
-			<a href="#" class="footer__nav-item">Безопасность</a>
-			<a href="#" class="footer__nav-item">Партнерская программа</a>
+			<a href="#" class="footer__nav-item">Пользовательское соглашение</a>
+			<a href="#" class="footer__nav-item">Соглашение о конфиденциальности</a>
+			<a href="#" class="footer__nav-item">Политика AML/KIC</a>
 		</nav>
-		<a href="#" class="language language--ru">Ru</a>
 	</footer>
-	<div class="hello">
+	<div class="modal hello">
 		<div class="hello__wrap js-hello">
 			<div class="hello__item">
 				<p class="hello__title">Добро пожаловать на BitStore</p>
@@ -275,8 +289,8 @@
 		<a href="#" class="hello__skip js-hello-skip">Пропустить</a>
 		<a href="#" class="hello__next js-hello-next">Далее</a>
 	</div>
-	<div class="send">
-		<a href="#" class="send__close"></a>
+	<div class="modal send">
+		<a href="#" class="modal__close"></a>
 		<p class="send__title">Отправить</p>
 		<div class="send__settings">
 			<div class="send__settings-row">
@@ -327,7 +341,7 @@
 		</div>
 		<button class="btn send__btn">Отправить</button>
 		<!--
-		<a href="#" class="send__close"></a>
+		<a href="#" class="modal__close"></a>
 		<p class="send__title">Подтверждение</p>
 		<div class="send__confirm">
 			<div class="send__confirm-info">
@@ -352,7 +366,7 @@
 		<button class="btn send__btn">Подтвердить</button>
 		-->
 		<!--
-		<a href="#" class="send__close"></a>
+		<a href="#" class="modal__close"></a>
 		<p class="send__title">Подтверждение</p>
 		<div class="send__google">
 			<p class="send__google-title">Укажите в поле ниже 6-значный код, полученный из приложения Google Authenticator</p>
@@ -369,7 +383,7 @@
 		<a href="#" class="send__google-cancel">Назад</a>
 		-->
 		<!--
-		<a href="#" class="send__close"></a>
+		<a href="#" class="modal__close"></a>
 		<p class="send__title">Подтверждение</p>
 		<div class="send__google">
 			<p class="send__google-title">Укажите 4-х значный пин-код.</p>
@@ -384,7 +398,7 @@
 		<a href="#" class="send__google-cancel">Назад</a>
 		-->
 		<!--
-		<a href="#" class="send__close"></a>
+		<a href="#" class="modal__close"></a>
 		<p class="send__title">Подтверждение</p>
 		<div class="send__google">
 			<p class="send__google-title">Укажите 4-х код, отправленный в СМС на номер: *********55</p>
@@ -405,13 +419,13 @@
 			<div class="send__success-links">
 				<p><a href="#">На страницу статуса</a></p>
 				<p><a href="#">Скопировать хэш</a></p>
-				<p><a href="#" class="js-send-close">Закрыть окно</a></p>
+				<p><a href="#" class="js-modal-close">Закрыть окно</a></p>
 			</div>
 		</div>
 		-->
 	</div>
-	<div class="get">
-		<a href="#" class="get__close"></a>
+	<div class="modal get">
+		<a href="#" class="modal__close"></a>
 		<p class="get__title">Получить</p>
 		<p class="get__descr">Чтобы получить перевод на свой кошёк — отправьте его адрес отправителю</p>
 		<div class="get__wallets">
