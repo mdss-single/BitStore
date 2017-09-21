@@ -93,6 +93,28 @@
 		}
 	});
 
+	$('.js-chat-link').click(function(e) {
+		e.preventDefault();
+		$('.deal-chat').addClass('deal-chat--active');
+		$('html').css('overflow-y','hidden');
+	});
+	$('.js-chat-close').click(function(e) {
+		e.preventDefault();
+		$('.deal-chat').removeClass('deal-chat--active');
+		$('html').css('overflow-y','auto');
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
+$(document).one('focus.autoExpand', 'textarea.autoExpand', function(){
+	var savedValue = this.value;
+	this.value = '';
+	this.baseScrollHeight = this.scrollHeight;
+	this.value = savedValue;
+}).on('input.autoExpand', 'textarea.autoExpand', function(){
+	var minRows = this.getAttribute('data-min-rows')|0, rows;
+	this.rows = minRows;
+	rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);
+	this.rows = minRows + rows;
+});

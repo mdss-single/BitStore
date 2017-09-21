@@ -1944,6 +1944,250 @@ a {
 	text-align:center;
 	margin:30px 30px 20px;
 }
+.deal-block__chat {
+	position:relative;
+}
+	.deal-block__chat-status {
+		position:relative;
+		color:#157efb;
+		padding-right:16px;
+	}
+		.deal-block__chat-status::after {
+			position:absolute;
+			top:50%; right:0;
+			width:7px; height:7px;
+			border-radius:50%;
+			content:'';
+			transform:translateY(-50%);
+		}
+		.deal-block__chat-status--online::after {
+			background-color:#6fac20;
+		}
+		.deal-block__chat-status--offline::after {
+			background-color:#aaa;
+		}
+	.deal-block__chat-counter {
+		position:absolute;
+		top:50%; right:22px;
+		min-width:19px;
+		color:#fff;
+		font-size:1.2rem;
+		line-height:1.8rem;
+		text-align:center;
+		background-color:#3b74d2;
+		border-radius:10px;
+		transform:translateY(-50%);
+	}
+	.deal-block__chat-link {
+		position:absolute;
+		top:-15px; right:-20px; bottom:-15px; left:-20px;
+		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAeBAMAAADX14MiAAAAGFBMVEUAAACVlZWVlZWVlZWVlZWVlZWVlZWVlZWR0ySuAAAACHRSTlMA/J5Kd0M/Eg5FxR8AAAArSURBVBjTYyhlgAJFBSgjUQjKYBaECRnSWEgEzoBLwRTTQCBRCM3L8EAAADMpB+uKZ/yUAAAAAElFTkSuQmCC) no-repeat calc(100% - 20px) center / 8px auto;
+	}
+	.deal-step__text p {
+		margin:0;
+	}
+.deal-step {
+	padding:10px 0 18px;
+	margin-bottom:10px;
+}
+.deal-step:first-of-type {
+	border-bottom:1px solid #e4e4e4;
+}
+	.deal-step__title {
+		font-size:1.6rem;
+		margin:0 0 10px;
+	}
+	.deal-step__table {
+		width:100%;
+		margin-top:20px;
+	}
+		.deal-step__table td:last-child {
+			width:60%;
+			font-family:Smedium;
+			padding-left:15px;
+		}
+	.deal-step__btns {
+		margin:20px -20px 0;
+	}
+		.deal-step__btns .btn {
+			margin-bottom:10px;
+		}
+		.btn.deal-step__cancel {
+			color:#e12929;
+			background-color:#efefef;
+		}
+			.btn.deal-step__cancel:hover {
+				background-color:#ddd;
+			}
+		.btn.deal-step__dispute {
+			color:#000;
+			background-color:#efefef;
+		}
+			.btn.deal-step__dispute:hover {
+				background-color:#ddd;
+			}
+.deal-block--detail-info {
+	margin:25px 0 30px;
+}
+	.deal-userinfo__title {
+		font-size:1.6rem;
+		margin:0 0 10px;
+	}
+	.deal-userinfo__item {
+		background-repeat:no-repeat;
+		background-position:0 7px;
+		-webkit-background-size:20px auto;
+		background-size:20px auto;
+		padding:7px 0 7px 31px;
+		margin:0;
+	}
+	.deal-userinfo__item--ok {
+		background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAAAM1BMVEUAAABMr1BMr1BNr1BLsE9Mr1BMr1BMrlFNr1BMr1BOsU5Mr1DL/5B1yGR1yWWM13BgvFoRA4kYAAAAC3RSTlMA8bNGOtjMm4+DLmJG67EAAADkSURBVDjLldXREoQgCAVQoKy1W9b/f+020+xShEb31TONmCCZdFkSA5wkd9RIPzJO4bGvQcEt4uIP3HxucBpQyTCZahjVcHeRaOZkJ25T1j0MeMjg1t48hx6BHOcrLbLhiDx+dJnX02fHppx/dtwpN+WeYw+sp1+Vy/8/5KBEJglKCKWgRLpUtTUkmKBZdUmlhk5SF4sjoRvYdNmVTMlsr1ipZQms9SWEMqz1JTJ18GxxG4yNrUi+XcJyl3oJe1hbqh0jxrpSXrZhvLnjIyM+iOLjLT4046M4PuDjz8b7xyj+xH0BDHE7jzAzp3cAAAAASUVORK5CYII=);
+	}
+	.deal-userinfo__item--notok {
+		background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAMAAACf4xmcAAAAWlBMVEUAAAD0Qzb0Qzb0Qzb0QzX0QzX0QzbzQjX/STD0Qzb0Qzb0Qzb0Qzb0Qzb0Qzb0Qzb0Qzb1RDfzRDXzQTXzQzf1RzP0Qzb////+7+75kYn1T0P+9vX6rqn3b2VQte25AAAAFnRSTlMAcfbp5sFdPgry3tnYy7ekiWZWKyoZ0DxOYQAAANxJREFUOMuN1NkOhCAMBVDQcd+3IqL//5szTsSqqLn3icSTgIVWnNLLKsiTJA8q2YuHxDKjQzIZ36nmQ5d8Ggd1Bd2k6M6q9eg2XntUIT0mZBV5z8yLrBp8eok/bKyk15TOwV6OF3O9poW/LRPXb62zZDWP2q71OLOTP5ayUmrUVinFLhUi4m1GZZ3+L/kIkahpj94cL2xqEZDjHEWB8OnqjLkq8gWR43bF2Rg7sypzUjgDNwV/ASwIWF7wsrCrBx8S+CyxR461DNiAWDtjwwEbNeDgwscgPlTBEf0FKxRhdQ7+0RYAAAAASUVORK5CYII=);
+	}
+.deal-chat {
+	display:none;
+}
+.deal-chat--active {
+	display:block;
+	animation:slide .5s;
+	position:fixed;
+	top:0; right:0; bottom:0; left:0;
+	z-index:100;
+	overflow-y:auto;
+	background-color:#f8f8f8;
+}
+	.deal-chat__header {
+		background-color:#273b4e;
+	}
+		.deal-chat__header-status {
+			position:relative;
+			padding-right:15px;
+		}
+			.deal-chat__header-status::after {
+				position:absolute;
+				top:50%; right:0;
+				width:7px; height:7px;
+				border-radius:50%;
+				content:'';
+				transform:translateY(-50%);
+			}
+			.deal-chat__header-status--online::after {
+				background-color:#6fac20;
+			}
+			.deal-chat__header-status--offline::after {
+				background-color:#aaa;
+			}
+	.deal-chat__main {
+		overflow-y:auto;
+		height:calc(100% - 90px);
+		padding:10px 15px;
+	}
+		.deal-chat__message {
+			position:relative;
+			min-height:75px;
+			padding-left:80px;
+			margin:20px 0;
+		}
+		.deal-chat__message--you {
+			text-align:right;
+			padding-right:80px;
+			padding-left:0;
+		}
+			.deal-chat__avatar {
+				position:absolute;
+				top:5px; left:0;
+				overflow:hidden;
+				width:70px; height:70px;
+				line-height:66px;
+				border-radius:50%;
+			}
+			.deal-chat__message--you .deal-chat__avatar {
+				top:-5px; right:0; left:auto;
+				text-align:center;
+			}
+				.deal-chat__avatar img {
+					width:100%;
+				}
+			.deal-chat__text {
+				display:inline-block;
+				vertical-align:top;
+				position:relative;
+				background-color:#fff;
+				border-radius:12px;
+				padding:10px 15px 8px;
+			}
+			.deal-chat__message--you .deal-chat__text {
+				color:#fff;
+				text-align:left;
+				background-color:#037cff;
+			}
+				.deal-chat__text::before {
+					position:absolute;
+					bottom:-2px; left:-5px;
+					border:solid transparent;
+					border-width:10px 5px 0;
+					border-top-color:#fff;
+					content:'';
+					transform:rotate(50deg);
+				}
+				.deal-chat__message--you .deal-chat__text::before {
+					right:-5px; left:auto;
+					border-top-color:#037cff;
+					transform:rotate(-50deg);
+				}
+				.deal-chat__text p {
+					margin:0;
+				}
+			.deal-chat__time {
+				color:#a7a7a7;
+				font-size:1.1rem;
+				margin:8px 0 0 15px;
+			}
+	.deal-chat__footer {
+		position:absolute;
+		right:0; bottom:0; left:0;
+		background-color:#fff;
+		padding:15px 110px 15px 55px;
+	}
+		.deal-chat__attach {
+			position:absolute;
+			left:-9999px;
+		}
+		.deal-chat__attach + label {
+			position:absolute;
+			top:16px; left:20px;
+			width:16px; height:16px;
+		}
+			.deal-chat__attach + label::before, .deal-chat__attach + label::after {
+				position:absolute;
+				top:50%; right:0; left:0;
+				height:2px;
+				background-color:#0e78c3;
+				content:'';
+			}
+			.deal-chat__attach + label::after {
+				transform:rotate(90deg);
+			}
+		.deal-chat__textarea {
+			overflow:hidden;
+			width:100%;
+			background-color:#fff;
+			border:0;
+			padding:0;
+			resize:none;
+		}
+		.deal-chat__btn {
+			position:absolute;
+			top:10px; right:20px;
+			height:30px;
+			color:#167cdc;
+			font-family:Ssemi;
+			background-color:#fff;
+			border:0;
+		}
 /*  </deal>  */
 
 /*  <elements>  */
