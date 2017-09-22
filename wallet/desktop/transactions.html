@@ -31,53 +31,61 @@
 					<div class="header__notice-text">
 						Транзакция (2.183772 BTC) подтверждена
 					</div>
+					<a href="#" class="header-notice__item-link"></a>
 				</div>
 				<div class="header__notice-item">
 					<p class="notice-item__time">Сегодня, 10:00</p>
 					<div class="header__notice-text">
 						Новое сообщение в сделке 271665
 					</div>
+					<a href="#" class="header-notice__item-link"></a>
 				</div>
 				<div class="header__notice-item">
 					<p class="notice-item__time">Вчера, 11:30</p>
 					<div class="header__notice-text">
 						Транзакция (2.183772 BTC) подтверждена
 					</div>
+					<a href="#" class="header-notice__item-link"></a>
 				</div>
 				<div class="header__notice-item">
 					<p class="notice-item__time">20.07.17, 09:50</p>
 					<div class="header__notice-text">
 						Новое сообщение в сделке 271665
 					</div>
+					<a href="#" class="header-notice__item-link"></a>
 				</div>
 				<div class="header__notice-item">
 					<p class="notice-item__time">Сегодня, 19:30</p>
 					<div class="header__notice-text">
 						Транзакция (2.183772 BTC) подтверждена
 					</div>
+					<a href="#" class="header-notice__item-link"></a>
 				</div>
 				<div class="header__notice-item">
 					<p class="notice-item__time">Сегодня, 10:00</p>
 					<div class="header__notice-text">
 						Новое сообщение в сделке 271665
 					</div>
+					<a href="#" class="header-notice__item-link"></a>
 				</div>
 				<div class="header__notice-item">
 					<p class="notice-item__time">Вчера, 11:30</p>
 					<div class="header__notice-text">
 						Транзакция (2.183772 BTC) подтверждена
 					</div>
+					<a href="#" class="header-notice__item-link"></a>
 				</div>
 				<div class="header__notice-item">
 					<p class="notice-item__time">20.07.17, 09:50</p>
 					<div class="header__notice-text">
 						Новое сообщение в сделке 271665
 					</div>
+					<a href="#" class="header-notice__item-link"></a>
 				</div>
 			</div>
 		</div>
 		<a href="#" class="header__logout"></a>
-		<a href="#" class="header__avatar"><img src="i/avatar.jpg" alt="%username%"></a>
+		<a href="#" class="header__avatar" data-avatar="mail@localhost"><img src="i/avatar.jpg" alt="%username%"></a>
 	</header>
 	<main class="main">
 		<div class="wallet__info">
@@ -136,15 +144,21 @@
 					<div class="transactions__nav-item">
 						<select name="" id="" class="select transactions__nav-wallets" data-placeholder="Все кошельки">
 							<option></option>
-							<option value="">Wallet 1</option>
-							<option value="">Wallet 2</option>
+							<option value="" data-value="2.900222">Bitcoin</option>
+							<option value="" data-value="1.883726">Etherum</option>
+							<option value="" data-value="8.373626">Litecoin</option>
+							<option value="" data-value="1.287765">Dashcoin</option>
 						</select>
 					</div>
 					<div class="transactions__nav-item">
 						<select name="" id="" class="select transactions__nav-period" data-placeholder="Весь период">
 							<option></option>
-							<option value="">1 sep - 1 oct</option>
-							<option value="">1 nov - 1 dec</option>
+							<option value="">Сегодня</option>
+							<option value="">Вчера</option>
+							<option value="">Неделя</option>
+							<option value="">Месяц</option>
+							<option value="">Год</option>
+							<option value="">Другой период</option>
 						</select>
 					</div>
 				</div>
@@ -164,7 +178,7 @@
 							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
 						</td>
 						<td>
-							<a href="#" class="transactions-table__copy js-wallet-copy" data-clipboard-text="123"></a>
+							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
 							<div class="transactions-table__summ">
 								<p class="transactions-table__summ-value">92.534435 BTC</p>
 								<span class="transactions-table__summ-ok">Подтверждена</span>
@@ -183,7 +197,7 @@
 							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
 						</td>
 						<td>
-							<a href="#" class="transactions-table__copy js-wallet-copy" data-clipboard-text="123"></a>
+							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
 							<div class="transactions-table__summ">
 								<p class="transactions-table__summ-value">92.534435 BTC</p>
 								<span class="transactions-table__summ-wait">Подтверждена</span>
@@ -202,7 +216,7 @@
 							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
 						</td>
 						<td>
-							<a href="#" class="transactions-table__copy js-wallet-copy" data-clipboard-text="123"></a>
+							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
 							<div class="transactions-table__summ">
 								<p class="transactions-table__summ-value">92.534435 BTC</p>
 								<span class="transactions-table__summ-ok">Подтверждена</span>
@@ -224,7 +238,7 @@
 							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
 						</td>
 						<td>
-							<a href="#" class="transactions-table__copy js-wallet-copy" data-clipboard-text="123"></a>
+							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
 							<div class="transactions-table__summ">
 								<p class="transactions-table__summ-value">92.534435 BTC</p>
 								<span class="transactions-table__summ-ok">Подтверждена</span>
@@ -243,7 +257,7 @@
 							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
 						</td>
 						<td>
-							<a href="#" class="transactions-table__copy js-wallet-copy" data-clipboard-text="123"></a>
+							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции""></a>
 							<div class="transactions-table__summ">
 								<p class="transactions-table__summ-value">92.534435 BTC</p>
 								<span class="transactions-table__summ-wait">Подтверждена</span>
@@ -262,7 +276,7 @@
 							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
 						</td>
 						<td>
-							<a href="#" class="transactions-table__copy js-wallet-copy" data-clipboard-text="123"></a>
+							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
 							<div class="transactions-table__summ">
 								<p class="transactions-table__summ-value">92.534435 BTC</p>
 								<span class="transactions-table__summ-ok">Подтверждена</span>
@@ -335,7 +349,6 @@
 			<div class="send__settings-row">
 				<p class="send__settings-title">Кому</p>
 				<input type="text" name="" id="" class="input-text" placeholder="Адрес или почта" autofocus>
-				<img src="i/send__qr.png" alt="QR code" class="send__qr">
 			</div>
 			<div class="send__settings-row">
 				<p class="send__settings-title">Сумма <span class="send__settings-title--aviable">доступно: 23.252452246624 BTC</span></p>

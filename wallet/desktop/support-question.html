@@ -87,11 +87,9 @@
 		<a href="#" class="header__avatar" data-avatar="mail@localhost"><img src="i/avatar.jpg" alt="%username%"></a>
 	</header>
 	<main class="main">
-		<div class="support__header">
-			<p class="support__header-title">Добро пожаловать в центр поддержки</p>
-			<input type="text" name="" id="" class="support__search-text" placeholder="Найти ответ">
-			<a href="#" class="support__header-btn support__header-btn--write">Задать вопрос</a>
-			<a href="#" class="support__header-btn support__header-btn--chat">Онлайн чат</a>
+		<div class="support__head">
+			<p class="support__head-title">Задайте вопрос</p>
+			<p class="support__head-descr">Мы обрабатываем запросы в течении 24 часов</p>
 		</div>
 		<aside class="sidebar">
 			<nav class="nav">
@@ -111,17 +109,26 @@
 		</aside>
 		<div class="content">
 			<div class="support__main wallet__white">
-				<div class="support__questions">
-					<p class="support__questions-title">Кошельки</p>
-					<p class="support__questions-link"><a href="#">Что я должен делать, чтобы мой кошелек был в безопасности?</a>
-					<p class="support__questions-link"><a href="#">Сколько стоит отправка биткоинов?</a></p>
-					<p class="support__questions-link"><a href="#">Может ли BitStore видеть или иметь доступ к моим средствам?</a></p>
-				</div>
-				<div class="support__questions">
-					<p class="support__questions-title">Транзакции</p>
-					<p class="support__questions-link"><a href="#">Что я должен делать, чтобы мой кошелек был в безопасности?</a>
-					<p class="support__questions-link"><a href="#">Сколько стоит отправка биткоинов?</a></p>
-					<p class="support__questions-link"><a href="#">Может ли BitStore видеть или иметь доступ к моим средствам?</a></p>
+				<div class="support__question">
+					<div class="support-question__row">
+						<input type="text" name="" id="" class="input-text" placeholder="Ваше имя" autofocus>
+					</div>
+					<div class="support-question__row">
+						<input type="text" name="" id="" class="input-text" placeholder="Почта">
+					</div>
+					<div class="support-question__row">
+						<textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Сообщение"></textarea>
+					</div>
+					<div class="support-question__row">
+						<input type="file" name="" id="supportFile" class="support__file js-input-file">
+						<label for="supportFile">Приложить файл</label>
+					</div>
+					<div class="support-question__row">
+						%recapcha%
+					</div>
+					<div class="support-question__row">
+						<button class="btn btn--small">Отправить</button>
+					</div>
 				</div>
 			</div>
 		</div>

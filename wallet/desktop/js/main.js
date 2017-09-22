@@ -1,8 +1,10 @@
 (function($){ 
 	"use strict";
 
+	// custom styles for select, radio buttons and checkboxes
 	$('.select, .radio, .checkbox').styler();
 
+	// hide all dropdown
 	$('html').click(function() {
 		$('.wallet__menu--active').removeClass('wallet__menu--active');
 		$('.header__notice-link').removeClass('header__notice-link--active');
@@ -11,6 +13,7 @@
 		$('.footer__language-list--active').removeClass('footer__language-list--active');
 	});
 	
+	// show notices
 	$('.js-header-notice').click(function(e) {
 		e.preventDefault();
 		e.stopPropagation();
@@ -21,6 +24,7 @@
 		e.stopPropagation();
 	});
 
+	// copy to clipboard function
 	var clipboard = new Clipboard('.js-wallet-copy');
 	$('.js-wallet-copy').click(function(e) {
 		e.preventDefault();
@@ -37,6 +41,7 @@
 		e.clearSelection();
 	});
 
+	// show wallet menu
 	$('.js-wallet-menu').on('click', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
@@ -46,6 +51,7 @@
 		e.stopPropagation();
 	});
 
+	// hello modal window
 	var helloCarousel = $('.js-hello').flickity({
 		cellSelector: '.hello__item',
 		prevNextButtons: false,
@@ -65,6 +71,34 @@
 		helloCarousel.flickity('next');
 	});
 
+	// modal windows
+	$('body').on('click', '.modal__close, .modal__bg, .js-modal-close', function(e) {
+		e.preventDefault();
+		$('.modal__bg').remove();
+		$('.modal--active').removeClass('modal--active');
+	});
+	$('.js-verification-btn').click(function(e) {
+		e.preventDefault();
+		$('body').prepend('<div class="modal__bg"></div>');
+		$('.verification').addClass('modal--active');
+	});
+	$('.js-wallet-send').click(function() {
+		$('body').prepend('<div class="modal__bg"></div>');
+		$('.send').addClass('modal--active');
+		$('.send').find('input[autofocus]').focus();
+		$('.select').trigger('refresh');
+	});
+	$('.js-wallet-get').click(function() {
+		$('body').prepend('<div class="modal__bg"></div>');
+		$('.get').addClass('modal--active');
+	});
+	$('.js-twostep-link').click(function(e) {
+		e.preventDefault();
+		$('body').prepend('<div class="modal__bg"></div>');
+		$('.twostep').addClass('modal--active');
+	});
+
+	// specify manually commission in send modal window
 	$('.js-send-custom-link').click(function(e) {
 		$('.js-send-auto').removeClass('send__settings--active');
 		$('.js-send-custom').addClass('send__settings--active');
@@ -76,24 +110,14 @@
 		e.preventDefault();
 	});
 
-	$('.js-wallet-send').click(function() {
-		$('body').prepend('<div class="modal__bg"></div>');
-		$('.send').addClass('modal--active');
-		$('.send').find('input[autofocus]').focus();
-		$('.select').trigger('refresh');
-	});
-	$('body').on('click', '.modal__close, .modal__bg, .js-modal-close', function(e) {
-		e.preventDefault();
-		$('.modal__bg').remove();
-		$('.modal--active').removeClass('modal--active');
-	});
-
+	// auto focus to next input in google verification
 	$('.send__google-input').keyup(function() {
 		if (this.value.length == this.maxLength) {
 			$(this).next('.send__google-input').focus();
 		}
 	});
 
+	// timer for resend new code
 	var sendTimer = $('.js-send-resend').text();
 	var sendInterval = setInterval(function() {
 		sendTimer--;
@@ -104,10 +128,7 @@
 		}
 	}, 1000);
 
-	$('.js-wallet-get').click(function() {
-		$('body').prepend('<div class="modal__bg"></div>');
-		$('.get').addClass('modal--active');
-	});
+	// choose wallet in get modal widnow
 	$('.get-wallets__current').click(function(e) {
 		e.preventDefault();
 		e.stopPropagation();
@@ -132,6 +153,7 @@
 		$('.get-wallets__current').html(thisContent);
 	});
 
+	// tabs on settings page
 	$('.settings__nav').each(function(i) {
 		var storage = localStorage.getItem('stab' + i);
 		if (storage) {
@@ -147,12 +169,7 @@
 		$('.select').trigger('refresh');
 	});
 
-	$('.js-twostep-link').click(function(e) {
-		e.preventDefault();
-		$('body').prepend('<div class="modal__bg"></div>');
-		$('.twostep').addClass('modal--active');
-	});
-
+	// tabs in two step verification modal window
 	$('.twostep__tabs').each(function(i) {
 		var storage = localStorage.getItem('ttab' + i);
 		if (storage) {
@@ -166,6 +183,7 @@
 		localStorage.setItem('ttab' + ulIndex, $(this).index());
 	});
 
+	// tabs on partner program page
 	$('.partner-banners__tabs').each(function(i) {
 		var storage = localStorage.getItem('ptab' + i);
 		if (storage) {
@@ -179,11 +197,13 @@
 		localStorage.setItem('ptab' + ulIndex, $(this).index());
 	});
 
+	// show your link on partner page
 	$('.js-partner-link').click(function(e) {
 		e.preventDefault();
 		$('.partner__link-link').toggleClass('partner__link-link--active');
 	});
 
+	// show wallet value on adding page
 	$('.js-adplace-currency').styler({
 		onFormStyled: function() {
 			var newVal = $('.js-adplace-currency').find('li.selected').attr('data-adplacevalue');
@@ -197,22 +217,19 @@
 		}
 	});
 
-	$('.deal-chat__file').change(function() {
+	// input file styling
+	$('.deal-chat__file, .js-input-file').change(function() {
 		$('label[for="' + this.id + '"]').text($(this).val());
 	});
 
+	// auto focus to next input in verification
 	$('.verification-code__text').keyup(function() {
 		if (this.value.length == this.maxLength) {
 			$(this).next().focus();
 		}
 	});
 
-	$('.js-verification-btn').click(function(e) {
-		e.preventDefault();
-		$('body').prepend('<div class="modal__bg"></div>');
-		$('.verification').addClass('modal--active');
-	});
-
+	// show language list
 	$('.js-footer-language').click(function(e) {
 		e.preventDefault();
 		e.stopPropagation();

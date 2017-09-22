@@ -115,6 +115,11 @@
 		e.stopPropagation();
 	});
 
+	// input file change label text
+	$('.js-input-file').change(function() {
+		$('label[for="' + this.id + '"]').text($(this).val());
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
