@@ -108,6 +108,7 @@ a {
 
 /*  <header>  */
 .header {
+	flex-shrink:0;
 	display:-webkit-flex;
 	display:-moz-flex;
 	display:-ms-flex;
