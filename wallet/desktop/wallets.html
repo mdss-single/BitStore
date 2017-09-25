@@ -84,8 +84,11 @@
 				</div>
 			</div>
 		</div>
-		<a href="#" class="header__logout"></a>
-		<a href="#" class="header__avatar" data-avatar="mail@localhost"><img src="i/avatar.jpg" alt="%username%"></a>
+		<a href="#" class="header__avatar js-header-avatar"><img src="i/avatar.jpg" alt="%username%">ppp@ya.ru</a>
+		<div class="header__system">
+			<a href="#" class="header-system__item">Настройки</a>
+			<a href="#" class="header-system__item">Выход</a>
+		</div>
 	</header>
 	<main class="main">
 		<div class="wallet__info">
@@ -127,13 +130,7 @@
 				<a href="#" class="nav__item nav__item--rates">Курсы</a>
 				<a href="#" class="nav__item nav__item--settings">Настройки</a>
 				<a href="#" class="nav__item nav__item--help">Помощь</a>
-				<a href="#" class="nav__item nav__item-app">Приложение</a>
 			</nav>
-			<div class="quick-stat">
-				<p class="quick-stat__title">За последние сутки</p>
-				<p class="quick-stat__value"><span class="quick-stat__value--count">50 120</span>  переводов</p>
-				<p class="quick-stat__value"><span class="quick-stat__value--count">12 450</span>  сделок</p>
-			</div>
 		</aside>
 		<div class="content">
 			<div class="wallets__wrap">
@@ -142,7 +139,7 @@
 						<th>Название</th>
 						<th>Баланс</th>
 						<th>Не подтверждённые</th>
-						<th><a href="#" class="wallets__add">+</a></th>
+						<th><a href="#" class="wallets__add js-wallet-add">+</a></th>
 					</tr>
 					<tr>
 						<td>
@@ -158,9 +155,47 @@
 								<a href="#" class="wallet__copy js-wallet-copy" data-clipboard-text="BTC wallet"></a>
 								<i class="wallet__menu-link js-wallet-menu"></i>
 								<div class="wallet__menu">
-									<a href="#" class="wallet__menu-item">Редактировать название</a>
-									<a href="#" class="wallet__menu-item">Установить дополнительный пароль</a>
-									<a href="#" class="wallet__menu-item">Скрыть кошелек</a>
+									<a href="#" class="wallet__menu-item js-wallet-edit">Редактировать название</a>
+									<a href="#" class="wallet__menu-item js-wallet-password">Установить дополнительный пароль</a>
+									<a href="#" class="wallet__menu-item js-wallet-hide">Скрыть кошелек</a>
+								</div>
+								<div class="wallet__name">
+									<input type="text" name="" id="" class="wallet-name__input" placeholder="Укажите название">
+									<button class="btn btn--small btn--grey js-wallet-name-close">Отменить</button>
+									<button class="btn btn--small">Сохранить</button>
+								</div>
+								<div class="wallet__password">
+									<p class="wallet-password__title">Установить дополнительный пароль</p>
+									<div class="wallet-password__descr">
+										<p>Сохраните пароль в надёжном месте.</p>
+										<p>В случае утери дополнительного пароля — вы потеряете доступ к кошельку навсегда.</p>
+									</div>
+									<div class="wallet-password__system">
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Текущий пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Второй пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Повторите второй пароль">
+										</div>
+									</div>
+									<div class="wallet-password__btns">
+										<button class="btn btn--small btn--grey js-wallet-password-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
+								</div>
+								<div class="wallet__hide">
+									<p class="wallet-hide__title">Вы уверены, что хотите скрыть кошелёк?</p>
+									<div class="wallet-hide__descr">
+										<p>Все средства на данном кошельке будут сохранены.</p>
+										<p>Кошелёк будет перенесён в раздел “Скрытые кошельки”</p>
+									</div>
+									<div class="wallet-hide__btns">
+										<button class="btn btn--small btn--grey js-wallet-hide-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
 								</div>
 							</div>
 						</td>
@@ -179,9 +214,47 @@
 								<a href="#" class="wallet__copy js-wallet-copy" data-clipboard-text="BTC wallet"></a>
 								<i class="wallet__menu-link js-wallet-menu"></i>
 								<div class="wallet__menu">
-									<a href="#" class="wallet__menu-item">Редактировать название</a>
-									<a href="#" class="wallet__menu-item">Установить дополнительный пароль</a>
-									<a href="#" class="wallet__menu-item">Скрыть кошелек</a>
+									<a href="#" class="wallet__menu-item js-wallet-edit">Редактировать название</a>
+									<a href="#" class="wallet__menu-item js-wallet-password">Установить дополнительный пароль</a>
+									<a href="#" class="wallet__menu-item js-wallet-hide">Скрыть кошелек</a>
+								</div>
+								<div class="wallet__name">
+									<input type="text" name="" id="" class="wallet-name__input" placeholder="Укажите название">
+									<button class="btn btn--small btn--grey js-wallet-name-close">Отменить</button>
+									<button class="btn btn--small">Сохранить</button>
+								</div>
+								<div class="wallet__password">
+									<p class="wallet-password__title">Установить дополнительный пароль</p>
+									<div class="wallet-password__descr">
+										<p>Сохраните пароль в надёжном месте.</p>
+										<p>В случае утери дополнительного пароля — вы потеряете доступ к кошельку навсегда.</p>
+									</div>
+									<div class="wallet-password__system">
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Текущий пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Второй пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Повторите второй пароль">
+										</div>
+									</div>
+									<div class="wallet-password__btns">
+										<button class="btn btn--small btn--grey js-wallet-password-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
+								</div>
+								<div class="wallet__hide">
+									<p class="wallet-hide__title">Вы уверены, что хотите скрыть кошелёк?</p>
+									<div class="wallet-hide__descr">
+										<p>Все средства на данном кошельке будут сохранены.</p>
+										<p>Кошелёк будет перенесён в раздел “Скрытые кошельки”</p>
+									</div>
+									<div class="wallet-hide__btns">
+										<button class="btn btn--small btn--grey js-wallet-hide-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
 								</div>
 							</div>
 						</td>
@@ -198,9 +271,47 @@
 								<a href="#" class="wallet__copy js-wallet-copy" data-clipboard-text="BTC wallet"></a>
 								<i class="wallet__menu-link js-wallet-menu"></i>
 								<div class="wallet__menu">
-									<a href="#" class="wallet__menu-item">Редактировать название</a>
-									<a href="#" class="wallet__menu-item">Установить дополнительный пароль</a>
-									<a href="#" class="wallet__menu-item">Скрыть кошелек</a>
+									<a href="#" class="wallet__menu-item js-wallet-edit">Редактировать название</a>
+									<a href="#" class="wallet__menu-item js-wallet-password">Установить дополнительный пароль</a>
+									<a href="#" class="wallet__menu-item js-wallet-hide">Скрыть кошелек</a>
+								</div>
+								<div class="wallet__name">
+									<input type="text" name="" id="" class="wallet-name__input" placeholder="Укажите название">
+									<button class="btn btn--small btn--grey js-wallet-name-close">Отменить</button>
+									<button class="btn btn--small">Сохранить</button>
+								</div>
+								<div class="wallet__password">
+									<p class="wallet-password__title">Установить дополнительный пароль</p>
+									<div class="wallet-password__descr">
+										<p>Сохраните пароль в надёжном месте.</p>
+										<p>В случае утери дополнительного пароля — вы потеряете доступ к кошельку навсегда.</p>
+									</div>
+									<div class="wallet-password__system">
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Текущий пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Второй пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Повторите второй пароль">
+										</div>
+									</div>
+									<div class="wallet-password__btns">
+										<button class="btn btn--small btn--grey js-wallet-password-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
+								</div>
+								<div class="wallet__hide">
+									<p class="wallet-hide__title">Вы уверены, что хотите скрыть кошелёк?</p>
+									<div class="wallet-hide__descr">
+										<p>Все средства на данном кошельке будут сохранены.</p>
+										<p>Кошелёк будет перенесён в раздел “Скрытые кошельки”</p>
+									</div>
+									<div class="wallet-hide__btns">
+										<button class="btn btn--small btn--grey js-wallet-hide-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
 								</div>
 							</div>
 						</td>
@@ -217,9 +328,47 @@
 								<a href="#" class="wallet__copy js-wallet-copy" data-clipboard-text="BTC wallet"></a>
 								<i class="wallet__menu-link js-wallet-menu"></i>
 								<div class="wallet__menu">
-									<a href="#" class="wallet__menu-item">Редактировать название</a>
-									<a href="#" class="wallet__menu-item">Установить дополнительный пароль</a>
-									<a href="#" class="wallet__menu-item">Скрыть кошелек</a>
+									<a href="#" class="wallet__menu-item js-wallet-edit">Редактировать название</a>
+									<a href="#" class="wallet__menu-item js-wallet-password">Установить дополнительный пароль</a>
+									<a href="#" class="wallet__menu-item js-wallet-hide">Скрыть кошелек</a>
+								</div>
+								<div class="wallet__name">
+									<input type="text" name="" id="" class="wallet-name__input" placeholder="Укажите название">
+									<button class="btn btn--small btn--grey js-wallet-name-close">Отменить</button>
+									<button class="btn btn--small">Сохранить</button>
+								</div>
+								<div class="wallet__password">
+									<p class="wallet-password__title">Установить дополнительный пароль</p>
+									<div class="wallet-password__descr">
+										<p>Сохраните пароль в надёжном месте.</p>
+										<p>В случае утери дополнительного пароля — вы потеряете доступ к кошельку навсегда.</p>
+									</div>
+									<div class="wallet-password__system">
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Текущий пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Второй пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Повторите второй пароль">
+										</div>
+									</div>
+									<div class="wallet-password__btns">
+										<button class="btn btn--small btn--grey js-wallet-password-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
+								</div>
+								<div class="wallet__hide">
+									<p class="wallet-hide__title">Вы уверены, что хотите скрыть кошелёк?</p>
+									<div class="wallet-hide__descr">
+										<p>Все средства на данном кошельке будут сохранены.</p>
+										<p>Кошелёк будет перенесён в раздел “Скрытые кошельки”</p>
+									</div>
+									<div class="wallet-hide__btns">
+										<button class="btn btn--small btn--grey js-wallet-hide-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
 								</div>
 							</div>
 						</td>
@@ -236,9 +385,47 @@
 								<a href="#" class="wallet__copy js-wallet-copy" data-clipboard-text="BTC wallet"></a>
 								<i class="wallet__menu-link js-wallet-menu"></i>
 								<div class="wallet__menu">
-									<a href="#" class="wallet__menu-item">Редактировать название</a>
-									<a href="#" class="wallet__menu-item">Установить дополнительный пароль</a>
-									<a href="#" class="wallet__menu-item">Скрыть кошелек</a>
+									<a href="#" class="wallet__menu-item js-wallet-edit">Редактировать название</a>
+									<a href="#" class="wallet__menu-item js-wallet-password">Установить дополнительный пароль</a>
+									<a href="#" class="wallet__menu-item js-wallet-hide">Скрыть кошелек</a>
+								</div>
+								<div class="wallet__name">
+									<input type="text" name="" id="" class="wallet-name__input" placeholder="Укажите название">
+									<button class="btn btn--small btn--grey js-wallet-name-close">Отменить</button>
+									<button class="btn btn--small">Сохранить</button>
+								</div>
+								<div class="wallet__password">
+									<p class="wallet-password__title">Установить дополнительный пароль</p>
+									<div class="wallet-password__descr">
+										<p>Сохраните пароль в надёжном месте.</p>
+										<p>В случае утери дополнительного пароля — вы потеряете доступ к кошельку навсегда.</p>
+									</div>
+									<div class="wallet-password__system">
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Текущий пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Второй пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Повторите второй пароль">
+										</div>
+									</div>
+									<div class="wallet-password__btns">
+										<button class="btn btn--small btn--grey js-wallet-password-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
+								</div>
+								<div class="wallet__hide">
+									<p class="wallet-hide__title">Вы уверены, что хотите скрыть кошелёк?</p>
+									<div class="wallet-hide__descr">
+										<p>Все средства на данном кошельке будут сохранены.</p>
+										<p>Кошелёк будет перенесён в раздел “Скрытые кошельки”</p>
+									</div>
+									<div class="wallet-hide__btns">
+										<button class="btn btn--small btn--grey js-wallet-hide-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
 								</div>
 							</div>
 						</td>
@@ -255,9 +442,47 @@
 								<a href="#" class="wallet__copy js-wallet-copy" data-clipboard-text="BTC wallet"></a>
 								<i class="wallet__menu-link js-wallet-menu"></i>
 								<div class="wallet__menu">
-									<a href="#" class="wallet__menu-item">Редактировать название</a>
-									<a href="#" class="wallet__menu-item">Установить дополнительный пароль</a>
-									<a href="#" class="wallet__menu-item">Скрыть кошелек</a>
+									<a href="#" class="wallet__menu-item js-wallet-edit">Редактировать название</a>
+									<a href="#" class="wallet__menu-item js-wallet-password">Установить дополнительный пароль</a>
+									<a href="#" class="wallet__menu-item js-wallet-hide">Скрыть кошелек</a>
+								</div>
+								<div class="wallet__name">
+									<input type="text" name="" id="" class="wallet-name__input" placeholder="Укажите название">
+									<button class="btn btn--small btn--grey js-wallet-name-close">Отменить</button>
+									<button class="btn btn--small">Сохранить</button>
+								</div>
+								<div class="wallet__password">
+									<p class="wallet-password__title">Установить дополнительный пароль</p>
+									<div class="wallet-password__descr">
+										<p>Сохраните пароль в надёжном месте.</p>
+										<p>В случае утери дополнительного пароля — вы потеряете доступ к кошельку навсегда.</p>
+									</div>
+									<div class="wallet-password__system">
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Текущий пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Второй пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Повторите второй пароль">
+										</div>
+									</div>
+									<div class="wallet-password__btns">
+										<button class="btn btn--small btn--grey js-wallet-password-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
+								</div>
+								<div class="wallet__hide">
+									<p class="wallet-hide__title">Вы уверены, что хотите скрыть кошелёк?</p>
+									<div class="wallet-hide__descr">
+										<p>Все средства на данном кошельке будут сохранены.</p>
+										<p>Кошелёк будет перенесён в раздел “Скрытые кошельки”</p>
+									</div>
+									<div class="wallet-hide__btns">
+										<button class="btn btn--small btn--grey js-wallet-hide-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
 								</div>
 							</div>
 						</td>
@@ -274,15 +499,54 @@
 								<a href="#" class="wallet__copy js-wallet-copy" data-clipboard-text="BTC wallet"></a>
 								<i class="wallet__menu-link js-wallet-menu"></i>
 								<div class="wallet__menu">
-									<a href="#" class="wallet__menu-item">Редактировать название</a>
-									<a href="#" class="wallet__menu-item">Установить дополнительный пароль</a>
-									<a href="#" class="wallet__menu-item">Скрыть кошелек</a>
+									<a href="#" class="wallet__menu-item js-wallet-edit">Редактировать название</a>
+									<a href="#" class="wallet__menu-item js-wallet-password">Установить дополнительный пароль</a>
+									<a href="#" class="wallet__menu-item js-wallet-hide">Скрыть кошелек</a>
+								</div>
+								<div class="wallet__name">
+									<input type="text" name="" id="" class="wallet-name__input" placeholder="Укажите название">
+									<button class="btn btn--small btn--grey js-wallet-name-close">Отменить</button>
+									<button class="btn btn--small">Сохранить</button>
+								</div>
+								<div class="wallet__password">
+									<p class="wallet-password__title">Установить дополнительный пароль</p>
+									<div class="wallet-password__descr">
+										<p>Сохраните пароль в надёжном месте.</p>
+										<p>В случае утери дополнительного пароля — вы потеряете доступ к кошельку навсегда.</p>
+									</div>
+									<div class="wallet-password__system">
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Текущий пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Второй пароль">
+										</div>
+										<div class="form__row">
+											<input type="password" name="" id="" class="input-text" placeholder="Повторите второй пароль">
+										</div>
+									</div>
+									<div class="wallet-password__btns">
+										<button class="btn btn--small btn--grey js-wallet-password-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
+								</div>
+								<div class="wallet__hide">
+									<p class="wallet-hide__title">Вы уверены, что хотите скрыть кошелёк?</p>
+									<div class="wallet-hide__descr">
+										<p>Все средства на данном кошельке будут сохранены.</p>
+										<p>Кошелёк будет перенесён в раздел “Скрытые кошельки”</p>
+									</div>
+									<div class="wallet-hide__btns">
+										<button class="btn btn--small btn--grey js-wallet-hide-close">Отменить</button>
+										<button class="btn btn--small">Установить</button>
+									</div>
 								</div>
 							</div>
 						</td>
 					</tr>
 				</table>
 			</div>
+			<p class="wallets__show-all"><a href="#">Показать скрытые кошельки</a></p>
 		</div>
 	</main>
 	<footer class="footer">
@@ -511,6 +775,26 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="modal add-wallet">
+		<a href="#" class="modal__close"></a>
+		<p class="add-wallet__title">Добавить кошелёк</p>
+		<div class="add-wallet__system">
+			<div class="form__row">
+				<select name="" id="" class="select add-wallet__select" data-placeholder="Криптовалюта">
+					<option></option>
+					<option value="">Bitcoin</option>
+					<option value="">Litecoin</option>
+				</select>
+			</div>
+			<div class="form__row">
+				<input type="text" name="" id="" class="input-text" placeholder="Название кошелька">
+			</div>
+			<div class="form__row">
+				<input type="checkbox" name="" id="addWallet" class="checkbox"><label for="addWallet">Сделать основным кошельком</label>
+			</div>
+		</div>
+		<button class="btn btn--small">Добавить кошелёк</button>
 	</div>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 	<script src="js/plugins.js"></script>

@@ -84,8 +84,11 @@
 				</div>
 			</div>
 		</div>
-		<a href="#" class="header__logout"></a>
-		<a href="#" class="header__avatar" data-avatar="mail@localhost"><img src="i/avatar.jpg" alt="%username%"></a>
+		<a href="#" class="header__avatar js-header-avatar"><img src="i/avatar.jpg" alt="%username%">ppp@ya.ru</a>
+		<div class="header__system">
+			<a href="#" class="header-system__item">Настройки</a>
+			<a href="#" class="header-system__item">Выход</a>
+		</div>
 	</header>
 	<main class="main">
 		<div class="wallet__info">
@@ -127,13 +130,7 @@
 				<a href="#" class="nav__item nav__item--rates">Курсы</a>
 				<a href="#" class="nav__item nav__item--settings">Настройки</a>
 				<a href="#" class="nav__item nav__item--help">Помощь</a>
-				<a href="#" class="nav__item nav__item-app">Приложение</a>
 			</nav>
-			<div class="quick-stat">
-				<p class="quick-stat__title">За последние сутки</p>
-				<p class="quick-stat__value"><span class="quick-stat__value--count">50 120</span>  переводов</p>
-				<p class="quick-stat__value"><span class="quick-stat__value--count">12 450</span>  сделок</p>
-			</div>
 		</aside>
 		<div class="content">
 			<div class="deal-user wallet__white">
@@ -219,8 +216,8 @@
 						Биткоины в размере 0.727236726 BTC были заморожены на вашем счёте до завершения сделки. В случае оплату пользователем на ваши реквизты и подтвреждения с вашей стороны - биткоины перейдут на счёт опкупателя. В случае не полаты сделки в течении 60 минут биткоины вернутся на ваше кошелку и сделки будет аннулированна.
 					</div>
 					<div class="deal-step__btns">
-						<button class="btn deal-step__btn-approve">Получил оплату</button>
-						<button class="btn deal-step__btn-nopayment">Не получил оплату</button>
+						<button class="btn deal-step__btn-approve js-approve-btn">Получил оплату</button>
+						<button class="btn deal-step__btn-nopayment js-discard-btn">Не получил оплату</button>
 					</div>
 				</div>
 			</div>
@@ -474,6 +471,30 @@
 					<span class="get-wallets__content-link js-wallet-copy" data-clipboard-text="2Hwfb36AEFHasdasdJB3272FJWHBEF23">Копировать</span>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="modal approve">
+		<p class="approve__title">Подтверждение оплаты</p>
+		<div class="approve__descr">
+			<p class="approve__descr-title">Вы подтверждаете что получили оплату от пользователя</p>
+			<p>&mdash; Принимаете условия сделки 12423532</p>
+			<p>&mdash; Завершили платёж, следую инструкциям продавца</p>
+			<p class="approve__descr-notice">Если вы не уверены, как платить с помощью QIWI — свяжитесь с TITAN100, чтобы узнать порядок оплаты или отменить сделку.</p>
+		</div>
+		<div class="approve__btns">
+			<button class="btn btn--small btn--grey js-modal-close">Закрыть</button>
+			<button class="btn btn--small">Я оплатил</button>
+		</div>
+	</div>
+	<div class="modal cancel-transaction">
+		<p class="cancel-transaction__title">Отмена сделки</p>
+		<div class="cancel-transaction__descr">
+			<p>Вы уверены, что хотите отменить сделку 23423551 на 10000.00 RUB?</p>
+			<p>Никогда не отменяйте сделку, если уже совершили оплату.</p>
+		</div>
+		<div class="cancel-transaction__btns">
+			<button class="btn btn--small btn--grey js-modal-close">Отменить</button>
+			<button class="btn btn--small">Продолжить</button>
 		</div>
 	</div>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>

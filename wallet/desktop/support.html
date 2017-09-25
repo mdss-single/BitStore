@@ -83,15 +83,23 @@
 				</div>
 			</div>
 		</div>
-		<a href="#" class="header__logout"></a>
-		<a href="#" class="header__avatar" data-avatar="mail@localhost"><img src="i/avatar.jpg" alt="%username%"></a>
+		<a href="#" class="header__avatar js-header-avatar"><img src="i/avatar.jpg" alt="%username%">ppp@ya.ru</a>
+		<div class="header__system">
+			<a href="#" class="header-system__item">Настройки</a>
+			<a href="#" class="header-system__item">Выход</a>
+		</div>
 	</header>
 	<main class="main">
 		<div class="support__header">
 			<p class="support__header-title">Добро пожаловать в центр поддержки</p>
-			<input type="text" name="" id="" class="support__search-text" placeholder="Найти ответ">
-			<a href="#" class="support__header-btn support__header-btn--write">Задать вопрос</a>
-			<a href="#" class="support__header-btn support__header-btn--chat">Онлайн чат</a>
+			<div class="support__header-wrap">
+				<div class="support__header-form">
+					<input type="text" name="" id="" class="support__search-text" placeholder="Найти ответ">
+					<button class="support__search-btn"></button>
+				</div>
+				<a href="#" class="support__header-btn support__header-btn--write">Задать вопрос</a>
+				<a href="#" class="support__header-btn support__header-btn--chat">Онлайн чат</a>
+			</div>
 		</div>
 		<aside class="sidebar">
 			<nav class="nav">
@@ -101,27 +109,40 @@
 				<a href="#" class="nav__item nav__item--rates">Курсы</a>
 				<a href="#" class="nav__item nav__item--settings">Настройки</a>
 				<a href="#" class="nav__item nav__item--active nav__item--help">Помощь</a>
-				<a href="#" class="nav__item nav__item-app">Приложение</a>
 			</nav>
-			<div class="quick-stat">
-				<p class="quick-stat__title">За последние сутки</p>
-				<p class="quick-stat__value"><span class="quick-stat__value--count">50 120</span>  переводов</p>
-				<p class="quick-stat__value"><span class="quick-stat__value--count">12 450</span>  сделок</p>
-			</div>
 		</aside>
 		<div class="content">
 			<div class="support__main wallet__white">
 				<div class="support__questions">
 					<p class="support__questions-title">Кошельки</p>
 					<p class="support__questions-link"><a href="#">Что я должен делать, чтобы мой кошелек был в безопасности?</a>
+					<div class="support__answer-text">
+						<p>Стоимость зависит от аппетита в данный период времени.</p>
+						<p>Стоимость зависит от аппетита в данный период времени.</p>
+					</div>
 					<p class="support__questions-link"><a href="#">Сколько стоит отправка биткоинов?</a></p>
+					<div class="support__answer-text">
+						<p>Стоимость зависит от аппетита в данный период времени.</p>
+					</div>
 					<p class="support__questions-link"><a href="#">Может ли BitStore видеть или иметь доступ к моим средствам?</a></p>
+					<div class="support__answer-text">
+						<p>Стоимость зависит от аппетита в данный период времени.</p>
+					</div>
 				</div>
 				<div class="support__questions">
 					<p class="support__questions-title">Транзакции</p>
 					<p class="support__questions-link"><a href="#">Что я должен делать, чтобы мой кошелек был в безопасности?</a>
+					<div class="support__answer-text">
+						<p>Стоимость зависит от аппетита в данный период времени.</p>
+					</div>
 					<p class="support__questions-link"><a href="#">Сколько стоит отправка биткоинов?</a></p>
+					<div class="support__answer-text">
+						<p>Стоимость зависит от аппетита в данный период времени.</p>
+					</div>
 					<p class="support__questions-link"><a href="#">Может ли BitStore видеть или иметь доступ к моим средствам?</a></p>
+					<div class="support__answer-text">
+						<p>Стоимость зависит от аппетита в данный период времени.</p>
+					</div>
 				</div>
 			</div>
 		</div>

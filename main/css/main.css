@@ -230,6 +230,7 @@ a {
 	.logo {
 		position:absolute;
 		top:20px; left:70px;
+		width:92px;
 		line-height:1.2;
 	}
 	.header__nav {
@@ -390,11 +391,12 @@ a {
 			margin-top:30px;
 		}
 			.download__item {
+				display:inline-block;
+				overflow:hidden;
+				max-width:130px;
+				border-radius:5px;
 				margin:0 6px;
 			}
-				.download__pic {
-					max-width:40%;
-				}
 /*  </download>  */
 
 /*  <press>  */
@@ -630,6 +632,10 @@ a {
 		.auth__safe-desktop {
 			display:none;
 		}
+.register {
+	flex:1;
+	background-color:#f5f5f5;
+}
 /*  </auth>  */
 
 /*  <safety>  */
@@ -910,7 +916,7 @@ a {
 	color:#fff;
 	background:url(../i/about-us__enjoy.jpg) no-repeat center 0 / cover;
 	padding-bottom:30px;
-	margin:30px 0 -30px;
+	margin:80px 0 0;
 }
 	.about-us__enjoy-descr {
 		margin-top:-15px;
@@ -1617,9 +1623,7 @@ a.btn {
 		font-weight:normal;
 		font-size:2.5rem;
 	}
-	.format-text {
-		font-size:1.7rem;
-	}
+	.format-text {}
 		.format__block {
 			margin-top:30px;
 		}
@@ -1650,15 +1654,25 @@ a.btn {
 	.header--auth {
 		background-color:transparent;
 	}
+	.header--auth .header__nav, .header--auth .header__login {
+		line-height:60px;
+	}
+	.header--auth .logo {
+		top:10px;
+	}
 		.burger {
 			display:none;
 		}
 		.logo {
 			top:20px; left:5px;
+			width:auto;
 			padding:10px;
 		}
 		.header__system {
 			height:80px;
+		}
+		.header--auth .header__system {
+			height:60px;
 		}
 			.header__nav {
 				display:inline-block;
@@ -1685,7 +1699,6 @@ a.btn {
 				}
 			.header__login.header__login--auth {
 				line-height:29px;
-				background-color:#4878cd;
 				border-radius:3px;
 				padding:0 19px;
 			}
@@ -1771,7 +1784,6 @@ a.btn {
 			display:flex;
 			position:absolute;
 			top:0; right:0; bottom:0; left:55%;
-			background-color:#e6e6e6;
 		}
 			.about-crypto__video-wrap {
 				height:100%;
@@ -1808,6 +1820,9 @@ a.btn {
 		.download__title {
 			font-size:3rem;
 		}
+		.download__item {
+			max-width:135px;
+		}
 	.press__title {
 		font-size:3rem;
 	}
@@ -1827,6 +1842,9 @@ a.btn {
 		position:relative;
 		padding:80px 0;
 		margin-bottom:-1px;
+	}
+	.trade-page__enjoy-block {
+		margin-top:50px;
 	}
 		.enjoy-us__title {
 			font-size:3rem;
@@ -1884,15 +1902,17 @@ a.btn {
 			top:auto;
 			bottom:47px; left:210px;
 			height:22px;
-			color:#717171;
+			color:#000;
 			line-height:22px;
+			text-transform:capitalize;
 			background-position:0 center;
 			-webkit-background-size:32px auto;
 			background-size:32px auto;
 			border-radius:2px;
-			padding:0 16px 0 39px;
+			padding:0 0 0 39px;
 		}
 			.footer__language::before {
+				display:none;
 				right:0;
 			}
 			a:hover.footer__language {
@@ -1935,7 +1955,7 @@ a.btn {
 		.register .auth__wrap {
 			width:510px;
 			padding:60px 90px 54px;
-			margin:138px auto 80px;
+			margin:58px auto 80px;
 		}
 		.auth .btn {
 			width:auto;
@@ -2601,7 +2621,7 @@ a.btn {
 				.trade-page__select.trade-page__select-currency {
 					position:absolute;
 					top:1px; right:1px; bottom:1px;
-					width:110px;
+					width:65px;
 				}
 					.trade-page__select .jq-selectbox__select {
 						height:36px;
@@ -2616,6 +2636,12 @@ a.btn {
 						box-shadow:none;
 						transition:all .2s;
 					}
+					.trade-page__select.trade-page__select-currency .jq-selectbox__select {
+						padding:0 30px 0 0;
+					}
+						.trade-page__select.trade-page__select-currency .jq-selectbox__select-text {
+							text-align:right;
+						}
 					.trade-page__select.trade-page__select-currency .jq-selectbox__select, .jq-selectbox.focused.trade-page__select-currency .jq-selectbox__select {
 						border:0;
 					}
@@ -2648,19 +2674,6 @@ a.btn {
 						margin:7px 0 0;
 						box-shadow:0 3px 7px rgba(0, 0, 0, .28);
 					}
-						.trade-page__select.jq-selectbox li {
-							min-height:auto;
-							color:#000;
-							font-family:Smedium;
-							padding:12px 28px;
-						}
-							.trade-page__select.jq-selectbox li:hover, .trade-page__select.jq-selectbox li.sel:hover {
-								background-color:#208afe;
-							}
-							.jq-selectbox li.sel {
-								color:#fff;
-								background-color:#a3abb1;
-							}
 				.trade-page__input {
 					height:38px;
 					white-space:nowrap;
@@ -2672,7 +2685,7 @@ a.btn {
 				}
 					.trade-page__filter-block:nth-child(2) .trade-page__input {
 						width:220px;
-						padding:0 120px 0 13px;
+						padding:0 65px 0 13px;
 					}
 					.trade-page__input:focus {
 						border-color:#5794bf;
@@ -2684,7 +2697,11 @@ a.btn {
 					background-color:#fff;
 					border:1px solid #dfdfdf;
 					border-radius:1px;
+					transition:all .2s;
 				}
+					.trade-page__btn:hover {
+						border-color:#208afe;
+					}
 			.trade-page__sort-verification {
 				position:absolute;
 				bottom:-54px; right:50px;
@@ -2768,6 +2785,7 @@ a.btn {
 		}
 			.trade-page__enjoy .btn {
 				color:#000;
+				font-size:1.5rem;
 				background-color:#e7e7e7;
 			}
 				.trade-page__enjoy a:hover.btn {

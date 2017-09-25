@@ -11,6 +11,7 @@
 		$('.header__notice--active').removeClass('header__notice--active');
 		$('.get-wallets__list--active').removeClass('get-wallets__list--active');
 		$('.footer__language-list--active').removeClass('footer__language-list--active');
+		$('.header__system--active').removeClass('header__system--active')
 	});
 	
 	// show notices
@@ -21,6 +22,16 @@
 		$('.header__notice').toggleClass('header__notice--active');
 	});
 	$('.header__notice').click(function(e) {
+		e.stopPropagation();
+	});
+
+	// show user menu in header
+	$('.js-header-avatar').click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).next('.header__system').toggleClass('header__system--active');
+	});
+	$('.header__system').click(function(e){
 		e.stopPropagation();
 	});
 
@@ -41,7 +52,7 @@
 		e.clearSelection();
 	});
 
-	// show wallet menu
+	// wallet menu
 	$('.js-wallet-menu').on('click', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
@@ -49,6 +60,30 @@
 	});
 	$('.wallet__menu').click(function(e) {
 		e.stopPropagation();
+	});
+	$('.js-wallet-edit').click(function(e) {
+		e.preventDefault();
+		$(this).closest('.wallet__menu--active').removeClass('wallet__menu--active');
+		$(this).closest('.wallet__settings').find('.wallet__name').addClass('wallet__name--active');
+	});
+	$('.js-wallet-name-close').click(function() {
+		$(this).closest('.wallet__name--active').removeClass('wallet__name--active');
+	});
+	$('.js-wallet-password').click(function(e) {
+		e.preventDefault();
+		$(this).closest('.wallet__menu--active').removeClass('wallet__menu--active');
+		$(this).closest('.wallet__settings').find('.wallet__password').addClass('wallet__password--active');
+	});
+	$('.js-wallet-password-close').click(function() {
+		$(this).closest('.wallet__password--active').removeClass('wallet__password--active');
+	});
+	$('.js-wallet-hide').click(function(e) {
+		e.preventDefault();
+		$(this).closest('.wallet__menu--active').removeClass('wallet__menu--active');
+		$(this).closest('.wallet__settings').find('.wallet__hide').addClass('wallet__hide--active');
+	});
+	$('.js-wallet-hide-close').click(function() {
+		$(this).closest('.wallet__hide--active').removeClass('wallet__hide--active');
 	});
 
 	// hello modal window
@@ -96,6 +131,20 @@
 		e.preventDefault();
 		$('body').prepend('<div class="modal__bg"></div>');
 		$('.twostep').addClass('modal--active');
+	});
+	$('.js-wallet-add').click(function(e) {
+		e.preventDefault();
+		$('body').prepend('<div class="modal__bg"></div>')
+		$('.add-wallet').addClass('modal--active');
+		$('.select').trigger('refresh');
+	});
+	$('.js-approve-btn').click(function() {
+		$('body').prepend('<div class="modal__bg"></div>')
+		$('.approve').addClass('modal--active');
+	});
+	$('.js-discard-btn').click(function() {
+		$('body').prepend('<div class="modal__bg"></div>')
+		$('.cancel-transaction').addClass('modal--active');
 	});
 
 	// specify manually commission in send modal window
@@ -212,7 +261,7 @@
 		},
 		onSelectClosed: function() {
 			var newVal = $(this).find('li.selected').attr('data-adplacevalue');
-			var curVal = $(this).find('.jq-selectbox__select-text').text();
+			var curVal = $(this).find('li.selected').text();
 			$(this).find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
 		}
 	});
@@ -237,6 +286,22 @@
 	});
 	$('.footer__language-list').click(function(e) {
 		e.stopPropagation();
+	});
+
+	// show period if select this option
+	$('.transactions__nav-period').change(function(e) {
+		if ( $(this).find('.js-transactions-period').is(':selected') ) {
+			$('.transactions__period').addClass('transactions__period--active');
+		}
+	});
+	$('.js-transactions-period-close').click(function() {
+		$('.transactions__period--active').removeClass('transactions__period--active');
+	});
+
+	// support page QA expanding
+	$('.support__questions-link').click(function(e) {
+		e.preventDefault();
+		$(this).next().toggleClass('support__answer-text--active');
 	});
 
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')

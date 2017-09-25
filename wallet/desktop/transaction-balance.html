@@ -125,7 +125,7 @@
 		<aside class="sidebar">
 			<nav class="nav">
 				<a href="#" class="nav__item nav__item--wallets">Кошельки</a>
-				<a href="#" class="nav__item nav__item--active nav__item--transactions">Транзакции</a>
+				<a href="#" class="nav__item nav__item--transactions">Транзакции</a>
 				<a href="#" class="nav__item nav__item--buy">Купить Bitcoin</a>
 				<a href="#" class="nav__item nav__item--rates">Курсы</a>
 				<a href="#" class="nav__item nav__item--settings">Настройки</a>
@@ -133,185 +133,128 @@
 			</nav>
 		</aside>
 		<div class="content">
-			<div class="wallet__white">
-				<div class="seller__info">
-					<div class="seller__avatar"><img src="i/avatar.jpg" alt="BitcoinStore2000"></div>
-					<p class="seller__name">BitcoinStore2000 <span class="seller__status seller__status--reliable">Надёжный</span></p>
-					<p class="seller__timeout">Был в сети 3 часа назад</p>
-					<a href="#" class="seller__abuse">Пожаловаться</a>
-					<a href="#" class="seller__favorite">Добавить в избранное</a>
+			<div class="transactions wallet__white">
+				<div class="transactions__nav">
+					<div class="transactions__nav-item transactions__nav-item--active"><a href="#">Все</a></div>
+					<div class="transactions__nav-item transactions__nav-item--secondary"><a href="#">Получена</a></div>
+					<div class="transactions__nav-item transactions__nav-item--secondary"><a href="#">Отправлена</a></div>
+					<div class="transactions__nav-item">
+						<select name="" id="" class="select transactions__nav-wallets">
+							<option value="">Все кошельки</option>
+							<option value="" data-value="2.900222">Bitcoin</option>
+							<option value="" data-value="1.883726">Etherum</option>
+							<option value="" data-value="8.373626">Litecoin</option>
+							<option value="" data-value="1.287765">Dashcoin</option>
+						</select>
+					</div>
+					<div class="transactions__nav-item">
+						<select name="" id="" class="select transactions__nav-period" data-placeholder="Весь период">
+							<option></option>
+							<option value="">Сегодня</option>
+							<option value="">Вчера</option>
+							<option value="">Неделя</option>
+							<option value="">Месяц</option>
+							<option value="">Год</option>
+							<option value="" class="js-transactions-period">Другой период</option>
+						</select>
+						<div class="transactions__period">
+							<p class="transaction-period__title">Другой период</p>
+							С
+							<input type="text" name="" id="" class="input-text transaction-period__text" value="Сентября">
+							по
+							<input type="text" name="" id="" class="input-text transaction-period__text" value="Октябрь">
+							<div class="transaction-period__btns">
+								<button class="btn btn--small btn--grey js-transactions-period-close">Отменить</button>
+								<button class="btn btn--small">Показать</button>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="seller__total">
-					<p class="seller__total-title">Сводная информация</p>
-					<table class="seller__total-table">
+				<div class="transactions__balance">
+					<table class="transaction-balance__table">
 						<tr>
-							<td>Объём сделок</td>
-							<td>138456.00 RUB / 1.0024124 BTC</td>
+							<td>Баланс на начало периода:</td>
+							<td>123.32353463 BTC</td>
 						</tr>
 						<tr>
-							<td>Количество сделок</td>
-							<td>203</td>
-						</tr>
-						<tr>
-							<td>Среднее время ответа на сообщение</td>
-							<td>20 минут</td>
-						</tr>
-						<tr>
-							<td>Среднее время подтверждения оплаты</td>
-							<td>12 минут</td>
-						</tr>
-						<tr>
-							<td>Верификация в системе</td>
-							<td>Верифицирован</td>
-						</tr>
-						<tr>
-							<td>Зарегистрирован</td>
-							<td>4 года назад</td>
-						</tr>
-						<tr>
-							<td>Язык</td>
-							<td>Русский</td>
+							<td>Баланс на конец периода:</td>
+							<td>125.2856173895 BTC</td>
 						</tr>
 					</table>
+					<table class="transaction-balance__table">
+						<tr>
+							<td>Приход:</td>
+							<td>21.546542321147 BTC</td>
+						</tr>
+						<tr>
+							<td>Расход:</td>
+							<td>66.5234373.01 BTC</td>
+						</tr>
+					</table>
+					<a href="#" class="transaction-balance__export">Экспорт:</a>
 				</div>
-			</div>
-			<div class="wallet__white">
-				<p class="seller__title">Купить биткоины у BitcoinStore2000</p>
-				<table class="trade-search__table">
+				<table class="transactions__table">
 					<tr>
-						<th>Продавец</th>
-						<th>Способ оплаты</th>
-						<th>Цена</th>
-						<th>Ограничения</th>
-						<th></th>
+						<th colspan="3">Транзакции за период</th>
 					</tr>
 					<tr>
 						<td>
-							<div class="seller__buy-info">
-								<a href="#"><img src="i/avatar.jpg" alt="BitcoinStore2000" class="seller__buy-avatar"></a>
-								<p class="seller__buy-name seller__buy-name--online seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
-								<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
+							<div class="transactions-table__status transactions-table__status--received">
+								<p class="transactions-table__status-title">Получена</p>
+								<p class="transactions-table__status-date">21.07.2017</p>
 							</div>
 						</td>
-						<td>Банковский перевод внутри страны</td>
-						<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-						<td>50 - 5000 USD</td>
-						<td><a href="#" class="seller__buy-btn">Купить</a></td>
+						<td>
+							<p>От: Мой кошелёк</p>
+							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
+						</td>
+						<td>
+							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
+							<div class="transactions-table__summ">
+								<p class="transactions-table__summ-value">92.534435 BTC</p>
+								<span class="transactions-table__summ-ok">Подтверждена</span>
+							</div>
+						</td>
 					</tr>
 					<tr>
 						<td>
-							<div class="seller__buy-info">
-								<a href="#"><img src="i/avatar.jpg" alt="BitcoinStore2000" class="seller__buy-avatar"></a>
-								<p class="seller__buy-name seller__buy-name--offline"><a href="#">BitcoinStore2000</a></p>
-								<p class="seller__buy-status">Новичок 9.3 (210 сделок)</p>
+							<div class="transactions-table__status transactions-table__status--wait">
+								<p class="transactions-table__status-title">Получена</p>
+								<p class="transactions-table__status-date">21.07.2017</p>
 							</div>
 						</td>
-						<td>Банковский перевод внутри страны</td>
-						<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-						<td>50 - 5000 USD</td>
-						<td><a href="#" class="seller__buy-btn">Купить</a></td>
+						<td>
+							<p>От: Мой кошелёк</p>
+							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
+						</td>
+						<td>
+							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
+							<div class="transactions-table__summ">
+								<p class="transactions-table__summ-value">92.534435 BTC</p>
+								<span class="transactions-table__summ-wait">Подтверждена</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="transactions-table__status transactions-table__status--sended">
+								<p class="transactions-table__status-title">Получена</p>
+								<p class="transactions-table__status-date">21.07.2017</p>
+							</div>
+						</td>
+						<td>
+							<p>От: Мой кошелёк</p>
+							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
+						</td>
+						<td>
+							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
+							<div class="transactions-table__summ">
+								<p class="transactions-table__summ-value">92.534435 BTC</p>
+								<span class="transactions-table__summ-ok">Подтверждена</span>
+							</div>
+						</td>
 					</tr>
 				</table>
-			</div>
-			<div class="wallet__white">
-				<p class="seller__title">Продать биткоины BitcoinStore2000</p>
-				<table class="trade-search__table">
-					<tr>
-						<th>Продавец</th>
-						<th>Способ оплаты</th>
-						<th>Цена</th>
-						<th>Ограничения</th>
-						<th></th>
-					</tr>
-					<tr>
-						<td>
-							<div class="seller__buy-info">
-								<a href="#"><img src="i/avatar.jpg" alt="BitcoinStore2000" class="seller__buy-avatar"></a>
-								<p class="seller__buy-name seller__buy-name--online seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
-								<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
-							</div>
-						</td>
-						<td>Банковский перевод внутри страны</td>
-						<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-						<td>50 - 5000 USD</td>
-						<td><a href="#" class="seller__buy-btn">Купить</a></td>
-					</tr>
-					<tr>
-						<td>
-							<div class="seller__buy-info">
-								<a href="#"><img src="i/avatar.jpg" alt="BitcoinStore2000" class="seller__buy-avatar"></a>
-								<p class="seller__buy-name seller__buy-name--offline"><a href="#">BitcoinStore2000</a></p>
-								<p class="seller__buy-status">Новичок 9.3 (210 сделок)</p>
-							</div>
-						</td>
-						<td>Банковский перевод внутри страны</td>
-						<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-						<td>50 - 5000 USD</td>
-						<td><a href="#" class="seller__buy-btn">Купить</a></td>
-					</tr>
-				</table>
-			</div>
-			<div class="wallet__white">
-				<div class="seller__rating">
-					<div class="seller__rating-info">
-						<p class="seller__rating-title">Рейтинг: 8.7</p>
-						<div class="seller__rating-main">
-							<span class="seller__rating-item seller__rating-item--full"></span>
-							<span class="seller__rating-item seller__rating-item--full"></span>
-							<span class="seller__rating-item seller__rating-item--full"></span>
-							<span class="seller__rating-item seller__rating-item--full"></span>
-							<span class="seller__rating-item"></span>
-						</div>
-						<p class="seller__rating-count">3 отзыва</p>
-					</div>
-					<div class="reviews__sort">
-						<a href="#" class="reviews__sort-link reviews__sort-link--active">Все отзывы</a>
-						<a href="#" class="reviews__sort-link">по новизне</a>
-						<a href="#" class="reviews__sort-link">хорошие</a>
-						<a href="#" class="reviews__sort-link">плохие</a>
-					</div>
-					<div class="review__items">
-						<div class="review__item">
-							<time datetime="2017-02-28T22:21" class="review-item__date">28 февраля 2017 г. 22:21</time>
-							<div class="review-item__rating">
-								<span class="review-item__rating-item review-item__rating-item--full"></span>
-								<span class="review-item__rating-item review-item__rating-item--full"></span>
-								<span class="review-item__rating-item review-item__rating-item--full"></span>
-								<span class="review-item__rating-item review-item__rating-item--full"></span>
-								<span class="review-item__rating-item"></span>
-							</div>
-							<div class="review-item__text">
-								 +++ отличный продавец
-							</div>
-						</div>
-						<div class="review__item">
-							<time datetime="2017-02-28T22:21" class="review-item__date">28 февраля 2017 г. 22:21</time>
-							<div class="review-item__rating">
-								<span class="review-item__rating-item review-item__rating-item--full"></span>
-								<span class="review-item__rating-item review-item__rating-item--full"></span>
-								<span class="review-item__rating-item review-item__rating-item--full"></span>
-								<span class="review-item__rating-item review-item__rating-item--full"></span>
-								<span class="review-item__rating-item"></span>
-							</div>
-							<div class="review-item__text">
-								 +++ отличный продавец
-							</div>
-						</div>
-						<div class="review__item">
-							<time datetime="2017-02-28T22:21" class="review-item__date">28 февраля 2017 г. 22:21</time>
-							<div class="review-item__rating">
-								<span class="review-item__rating-item review-item__rating-item--full"></span>
-								<span class="review-item__rating-item review-item__rating-item--full"></span>
-								<span class="review-item__rating-item review-item__rating-item--full"></span>
-								<span class="review-item__rating-item review-item__rating-item--full"></span>
-								<span class="review-item__rating-item"></span>
-							</div>
-							<div class="review-item__text">
-								 +++ отличный продавец
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</main>

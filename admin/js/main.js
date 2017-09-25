@@ -44,6 +44,9 @@
 		$('label[for="' + this.id + '"]').text($(this).val());
 	});
 
+	var dHeight = $(window).height() - 515;
+	$('.js-chat-calculate-height').css('height',dHeight)
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);

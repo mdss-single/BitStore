@@ -84,8 +84,11 @@
 				</div>
 			</div>
 		</div>
-		<a href="#" class="header__logout"></a>
-		<a href="#" class="header__avatar" data-avatar="mail@localhost"><img src="i/avatar.jpg" alt="%username%"></a>
+		<a href="#" class="header__avatar js-header-avatar"><img src="i/avatar.jpg" alt="%username%">ppp@ya.ru</a>
+		<div class="header__system">
+			<a href="#" class="header-system__item">Настройки</a>
+			<a href="#" class="header-system__item">Выход</a>
+		</div>
 	</header>
 	<main class="main">
 		<div class="wallet__info">
@@ -127,13 +130,7 @@
 				<a href="#" class="nav__item nav__item--rates">Курсы</a>
 				<a href="#" class="nav__item nav__item--settings">Настройки</a>
 				<a href="#" class="nav__item nav__item--help">Помощь</a>
-				<a href="#" class="nav__item nav__item-app">Приложение</a>
 			</nav>
-			<div class="quick-stat">
-				<p class="quick-stat__title">За последние сутки</p>
-				<p class="quick-stat__value"><span class="quick-stat__value--count">50 120</span>  переводов</p>
-				<p class="quick-stat__value"><span class="quick-stat__value--count">12 450</span>  сделок</p>
-			</div>
 		</aside>
 		<div class="content">
 			<div class="transactions wallet__white">
@@ -142,8 +139,8 @@
 					<div class="transactions__nav-item transactions__nav-item--secondary"><a href="#">Получена</a></div>
 					<div class="transactions__nav-item transactions__nav-item--secondary"><a href="#">Отправлена</a></div>
 					<div class="transactions__nav-item">
-						<select name="" id="" class="select transactions__nav-wallets" data-placeholder="Все кошельки">
-							<option></option>
+						<select name="" id="" class="select transactions__nav-wallets">
+							<option value="">Все кошельки</option>
 							<option value="" data-value="2.900222">Bitcoin</option>
 							<option value="" data-value="1.883726">Etherum</option>
 							<option value="" data-value="8.373626">Litecoin</option>
@@ -158,8 +155,19 @@
 							<option value="">Неделя</option>
 							<option value="">Месяц</option>
 							<option value="">Год</option>
-							<option value="">Другой период</option>
+							<option value="" class="js-transactions-period">Другой период</option>
 						</select>
+						<div class="transactions__period">
+							<p class="transaction-period__title">Другой период</p>
+							С
+							<input type="text" name="" id="" class="input-text transaction-period__text" value="Сентября">
+							по
+							<input type="text" name="" id="" class="input-text transaction-period__text" value="Октябрь">
+							<div class="transaction-period__btns">
+								<button class="btn btn--small btn--grey js-transactions-period-close">Отменить</button>
+								<button class="btn btn--small">Показать</button>
+							</div>
+						</div>
 					</div>
 				</div>
 				<table class="transactions__table">
