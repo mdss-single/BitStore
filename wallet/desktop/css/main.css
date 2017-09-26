@@ -1876,14 +1876,13 @@ a {
 			line-height:35px;
 			transform:translateY(-50%);
 		}
-			.transaction-balance__export::after {
+			.transaction-balance__export-link {
 				display:inline-block;
 				vertical-align:middle;
 				height:35px;
 				background:url(../i/icons/icon-excel.png) no-repeat 0 center;
 				padding-left:42px;
 				margin:-4px 0 0 15px;
-				content:'(.excel)';
 			}
 /*  </transactions>  */
 
@@ -2371,9 +2370,6 @@ a {
 			.adplace-main__row .jq-selectbox__select {
 				height:39px;
 				line-height:39px;
-				border-color:#d0d3e4;
-				border-radius:3px;
-				box-shadow:0 1px 1px rgba(0, 0, 0, .35);
 			}
 				.adplace-main__row .jq-selectbox .placeholder {
 					color:#000;
@@ -3529,9 +3525,6 @@ a {
 		.add-wallet__system .jq-selectbox__select {
 			height:39px;
 			line-height:39px;
-			border-color:#d0d3e4;
-			border-radius:3px;
-			box-shadow:0 1px 1px rgba(0, 0, 0, .35);
 		}
 			.add-wallet__system .jq-selectbox .placeholder {
 				color:#000;

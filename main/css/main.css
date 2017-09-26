@@ -639,7 +639,6 @@ a {
 /*  </auth>  */
 
 /*  <safety>  */
-.safety {}
 	.safety__item {
 		margin:40px 0;
 	}
@@ -1595,6 +1594,9 @@ a.btn {
 	}
 }
 @media screen and (min-width:992px) {
+	.margin-block {
+		padding-bottom:80px;
+	}
 	.btn {
 		font-size:1.8rem;
 	}
@@ -1965,19 +1967,7 @@ a.btn {
 	.safety__item {
 		background-repeat:no-repeat;
 		background-position:0 8px;
-		/*padding-left:93px;*/
 	}
-	/*
-	.safety__item--encrypt {
-		background-image:url(../i/safety__encrypt.png);
-		background-position:3px 8px;
-	}
-	.safety__item--recommend {
-		background-image:url(../i/safety__recommend.png);
-	}
-	.safety__item--unknown {
-		background-image:url(../i/safety__unknown.png);
-	}*/
 		.safety__title {
 			font-size:3rem;
 		}
@@ -2059,35 +2049,44 @@ a.btn {
 		.news__sort-link--current {
 			color:#fff;
 		}
-	.news__item {
-		display:block;
-		padding:25px 0 45px;
+	.news__items {
+		margin-bottom:35px;
 	}
-		.news__item::after {
-			display:table;
-			clear:both;
-			content:'';
+		.news__item {
+			display:block;
+			padding:25px 0 45px;
 		}
-		.news__item-pic {
-			float:left;
-			width:auto;
-			margin:3px 30px 0 0;
-		}
-		.news__item-name {
-			font-size:2rem;
-			margin:6px 0;
-		}
-		.news__item-text {
-			margin-top:0;
-		}
-		.news__item-link {
-			display:inline-block;
-			background-color:#e7e7e7;
-		}
-			a:hover.news__item-link {
-				text-decoration:none;
-				background-color:#ddd;
+			.news__item:last-child::before {
+				display:none;
 			}
+			.news__item::after {
+				display:table;
+				clear:both;
+				content:'';
+			}
+			.news__item-pic {
+				float:left;
+				width:auto;
+				margin:3px 30px 0 0;
+			}
+			.news__item-name {
+				font-size:2rem;
+				margin:6px 0;
+			}
+			.news__item-text {
+				margin-top:0;
+			}
+			.news__item-link {
+				display:inline-block;
+				background-color:#e7e7e7;
+			}
+				a:hover.news__item-link {
+					text-decoration:none;
+					background-color:#ddd;
+				}
+	.news__detail {
+		margin-bottom:35px;
+	}
 	.about-us__block {
 		margin-top:80px;
 	}
@@ -2178,6 +2177,7 @@ a.btn {
 	.reviews__main {
 		padding-top:50px;
 		margin-top:60px;
+		margin-bottom:80px;
 	}
 		.reviews__title {
 			font-size:2rem;
@@ -2206,6 +2206,9 @@ a.btn {
 			}
 	.bg--gray {
 		background-color:#f9f9f9;
+	}
+	.safety {
+		margin-bottom:80px;
 	}
 	.seller {
 		overflow:hidden;
