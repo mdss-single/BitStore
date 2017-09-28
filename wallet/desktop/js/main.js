@@ -331,6 +331,26 @@
 		$(this).next().toggleClass('support__answer-text--active');
 	});
 
+	// show wallet value into get modal
+	$('.get__select').styler({
+		onFormStyled: function() {
+			var newVal = $('.get__select').find('li.selected').attr('data-value'),
+			curVal = $('.get__select').find('.jq-selectbox__select-text').text(),
+			hash = $('.get__select').find('li.selected').attr('data-hash');
+			$('.get__select').find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
+			$('.get-wallet__content-hash').text(hash);
+			$('.get-wallets__content-link').attr('data-clipboard-text', hash);
+		},
+		onSelectClosed: function() {
+			var newVal = $(this).find('li.selected').attr('data-value'),
+			curVal = $(this).find('li.selected').text(),
+			hash = $(this).find('li.selected').attr('data-hash');
+			$(this).find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
+			$('.get-wallet__content-hash').text(hash);
+			$('.get-wallets__content-link').attr('data-clipboard-text', hash);
+		}
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
