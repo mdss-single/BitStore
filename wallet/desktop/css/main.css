@@ -612,7 +612,6 @@ a {
 					.wallet-name__input {
 						flex:1;
 						height:36px;
-						font-size:1.7rem;
 						background-color:#fff;
 						border:0;
 						padding:0 10px;
@@ -644,8 +643,7 @@ a {
 						margin:0 0 20px;
 					}
 					.wallet-password__descr {
-						font-size:1.7rem;
-						line-height:3rem;
+						line-height:2.4rem;
 						margin-bottom:20px;
 					}
 						.wallet-password__descr p {
@@ -691,8 +689,7 @@ a {
 						margin:0 0 20px;
 					}
 					.wallet-hide__descr {
-						font-size:1.7rem;
-						line-height:3rem;
+						line-height:2.4rem;
 						margin-bottom:50px;
 					}
 						.wallet-hide__descr p {
@@ -702,6 +699,9 @@ a {
 							padding:0 30px;
 							margin-right:15px;
 						}
+				.bottom--active {
+					transform:translate(-48px, calc(-100% + 22px));
+				}
 .wallets__show-all {
 	color:#959595;
 	font-size:1.7rem;
@@ -990,8 +990,8 @@ a {
 	}
 		.settings-nav__item {
 			color:#6e6e6e;
-			font-size:1.7rem;
-			line-height:47px;
+			font-size:1.6rem;
+			line-height:48px;
 			border-right:1px solid #e0e0e0;
 			padding:0 35px;
 			cursor:pointer;
@@ -1646,14 +1646,14 @@ a {
 		display:-o-flex;
 		display:flex;
 		justify-content:flex-start;
-		font-size:1.7rem;
+		font-size:1.6rem;
 		background-color:#eaeaea;
 		border-bottom:1px solid #ececec;
 	}
 		.transactions__nav-item {
 			position:relative;
 			color:#6e6e6e;
-			line-height:49px;
+			line-height:48px;
 			border-right:1px solid #e2e2e2;
 			transition:background .2s;
 		}
@@ -1669,7 +1669,6 @@ a {
 				}
 		.transactions__nav-item--active {
 			color:#000;
-			font-family:Smedium;
 			background-color:#fff;
 			border-bottom:1px solid #fff;
 			margin-bottom:-1px;
@@ -1691,8 +1690,8 @@ a {
 				background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAALVBMVEW+xM++xM8AAAC+xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM/B6Xh6AAAADnRSTlNAgADA4KDv0CCfcF8wEFIzcaUAAABySURBVAjXY1BSMmFSUlJwVlJi0BY0NBQUFBYW3MRw7p3hOyAQfveGge9dCojp9u4BkAkBQOYFBijgRRJFZToGCxuaioCZRoyKQgLKENHJwoaWENGCpawBUezoCpJLTJzdzVBFEUwctvXBmC8YNGAuawIA9Wpk4B6z6lUAAAAASUVORK5CYII=) no-repeat 22px center;
 			}
 			.transactions__nav-wallets .jq-selectbox__select, .transactions__nav-period .jq-selectbox__select {
-				height:49px;
-				line-height:49px;
+				height:40px;
+				line-height:40px;
 				border:0;
 			}
 			.transactions__nav-wallets .jq-selectbox__select {
@@ -1904,7 +1903,7 @@ a {
 		.trade-nav__item {
 			color:#6e6e6e;
 			font-size:1.7rem;
-			line-height:50px;
+			line-height:48px;
 			border-right:1px solid #e0e0e0;
 			padding:0 35px;
 			cursor:pointer;
@@ -2003,7 +2002,12 @@ a {
 			border:1px solid #dfdfdf;
 			border-radius:1px;
 			padding:0 30px;
+			transition:all .2s;
 		}
+			.trade-search__btn:hover {
+				color:#498dea;
+				border-color:#498dea;
+			}
 .trade__search-system {
 	display:-webkit-flex;
 	display:-moz-flex;
@@ -2423,8 +2427,8 @@ a {
 			}
 			.select.adplace__select {
 				position:absolute;
-				top:0; left:189px;
-				width:62px;
+				top:0; left:171px;
+				width:80px;
 			}
 				.adplace__select .jq-selectbox__select {
 					border-radius:0 3px 3px 0;
@@ -2432,9 +2436,12 @@ a {
 				}
 			.input-text.adplace__extra-charge {
 				position:relative;
-				width:190px;
+				width:172px;
 				border-radius:3px 0 0 3px;
 			}
+				.input-text.adplace__extra-charge:focus {
+					z-index:12;
+				}
 			.adplace-main__currency-name {
 				position:absolute;
 				top:50%; left:206px;

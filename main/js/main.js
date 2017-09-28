@@ -6,7 +6,7 @@
 	});
 
 	$(window).scroll(function() {
-		var scrolledY = $(window).scrollTop();
+		var scrolledY = $(window).scrollTop() / 5;
 		if ($('.header').attr('style')) $('.header').css('background-position', 'center ' + ((scrolledY)) + 'px');
 	});
 
@@ -55,7 +55,7 @@
 				prevNextButtons: false,
 			});
 		} else {
-			$('.js-press').flickity('destroy');
+			if ($('.flickity-enabled').length) $('.js-press').flickity('destroy');
 		}
 	});
 

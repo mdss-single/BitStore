@@ -11,7 +11,10 @@
 		$('.header__notice--active').removeClass('header__notice--active');
 		$('.get-wallets__list--active').removeClass('get-wallets__list--active');
 		$('.footer__language-list--active').removeClass('footer__language-list--active');
-		$('.header__system--active').removeClass('header__system--active')
+		$('.header__system--active').removeClass('header__system--active');
+		$('.wallet__password--active').removeClass('wallet__password--active');
+		$('.wallet__name--active').removeClass('wallet__name--active');
+		$('.wallet__hide--active').removeClass('wallet__hide--active');
 	});
 	
 	// show notices
@@ -63,24 +66,48 @@
 	});
 	$('.js-wallet-edit').click(function(e) {
 		e.preventDefault();
+		e.stopPropagation();
 		$(this).closest('.wallet__menu--active').removeClass('wallet__menu--active');
 		$(this).closest('.wallet__settings').find('.wallet__name').addClass('wallet__name--active');
+	});
+	$('.wallet__name').click(function(e) {
+		e.stopPropagation();
 	});
 	$('.js-wallet-name-close').click(function() {
 		$(this).closest('.wallet__name--active').removeClass('wallet__name--active');
 	});
 	$('.js-wallet-password').click(function(e) {
 		e.preventDefault();
+		e.stopPropagation();
 		$(this).closest('.wallet__menu--active').removeClass('wallet__menu--active');
 		$(this).closest('.wallet__settings').find('.wallet__password').addClass('wallet__password--active');
+		var $this = $(this).closest('.wallet__settings').find('.wallet__password--active');
+		var topOffset = $(this).closest('.wallet__settings').offset().top;
+		var bottomOffset = $(document).height() - topOffset;
+		if (bottomOffset < $this.outerHeight()) {
+			$this.addClass('bottom--active');
+		}
+	});
+	$('.wallet__password').click(function(e) {
+		e.stopPropagation();
 	});
 	$('.js-wallet-password-close').click(function() {
 		$(this).closest('.wallet__password--active').removeClass('wallet__password--active');
 	});
 	$('.js-wallet-hide').click(function(e) {
 		e.preventDefault();
+		e.stopPropagation();
 		$(this).closest('.wallet__menu--active').removeClass('wallet__menu--active');
 		$(this).closest('.wallet__settings').find('.wallet__hide').addClass('wallet__hide--active');
+		var $this = $(this).closest('.wallet__settings').find('.wallet__hide--active');
+		var topOffset = $(this).closest('.wallet__settings').offset().top;
+		var bottomOffset = $(document).height() - topOffset;
+		if (bottomOffset < $this.outerHeight()) {
+			$this.addClass('bottom--active');
+		}
+	});
+	$('.wallet__hide').click(function(e) {
+		e.stopPropagation();
 	});
 	$('.js-wallet-hide-close').click(function() {
 		$(this).closest('.wallet__hide--active').removeClass('wallet__hide--active');

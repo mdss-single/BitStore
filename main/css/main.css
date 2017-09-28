@@ -487,6 +487,7 @@ a {
 		.footer__social {}
 			.social__item {
 				display:inline-block;
+				position:relative;
 				width:32px; height:32px;
 				-webkit-background-size:cover;
 				background-size:cover;
@@ -495,6 +496,14 @@ a {
 			.social__item--fb {
 				background-image:url(../i/social/fb.png);
 			}
+				.social__item:hover::before {
+					animation:fadein .5s;
+					position:absolute;
+					top:0; right:0; bottom:0; left:0;
+					background-color:rgba(0, 0, 0, .2);
+					border-radius:50%;
+					content:'';
+				}
 			.social__item--insta {
 				background-image:url(../i/social/insta.png);
 			}
@@ -1318,8 +1327,9 @@ a {
 	.trade-page__section-link:first-child {
 		margin-right:30px;
 	}
-	.trade-page__section-link--active {
+	.trade-page__section-link--active, a:hover.trade-page__section-link {
 		color:#000;
+		text-decoration:none;
 		border-color:#208afe;
 	}
 .trade-page__filter {}
@@ -1629,9 +1639,6 @@ a.btn {
 		.format__block {
 			margin-top:30px;
 		}
-		.format-text p {
-			line-height:3.6rem;
-		}
 		.format-text ul {
 			margin:25px 0;
 		}
@@ -1825,6 +1832,9 @@ a.btn {
 		.download__item {
 			max-width:135px;
 		}
+	.press {
+		margin-bottom:80px;
+	}
 	.press__title {
 		font-size:3rem;
 	}
@@ -1974,6 +1984,9 @@ a.btn {
 		.safety__descr {
 			line-height:2.7rem;
 		}
+	.career {
+		margin-top:56px;
+	}
 	.career__tabs {
 		justify-content:center;
 	}
@@ -2034,6 +2047,10 @@ a.btn {
 	.newcomer__enjoy {
 		margin:80px 0 30px;
 	}
+	.news__sort {
+		padding:50px 0;
+		margin-bottom:20px;
+	}
 	.news__sort-wrap {
 		display:inline-block;
 		vertical-align:middle;
@@ -2056,7 +2073,7 @@ a.btn {
 			display:block;
 			padding:25px 0 45px;
 		}
-			.news__item:last-child::before {
+			.news__item::before {
 				display:none;
 			}
 			.news__item::after {
@@ -2254,7 +2271,6 @@ a.btn {
 		.seller__abuse, .seller__favorite {
 			top:30px; bottom:auto; left:auto;
 			font-size:1.5rem;
-			font-family:Smedium;
 			line-height:36px;
 			border-radius:2px;
 		}
@@ -2272,6 +2288,7 @@ a.btn {
 			right:208px;
 			width:218px;
 			color:#fff;
+			font-family:Smedium;
 			background-color:#417ce4;
 		}
 			a:hover.seller__favorite {
@@ -2571,13 +2588,13 @@ a.btn {
 			}
 	.trade-page {
 		background-image:linear-gradient(#fcfcfc, #fff);
+		padding-top:36px;
 	}
 		.trade-page__title {
 			margin:-20px 0 60px;
 		}
 		.trade-page__section-link {
 			font-size:1.7rem;
-			font-family:Smedium;
 			border-width:2px;
 		}
 		.trade-page__filter {
@@ -2648,13 +2665,6 @@ a.btn {
 					.trade-page__select.trade-page__select-currency .jq-selectbox__select, .jq-selectbox.focused.trade-page__select-currency .jq-selectbox__select {
 						border:0;
 					}
-						.trade-page__select.trade-page__select-currency .jq-selectbox__select:hover {
-							border:0;
-						}
-						.trade-page__select .jq-selectbox__select:hover {
-							border-color:#208afe;
-							background-image:none;
-						}
 						.trade-page__select.jq-selectbox .placeholder {
 							color:#000;
 						}
@@ -2703,6 +2713,7 @@ a.btn {
 					transition:all .2s;
 				}
 					.trade-page__btn:hover {
+						color:#208afe;
 						border-color:#208afe;
 					}
 			.trade-page__sort-verification {
@@ -2797,7 +2808,11 @@ a.btn {
 		.trade-page__download {
 			display:block;
 		}
+	.header--partner .header__main {
+		margin:40px 0 60px;
+	}
 	.partner {
+		margin-top:56px;
 		margin-bottom:90px;
 	}
 		.partner__descr {
