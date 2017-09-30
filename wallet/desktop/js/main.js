@@ -45,7 +45,7 @@
 	});
 	$('[data-clipboard-text]').hover(function() {
 		var thisPos = $(this).position();
-		$('<span class="clipboard-tooltip" style="top:'+thisPos.top+'px;left:'+thisPos.left+'px">Копировать адрес</span>').insertBefore(this);
+		$('<span class="clipboard-tooltip" style="top:'+thisPos.top+'px;left:'+thisPos.left+'px">Копировать адрес</span>').insertAfter(this);
 		if ($(window).width() < thisPos.left+160) $('.clipboard-tooltip').addClass('clipboard-tooltip--left');
 	}, function() {
 		$('.clipboard-tooltip').remove();

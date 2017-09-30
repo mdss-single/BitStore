@@ -9,16 +9,42 @@
 </head>
 <body>
 	<header class="header">
-		<a href="#" class="logo"><img src="i/logo.png" alt=""></a>
+		<a href="#" class="header__logo"><img src="i/logo.png" alt=""></a>
+		<button class="header__send-btn js-wallet-send">Отправить</button>
+		<button class="header__get-btn js-wallet-get">Получить</button>
+		<button class="header__copy-btn js-wallet-copy" data-clipboard-text="1231231231"></button>
 		<div class="header__rates">
-			<div class="header__rate-item header__rate-item--down">1 USD = 62.87 RUB</div>
-			<div class="header__rate-item header__rate-item--down">1 BTC = 157500.8271 RUB</div>
-			<div class="header__rate-item header__rate-item--up">1 ETH = 12497.9233 RUB</div>
-			<div class="header__rate-item header__rate-item--up">1 LTC = 3034.1574 RUB</div>
-			<div class="header__rate-item header__rate-item--up">1 DSH = 10665.0781 RUB</div>
-			<div class="header__rate-item header__rate-item--up">1 NVC = 42.0098 RUB</div>
+			BTC <span class="header-rates__current-value">245 006 RUB</span>
+			<div class="header-rates__list">
+				<div class="header-rates__item header-rates__item--down">1 USD = 62.87 RUB</div>
+				<div class="header-rates__item header-rates__item--down">1 BTC = 157500.8271 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 ETH = 12497.9233 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 LTC = 3034.1574 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 DSH = 10665.0781 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 NVC = 42.0098 RUB</div>
+			</div>
 		</div>
-		<a href="#" class="header__notice-link js-header-notice"></a>
+		<div class="header__wallets">
+			22.876988 BTC
+			<div class="header-wallets__choose">
+				<div class="header-wallets__choose-section">
+					<p class="header-wallets__choose-title">Основной кошелёк</p>
+					<div class="header-wallets__choose-item header-wallets__choose-item--btc">
+						Bitcoin (BTC)
+						<span class="header-wallet__item--value">0.000123124</span>
+					</div>
+				</div>
+				<div class="header-wallets__choose-section">
+					<p class="header-wallets__choose-title">Выбрать другую валюту</p>
+					<div class="header-wallets__choose-item header-wallets__choose-item--ltc">
+						Litecoin (LTC)
+						<span class="header-wallet__item--value">0.000123124</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- класс header__notice-link--newest добавляем только если есть новые уведомления -->
+		<a href="#" class="header__notice-link header__notice-link--newest js-header-notice"></a>
 		<div class="header__notice">
 			<div class="header__notice-head">
 				Уведомления
