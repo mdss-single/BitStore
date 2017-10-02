@@ -126,6 +126,9 @@ a {
 		position:absolute;
 		top:16px; left:48px;
 	}
+		.header__logo img {
+			width:113px;
+		}
 	.header__send-btn, .header__get-btn, .header__copy-btn {
 		position:absolute;
 		top:0;
@@ -138,22 +141,22 @@ a {
 	.header__send-btn {
 		left:268px;
 		width:155px;
-		background:#204fa1 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALVJREFUeNpi/P//PwMeoAvEn4H4AU4VIANwYBEgvgLE24GYBZc6XJqZgXjOfwSoINWANCD+i2TAJyB2I9YAMyB+9x8T3AJiWUIGgBRc/o8bbAFiQWQ9TGhh6g3Ef4D4MBC/QRJ/AhUTB2JrfLHAjMReiWRzEw41GC74i8RmRGIz4VCDYQDJgKYGMOJgU9cFjAQy08CGAVGABYi7gZiDHO8D8TNQGDwHMoSA+B+JBrAB8VmAAAMAT/NPdhvYcNwAAAAASUVORK5CYII=) no-repeat 27px center;
+		background:#204fa1 url(../i/icons/icon-upload.svg) no-repeat 27px center / 16px auto;
 		padding-left:30px;
 	}
 	.header__get-btn {
 		left:424px;
 		width:146px;
-		background:#204fa1 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAWlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////9ZMre9AAAAHXRSTlMAk/ir74Tj1sqdi3tYNxDn2r6lnIhzaU9DOysjBE1NdmsAAABYSURBVBjTlctJDoAgAEPRojgDzrO9/zUNYgIsXPh2v0nhzHkuEJrIFKHs/9CQg69tFCXZiUrBOQs+pMZLS1rKnxbbNbyrInuDgCnkgci+4ksjIjVKJqH2BhXgBZrjIDJUAAAAAElFTkSuQmCC) no-repeat 27px center;
+		background:#204fa1 url(../i/icons/icon-download.svg) no-repeat 24px center / 16px auto;
 		padding-left:30px;
 	}
 	.header__copy-btn {
 		left:571px;
 		width:45px;
-		background:#204fa1 url(../i/icons/icon-copy.png) no-repeat center center;
+		background:#204fa1 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAD1BMVEUAAAD///////////////+PQt5oAAAABHRSTlMA4IBgbEBPKQAAAC9JREFUCNdjEHEBAQMGBgcGIGBSADGgwIERLOfI4MAC5rOQyXCCMYxgDAZMBtQuALbSCDNKtBBCAAAAAElFTkSuQmCC) no-repeat center center;
 	}
 		.header__send-btn:hover, .header__get-btn:hover, .header__copy-btn:hover {
-			background-color:#1e4b9b;
+			background-color:#2352a4;
 		}
 	.header__rates {
 		position:relative;
