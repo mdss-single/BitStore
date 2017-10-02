@@ -56,6 +56,7 @@ body {
 	color:#000;
 	font:normal 1.5rem/1.3 Sregular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	background-color:#fff;
+	font-size-adjust:0.5;
 }
 :-moz-placeholder {
 	opacity:1;
