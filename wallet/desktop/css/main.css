@@ -67,6 +67,7 @@ body {
 	color:#000;
 	font:normal 1.5rem/1.3 Sregular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	background-color:#fff;
+	font-size-adjust:0.5;
 }
 :-moz-placeholder {
 	opacity:1;
@@ -123,8 +124,7 @@ a {
 }
 	.header__logo {
 		position:absolute;
-		top:50%; left:48px;
-		transform:translateY(-50%);
+		top:16px; left:48px;
 	}
 	.header__send-btn, .header__get-btn, .header__copy-btn {
 		position:absolute;
@@ -132,7 +132,6 @@ a {
 		height:54px;
 		color:#fff;
 		font-family:Smedium;
-		background-color:#204fa1;
 		border:0;
 		transition:all .2s;
 	}
@@ -154,7 +153,7 @@ a {
 		background:#204fa1 url(../i/icons/icon-copy.png) no-repeat center center;
 	}
 		.header__send-btn:hover, .header__get-btn:hover, .header__copy-btn:hover {
-			background-color:#104198;
+			background-color:#1e4b9b;
 		}
 	.header__rates {
 		position:relative;
@@ -188,7 +187,7 @@ a {
 			animation:fadein .5s;
 			position:absolute;
 			right:0;
-			z-index:10;
+			z-index:15;
 			color:#000;
 			font-family:Sregular;
 			line-height:1;
@@ -253,7 +252,7 @@ a {
 			animation:fadein .5s;
 			position:absolute;
 			right:0;
-			z-index:10;
+			z-index:15;
 			width:302px;
 			color:#000;
 			font-family:Sregular;
@@ -284,9 +283,10 @@ a {
 					background-position:20px center;
 					-webkit-background-size:23px auto;
 					background-size:23px auto;
-					padding:10px 20px 10px 56px;
-					margin:8px -20px;
+					padding:18px 20px 18px 56px;
+					margin:5px -20px;
 					cursor:pointer;
+					transition:all .2s;
 				}
 				.header-wallets__choose-item--btc {
 					background-image:url(../i/wallets/bitcoin.png);
@@ -303,18 +303,19 @@ a {
 	.header__notice-link {
 		position:relative;
 		width:30px; height:54px;
+		text-align:center;
 		margin-right:20px;
 		transition:background .2s;
 	}
-		.header__notice-link::before {
-			position:absolute;
-			top:0; right:0; bottom:0; left:0;
-			background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj48cGF0aCBmaWxsPSIjMUUzQzVGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04LDE4IEM2LjY0NTgzMzMzLDE4IDUuNSwxNy4zIDUuNSwxNiBMMTAuNSwxNiBDMTAuNSwxNy4zIDkuMzU0MTY2NjcsMTggOCwxOCBaIE0xMy45OTU2OTMzLDExIEMxMy45OTU2OTMzLDEyLjUgMTYsMTIuNSAxNiwxMy41IEMxNiwxNCAxNiwxNSAxMy44OTU1OTg0LDE1IEwxLjk4NDMwOTg1LDE1IEMtNi4xOTA2MDM1OWUtMTMsMTUgLTEuNjI1MzY2NTFlLTEzLDE0IC0xLjYzNDI0ODI5ZS0xMywxMy41IEMtMS42MzM2OTMxOGUtMTMsMTIuNSAxLjk4NDMwOTg1LDEyLjUgMiwxMSBMMiw4IEMyLDQgNC4wOTcyNDkwMSwxLjUgNywxLjEgTDcsMSBDNywwLjQgNy41LDUuNzQwNTMxODdlLTE3IDgsMCBDOC41LDAgOSwwLjQgOSwxIEw5LDEuMSBDMTEuOTAyNzUxLDEuNSAxMy45OTU2OTMzLDQgMTMuOTk1NjkzMyw4IEwxMy45OTU2OTMzLDExIFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIgMSkiLz48L3N2Zz4=) no-repeat center center;
-			content:'';
+		.header__notice-link svg {
+			width:20px; height:54px;
 		}
-			.header__notice-link--active::before, a:hover.header__notice-link::before {
-				animation:fadein .2s;
-				background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%20d%3D%22M8%2C18%20C6.64583333%2C18%205.5%2C17.3%205.5%2C16%20L10.5%2C16%20C10.5%2C17.3%209.35416667%2C18%208%2C18%20Z%20M13.9956933%2C11%20C13.9956933%2C12.5%2016%2C12.5%2016%2C13.5%20C16%2C14%2016%2C15%2013.8955984%2C15%20L1.98430985%2C15%20C-6.19060359e-13%2C15%20-1.62536651e-13%2C14%20-1.63424829e-13%2C13.5%20C-1.63369318e-13%2C12.5%201.98430985%2C12.5%202%2C11%20L2%2C8%20C2%2C4%204.09724901%2C1.5%207%2C1.1%20L7%2C1%20C7%2C0.4%207.5%2C5.74053187e-17%208%2C0%20C8.5%2C0%209%2C0.4%209%2C1%20L9%2C1.1%20C11.902751%2C1.5%2013.9956933%2C4%2013.9956933%2C8%20L13.9956933%2C11%20Z%22%20transform%3D%22translate(2%201)%22%2F%3E%3C%2Fsvg%3E");
+			.header__notice-link svg path {
+				fill:#12336c;
+				transition:all .2s;
+			}
+			.header__notice-link--active svg path, a:hover.header__notice-link svg path {
+				fill:#fff;
 			}
 		.header__notice-link--newest::after {
 			animation:fadein 0;
@@ -333,7 +334,7 @@ a {
 		animation:fadein .5s;
 		position:absolute;
 		top:57px; right:35px;
-		z-index:10;
+		z-index:15;
 		width:404px;
 		background-color:#fff;
 		border-radius:3px;
@@ -438,39 +439,47 @@ a {
 			padding:11px 0 11px 64px;
 			margin-bottom:5px;
 		}
-		.nav__item--active, .nav__item:hover {
-			color:#134396;
-			text-decoration:none;
-			background-color:#edeef0;
-		}
-		.nav__item--wallets {
-			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAASCAMAAACZ8IWSAAAAPFBMVEWgqLYAAACgqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLYoj7thAAAAE3RSTlO4APkYDbHx7+mokoyFZ9nBnTtkXP0ffgAAAGNJREFUGNN1kUcSwCAMA10wnYSE//81gStirzsuIxG7ZrRhryPOA1KIAzaReGAEGfE/YOZ+nE42Y1oC3qbJ1yrAXCqFuWPTmQ1vk2TwjmmN6wP49QJmIJNpMMdEw7GFfGquuQ8GPhkiE1hHDwAAAABJRU5ErkJggg==);
-		}
-		.nav__item--transactions {
-			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAVBAMAAABfzGiYAAAAKlBMVEUAAACgqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLYDOf74AAAADXRSTlMAgMDQEDCgYPBAIJBQ5CLsxwAAAJJJREFUGNNjgIFQBgRg7QhA4vS2IkkF31iA4LDYmgBJpYBNAUVKSkq2lx0YGO5O0J0gexcEBBgYBBcULpgoKChoew2i3gGI2e8mgNlsIK21UIncOwwMPDCJuwVAk82gEtfB+qAShkCzJiwsWAg0GmrHXIW5FxgYnO8aAe0vCNoQpABxFAI4Ax0FBRhSyP5igfkYAAG3LFQY8hkCAAAAAElFTkSuQmCC);
-		}
-		.nav__item--buy {
-			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAMAAACaPIWZAAAANlBMVEUAAACgqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLbddT47AAAAEXRSTlMAwIBA0BCwYCAw8JDg33CgUCxuQtoAAACDSURBVBjTbZBbEoQgDAQHAoig7ub+l11WrTzQ/kq6qEkCAB5UTNx+wROiznvwRPypPJNwkmZ/XP6YdMt4DerAI8itvTj9kV2z86R+NzpAKJyisELjmzSWMJ4b5LciO4KMjcHSdR+CQFXLxsmc/pW5egzZ/DKae9F1lEXiyxbllq1k4AfG6wwx14MZygAAAABJRU5ErkJggg==);
-		}
-		.nav__item--rates {
-			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAMAAACaPIWZAAAANlBMVEUAAACgqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLbddT47AAAAEXRSTlMAP8BggDCQIOBw8NCgEM9Q70aihwsAAACLSURBVBjTnZDhDsMgCIRFVKRqu3v/lx0l7TKTmiW7P0cO8gUIlyKSe0J0/5VnEnehPOUlsjvHsuZw1YlDu9LJqeCJ0wHsKow6cQbQ4LrGuWROFBQtiDbc4/KysmTHUuLBdDPqBmthG993KTYJR7dWD+f8Z8Vm2xr/6Nnz1V2rP6z+9i+HnmQ5nrTK33GnCEXiN/OhAAAAAElFTkSuQmCC);
-		}
-		.nav__item--settings {
-			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAAOVBMVEUAAACgqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLYrcTBIAAAAEnRSTlMAMMCwEIDg369A0PDvoGBQIH8/+2PRAAAAq0lEQVQoz32S7Q7DIAhFwe+6qtt9/4fdKittdd35YTAnJJcAHXgAnn5hAFi6wnV7A4C8FZVVrEiOGBtMLmFlFUA0EEwEdtUw06hTMFJIcGEQwWnewRjNho5daLFSPvvkPYwO+VXRvAg7EnTR/2FImM3c422WKp1jZutP2dInW9JsQr6bx8XBREeCxUgSUTFTu+EHgKD7CQAeTLsqp50WEaLa5Q4a/7+d+3t7A2vJFy5MxnqmAAAAAElFTkSuQmCC);
-		}
-		.nav__item--help {
-			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAXCAMAAAAm/38fAAAAV1BMVEUAAACgqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLZD0RIvAAAAHHRSTlMAB8eYlOjPSrFHBPjvUPPiwYvZqXNWIQLAum5jCyAxowAAAKdJREFUKM91klkWwyAIRR8aNWae04H9r7PNqRD74f26KOoBRKIJ1rjOGRsa5PSGBdNDoYpzKpL1mv+p047mKxUugoRj7UUDAJJoJjrf7c89ATGtT9gWq9dGwCZ97t/sY0+RBQzfjDRLNYDjm3h0yRwwsDJjEh3yE+O5qbv8jal5qBvAatAurbq96hD8y6vHrHJesWoO5b0afCcaSt0tzqM8wfLMi7/kA0Z7J7D5l3iUAAAAAElFTkSuQmCC);
-		}
-		.nav__item-app {
-			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAaCAMAAACNQ/wIAAAAclBMVEUAAACgqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLaUvTiIAAAAJXRSTlMA+WXS7VDN8tUkGekK3cXAbkopp51/Wi/kurSxYV41EIp6RiIDRl8+XgAAALtJREFUGNOF0MsSgyAMBdCgNSCg4Nuq1b74/18sIO3QceFdmDtn4iKA7ASxEYijn3cOmhqXa/acfSEtlEakjKWoFDI7hbkAIx3P87wehtoOrimBlNwgSiUcJTFllxOSB0r6f3rzYV62mOSDlQob/iNXjCGmlRFpf8oC8Rb1d74i4soRrSKCClEVnYwJ6pyv8uSgEzq+lyU0TZ/YaO2+fUuopT1FEQqFdC+41uWXpr1MGzRhHarwQxmWxuQDMuATmrHU+ywAAAAASUVORK5CYII=);
-			margin-top:50px;
-		}
-			.nav__item-app::before {
+			.nav__item svg {
 				position:absolute;
-				top:-25px; left:-44px;
-				width:260px; height:1px;
-				background-color:#e5e5e5;
+				top:50%;
 				content:'';
+				transform:translateY(-50%);
+			}
+				.nav__item svg path {
+					fill:#a0a8b6;
+					transition:all .2s;
+				}
+			.nav__item--active, .nav__item:hover {
+				color:#134396;
+				text-decoration:none;
+				background-color:#edeef0;
+			}
+				.nav__item--active svg path, .nav__item:hover svg path {
+					fill:#204fa1;
+				}
+			.nav__item--wallets svg {
+				left:23px;
+				width:19px; height:18px;
+			}
+			.nav__item--transactions svg {
+				left:21px;
+				width:22px; height:19px;
+			}
+			.nav__item--buy svg {
+				left:22px;
+				width:20px; height:18px;
+			}
+			.nav__item--rates svg {
+				left:23px;
+				width:19px; height:19px;
+			}
+			.nav__item--settings svg {
+				left:22px;
+				width:20px; height:20px;
+			}
+			.nav__item--help svg {
+				left:23px;
+				width:19px; height:20px;
 			}
 	.quick-stat {
 		border-top:1px solid #e5e5e5;
@@ -496,6 +505,7 @@ a {
 }
 	.wallets {
 		width:100%;
+		border:1px solid #ececec;
 	}
 	.wallets tr {
 		border-top:1px solid #f3f3f3;
@@ -520,7 +530,6 @@ a {
 			width:20%;
 		}
 		.wallets td:first-child {
-			border-left:1px solid #ececec;
 			padding:22px 10px 22px 26px;
 		}
 		.wallets th:last-child, .wallets td:last-child {
@@ -730,6 +739,7 @@ a {
 /*  <rates>  */
 .wallet__white {
 	background-color:#fff;
+	border:1px solid #ececec;
 	margin-bottom:20px;
 }
 .wallet__rates {
@@ -999,7 +1009,7 @@ a {
 		display:-o-flex;
 		display:flex;
 		justify-content:flex-start;
-		background-color:#f1f1f1;
+		background-color:#ededed;
 		border-bottom:1px solid #ececec;
 	}
 		.settings-nav__item {
@@ -1688,7 +1698,7 @@ a {
 				background-color:#fff;
 			}
 		.transactions__nav-item--secondary {
-			background-color:#f1f1f1;
+			background-color:#ededed;
 		}
 			.select.transactions__nav-wallets, .select.transactions__nav-period {
 				width:236px;
@@ -1899,8 +1909,9 @@ a {
 	justify-content:space-between;
 	align-items:center;
 	background-color:#f1f1f1;
+	border:1px solid #ececec;
 	padding:0 24px 0 0;
-	border-bottom:1px solid #ececec;
+	margin-bottom:-1px;
 }
 	.trade__nav {
 		display:-webkit-flex;
@@ -1918,6 +1929,10 @@ a {
 			cursor:pointer;
 			transition:background .2s;
 		}
+		.trade-nav__item--settings {
+			background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAS1BMVEUAAACzu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8iYAJsLAAAAGHRSTlMA0JNBosI3Eg67Cffx7OaWr6vk48SukhV5KoymAAAAnUlEQVQY023RCQrEIAwF0Ghcqm3t3vn3P+k4UQcLfSBI0Bi+1CzjqKk35KUAK9tKWyY/AbMntvX4DSSjkCmTgFvuBjwE6eB2dHZHwqBjpBQ/0m9lXqXvEIkWNSHbKJPqpBZCwb8io3gvaju361GGm2X+8tDFfJWHSGzPkYRL6CQZ3p94OL2EBBwtkAPQNbrgWnQu/JOONeS6pdfv+AJYTxKzDD81CAAAAABJRU5ErkJggg==) no-repeat center center;
+			padding:0 39px;
+		}
 		.trade-nav__item--active {
 			color:#000;
 			background-color:#fff;
@@ -1932,21 +1947,13 @@ a {
 			.trade-nav__item--active:hover {
 				background-color:#fff;
 			}
-	.trade-search__btns {
-		text-align:right;
-	}
 	.btn.trade__add-btn {
-		vertical-align:middle;
-		height:36px;
-		line-height:36px;
-		padding:0 24px;
-	}
-	.trade__search-settings {
-		display:inline-block;
-		vertical-align:middle;
-		width:36px; height:36px;
-		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAS1BMVEUAAACzu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8izu8iYAJsLAAAAGHRSTlMA0JNBosI3Eg67Cffx7OaWr6vk48SukhV5KoymAAAAnUlEQVQY023RCQrEIAwF0Ghcqm3t3vn3P+k4UQcLfSBI0Bi+1CzjqKk35KUAK9tKWyY/AbMntvX4DSSjkCmTgFvuBjwE6eB2dHZHwqBjpBQ/0m9lXqXvEIkWNSHbKJPqpBZCwb8io3gvaju361GGm2X+8tDFfJWHSGzPkYRL6CQZ3p94OL2EBBwtkAPQNbrgWnQu/JOONeS6pdfv+AJYTxKzDD81CAAAAABJRU5ErkJggg==) no-repeat center center;
-		margin-left:10px;
+		height:28px;
+		font-size:1.4rem;
+		line-height:28px;
+		background-color:#498dea;
+		border-radius:2px;
+		padding:0 14px;
 	}
 .trade__search-filter {
 	display:-webkit-flex;
@@ -1955,7 +1962,7 @@ a {
 	display:-o-flex;
 	display:flex;
 	justify-content:space-between;
-	padding:32px 24px 36px 32px;
+	padding:32px 24px 18px 32px;
 }
 	.trade-search__filter-block {
 		flex:1;
@@ -2022,24 +2029,12 @@ a {
 	display:-ms-flex;
 	display:-o-flex;
 	display:flex;
-	justify-content:space-between;
-	margin:0 25px 10px 35px;
+	justify-content:flex-start;
+	margin:0 24px 35px 32px;
 }
-	.trade__search-title {
-		flex:1;
-		color:#676b73;
-		margin:0;
+	.trade-search__system-verification {
+		margin-right:22px;
 	}
-	.trade__search-sort {
-		margin-right:45px;
-	}
-		.trade-search__sort-link {
-			color:#848484;
-			margin:0 7px;
-		}
-		.trade-search__sort-link--active {
-			color:#000;
-		}
 		.trade-search__check {
 			position:absolute;
 			left:-9999px;
@@ -2075,6 +2070,7 @@ a {
 				}
 .trade-search__table {
 	width:100%;
+	margin-top:15px;
 }
 	.trade-search__table tr {
 		border-bottom:1px solid #eee;
@@ -2084,6 +2080,7 @@ a {
 	}
 		.trade-search__table th {
 			font-weight:normal;
+			font-size:1.3rem;
 			font-family:Smedium;
 			text-align:left;
 			padding:9px 10px 5px;
@@ -2105,6 +2102,25 @@ a {
 			text-align:right;
 			padding:14px 22px 14px 10px;
 		}
+			.trade-search__sort {
+				position:relative;
+				padding-right:14px;
+			}
+				.trade-search__sort::before {
+					position:absolute;
+					top:50%; right:0;
+					border:solid transparent;
+					content:'';
+					transform:translateY(-50%);
+				}
+				.trade-search__sort--desc::before {
+					border-width:5px 5px 0;
+					border-top-color:#000;
+				}
+				.trade-search__sort--asc::before {
+					border-width:0 5px 5px;
+					border-bottom-color:#000;
+				}
 			.seller__buy-info {
 				position:relative;
 				padding-left:50px;
@@ -2116,6 +2132,27 @@ a {
 					width:36px;
 					border-radius:2px;
 				}
+					.seller__buy-avatar img {
+						width:100%;
+					}
+				.seller__buy-avatar--online::before {
+					position:absolute;
+					right:-2px; bottom:-2px;
+					width:12px; height:12px;
+					background-color:#6f932a;
+					border:2px solid #fff;
+					border-radius:50%;
+					content:'';
+				}
+				.seller__buy-avatar--offline::before {
+					position:absolute;
+					right:-2px; bottom:-2px;
+					width:12px; height:12px;
+					background-color:#c7a930;
+					border:2px solid #fff;
+					border-radius:50%;
+					content:'';
+				}
 				.seller__buy-name {
 					position:relative;
 					color:#000;
@@ -2123,27 +2160,11 @@ a {
 					font-family:Ssemi;
 					margin:0 0 5px;
 				}
-				.seller__buy-name--online, .seller__buy-name--offline {
-					padding-left:13px;
-				}
-					.seller__buy-name--online::before, .seller__buy-name--offline::before {
-						position:absolute;
-						top:7px; left:0;
-						width:8px; height:8px;
-						border-radius:50%;
-						content:'';
-					}
-					.seller__buy-name--online::before {
-						background-color:#6f932a;
-					}
-					.seller__buy-name--offline::before {
-						background-color:#c7a930;
-					}
 					.seller__buy--reliable::after {
 						display:inline-block;
 						vertical-align:middle;
-						width:13px; height:10px;
-						background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAKCAMAAABYMCT2AAAARVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADc6ur3AAAAFnRSTlMACOeXPg3iqKOeUEQ489fVv5KNMTAoxh+gAwAAAExJREFUCNdljVcOgDAMQzNKB3v6/kclEaggNT/xs2Sbvuu0/0HCWoETloP4eiBjPolUBqeCONrbIIFYIQ4uYtjNeuMFkxm1OsOz7ewNoIcCU3ikCFcAAAAASUVORK5CYII=);
+						width:15px; height:15px;
+						background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAS1BMVEUAAACDuepQiL9ak8htpNlwo9dclMpooNZak8hgmMxgmM1dlsqYzP2XyvuVyfmr1f35/P/Z7P6Ow/OKvu+ez/3s9v/S6f6/3/6l0v0l9QqzAAAADHRSTlMA82Zk2KB83KaXh3uzORLlAAAAbklEQVQI12WPSQKAIAwDEQG3EhVw+f9Lpa1cNLdpuqRGZBe/WNPUDwlAcr3i2EVixW4SV1AL3DE0vCi6uiq9uG83ZWtmNFyJEIwHradiZc9+OXZB9mW+HIo8L/uLYnTf+/983OEygCz5VTb4oP89ph8HwCPcp0EAAAAASUVORK5CYII=);
 						margin:-4px 0 0 6px;
 						content:'';
 					}
@@ -2163,7 +2184,6 @@ a {
 					font-family:Ssemi;
 				}
 				.seller__buy--cost {
-					color:#257af2;
 					font-family:Ssemi;
 				}
 				.seller__buy-btn {
@@ -3606,7 +3626,7 @@ a {
 	color:#fff;
 	font-size:1.6rem;
 	font-family:Smedium;
-	background-color:#498dea;
+	background-color:#157efb;
 	border:0;
 	border-radius:4px;
 	padding:0 45px;
@@ -3638,7 +3658,7 @@ a.btn {
 }
 	a:hover.btn, .btn:hover {
 		text-decoration:none;
-		background-color:#4482da;
+		background-color:#0064de;
 	}
 [data-tooltip] {
 	position:relative;
