@@ -182,6 +182,9 @@ a {
 			.header-rates__current-value {
 				color:#98b6eb;
 			}
+			.header__rates:hover, .header__rates:hover .header-rates__current-value {
+				color:#fff;
+			}
 		.header-rates__list {
 			display:none;
 		}
