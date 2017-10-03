@@ -2,7 +2,12 @@
 	"use strict";
 
 	$('html').click(function() {
-		$('.settings__modal--active').removeClass('settings__modal--active');
+		$('.wallet__menu--active').removeClass('wallet__menu--active');
+		$('.header__system--active').removeClass('header__system--active');
+		$('.wallet__password--active').removeClass('wallet__password--active');
+		$('.wallet__name--active').removeClass('wallet__name--active');
+		$('.wallet__hide--active').removeClass('wallet__hide--active');
+		$('.footer__language-list--active').removeClass('footer__language-list--active');
 	});
 
 	$('.tabs__nav').each(function(i) {
@@ -31,6 +36,91 @@
 		localStorage.setItem('stab' + ulIndex, $(this).index());
 	});
 
+	// show user menu in header
+	$('.js-header-avatar').click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).next('.header__system').toggleClass('header__system--active');
+	});
+	$('.header__system').click(function(e){
+		e.stopPropagation();
+	});
+
+	// copy to clipboard function
+	var clipboard = new Clipboard('.js-wallet-copy');
+	$('.js-wallet-copy').click(function(e) {
+		e.preventDefault();
+	});
+	$('[data-clipboard-text]').hover(function() {
+		var thisPos = $(this).position();
+		$('<span class="clipboard-tooltip" style="top:'+thisPos.top+'px;left:'+thisPos.left+'px">Копировать адрес</span>').insertAfter(this);
+		if ($(window).width() < thisPos.left+160) $('.clipboard-tooltip').addClass('clipboard-tooltip--left');
+	}, function() {
+		$('.clipboard-tooltip').remove();
+	});
+	clipboard.on('success', function(e) {
+		$('.clipboard-tooltip').text('Скопировано в буфер');
+		e.clearSelection();
+	});
+
+	// wallet menu
+	$('.js-wallet-menu').on('click', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).next().toggleClass('wallet__menu--active');
+	});
+	$('.wallet__menu').click(function(e) {
+		e.stopPropagation();
+	});
+	$('.js-wallet-edit').click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).closest('.wallet__menu--active').removeClass('wallet__menu--active');
+		$(this).closest('.wallet__settings').find('.wallet__name').addClass('wallet__name--active');
+	});
+	$('.wallet__name').click(function(e) {
+		e.stopPropagation();
+	});
+	$('.js-wallet-name-close').click(function() {
+		$(this).closest('.wallet__name--active').removeClass('wallet__name--active');
+	});
+	$('.js-wallet-password').click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).closest('.wallet__menu--active').removeClass('wallet__menu--active');
+		$(this).closest('.wallet__settings').find('.wallet__password').addClass('wallet__password--active');
+		var $this = $(this).closest('.wallet__settings').find('.wallet__password--active');
+		var topOffset = $(this).closest('.wallet__settings').offset().top;
+		var bottomOffset = $(document).height() - topOffset;
+		if (bottomOffset < $this.outerHeight()) {
+			$this.addClass('bottom--active');
+		}
+	});
+	$('.wallet__password').click(function(e) {
+		e.stopPropagation();
+	});
+	$('.js-wallet-password-close').click(function() {
+		$(this).closest('.wallet__password--active').removeClass('wallet__password--active');
+	});
+	$('.js-wallet-hide').click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).closest('.wallet__menu--active').removeClass('wallet__menu--active');
+		$(this).closest('.wallet__settings').find('.wallet__hide').addClass('wallet__hide--active');
+		var $this = $(this).closest('.wallet__settings').find('.wallet__hide--active');
+		var topOffset = $(this).closest('.wallet__settings').offset().top;
+		var bottomOffset = $(document).height() - topOffset;
+		if (bottomOffset < $this.outerHeight()) {
+			$this.addClass('bottom--active');
+		}
+	});
+	$('.wallet__hide').click(function(e) {
+		e.stopPropagation();
+	});
+	$('.js-wallet-hide-close').click(function() {
+		$(this).closest('.wallet__hide--active').removeClass('wallet__hide--active');
+	});
+
 	$('.js-modal').on('click', function(e) {
 		e.preventDefault();
 		e.stopPropagation();
@@ -42,6 +132,16 @@
 
 	$('.support-ticket__attach').change(function() {
 		$('label[for="' + this.id + '"]').text($(this).val());
+	});
+
+	// show language list
+	$('.js-footer-language').click(function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).next().toggleClass('footer__language-list--active');
+	});
+	$('.footer__language-list').click(function(e) {
+		e.stopPropagation();
 	});
 
 	var dHeight = $(window).height() - 515;

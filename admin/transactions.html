@@ -9,23 +9,47 @@
 </head>
 <body>
 	<header class="header">
-		<a href="#" class="logo"><img src="i/logo.png" alt=""></a>
+		<a href="#" class="header__logo"><img src="i/logo.svg" alt=""></a>
 		<div class="header__rates">
-			<div class="header__rate-item header__rate-item--down">1 USD = 62.87 RUB</div>
-			<div class="header__rate-item header__rate-item--down">1 BTC = 157500.8271 RUB</div>
-			<div class="header__rate-item header__rate-item--up">1 ETH = 12497.9233 RUB</div>
-			<div class="header__rate-item header__rate-item--up">1 LTC = 3034.1574 RUB</div>
-			<div class="header__rate-item header__rate-item--up">1 DSH = 10665.0781 RUB</div>
-			<div class="header__rate-item header__rate-item--up">1 NVC = 42.0098 RUB</div>
+			BTC <span class="header-rates__current-value">245 006 RUB</span>
+			<div class="header-rates__list">
+				<div class="header-rates__item header-rates__item--down">1 USD = 62.87 RUB</div>
+				<div class="header-rates__item header-rates__item--down">1 BTC = 157500.8271 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 ETH = 12497.9233 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 LTC = 3034.1574 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 DSH = 10665.0781 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 NVC = 42.0098 RUB</div>
+			</div>
 		</div>
-		<a href="#" class="header__notice-link"></a>
-		<a href="#" class="header__logout"></a>
-		<a href="#" class="header__avatar"><img src="i/avatar.jpg" alt="%username%"></a>
+		<div class="header__wallets">
+			22.876988 BTC
+			<div class="header-wallets__choose">
+				<div class="header-wallets__choose-section">
+					<p class="header-wallets__choose-title">Основной кошелёк</p>
+					<div class="header-wallets__choose-item header-wallets__choose-item--btc">
+						Bitcoin (BTC)
+						<span class="header-wallet__item--value">0.000123124</span>
+					</div>
+				</div>
+				<div class="header-wallets__choose-section">
+					<p class="header-wallets__choose-title">Выбрать другую валюту</p>
+					<div class="header-wallets__choose-item header-wallets__choose-item--ltc">
+						Litecoin (LTC)
+						<span class="header-wallet__item--value">0.000123124</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="header__avatar js-header-avatar"><img src="i/avatar.jpg" alt="%username%">ppp@ya.ru</a>
+		<div class="header__system">
+			<a href="#" class="header-system__item">Настройки</a>
+			<a href="#" class="header-system__item">Выход</a>
+		</div>
 	</header>
 	<main class="main">
 		<aside class="sidebar">
 			<nav class="nav">
-				<a href="#" class="nav__item">Статистика</a>
+				<a href="#" class="nav__item nav__item--active">Статистика</a>
 				<a href="#" class="nav__item">Транзакции</a>
 				<a href="#" class="nav__item">Пользователи</a>
 				<a href="#" class="nav__item">Курсы</a>
@@ -75,7 +99,7 @@
 										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
 										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
 									</td>
-									<td><a href="#">Копировать</a></td>
+									<td><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
 									<td class="tr">
 										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
 										<p>Не подтверждена</p>
@@ -93,55 +117,7 @@
 										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
 										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
 									</td>
-									<td><a href="#">Копировать</a></td>
-									<td class="tr">
-										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
-										<p>Не подтверждена</p>
-									</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-					<div class="tab__content">
-						<div class="settings">
-							<table class="table transaction__table">
-								<tr>
-									<th>Статус</th>
-									<th>Пользователи</th>
-									<th>Хэш</th>
-									<th class="tr">Сумма</th>
-								</tr>
-								<tr>
-									<td>
-										<div class="transaction__status">
-											<i class="transaction__icon transaction__icon--delivered"></i>
-											<p class="transaction__status-title">Получена</p>
-											<p class="transaction__status-datestamp">09.07.2017, 22:29</p>
-										</div>
-									</td>
-									<td>
-										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
-										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
-									</td>
-									<td><a href="#">Копировать</a></td>
-									<td class="tr">
-										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
-										<p>Не подтверждена</p>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="transaction__status">
-											<i class="transaction__icon transaction__icon--delivered"></i>
-											<p class="transaction__status-title">Получена</p>
-											<p class="transaction__status-datestamp">09.07.2017, 22:29</p>
-										</div>
-									</td>
-									<td>
-										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
-										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
-									</td>
-									<td><a href="#">Копировать</a></td>
+									<td><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
 									<td class="tr">
 										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
 										<p>Не подтверждена</p>
@@ -171,7 +147,7 @@
 										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
 										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
 									</td>
-									<td><a href="#">Копировать</a></td>
+									<td><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
 									<td class="tr">
 										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
 										<p>Не подтверждена</p>
@@ -189,55 +165,7 @@
 										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
 										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
 									</td>
-									<td><a href="#">Копировать</a></td>
-									<td class="tr">
-										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
-										<p>Не подтверждена</p>
-									</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-					<div class="tab__content">
-						<div class="settings">
-							<table class="table transaction__table">
-								<tr>
-									<th>Статус</th>
-									<th>Пользователи</th>
-									<th>Хэш</th>
-									<th class="tr">Сумма</th>
-								</tr>
-								<tr>
-									<td>
-										<div class="transaction__status">
-											<i class="transaction__icon transaction__icon--delivered"></i>
-											<p class="transaction__status-title">Получена</p>
-											<p class="transaction__status-datestamp">09.07.2017, 22:29</p>
-										</div>
-									</td>
-									<td>
-										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
-										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
-									</td>
-									<td><a href="#">Копировать</a></td>
-									<td class="tr">
-										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
-										<p>Не подтверждена</p>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="transaction__status">
-											<i class="transaction__icon transaction__icon--delivered"></i>
-											<p class="transaction__status-title">Получена</p>
-											<p class="transaction__status-datestamp">09.07.2017, 22:29</p>
-										</div>
-									</td>
-									<td>
-										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
-										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
-									</td>
-									<td><a href="#">Копировать</a></td>
+									<td><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
 									<td class="tr">
 										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
 										<p>Не подтверждена</p>
@@ -267,7 +195,7 @@
 										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
 										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
 									</td>
-									<td><a href="#">Копировать</a></td>
+									<td><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
 									<td class="tr">
 										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
 										<p>Не подтверждена</p>
@@ -285,7 +213,103 @@
 										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
 										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
 									</td>
-									<td><a href="#">Копировать</a></td>
+									<td><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
+									<td class="tr">
+										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
+										<p>Не подтверждена</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="tab__content">
+						<div class="settings">
+							<table class="table transaction__table">
+								<tr>
+									<th>Статус</th>
+									<th>Пользователи</th>
+									<th>Хэш</th>
+									<th class="tr">Сумма</th>
+								</tr>
+								<tr>
+									<td>
+										<div class="transaction__status">
+											<i class="transaction__icon transaction__icon--delivered"></i>
+											<p class="transaction__status-title">Получена</p>
+											<p class="transaction__status-datestamp">09.07.2017, 22:29</p>
+										</div>
+									</td>
+									<td>
+										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
+										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
+									</td>
+									<td><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
+									<td class="tr">
+										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
+										<p>Не подтверждена</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="transaction__status">
+											<i class="transaction__icon transaction__icon--delivered"></i>
+											<p class="transaction__status-title">Получена</p>
+											<p class="transaction__status-datestamp">09.07.2017, 22:29</p>
+										</div>
+									</td>
+									<td>
+										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
+										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
+									</td>
+									<td><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
+									<td class="tr">
+										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
+										<p>Не подтверждена</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="tab__content">
+						<div class="settings">
+							<table class="table transaction__table">
+								<tr>
+									<th>Статус</th>
+									<th>Пользователи</th>
+									<th>Хэш</th>
+									<th class="tr">Сумма</th>
+								</tr>
+								<tr>
+									<td>
+										<div class="transaction__status">
+											<i class="transaction__icon transaction__icon--delivered"></i>
+											<p class="transaction__status-title">Получена</p>
+											<p class="transaction__status-datestamp">09.07.2017, 22:29</p>
+										</div>
+									</td>
+									<td>
+										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
+										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
+									</td>
+									<td><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
+									<td class="tr">
+										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
+										<p>Не подтверждена</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="transaction__status">
+											<i class="transaction__icon transaction__icon--delivered"></i>
+											<p class="transaction__status-title">Получена</p>
+											<p class="transaction__status-datestamp">09.07.2017, 22:29</p>
+										</div>
+									</td>
+									<td>
+										<p class="transaction__address">От кого: <a href="#">RocketLand</a> <span>12EdgGRS3FSwegfn32</span></p>
+										<p class="transaction__address">Кому: <a href="#">Pocker</a> <span>3142srg424gwfg</span></p>
+									</td>
+									<td><a href="#" class="js-wallet-copy" data-clipboard-text="123">Копировать</a></td>
 									<td class="tr">
 										<p><span class="transaction__summ">+ 9.35341332225434 BTC</span> <a href="#">[txid]</a></p>
 										<p>Не подтверждена</p>
@@ -300,13 +324,27 @@
 	</main>
 	<footer class="footer">
 		<p class="copyright">© BitStore 2017</p>
+		<a href="#" class="language language--ru js-footer-language">Ru</a>
+		<div class="footer__language-list">
+			<a href="#" class="footer__language-item footer__language-item--en">English</a>
+			<a href="#" class="footer__language-item footer__language-item--ru">Русский</a>
+			<a href="#" class="footer__language-item footer__language-item--cn">中国</a>
+		</div>
+		<nav class="footer__nav">
+			<a href="#" class="footer__nav-item">Приложение</a>
+			<a href="#" class="footer__nav-item">О компании</a>
+			<a href="#" class="footer__nav-item">Безопасность</a>
+			<a href="#" class="footer__nav-item">Партнёрам</a>
+			<a href="#" class="footer__nav-item">Карьера</a>
+			<a href="#" class="footer__nav-item">Поддержка</a>
+			<a href="#" class="footer__nav-item">Отзывы</a>
+		</nav>
 		<nav class="footer__nav">
 			<a href="#" class="footer__nav-item">Комиссии</a>
-			<a href="#" class="footer__nav-item">Условия обслуживания</a>
-			<a href="#" class="footer__nav-item">Безопасность</a>
-			<a href="#" class="footer__nav-item">Партнерская программа</a>
+			<a href="#" class="footer__nav-item">Пользовательское соглашение</a>
+			<a href="#" class="footer__nav-item">Соглашение о конфиденциальности</a>
+			<a href="#" class="footer__nav-item">Политика AML/KIC</a>
 		</nav>
-		<a href="#" class="language language--ru">Ru</a>
 	</footer>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 	<script src="js/plugins.js"></script>

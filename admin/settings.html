@@ -9,23 +9,47 @@
 </head>
 <body>
 	<header class="header">
-		<a href="#" class="logo"><img src="i/logo.png" alt=""></a>
+		<a href="#" class="header__logo"><img src="i/logo.svg" alt=""></a>
 		<div class="header__rates">
-			<div class="header__rate-item header__rate-item--down">1 USD = 62.87 RUB</div>
-			<div class="header__rate-item header__rate-item--down">1 BTC = 157500.8271 RUB</div>
-			<div class="header__rate-item header__rate-item--up">1 ETH = 12497.9233 RUB</div>
-			<div class="header__rate-item header__rate-item--up">1 LTC = 3034.1574 RUB</div>
-			<div class="header__rate-item header__rate-item--up">1 DSH = 10665.0781 RUB</div>
-			<div class="header__rate-item header__rate-item--up">1 NVC = 42.0098 RUB</div>
+			BTC <span class="header-rates__current-value">245 006 RUB</span>
+			<div class="header-rates__list">
+				<div class="header-rates__item header-rates__item--down">1 USD = 62.87 RUB</div>
+				<div class="header-rates__item header-rates__item--down">1 BTC = 157500.8271 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 ETH = 12497.9233 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 LTC = 3034.1574 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 DSH = 10665.0781 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 NVC = 42.0098 RUB</div>
+			</div>
 		</div>
-		<a href="#" class="header__notice-link"></a>
-		<a href="#" class="header__logout"></a>
-		<a href="#" class="header__avatar"><img src="i/avatar.jpg" alt="%username%"></a>
+		<div class="header__wallets">
+			22.876988 BTC
+			<div class="header-wallets__choose">
+				<div class="header-wallets__choose-section">
+					<p class="header-wallets__choose-title">Основной кошелёк</p>
+					<div class="header-wallets__choose-item header-wallets__choose-item--btc">
+						Bitcoin (BTC)
+						<span class="header-wallet__item--value">0.000123124</span>
+					</div>
+				</div>
+				<div class="header-wallets__choose-section">
+					<p class="header-wallets__choose-title">Выбрать другую валюту</p>
+					<div class="header-wallets__choose-item header-wallets__choose-item--ltc">
+						Litecoin (LTC)
+						<span class="header-wallet__item--value">0.000123124</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="header__avatar js-header-avatar"><img src="i/avatar.jpg" alt="%username%">ppp@ya.ru</a>
+		<div class="header__system">
+			<a href="#" class="header-system__item">Настройки</a>
+			<a href="#" class="header-system__item">Выход</a>
+		</div>
 	</header>
 	<main class="main">
 		<aside class="sidebar">
 			<nav class="nav">
-				<a href="#" class="nav__item">Статистика</a>
+				<a href="#" class="nav__item nav__item--active">Статистика</a>
 				<a href="#" class="nav__item">Транзакции</a>
 				<a href="#" class="nav__item">Пользователи</a>
 				<a href="#" class="nav__item">Курсы</a>
@@ -35,8 +59,8 @@
 			</nav>
 			<div class="quick-stat">
 				<p class="quick-stat__title">За последние сутки</p>
-				<p class="quick-stat__value"><span class="quick-stat__value--count">50 120</span>  переводов</p>
-				<p class="quick-stat__value"><span class="quick-stat__value--count">12 450</span>  сделок</p>
+				<p class="quick-stat__value"><span class="quick-stat__value--count">50 120</span> переводов</p>
+				<p class="quick-stat__value"><span class="quick-stat__value--count">12 450</span> сделок</p>
 			</div>
 		</aside>
 		<div class="content">
@@ -84,11 +108,51 @@
 									<td><a href="#">Модератор</a></td>
 									<td><a href="#">Транзакции, пользователи, курсы, контент</a></td>
 									<td>
-										<a href="#" class="settings__modal-link js-modal"></a>
-										<div class="settings__modal">
-											<a href="#" class="settings__modal-item">Редактировать имя</a>
-											<a href="#" class="settings__modal-item">Установить дополнительный пароль</a>
-											<a href="#" class="settings__modal-item">Скрыть кошелек</a>
+										<div class="wallet__settings">
+											<i class="wallet__menu-link js-wallet-menu"></i>
+											<div class="wallet__menu">
+												<a href="#" class="wallet__menu-item js-wallet-edit">Редактировать название</a>
+												<a href="#" class="wallet__menu-item js-wallet-password">Установить дополнительный пароль</a>
+												<a href="#" class="wallet__menu-item js-wallet-hide">Скрыть кошелек</a>
+											</div>
+											<div class="wallet__name">
+												<input type="text" name="" id="" class="wallet-name__input" placeholder="Укажите название">
+												<button class="btn btn--small btn--grey js-wallet-name-close">Отменить</button>
+												<button class="btn btn--small">Сохранить</button>
+											</div>
+											<div class="wallet__password">
+												<p class="wallet-password__title">Установить дополнительный пароль</p>
+												<div class="wallet-password__descr">
+													<p>Сохраните пароль в надёжном месте.</p>
+													<p>В случае утери дополнительного пароля — вы потеряете доступ к кошельку навсегда.</p>
+												</div>
+												<div class="wallet-password__system">
+													<div class="form__row">
+														<input type="password" name="" id="" class="input-text" placeholder="Текущий пароль">
+													</div>
+													<div class="form__row">
+														<input type="password" name="" id="" class="input-text" placeholder="Второй пароль">
+													</div>
+													<div class="form__row">
+														<input type="password" name="" id="" class="input-text" placeholder="Повторите второй пароль">
+													</div>
+												</div>
+												<div class="wallet-password__btns">
+													<button class="btn btn--small btn--grey js-wallet-password-close">Отменить</button>
+													<button class="btn btn--small">Установить</button>
+												</div>
+											</div>
+											<div class="wallet__hide">
+												<p class="wallet-hide__title">Вы уверены, что хотите скрыть кошелёк?</p>
+												<div class="wallet-hide__descr">
+													<p>Все средства на данном кошельке будут сохранены.</p>
+													<p>Кошелёк будет перенесён в раздел “Скрытые кошельки”</p>
+												</div>
+												<div class="wallet-hide__btns">
+													<button class="btn btn--small btn--grey js-wallet-hide-close">Отменить</button>
+													<button class="btn btn--small">Установить</button>
+												</div>
+											</div>
 										</div>
 									</td>
 								</tr>
@@ -101,13 +165,27 @@
 	</main>
 	<footer class="footer">
 		<p class="copyright">© BitStore 2017</p>
+		<a href="#" class="language language--ru js-footer-language">Ru</a>
+		<div class="footer__language-list">
+			<a href="#" class="footer__language-item footer__language-item--en">English</a>
+			<a href="#" class="footer__language-item footer__language-item--ru">Русский</a>
+			<a href="#" class="footer__language-item footer__language-item--cn">中国</a>
+		</div>
+		<nav class="footer__nav">
+			<a href="#" class="footer__nav-item">Приложение</a>
+			<a href="#" class="footer__nav-item">О компании</a>
+			<a href="#" class="footer__nav-item">Безопасность</a>
+			<a href="#" class="footer__nav-item">Партнёрам</a>
+			<a href="#" class="footer__nav-item">Карьера</a>
+			<a href="#" class="footer__nav-item">Поддержка</a>
+			<a href="#" class="footer__nav-item">Отзывы</a>
+		</nav>
 		<nav class="footer__nav">
 			<a href="#" class="footer__nav-item">Комиссии</a>
-			<a href="#" class="footer__nav-item">Условия обслуживания</a>
-			<a href="#" class="footer__nav-item">Безопасность</a>
-			<a href="#" class="footer__nav-item">Партнерская программа</a>
+			<a href="#" class="footer__nav-item">Пользовательское соглашение</a>
+			<a href="#" class="footer__nav-item">Соглашение о конфиденциальности</a>
+			<a href="#" class="footer__nav-item">Политика AML/KIC</a>
 		</nav>
-		<a href="#" class="language language--ru">Ru</a>
 	</footer>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 	<script src="js/plugins.js"></script>
