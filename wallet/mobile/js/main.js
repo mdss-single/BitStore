@@ -33,9 +33,13 @@
 		threshold:40,
 	});
 
-	new Clipboard('.js-wallet-copy');
+	var clipboard = new Clipboard('.js-wallet-copy');
 	$('.js-wallet-copy').click(function(e) {
 		e.preventDefault();
+	});
+	clipboard.on('success', function(e) {
+		alert('Скопировано в буфер');
+		e.clearSelection();
 	});
 
 	$('.js-wallets-list').flickity({
@@ -45,12 +49,18 @@
 
 	$('.js-wallet-add').click(function(e) {
 		e.preventDefault();
-		$('.add-wallet').addClass('add-wallet--active');
+		$('.add-wallet').addClass('modal--active');
 		$('body').prepend('<div class="modal__bg"></div>');
 		$('html').css('overflow','hidden');
 	});
-	$('body').on('click', '.modal__bg, .add-wallet__btn-cancel', function(e) {
-		$('.add-wallet--active').removeClass('add-wallet--active');
+	$('.js-deal-confirm').click(function(e) {
+		e.preventDefault();
+		$('.deal-confirm').addClass('modal--active');
+		$('body').prepend('<div class="modal__bg"></div>');
+		$('html').css('overflow','hidden');
+	});
+	$('body').on('click', '.modal__bg, .add-wallet__btn-cancel, .js-modal-cancel', function(e) {
+		$('.modal--active').removeClass('modal--active');
 		$('.modal__bg').remove();
 		$('html').css('overflow','auto');
 		e.preventDefault();
@@ -115,6 +125,6 @@ $(document).one('focus.autoExpand', 'textarea.autoExpand', function(){
 }).on('input.autoExpand', 'textarea.autoExpand', function(){
 	var minRows = this.getAttribute('data-min-rows')|0, rows;
 	this.rows = minRows;
-	rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);
+	rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 20);
 	this.rows = minRows + rows;
 });

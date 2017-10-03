@@ -143,9 +143,12 @@
 			</div>
 		</div>
 	</main>
-	<div class="add-wallet">
-		<p class="add-wallet__title">Добавить кошелёк</p>
-		<input type="text" name="" id="" class="input-text" placeholder="Название кошелька">
+	<div class="modal add-wallet">
+		<p class="modal__title">Добавить кошелёк</p>
+		<div class="rel">
+			<input type="text" name="" id="addWallet" class="input-text" required>
+			<label for="addWallet">Название кошелька</label>
+		</div>
 		<div class="add-wallet__currency">
 			<p class="add-wallet__currency-title">Выберите валюту</p>
 			<input type="radio" name="a" id="a1" class="add-wallet__radio" checked>
@@ -159,8 +162,8 @@
 			<input type="radio" name="a" id="a5" class="add-wallet__radio">
 			<label for="a5">DSH</label>
 		</div>
-		<div class="add-wallet__btns">
-			<button class="btn add-wallet__btn-cancel">Отменить</button>
+		<div class="modal__btns">
+			<button class="btn btn--grey js-modal-cancel">Отменить</button>
 			<button class="btn">Добавить</button>
 		</div>
 	</div>

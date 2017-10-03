@@ -95,7 +95,7 @@
 				</div>
 			</div>
 			<div class="deal-step__btns">
-				<button class="btn btn--fullwidth">Я оплатил</button>
+				<button class="btn btn--fullwidth js-deal-confirm">Я оплатил</button>
 				<button class="btn btn--fullwidth deal-step__cancel">Отменить сделку</button>
 			</div>
 		</div>
@@ -184,6 +184,19 @@
 			<input type="file" name="" id="chatAttach" class="deal-chat__attach"><label for="chatAttach"></label>
 			<textarea rows="1" data-min-rows="1" class="deal-chat__textarea autoExpand" placeholder="Написать сообщение"></textarea>
 			<button class="deal-chat__btn">Отправить</button>
+		</div>
+	</div>
+	<div class="modal deal-confirm">
+		<p class="modal__title">Подтверждение оплаты</p>
+		<div class="modal__descr">
+			<p class="deal-modal__text-confirm">Вы подтверждаете что:</p>
+			<p>— Принимаете условия сделки 12423532</p>
+			<p>— Завершили платёж, следую инструкциям продавца</p>
+			<p class="deal-modal__notice">Если вы не уверены, как платить с помощью QIWI — свяжитесь с TITAN100, чтобы узнать поярдок оплаты или отменить сделку.</p>
+		</div>
+		<div class="modal__btns">
+			<button class="btn btn--grey js-modal-cancel">Закрыть</button>
+			<button class="btn">Я оплатил</button>
 		</div>
 	</div>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
