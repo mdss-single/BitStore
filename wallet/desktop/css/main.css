@@ -154,7 +154,7 @@ a {
 	.header__copy-btn {
 		left:571px;
 		width:45px;
-		background:#204fa1 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAD1BMVEUAAAD///////////////+PQt5oAAAABHRSTlMA4IBgbEBPKQAAAC9JREFUCNdjEHEBAQMGBgcGIGBSADGgwIERLOfI4MAC5rOQyXCCMYxgDAZMBtQuALbSCDNKtBBCAAAAAElFTkSuQmCC) no-repeat center center;
+		background:#204fa1 url(../i/icons/icon-copy.svg) no-repeat center center / 16px auto;
 	}
 		.header__send-btn:hover, .header__get-btn:hover, .header__copy-btn:hover {
 			background-color:#2352a4;
@@ -383,7 +383,7 @@ a {
 		overflow:hidden;
 		max-width:140px;
 		color:#b3c7ec;
-		font-size:1.2rem;
+		font-size:1.4rem;
 		white-space:nowrap;
 		text-overflow:ellipsis;
 	}
@@ -2169,7 +2169,7 @@ a {
 						display:inline-block;
 						vertical-align:middle;
 						width:15px; height:15px;
-						background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAS1BMVEUAAACDuepQiL9ak8htpNlwo9dclMpooNZak8hgmMxgmM1dlsqYzP2XyvuVyfmr1f35/P/Z7P6Ow/OKvu+ez/3s9v/S6f6/3/6l0v0l9QqzAAAADHRSTlMA82Zk2KB83KaXh3uzORLlAAAAbklEQVQI12WPSQKAIAwDEQG3EhVw+f9Lpa1cNLdpuqRGZBe/WNPUDwlAcr3i2EVixW4SV1AL3DE0vCi6uiq9uG83ZWtmNFyJEIwHradiZc9+OXZB9mW+HIo8L/uLYnTf+/983OEygCz5VTb4oP89ph8HwCPcp0EAAAAASUVORK5CYII=);
+						background-image:url(data:image/svg+xml;base64,77u/PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCI+Cgk8cGF0aCBzdHlsZT0iZmlsbDojOThDQ0ZEOyIgZD0iTSAyMCAzOC41IEMgOS44MDA3ODEgMzguNSAxLjUgMzAuMTk5MjE5IDEuNSAyMCBDIDEuNSA5LjgwMDc4MSA5LjgwMDc4MSAxLjUgMjAgMS41IEMgMzAuMTk5MjE5IDEuNSAzOC41IDkuODAwNzgxIDM4LjUgMjAgQyAzOC41IDMwLjE5OTIxOSAzMC4xOTkyMTkgMzguNSAyMCAzOC41IFogIi8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojNDc4OEM3OyIgZD0iTSAyMCAyIEMgMjkuOTI1NzgxIDIgMzggMTAuMDc0MjE5IDM4IDIwIEMgMzggMjkuOTI1NzgxIDI5LjkyNTc4MSAzOCAyMCAzOCBDIDEwLjA3NDIxOSAzOCAyIDI5LjkyNTc4MSAyIDIwIEMgMiAxMC4wNzQyMTkgMTAuMDc0MjE5IDIgMjAgMiBNIDIwIDEgQyA5LjUwNzgxMyAxIDEgOS41MDc4MTMgMSAyMCBDIDEgMzAuNDkyMTg4IDkuNTA3ODEzIDM5IDIwIDM5IEMgMzAuNDkyMTg4IDM5IDM5IDMwLjQ5MjE4OCAzOSAyMCBDIDM5IDkuNTA3ODEzIDMwLjQ5MjE4OCAxIDIwIDEgWiAiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNIDE2LjAyMzQzOCAyOC4wMTk1MzEgTCA5LjExNzE4OCAyMS4xMTMyODEgTCAxMS4yMzgyODEgMTguOTkyMTg4IEwgMTYuMDIzNDM4IDIzLjc3NzM0NCBMIDI4LjExNzE4OCAxMS42ODM1OTQgTCAzMC4yMzgyODEgMTMuODA0Njg4IFogIi8+Cjwvc3ZnPg==);
 						margin:-4px 0 0 6px;
 						content:'';
 					}
