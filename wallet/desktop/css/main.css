@@ -1931,10 +1931,13 @@ a {
 			cursor:pointer;
 			transition:background .2s;
 		}
-		.trade-nav__item--settings {
-			background:url(../i/icons/icon-nav-settings.svg) no-repeat center center / 20px auto;
-			padding:0 39px;
-		}
+			.trade-nav__item--settings::before {
+				display:inline-block;
+				vertical-align:middle;
+				width:20px; height:20px;
+				background:url(../i/icons/icon-nav-settings.svg) no-repeat center center;
+				content:'';
+			}
 		.trade-nav__item--active {
 			color:#000;
 			background-color:#fff;
