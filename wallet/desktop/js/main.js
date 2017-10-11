@@ -280,7 +280,7 @@
 	});
 
 	// show wallet value on adding page
-	$('.js-adplace-currency').styler({
+	$('.js-addplace-currency').styler({
 		onFormStyled: function() {
 			var newVal = $('.js-adplace-currency').find('li.selected').attr('data-adplacevalue');
 			var curVal = $('.js-adplace-currency').find('.jq-selectbox__select-text').text();
