@@ -150,47 +150,11 @@
 				ERROR: 'Невозможно загрузить данные. Попробуйте еще раз.',
 			}
 		},
-		afterLoad: function() {
-			$('.send').find('input[autofocus]').focus();
+		afterLoad: function(current) {
+			$(this).find('input[autofocus]').focus();
 			$('.select').trigger('refresh');
 		}
 	});
-	/*
-	$('.js-verification-btn').click(function(e) {
-		e.preventDefault();
-		$('body').prepend('<div class="modal__bg"></div>');
-		$('.verification').addClass('modal--active');
-	});
-	$('.js-wallet-send').click(function() {
-		$('body').prepend('<div class="modal__bg"></div>');
-		$('.send').addClass('modal--active');
-		$('.send').find('input[autofocus]').focus();
-		$('.select').trigger('refresh');
-	});
-	$('.js-wallet-get').click(function() {
-		$('body').prepend('<div class="modal__bg"></div>');
-		$('.get').addClass('modal--active');
-	});
-	$('.js-twostep-link').click(function(e) {
-		e.preventDefault();
-		$('body').prepend('<div class="modal__bg"></div>');
-		$('.twostep').addClass('modal--active');
-	});
-	$('.js-wallet-add').click(function(e) {
-		e.preventDefault();
-		$('body').prepend('<div class="modal__bg"></div>')
-		$('.add-wallet').addClass('modal--active');
-		$('.select').trigger('refresh');
-	});
-	$('.js-approve-btn').click(function() {
-		$('body').prepend('<div class="modal__bg"></div>')
-		$('.approve').addClass('modal--active');
-	});
-	$('.js-discard-btn').click(function() {
-		$('body').prepend('<div class="modal__bg"></div>')
-		$('.cancel-transaction').addClass('modal--active');
-	});
-	*/
 
 	// specify manually commission in send modal window
 	$('.js-send-custom-link').click(function(e) {
