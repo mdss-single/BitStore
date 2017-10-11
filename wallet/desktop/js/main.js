@@ -118,16 +118,14 @@
 		cellSelector: '.hello__item',
 		prevNextButtons: false,
 	});
-	//var storage = localStorage.getItem('hello');
-	//if (!storage) {
-		$('body').prepend('<div class="modal__bg"></div>');
-		$('.hello').addClass('modal--active');
-		helloCarousel.flickity('resize');
-	//}
-	$('.js-hello-skip').click(function() {
-		$('.modal__bg').remove();
-		$('.hello').removeClass('modal--active');
-		//localStorage.setItem('hello', true);
+	$.fancybox.open({
+		src:'#modalHello',
+		opts : {
+			touch: false,
+			afterLoad : function( instance, current ) {
+				helloCarousel.flickity('resize');
+			}
+		}
 	});
 	$('.js-hello-next').click(function() {
 		helloCarousel.flickity('next');
@@ -139,6 +137,25 @@
 		$('.modal__bg').remove();
 		$('.modal--active').removeClass('modal--active');
 	});
+	$('.modal__close, .js-modal-close, .js-hello-skip').click(function(e){
+		e.preventDefault();
+		$.fancybox.close();
+	});
+	$('.js-modal').fancybox({
+		touch: false,
+		lang : 'ru',
+		i18n : {
+			'ru' : {
+				CLOSE: 'Закрыть',
+				ERROR: 'Невозможно загрузить данные. Попробуйте еще раз.',
+			}
+		},
+		afterLoad: function() {
+			$('.send').find('input[autofocus]').focus();
+			$('.select').trigger('refresh');
+		}
+	});
+	/*
 	$('.js-verification-btn').click(function(e) {
 		e.preventDefault();
 		$('body').prepend('<div class="modal__bg"></div>');
@@ -173,6 +190,7 @@
 		$('body').prepend('<div class="modal__bg"></div>')
 		$('.cancel-transaction').addClass('modal--active');
 	});
+	*/
 
 	// specify manually commission in send modal window
 	$('.js-send-custom-link').click(function(e) {

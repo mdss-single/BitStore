@@ -2982,6 +2982,7 @@ a {
 }
 .modal {
 	display:none;
+	border-radius:5px;
 }
 .modal--active {
 	display:block;
@@ -3020,7 +3021,7 @@ a {
 /*  <hello>  */
 .hello {
 	width:605px;
-	text-align:center;
+	text-align:center !important;
 	padding:270px 0 30px;
 }
 	.hello::before {
@@ -3067,11 +3068,19 @@ a {
 		background-color:#ededed;
 		padding:0 27px;
 	}
+		a:hover.hello__skip {
+			text-decoration:none;
+			background-color:#ddd;
+		}
 	.hello__next {
 		color:#fff;
 		background-color:#498dea;
 		padding:0 31px;
 	}
+		a:hover.hello__next {
+			text-decoration:none;
+			background-color:#0064de;
+		}
 /*  </hello>  */
 
 /*  <send>  */
