@@ -1648,7 +1648,73 @@ a.btn {
 		opacity:1;
 	}
 }
+@keyframes fadeOut {
+	from {
+		opacity:1;
+	}
+	to {
+		opacity:0;
+	}
+}
 /*  </elements>  */
+
+/*  <general-notice>  */
+.general-notice {
+	animation:fadeOut 0.5s;
+	position:fixed;
+	top:46px; right:0; left:0;
+	visibility:hidden;
+	color:#fff;
+	font-size:1.8rem;
+	font-family:Sbold;
+	transition:all 0.5s;
+}
+.general-notice--error {
+	background-color:#d94d4d;
+}
+.general-notice--success {
+	background-color:#78a92c;
+}
+.general-notice--active {
+	animation:fadein 0.5s;
+	z-index:100;
+	visibility:visible;
+}
+	.general-notice__wrap {
+		display:-webkit-flex;
+		display:-moz-flex;
+		display:-ms-flex;
+		display:-o-flex;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		position:relative;
+		min-height:70px;
+		padding-right:50px;
+	}
+		.general-notice__close {
+			position:absolute;
+			top:50%; right:0;
+			width:36px; height:36px;
+			border:2px solid #fff;
+			border-radius:50%;
+			transform:translateY(-50%);
+		}
+			.general-notice__close:before,
+			.general-notice__close:after {
+				position:absolute;
+				top:15px; left:6px;
+				width:20px; height:2px;
+				background-color:#fff;
+				content:'';
+			}
+			.general-notice__close:before {
+				transform:rotate(45deg);
+			}
+			.general-notice__close:after {
+				transform:rotate(-45deg);
+			}
+/*  </general-notice>  */
 
 /*  <adaptive>  */
 @media screen and (min-width:480px) {
@@ -1833,7 +1899,7 @@ a.btn {
 	}
 		.about-crypto__text {
 			width:55%;
-			margin:45px 0;
+			margin:50px 0;
 		}
 			.about-crypto__text-title {
 				font-size:3rem;
@@ -1847,10 +1913,25 @@ a.btn {
 			position:absolute;
 			top:0; right:0; bottom:0; left:55%;
 		}
-			.about-crypto__video-wrap {
+			.about-crypto__wrap {
 				position:relative;
-				padding-bottom:100%;
+				overflow:hidden;
+				width:560px; height:0;
+				padding-bottom:41.25%;
+				margin-left:auto;
+				margin-right:-10px;
 			}
+				.about-crypto__wrap::before {
+					position:absolute;
+					top:0; bottom:0;
+					z-index:5;
+					width:10px;
+					background-color:#498dea;
+					content:'';
+				}
+				.about-crypto__wrap::before {
+					left:0;
+				}
 			.about-crypto__video iframe {
 				position:absolute;
 				top:0; left:0;
@@ -1923,6 +2004,7 @@ a.btn {
 			display:block;
 			position:absolute;
 			top:56px; left:15px;
+			width:126px;
 		}
 		.copyright {
 			display:none;
@@ -2025,7 +2107,7 @@ a.btn {
 		background-position:0 8px;
 	}
 		.safety__title {
-			font-size:3rem;
+			font-size:2.5rem;
 		}
 		.safety__descr {
 			line-height:2.7rem;
@@ -2308,9 +2390,9 @@ a.btn {
 				.seller__status--reliable::after {
 					display:inline-block;
 					vertical-align:middle;
-					width:13px; height:10px;
-					background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAKCAMAAABYMCT2AAAARVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADc6ur3AAAAFnRSTlMACOeXPg3iqKOeUEQ489fVv5KNMTAoxh+gAwAAAExJREFUCNdljVcOgDAMQzNKB3v6/kclEaggNT/xs2Sbvuu0/0HCWoETloP4eiBjPolUBqeCONrbIIFYIQ4uYtjNeuMFkxm1OsOz7ewNoIcCU3ikCFcAAAAASUVORK5CYII=);
-					margin-left:8px;
+					width:16px; height:16px;
+					background-image:url(data:image/svg+xml;base64,77u/PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCI+Cgk8cGF0aCBzdHlsZT0iZmlsbDojOThDQ0ZEOyIgZD0iTSAyMCAzOC41IEMgOS44MDA3ODEgMzguNSAxLjUgMzAuMTk5MjE5IDEuNSAyMCBDIDEuNSA5LjgwMDc4MSA5LjgwMDc4MSAxLjUgMjAgMS41IEMgMzAuMTk5MjE5IDEuNSAzOC41IDkuODAwNzgxIDM4LjUgMjAgQyAzOC41IDMwLjE5OTIxOSAzMC4xOTkyMTkgMzguNSAyMCAzOC41IFogIi8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojNDc4OEM3OyIgZD0iTSAyMCAyIEMgMjkuOTI1NzgxIDIgMzggMTAuMDc0MjE5IDM4IDIwIEMgMzggMjkuOTI1NzgxIDI5LjkyNTc4MSAzOCAyMCAzOCBDIDEwLjA3NDIxOSAzOCAyIDI5LjkyNTc4MSAyIDIwIEMgMiAxMC4wNzQyMTkgMTAuMDc0MjE5IDIgMjAgMiBNIDIwIDEgQyA5LjUwNzgxMyAxIDEgOS41MDc4MTMgMSAyMCBDIDEgMzAuNDkyMTg4IDkuNTA3ODEzIDM5IDIwIDM5IEMgMzAuNDkyMTg4IDM5IDM5IDMwLjQ5MjE4OCAzOSAyMCBDIDM5IDkuNTA3ODEzIDMwLjQ5MjE4OCAxIDIwIDEgWiAiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNIDE2LjAyMzQzOCAyOC4wMTk1MzEgTCA5LjExNzE4OCAyMS4xMTMyODEgTCAxMS4yMzgyODEgMTguOTkyMTg4IEwgMTYuMDIzNDM4IDIzLjc3NzM0NCBMIDI4LjExNzE4OCAxMS42ODM1OTQgTCAzMC4yMzgyODEgMTMuODA0Njg4IFogIi8+Cjwvc3ZnPg==);
+					margin:-4px 0 0 8px;
 					content:'';
 				}
 			.seller__timeout {
@@ -2356,6 +2438,7 @@ a.btn {
 			position:relative;
 			border-bottom:0;
 			padding:0;
+			margin-top:20px;
 		}
 			.seller__total-table tr {
 				display:table-row;
