@@ -120,12 +120,7 @@
 		$('label[for="' + this.id + '"]').text($(this).val());
 	});
 
-	$('.test').contents().find('.video-stream').css({
-		'display':'none',
-		'left':'0 !important',
-		'width':'100% !important',
-		'height':'316px !important'
-	});
+	$('.select').styler();
 
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
