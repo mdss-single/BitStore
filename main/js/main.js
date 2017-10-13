@@ -122,6 +122,12 @@
 
 	$('.select').styler();
 
+	// support page QA expanding
+	$('.support__questions-link').click(function(e) {
+		e.preventDefault();
+		$(this).next().toggleClass('support__answer-text--active');
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
