@@ -3052,6 +3052,7 @@ a {
 
 /*  <hello>  */
 .hello {
+	overflow:hidden;
 	width:605px;
 	text-align:center !important;
 	padding:270px 0 30px;

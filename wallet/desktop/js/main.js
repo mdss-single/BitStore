@@ -118,15 +118,22 @@
 		cellSelector: '.hello__item',
 		prevNextButtons: false,
 	});
-	$.fancybox.open({
-		src:'#modalHello',
-		opts : {
-			touch: false,
-			afterLoad : function( instance, current ) {
-				helloCarousel.flickity('resize');
-			}
-		}
+	$('.js-hello-skip').click(function(e) {
+		e.preventDefault();
+		localStorage.setItem('hello','shown');
 	});
+	if(localStorage.getItem('hello') != 'shown'){
+		$.fancybox.open({
+			src: '#modalHello',
+			type: 'inline',
+			opts : {
+				touch: false,
+				afterLoad : function( instance, current ) {
+					helloCarousel.flickity('resize');
+				}
+			}
+		});
+	}
 	$('.js-hello-next').click(function() {
 		helloCarousel.flickity('next');
 	});

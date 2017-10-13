@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BitStore</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+	<style>
+		table {
+			width:100%;
+			margin-bottom:20px;
+		}
+			table th {
+				font-weight:bold;
+				text-align:left;
+			}
+			table th, table td {
+				vertical-align:top;
+				border:1px solid #dfe2e5;
+				padding:8px 12px;
+			}
+			.elements td:first-child {
+				width:20%;
+			}
+			.elements td:last-child {
+				width:40%;
+			}
+			.elements td:nth-of-type(2) {
+				width:40%;
+			}
+		h2 {
+			font-weight:300;
+			font-size:2.6rem;
+			margin:20px 0 10px;
+		}
+		code {
+			font-size:1.3rem;
+			font-family:"Courier New", Courier, monospace, sans-serif;
+			text-align:left;
+			color:#555;
+			background:#eaeaea;
+			border-radius:3px;
+		}
+			pre {
+				background:#eaeaea;
+			}
+		.overflow {
+			max-width:600px;
+		}
+			.overflow pre {
+				padding:15px 5px;
+				margin:0 0 10px;
+			}
+				.overflow pre:last-child {
+					margin:0;
+				}
+	</style>
+</head>
+<body>
+	<div class="full">
+		<h2>Основные классы</h2>
+		<table>
+			<tr>
+				<td><code>.tl</code></td>
+				<td>text-align:left</td>
+			</tr>
+			<tr>
+				<td><code>.tc</code></td>
+				<td>text-align:center</td>
+			</tr>
+			<tr>
+				<td><code>.tr</code></td>
+				<td>text-align:right</td>
+			</tr>
+			<tr>
+				<td><code>.rel</code></td>
+				<td>position:relative</td>
+			</tr>
+			<tr>
+				<td><code>.abs</code></td>
+				<td>position:absolute</td>
+			</tr>
+			<tr>
+				<td><code>.hide</code></td>
+				<td>display:none !important</td>
+			</tr>
+			<tr>
+				<td><code>.form__row</code></td>
+				<td>Задает отступ снизу</td>
+			</tr>
+		</table>
+		<h2>Модальные окна</h2>
+		<ul>
+			<li><a href="#" class="js-general-notice-error">Вызвать сообщение об ошибке</a></li>
+			<li><a href="#" class="js-general-notice-success">Вызвать сообщение об успехе</a></li>
+		</ul>
+		<h2>Основные элементы</h2>
+		<table class="elements">
+			<tr>
+				<td><code>.input-text</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;input type="text" name="" id="" class="input-text" placeholder="Input text"></code></pre>
+						<pre><code>&lt;input type="email" name="" id="" class="input-text" placeholder="Input email"></code></pre>
+						<pre><code>&lt;input type="tel" name="" id="" class="input-text" placeholder="Input tel"></code></pre>
+						<pre><code>&lt;input type="number" name="" id="" class="input-text" placeholder="Input number"></code></pre>
+					</div>
+				</td>
+				<td><input type="text" name="" id="" class="input-text" placeholder="Input"></td>
+			</tr>
+			<tr>
+				<td><code>.textarea</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Some text">&lt;/textarea></code></pre>
+					</div>
+				</td>
+				<td><textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Some text"></textarea></td>
+			</tr>
+			<tr>
+				<td><code>.select</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;select name="" id="" class="select">
+	&lt;option value="">Option 1&lt;/option>
+	&lt;option value="">Option 2&lt;/option>
+	&lt;option value="">Option 3&lt;/option>
+&lt;/select></code></pre>
+					</div>
+				</td>
+				<td>
+					<select name="" id="" class="select">
+						<option value="">Option 1</option>
+						<option value="">Option 2</option>
+						<option value="">Option 3</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><code>.select</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;select name="" id="" class="select" data-placeholder="Some text">
+	&lt;option>&lt;/option>
+	&lt;option value="">Option 1&lt;/option>
+	&lt;option value="">Option 2&lt;/option>
+	&lt;option value="">Option 3&lt;/option>
+&lt;/select></code></pre>
+					</div>
+					<p>Если у селекта есть атрибут data-placeholder, то необходимо первый тег option оставить пустым</p>
+				</td>
+				<td>
+					<select name="" id="" class="select" data-placeholder="Some text">
+						<option></option>
+						<option value="">Option 1</option>
+						<option value="">Option 2</option>
+						<option value="">Option 3</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><code>.btn</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;button class="btn">Button&lt;/button></code></pre>
+					</div>
+				</td>
+				<td><button class="btn">Button</button></td>
+			</tr>
+			<tr>
+				<td><code>.btn .btn--small</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;button class="btn btn--small">Small button&lt;/button></code></pre>
+					</div>
+				</td>
+				<td><button class="btn">Small button</button></td>
+			</tr>
+			<tr>
+				<td><code>.btn .btn--grey</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;button class="btn btn--grey">Grey button&lt;/button></code></pre>
+					</div>
+				</td>
+				<td><button class="btn btn--grey">Grey button</button></td>
+			</tr>
+			<tr>
+				<td><code>data-tooltip</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;span data-tooltip="Какое-то сообщение">Тултип&lt;/span></code></pre>
+					</div>
+				</td>
+				<td><span data-tooltip="Какое-то сообщение">Тултип</span></td>
+			</tr>
+			<tr>
+				<td><code>.switcher</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;input type="checkbox" name="" id="sw1" class="switcher">&lt;label for="sw1">&lt;/label></code></pre>
+						<p>Необходимо для радиокнопки или чекбокса добавить класс switcher. Стилизация идет следующего за ним элемента label</p>
+					</div>
+				</td>
+				<td><input type="checkbox" name="" id="sw1" class="switcher"><label for="sw1"></label></td>
+			</tr>
+		</table>
+	</div>
+	<div class="modal hello" id="modalHello">
+		<div class="hello__wrap js-hello">
+			<div class="hello__item">
+				<p class="hello__title">Добро пожаловать на BitStore</p>
+				<div class="hello__text">
+					Первый в Мире кошелёк, где вы легко сможете хранить, покупать и продавать криптовалюту.
+				</div>
+			</div>
+			<div class="hello__item">
+				<p class="hello__title">Бесплатные переводы</p>
+				<div class="hello__text">
+					Отправляйте криптовалюту внутри системы BitStore Instant бесплатно
+				</div>
+			</div>
+			<div class="hello__item">
+				<p class="hello__title">Все криптовалюты в одном месте</p>
+				<div class="hello__text">
+					Используйте все известные криптовалюты в одном кошельке
+				</div>
+			</div>
+			<div class="hello__item">
+				<p class="hello__title">Простой и мощный торговый модуль</p>
+				<div class="hello__text">
+					<p>Торговать криптовалютой стало ещё проще.</p>
+					<p>Начните зарабатывать уже сейчас в торговом модуле BitStore</p>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="hello__skip js-hello-skip">Пропустить</a>
+		<a href="#" class="hello__next js-hello-next">Далее</a>
+	</div>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+	<div class="general-notice general-notice--error">
+		<div class="full">
+			<div class="general-notice__wrap">
+				Ошибочное действие
+				<a href="#" class="general-notice__close"></a>
+			</div>
+		</div>
+	</div>
+	<div class="general-notice general-notice--success">
+		<div class="full">
+			<div class="general-notice__wrap">
+				Успешное действие
+				<a href="#" class="general-notice__close"></a>
+			</div>
+		</div>
+	</div>
+	<script>
+		(function($){
+			$('.js-general-notice-error').click(function(e) {
+				e.preventDefault();
+				$('.general-notice--error').addClass('general-notice--active');
+			});
+			$('.js-general-notice-success').click(function(e) {
+				e.preventDefault();
+				$('.general-notice--success').addClass('general-notice--active');
+			});
+			$('.general-notice__close').click(function(e) {
+				e.preventDefault();
+				$(this).closest('.general-notice').removeClass('general-notice--active');
+			});
+		})(jQuery);
+	</script>
+</body>
+</html>
