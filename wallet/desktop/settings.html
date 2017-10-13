@@ -168,7 +168,19 @@
 								</div>
 							</td>
 							<td>pafno@ya.ru</td>
-							<td><a href="#" class="settings__btn">Изменить</a></td>
+							<td><a href="#" class="settings__btn js-settings-edit">Изменить</a></td>
+						</tr>
+						<tr class="settings__hidden">
+							<td colspan="2">
+								<p class="settings__title">Адрес эл. почты</p>
+								<div class="settings__descr">
+									<input type="text" name="" id="" class="input-text" value="pafno@ya.ru" autofocus>
+								</div>
+							</td>
+							<td>
+								<a href="#" class="settings__btn js-settings-cancel">Отмена</a>
+								<a href="#" class="btn">Сохранить</a>
+							</td>
 						</tr>
 						<tr>
 							<td>
@@ -408,6 +420,37 @@
 		</nav>
 	</footer>
 	<div class="modal hello">
+		<div class="hello__wrap js-hello">
+			<div class="hello__item">
+				<p class="hello__title">Добро пожаловать на BitStore</p>
+				<div class="hello__text">
+					Первый в Мире кошелёк, где вы легко сможете хранить, покупать и продавать криптовалюту.
+				</div>
+			</div>
+			<div class="hello__item">
+				<p class="hello__title">Бесплатные переводы</p>
+				<div class="hello__text">
+					Отправляйте криптовалюту внутри системы BitStore Instant бесплатно
+				</div>
+			</div>
+			<div class="hello__item">
+				<p class="hello__title">Все криптовалюты в одном месте</p>
+				<div class="hello__text">
+					Используйте все известные криптовалюты в одном кошельке
+				</div>
+			</div>
+			<div class="hello__item">
+				<p class="hello__title">Простой и мощный торговый модуль</p>
+				<div class="hello__text">
+					<p>Торговать криптовалютой стало ещё проще.</p>
+					<p>Начните зарабатывать уже сейчас в торговом модуле BitStore</p>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="hello__skip js-hello-skip">Пропустить</a>
+		<a href="#" class="hello__next js-hello-next">Далее</a>
+	</div>
+	<div class="modal hello" id="modalHello">
 		<div class="hello__wrap js-hello">
 			<div class="hello__item">
 				<p class="hello__title">Добро пожаловать на BitStore</p>

@@ -1151,6 +1151,16 @@ a {
 							.second-password__row .btn {
 								padding:0 22px;
 							}
+			.settings__hidden {
+				display:none;
+			}
+			.settings__hidden--active {
+				display:table-row;
+				animation:fadein .5s;
+			}
+				.settings__hidden .settings__btn {
+					margin-bottom:15px;
+				}
 		.settings__history-wrap {
 			padding:20px 0;
 			margin:0 -40px;

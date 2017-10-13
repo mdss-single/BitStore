@@ -333,6 +333,16 @@
 		}
 	});
 
+	$('.js-settings-edit').click(function(e) {
+		e.preventDefault();
+		$(this).closest('tr').addClass('settings__hidden').next().addClass('settings__hidden--active');
+		$(this).closest('tr').next().find('input[autofocus]').focus();
+	});
+	$('.js-settings-cancel').click(function(e) {
+		e.preventDefault();
+		$(this).closest('tr').removeClass('settings__hidden--active').prev().removeClass('settings__hidden');
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
