@@ -344,6 +344,7 @@
 		e.preventDefault();
 		$(this).closest('tr').addClass('settings__hidden').next().addClass('settings__hidden--active');
 		$(this).closest('tr').next().find('input[autofocus]').focus();
+		$('.select').trigger('refresh');
 	});
 	$('.js-settings-cancel').click(function(e) {
 		e.preventDefault();
