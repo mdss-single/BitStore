@@ -139,11 +139,6 @@
 	});
 
 	// modal windows
-	$('body').on('click', '.modal__close, .modal__bg, .js-modal-close', function(e) {
-		e.preventDefault();
-		$('.modal__bg').remove();
-		$('.modal--active').removeClass('modal--active');
-	});
 	$('.modal__close, .js-modal-close, .js-hello-skip').click(function(e){
 		e.preventDefault();
 		$.fancybox.close();
@@ -159,7 +154,27 @@
 		},
 		afterLoad: function(current) {
 			$(this).find('input[autofocus]').focus();
-			$('.select').trigger('refresh');
+			$('.select, .get__select').trigger('refresh');
+			if (clipboard) {
+				clipboard.destroy();
+			}
+			var clipboard = new Clipboard('.js-wallet-copy', {
+				container: document.getElementById('modalGet'),
+			});
+			$('.js-wallet-copy').click(function(e) {
+				e.preventDefault();
+			});
+			$('[data-clipboard-text]').hover(function() {
+				var thisPos = $(this).position();
+				$('<span class="clipboard-tooltip" style="top:'+thisPos.top+'px;left:'+thisPos.left+'px">Копировать адрес</span>').insertAfter(this);
+				if ($(window).width() < thisPos.left+160) $('.clipboard-tooltip').addClass('clipboard-tooltip--left');
+			}, function() {
+				$('.clipboard-tooltip').remove();
+			});
+			clipboard.on('success', function(e) {
+				$('.clipboard-tooltip').text('Скопировано в буфер');
+				e.clearSelection();
+			});
 		}
 	});
 
