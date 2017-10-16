@@ -288,12 +288,12 @@
 	// show wallet value on adding page
 	$('.js-addplace-currency').styler({
 		onFormStyled: function() {
-			var newVal = $('.js-adplace-currency').find('li.selected').attr('data-adplacevalue');
-			var curVal = $('.js-adplace-currency').find('.jq-selectbox__select-text').text();
-			$('.js-adplace-currency').find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
+			var newVal = $('.addplace__currency').find('li.selected').data('addplacevalue');
+			var curVal = $('.addplace__currency').find('.jq-selectbox__select-text').text();
+			$('.addplace__currency').find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
 		},
 		onSelectClosed: function() {
-			var newVal = $(this).find('li.selected').attr('data-adplacevalue');
+			var newVal = $(this).find('li.selected').data('addplacevalue');
 			var curVal = $(this).find('li.selected').text();
 			$(this).find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
 		}
