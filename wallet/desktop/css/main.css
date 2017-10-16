@@ -400,6 +400,20 @@ a {
 			border-radius:50%;
 			margin-right:8px;
 		}
+		.header__avatar--empty {
+			display:inline-block;
+			vertical-align:middle;
+			width:28px; height:28px;
+			color:#000;
+			font-size:2rem;
+			font-family:Smedium;
+			line-height:28px;
+			text-shadow:1px 1px 1px #b3c7ec;
+			text-align:center;
+			background-color:#157efb;
+			border-radius:50%;
+			margin-right:10px;
+		}
 	.header__system {
 		display:none;
 	}
