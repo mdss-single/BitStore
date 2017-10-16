@@ -248,6 +248,48 @@
 					<table class="settings__table">
 						<tr>
 							<td colspan="2">
+								<p class="settings__title">Пин-код</p>
+								<div class="settings__descr">
+									Рекомендуем указать 4-х значный пин-код. Он будет запрашиваться при ключевых действях со счетами.
+								</div>
+							</td>
+							<td><a href="#" class="settings__btn js-settings-edit">Задать Пин-код</a></td>
+						</tr>
+						<tr class="settings__hidden">
+							<td colspan="2">
+								<p class="settings__title">Пин-код</p>
+								<div class="settings__descr">
+									<div class="form__row">
+										<p class="verification__code-title">Текущий пароль</p>
+										<input type="password" name="" id="" class="input-text" placeholder="Введите текущий пароль">
+									</div>
+									<div class="form__row">
+										<p class="verification__code-title">Введите пин-код</p>
+										<div class="verification__code-main">
+											<input type="text" name="" id="" class="input-text verification-code__text" maxlength="1">
+											<input type="text" name="" id="" class="input-text verification-code__text" maxlength="1">
+											<input type="text" name="" id="" class="input-text verification-code__text" maxlength="1">
+											<input type="text" name="" id="" class="input-text verification-code__text" maxlength="1">
+										</div>
+									</div>
+									<div class="form__row">
+										<p class="verification__code-title">Повторите пин-код</p>
+										<div class="verification__code-main">
+											<input type="text" name="" id="" class="input-text verification-code__text" maxlength="1">
+											<input type="text" name="" id="" class="input-text verification-code__text" maxlength="1">
+											<input type="text" name="" id="" class="input-text verification-code__text" maxlength="1">
+											<input type="text" name="" id="" class="input-text verification-code__text" maxlength="1">
+										</div>
+									</div>
+								</div>
+							</td>
+							<td>
+								<a href="#" class="settings__btn js-settings-cancel">Отмена</a>
+								<a href="#" class="btn">Сохранить</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
 								<p class="settings__title">Пароль кошелька</p>
 								<div class="settings__descr">
 									Ваш пароль не хранится на наших серверах. Это означает, что мы не сможем восстановить пароль, если вы забыли его. Обязательно запишите свою фразу для восстановления, которая поможет восстановить доступ к вашему кошельку в случае потери пароля.
@@ -298,7 +340,7 @@
 								</div>
 							</td>
 							<td>Выключено</td>
-							<td><a href="#" class="settings__btn js-twostep-link">Включить</a></td>
+							<td><a href="#twoStep" class="settings__btn js-modal">Включить</a></td>
 						</tr>
 						<tr>
 							<td>
@@ -634,7 +676,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal twostep">
+	<div class="modal twostep" id="twoStep">
 		<p class="twostep__title">Включить 2-шаговую верификация</p>
 		<div class="twostep__tabs">
 			<div class="twostep__tab twostep__tab--active">Google Authenticator</div>

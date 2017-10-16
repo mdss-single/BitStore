@@ -1072,10 +1072,10 @@ a {
 			width:100%;
 		}
 			.settings__table tr {
-				border-top:1px solid #e3e3e3;
+				border-bottom:1px solid #e3e3e3;
 			}
-			.settings__table tr:first-child {
-				border-top:0;
+			.settings__table tr:last-child {
+				border-bottom:0;
 			}
 				.settings__table td {
 					vertical-align:middle;
@@ -1175,6 +1175,16 @@ a {
 				.settings__hidden .settings__btn {
 					margin-bottom:15px;
 				}
+				.settings__hidden .settings__descr {
+					width:300px;
+				}
+					.settings__hidden .verification__code-main {
+						justify-content:space-between;
+					}
+						.settings__hidden .input-text.verification-code__text {
+							width:20%;
+							margin:0;
+						}
 		.settings__history-wrap {
 			padding:20px 0;
 			margin:0 -40px;
