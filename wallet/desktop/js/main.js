@@ -368,6 +368,19 @@
 		$(this).closest('tr').removeClass('settings__hidden--active').prev().removeClass('settings__hidden');
 	});
 
+	$('.js-input-phone').intlTelInput({
+		nationalMode: false,
+		preferredCountries: ["ru", "ua", "by", "kz"],
+		initialCountry: "auto",
+		geoIpLookup: function(callback) {
+			$.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+				var countryCode = (resp && resp.country) ? resp.country : "";
+				callback(countryCode);
+			});
+		},
+		utilsScript: "js/phone-prefix.js"
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
