@@ -120,9 +120,11 @@
 	});
 	$('.js-hello-skip').click(function(e) {
 		e.preventDefault();
-		localStorage.setItem('hello','shown');
+		$.fancybox.close();
+		localStorage.setItem('hello');
 	});
-	if(localStorage.getItem('hello') != 'shown'){
+	var hello = localStorage.getItem('hello');
+	if (!hello) {
 		$.fancybox.open({
 			src: '#modalHello',
 			type: 'inline',
