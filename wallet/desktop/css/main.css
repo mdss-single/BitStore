@@ -3040,6 +3040,9 @@ a {
 	display:none;
 	border-radius:5px;
 }
+.modal--universal {
+	padding:35px 50px;
+}
 .modal--active {
 	display:block;
 	animation:fadein .5s;
@@ -3072,6 +3075,23 @@ a {
 			.modal__close:hover::before, .modal__close:hover::after {
 				background-color:#000;
 			}
+	.modal__title {
+		font-size:3rem;
+		margin:0 0 30px;
+	}
+	.modal__descr {
+		line-height:2.4rem;
+		margin:0 0 20px;
+	}
+		.modal__descr p {
+			margin:0;
+		}
+	.modal__btns {
+		margin-top:50px;
+	}
+		.modal__btns button {
+			margin-right:10px;
+		}
 /*  </modal>  */
 
 /*  <hello>  */
