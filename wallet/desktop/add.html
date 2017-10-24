@@ -232,11 +232,14 @@
 						Выберите валюту
 					</div>
 					<div class="addplace__main">
-						<div class="addplace-main__row">
+						<div class="addplace-main__row addplace-main__advanced">
 							<select name="" id="" class="select">
 								<option value="">RUB</option>
 								<option value="">EUR</option>
 							</select>
+							<div class="addplace-main__descr">
+								курс биржи: <strong>{текущий курс биржи}</strong>
+							</div>
 						</div>
 						<div class="addplace-main__row">
 							<select name="" id="" class="select" data-placeholder="Биржа">
@@ -245,12 +248,15 @@
 								<option value="">Some else</option>
 							</select>
 						</div>
-						<div class="addplace-main__row">
+						<div class="addplace-main__row addplace-main__advanced">
 							<input type="text" name="" id="" class="input-text addplace__extra-charge" placeholder="Наценка">
 							<select class="select addplace__select">
 								<option value="">%</option>
 								<option value="">RUB</option>
 							</select>
+							<div class="addplace-main__descr">
+								стоимость с наценкой <strong>{стоимость курса биржи*наценка}</strong>
+							</div>
 						</div>
 						<div class="addplace-main__row">
 							<input type="text" name="" id="" class="input-text" placeholder="Минимальный лимит">

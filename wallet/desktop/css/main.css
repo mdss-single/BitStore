@@ -404,11 +404,10 @@ a {
 			display:inline-block;
 			vertical-align:middle;
 			width:28px; height:28px;
-			color:#000;
+			color:#fff;
 			font-size:2rem;
 			font-family:Smedium;
 			line-height:28px;
-			text-shadow:1px 1px 1px #b3c7ec;
 			text-align:center;
 			background-color:#157efb;
 			border-radius:50%;
@@ -921,54 +920,26 @@ a {
 				line-height:37px;
 			}
 		.wallet-rates__graph.wallet__white {
-			display:-webkit-flex;
-			display:-moz-flex;
-			display:-ms-flex;
-			display:-o-flex;
-			display:flex;
-			flex-wrap:wrap;
-			justify-content:space-between;
 			overflow:hidden;
 			margin-bottom:0;
 		}
-			.wallet-graph__currency {
-				position:relative;
-				width:50%;
-				font-family:Smedium;
-				padding-left:42px;
-			}
-				.wallet-graph__currency::before {
-					position:absolute;
-					right:-1000%; bottom:0; left:0;
-					z-index:-1;
-					height:1px;
-					background-color:#eee;
-					content:'';
-				}
-				.wallet-graph__currency-item, .wallet-graph-date-item {
-					display:inline-block;
-					color:#8d8d8d;
-					font-family:Sregular;
-					padding:20px 0 8px;
-					margin:0 6px;
-					cursor:pointer;
-				}
-				.wallet-graph__currency-item:first-child {
-					margin:0 6px 0 12px;
-				}
-				.wallet-graph__currency-item--active, .wallet-graph-date-item--active {
-					color:#000;
-					font-family:Smedium;
-					border-bottom:3px solid #3c9ae3;
-					cursor:default;
-				}
 			.wallet-graph__date {
-				width:50%;
 				text-align:right;
 				padding-right:9px;
 			}
 				.wallet-graph-date-item {
+					display:inline-block;
+					color:#8d8d8d;
+					font-family:Sregular;
+					padding:20px 0 8px;
 					margin:0 15px;
+					cursor:pointer;
+				}
+				.wallet-graph-date-item--active {
+					color:#000;
+					font-family:Smedium;
+					border-bottom:3px solid #3c9ae3;
+					cursor:default;
 				}
 			.wallet-graph__main {
 				overflow:hidden;
@@ -2542,6 +2513,9 @@ a {
 				position:relative;
 				padding-top:10px;
 				margin-left:40px;
+			}
+			.addplace__extra-charge ~ .addplace-main__descr {
+				margin-left:120px;
 			}
 				.addplace-main__descr::before {
 					position:absolute;
