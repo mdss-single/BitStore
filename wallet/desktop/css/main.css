@@ -786,6 +786,7 @@ a {
 			display:-ms-flex;
 			display:-o-flex;
 			display:flex;
+			flex-wrap:wrap;
 			justify-content:flex-start;
 		}
 			.wallet-rates__exchange-item {
