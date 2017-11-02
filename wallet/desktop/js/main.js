@@ -381,6 +381,38 @@
 		utilsScript: "js/phone-prefix.js"
 	});
 
+	$('.js-trade-comment').click(function(e) {
+		e.preventDefault();
+		$(this).next().toggleClass('trade-fav__comment--active');
+	});
+
+	$('.deal-review__rating-item').on('mouseover', function() {
+		var onStar = parseInt($(this).data('value'), 10);
+		$(this).parent().children('.deal-review__rating-item').each(function(e){
+			if (e < onStar) {
+				$(this).addClass('deal-review__rating-item--hovered');
+			} else {
+				$(this).removeClass('deal-review__rating-item--hovered');
+			}
+		});
+	}).on('mouseout', function(){
+		$(this).parent().children('.deal-review__rating-item').each(function(e){
+			$(this).removeClass('deal-review__rating-item--hovered');
+		});
+	});
+	$('.deal-review__rating-item').on('click', function(i) {
+		var onStar = parseInt($(this).data('value'), 10);
+		var stars = $(this).parent().children('.deal-review__rating-item');
+		for (i = 0; i < stars.length; i++) {
+			$(stars[i]).removeClass('deal-review__rating-item--selected');
+		}
+		for (i = 0; i < onStar; i++) {
+			$(stars[i]).addClass('deal-review__rating-item--selected');
+		}
+	});
+	// get clicked rating value
+	//var ratingValue = parseInt($('.deal-review__rating-item--selected').last().data('value'), 10);
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
