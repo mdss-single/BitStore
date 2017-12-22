@@ -10,8 +10,8 @@
 <body>
 	<header class="header">
 		<a href="#" class="header__logo"><img src="i/logo.svg" alt=""></a>
-		<button class="header__send-btn js-wallet-send">Отправить</button>
-		<button class="header__get-btn js-wallet-get">Получить</button>
+		<button class="header__send-btn js-modal" data-src="#sendPayment">Отправить</button>
+		<button class="header__get-btn js-modal" data-src="#getPayment">Получить</button>
 		<button class="header__copy-btn js-wallet-copy" data-clipboard-text="1231231231"></button>
 		<div class="header__rates">
 			BTC <span class="header-rates__current-value">245 006 RUB</span>
@@ -430,7 +430,7 @@
 			<a href="#" class="footer__nav-item">Политика AML/KIC</a>
 		</nav>
 	</footer>
-	<div class="modal hello">
+	<div class="modal hello" id="modalHello">
 		<div class="hello__wrap js-hello">
 			<div class="hello__item">
 				<p class="hello__title">Добро пожаловать на BitStore</p>
@@ -461,7 +461,7 @@
 		<a href="#" class="hello__skip js-hello-skip">Пропустить</a>
 		<a href="#" class="hello__next js-hello-next">Далее</a>
 	</div>
-	<div class="modal send">
+	<div class="modal send" id="sendPayment">
 		<a href="#" class="modal__close"></a>
 		<p class="send__title">Отправить</p>
 		<div class="send__settings">
@@ -595,7 +595,7 @@
 		</div>
 		-->
 	</div>
-	<div class="modal get">
+	<div class="modal get" id="getPayment">
 		<a href="#" class="modal__close"></a>
 		<p class="get__title">Получить</p>
 		<p class="get__descr">Чтобы получить перевод на свой кошёк — отправьте его адрес отправителю</p>

@@ -1,13 +1,25 @@
 (function($){ 
 	"use strict";
 
-	$('html').click(function() {
-		$('.wallet__menu--active').removeClass('wallet__menu--active');
-		$('.header__system--active').removeClass('header__system--active');
-		$('.wallet__password--active').removeClass('wallet__password--active');
-		$('.wallet__name--active').removeClass('wallet__name--active');
-		$('.wallet__hide--active').removeClass('wallet__hide--active');
-		$('.footer__language-list--active').removeClass('footer__language-list--active');
+	$(document).click(function(e) {
+		if (!$(e.target).closest('.wallet__menu').length) {
+			$('.wallet__menu').removeClass('wallet__menu--active');
+		}
+		if (!$(e.target).closest('.header__system').length) {
+			$('.header__system').removeClass('header__system--active');
+		}
+		if (!$(e.target).closest('.wallet__password').length) {
+			$('.wallet__password').removeClass('wallet__password--active');
+		}
+		if (!$(e.target).closest('.wallet__name').length) {
+			$('.wallet__name').removeClass('wallet__name--active');
+		}
+		if (!$(e.target).closest('.wallet__hide').length) {
+			$('.wallet__hide').removeClass('wallet__hide--active');
+		}
+		if (!$(e.target).closest('.footer__language-list').length) {
+			$('.footer__language-list').removeClass('footer__language-list--active');
+		}
 	});
 
 	$('.tabs__nav').each(function(i) {
@@ -146,7 +158,5 @@
 
 	var dHeight = $(window).height() - 515;
 	$('.js-chat-calculate-height').css('height',dHeight)
-
-	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);

@@ -2945,12 +2945,12 @@ a {
 	padding:34px 26px;
 }
 	.deal-review__descr {
-		width:385px;
+		width:380px;
 		margin-right:30px;
 	}
 		.deal-review__descr-title {
 			font-family:Ssemi;
-			margin:0 0 20px;
+			margin:0 0 18px;
 		}
 		.deal-review__descr-text {
 			line-height:2.4rem;
@@ -2959,7 +2959,7 @@ a {
 				margin:0;
 			}
 	.deal-review__main {
-		width:460px;
+		flex:1;
 	}
 		.deal-review__main-title {
 			margin:0;
@@ -2984,11 +2984,33 @@ a {
 				background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAMAAACxiD++AAAAVFBMVEUAAADisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyXisyVSOS8xAAAAG3RSTlMAWJ0F7kj3ahML4LivPCr11syli4V9Zl9WVEKrprDJAAAAxElEQVQoz32SVw7EIAxEvRBaCumV+99zEWgTMFnPD0pm8NMgAxLnQEsIoMUY7fOq4jTBOUETnGM0wTnPIAmeQRM8gyZgBibQDE8oGdfnkScERvLrAt04Qo32M1T/z+5VpNjx3R/tXW9585e0bldju+4gk2G5zwxgbam/QSmVBhSUarL+pa9lGpC6COwu014E2misazxb7BsZy/+eROKaZ7gWyDoMO1Fg8pfU3diPm4plG+zzaQe8eAK9rWFo8eYDkI45nl+KSh9zuZIogQAAAABJRU5ErkJggg==);
 			}
 			.deal-review__main .textarea {
-				height:100px;
+				display:block;
+				max-width:550px;
+				min-height:60px;
+				height:60px;
 			}
 			.deal-review__btn.btn.btn--small {
 				padding:0 32px;
 				margin-top:15px;
+			}
+		.deal-review__main-list {
+			margin:10px 0 30px;
+		}
+			.deal-review__main-item {
+				display:-webkit-flex;
+				display:-moz-flex;
+				display:-ms-flex;
+				display:-o-flex;
+				display:flex;
+				align-items:center;
+				font-family:Smedium;
+				margin:18px 0;
+			}
+			.deal-review__main-item--green {
+				color:#537b14;
+			}
+			.deal-review__main-item--red {
+				color:#971818;
 			}
 /*  </deal>  */
 

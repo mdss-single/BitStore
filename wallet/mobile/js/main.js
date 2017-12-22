@@ -114,8 +114,6 @@
 		$('html').css('overflow-y','auto');
 	});
 
-	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
-
 })(jQuery);
 $(document).one('focus.autoExpand', 'textarea.autoExpand', function(){
 	var savedValue = this.value;

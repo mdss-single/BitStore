@@ -5,16 +5,32 @@
 	$('.select, .radio, .checkbox').styler();
 
 	// hide all dropdown
-	$('html').click(function() {
-		$('.wallet__menu--active').removeClass('wallet__menu--active');
-		$('.header__notice-link').removeClass('header__notice-link--active');
-		$('.header__notice--active').removeClass('header__notice--active');
-		$('.get-wallets__list--active').removeClass('get-wallets__list--active');
-		$('.footer__language-list--active').removeClass('footer__language-list--active');
-		$('.header__system--active').removeClass('header__system--active');
-		$('.wallet__password--active').removeClass('wallet__password--active');
-		$('.wallet__name--active').removeClass('wallet__name--active');
-		$('.wallet__hide--active').removeClass('wallet__hide--active');
+	$(document).click(function(e) {
+		if (!$(e.target).closest('.wallet__menu').length) {
+			$('.wallet__menu').removeClass('wallet__menu--active');
+		}
+		if (!$(e.target).closest('.header__notice').length) {
+			$('.header__notice').removeClass('header__notice--active');
+			$('.header__notice-link').removeClass('header__notice-link--active');
+		}
+		if (!$(e.target).closest('.get-wallets__list').length) {
+			$('.get-wallets__list').removeClass('get-wallets__list--active');
+		}
+		if (!$(e.target).closest('.footer__language-list').length) {
+			$('.footer__language-list').removeClass('footer__language-list--active');
+		}
+		if (!$(e.target).closest('.header__system').length) {
+			$('.header__system').removeClass('header__system--active');
+		}
+		if (!$(e.target).closest('.wallet__password').length) {
+			$('.wallet__password').removeClass('wallet__password--active');
+		}
+		if (!$(e.target).closest('.wallet__name').length) {
+			$('.wallet__name').removeClass('wallet__name--active');
+		}
+		if (!$(e.target).closest('.wallet__hide').length) {
+			$('.wallet__hide').removeClass('wallet__hide--active');
+		}
 	});
 	
 	// show notices
@@ -157,6 +173,24 @@
 		afterLoad: function(current) {
 			$(this).find('input[autofocus]').focus();
 			$('.select, .get__select').trigger('refresh');
+			$('.get__select').styler({
+				onFormStyled: function() {
+					var newVal = $('.get__select').find('li.selected').attr('data-value'),
+					curVal = $('.get__select').find('.jq-selectbox__select-text').text(),
+					hash = $('.get__select').find('li.selected').attr('data-hash');
+					$('.get__select').find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
+					$('.get-wallet__content-hash').text(hash);
+					$('.get-wallets__content-link').attr('data-clipboard-text', hash);
+				},
+				onSelectClosed: function() {
+					var newVal = $(this).find('li.selected').attr('data-value'),
+					curVal = $(this).find('li.selected').text(),
+					hash = $(this).find('li.selected').attr('data-hash');
+					$(this).find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
+					$('.get-wallet__content-hash').text(hash);
+					$('.get-wallets__content-link').attr('data-clipboard-text', hash);
+				}
+			});
 			if (clipboard) {
 				clipboard.destroy();
 			}
@@ -412,7 +446,5 @@
 	});
 	// get clicked rating value
 	//var ratingValue = parseInt($('.deal-review__rating-item--selected').last().data('value'), 10);
-
-	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);

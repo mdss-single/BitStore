@@ -11,8 +11,8 @@
 <body>
 	<header class="header">
 		<a href="#" class="header__logo"><img src="i/logo.svg" alt=""></a>
-		<button class="header__send-btn js-wallet-send">Отправить</button>
-		<button class="header__get-btn js-wallet-get">Получить</button>
+		<button class="header__send-btn js-modal" data-src="#sendPayment">Отправить</button>
+		<button class="header__get-btn js-modal" data-src="#getPayment">Получить</button>
 		<button class="header__copy-btn js-wallet-copy" data-clipboard-text="1231231231"></button>
 		<div class="header__rates">
 			BTC <span class="header-rates__current-value">245 006 RUB</span>
@@ -226,12 +226,12 @@
 				<div class="deal-review__descr">
 					<p class="deal-review__descr-title">Оставить отзыв для Bitstore2000</p>
 					<div class="deal-review__descr-text">
-						<p>Оцените продавца по десяти бальной шкале.</p>
-						<p>Выставьте ему оценку в соответвии с количеством звёзд. Также вы можете указать комментарий, он будет доступен для других пользователей и влиять на общий рейтинг продавца.</p>
+						Поставьте оценку продавцу. Также вы можете указать комментарий,он будет доступен для других пользователей.
 					</div>
 				</div>
 				<div class="deal-review__main">
 					<p class="deal-review__main-title">Оцените продавца</p>
+					<!--
 					<div class="deal-review__main-rating">
 						<span class="deal-review__rating-item" data-value="1"></span>
 						<span class="deal-review__rating-item" data-value="2"></span>
@@ -239,7 +239,26 @@
 						<span class="deal-review__rating-item" data-value="4"></span>
 						<span class="deal-review__rating-item" data-value="5"></span>
 					</div>
-					<textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
+					-->
+					<div class="deal-review__main-list">
+						<div class="deal-review__main-item deal-review__main-item--green">
+							<input type="radio" name="rev" id="rev1" class="radio">
+							<label for="rev1">Поставить высшую оценку продавцу</label>
+						</div>
+						<div class="deal-review__main-item">
+							<input type="radio" name="rev" id="rev2" class="radio">
+							<label for="rev2">Поставить среднюю оценку продавцу</label>
+						</div>
+						<div class="deal-review__main-item deal-review__main-item--red">
+							<input type="radio" name="rev" id="rev3" class="radio">
+							<label for="rev3">Я считаю данного продавца не надежным</label>
+						</div>
+						<div class="deal-review__main-item deal-review__main-item--red">
+							<input type="radio" name="rev" id="rev4" class="radio">
+							<label for="rev4">Я считаю данного продавца не надежным и хочу заблокировать его</label>
+						</div>
+					</div>
+					<textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Оставить отзыв"></textarea>
 					<button class="btn btn--small deal-review__btn">Оценить</button>
 				</div>
 			</div>
@@ -256,8 +275,8 @@
 						Биткоины в размере 0.727236726 BTC были заморожены на вашем счёте до завершения сделки. В случае оплату пользователем на ваши реквизты и подтвреждения с вашей стороны - биткоины перейдут на счёт опкупателя. В случае не полаты сделки в течении 60 минут биткоины вернутся на ваше кошелку и сделки будет аннулированна.
 					</div>
 					<div class="deal-step__btns">
-						<button class="btn deal-step__btn-approve js-approve-btn">Получил оплату</button>
-						<button class="btn deal-step__btn-nopayment js-discard-btn">Не получил оплату</button>
+						<button class="btn deal-step__btn-approve js-modal" data-src="#approveDeal">Получил оплату</button>
+						<button class="btn deal-step__btn-nopayment js-modal" data-src="#cancelDeal">Не получил оплату</button>
 					</div>
 				</div>
 			</div>
@@ -310,7 +329,7 @@
 			<a href="#" class="footer__nav-item">Политика AML/KIC</a>
 		</nav>
 	</footer>
-	<div class="modal hello">
+	<div class="modal hello" id="modalHello">
 		<div class="hello__wrap js-hello">
 			<div class="hello__item">
 				<p class="hello__title">Добро пожаловать на BitStore</p>
@@ -341,7 +360,7 @@
 		<a href="#" class="hello__skip js-hello-skip">Пропустить</a>
 		<a href="#" class="hello__next js-hello-next">Далее</a>
 	</div>
-	<div class="modal send">
+	<div class="modal send" id="sendPayment">
 		<a href="#" class="modal__close"></a>
 		<p class="send__title">Отправить</p>
 		<div class="send__settings">
@@ -475,7 +494,7 @@
 		</div>
 		-->
 	</div>
-	<div class="modal get">
+	<div class="modal get" id="getPayment">
 		<a href="#" class="modal__close"></a>
 		<p class="get__title">Получить</p>
 		<p class="get__descr">Чтобы получить перевод на свой кошёк — отправьте его адрес отправителю</p>
@@ -494,7 +513,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal approve">
+	<div class="modal approve" id="approveDeal">
 		<p class="approve__title">Подтверждение оплаты</p>
 		<div class="approve__descr">
 			<p class="approve__descr-title">Вы подтверждаете что получили оплату от пользователя</p>
@@ -507,7 +526,7 @@
 			<button class="btn btn--small">Я оплатил</button>
 		</div>
 	</div>
-	<div class="modal cancel-transaction">
+	<div class="modal cancel-transaction" id="cancelDeal">
 		<p class="cancel-transaction__title">Отмена сделки</p>
 		<div class="cancel-transaction__descr">
 			<p>Вы уверены, что хотите отменить сделку 23423551 на 10000.00 RUB?</p>

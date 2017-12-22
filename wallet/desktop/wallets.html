@@ -11,8 +11,8 @@
 <body>
 	<header class="header">
 		<a href="#" class="header__logo"><img src="i/logo.svg" alt=""></a>
-		<button class="header__send-btn js-wallet-send js-modal" data-src="#modalSend">Отправить</button>
-		<button class="header__get-btn js-wallet-get js-modal" data-src="#modalGet">Получить</button>
+		<button class="header__send-btn js-modal" data-src="#sendPayment">Отправить</button>
+		<button class="header__get-btn js-modal" data-src="#getPayment">Получить</button>
 		<button class="header__copy-btn js-wallet-copy" data-clipboard-text="1231231231"></button>
 		<div class="header__rates">
 			BTC <span class="header-rates__current-value">245 006 RUB</span>
@@ -623,7 +623,7 @@
 		<a href="#" class="hello__skip js-hello-skip">Пропустить</a>
 		<a href="#" class="hello__next js-hello-next">Далее</a>
 	</div>
-	<div class="modal send" id="modalSend">
+	<div class="modal send" id="sendPayment">
 		<a href="#" class="modal__close"></a>
 		<p class="send__title">Отправить</p>
 		<div class="send__settings">
@@ -757,15 +757,15 @@
 		</div>
 		-->
 	</div>
-	<div class="modal get" id="modalGet">
+	<div class="modal get" id="getPayment">
 		<a href="#" class="modal__close"></a>
 		<p class="get__title">Получить</p>
 		<p class="get__descr">Чтобы получить перевод на свой кошёк — отправьте его адрес отправителю</p>
 		<div class="get__wallets">
 			<a href="#"><img src="i/get__qr.png" alt="QR code" class="get-wallets__current-qr"></a>
 			<select name="" id="" class="get__select">
-				<option value="" data-value="22.387639 BTC" data-hash="bitcoin hash">Bitcoin</option>
-				<option value="" data-value="2.387639 LTC" data-hash="litecoin hash">Litecoin</option>
+				<option value="" data-value="22.387639 BTC" data-hash="2Hwfb36AEFHJB3272FJWHBEF23">Bitcoin</option>
+				<option value="" data-value="2.387639 LTC" data-hash="2Hwfb36AEFHasdasdJB3272FJWHBEF23">Litecoin</option>
 			</select>
 			<div class="get-wallets__content">
 				<p class="get-wallets__content-title">Адрес кошелька</p>
