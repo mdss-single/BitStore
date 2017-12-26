@@ -3767,6 +3767,78 @@ a {
 		}
 /*  </cancel-transaction>  */
 
+/*  <tofav>  */
+.tofav {
+	width:528px;
+	padding:30px 45px 40px 40px;
+}
+	.tofav__title {
+		font:bold 1.7rem 'Open Sans';
+		margin:0 0 20px;
+	}
+	.tofav__descr {
+		font-family:'Open Sans';
+		line-height:3rem;
+		margin-bottom:20px;
+	}
+		.tofav__descr p {
+			margin:0;
+		}
+	.tofav__btns {
+		text-align:right;
+		margin-top:30px;
+	}
+		.tofav__btns .btn.btn--small {
+			border-radius:2px;
+			padding:0 34px;
+			margin-left:20px;
+		}
+	.tofav .textarea {
+		min-height:96px;
+		height:96px;
+	}
+/*  </tofav>  */
+
+/*  <report-user>  */
+.report-user {
+	width:726px;
+	padding:50px 55px 40px;
+}
+	.report-user__title {
+		font:bold 1.7rem 'Open Sans';
+		margin:0 0 20px;
+	}
+	.report-user__descr {
+		font-family:'Open Sans';
+		line-height:3rem;
+		margin-bottom:20px;
+	}
+		.report-user__descr p {
+			margin:0;
+		}
+	.report-user__reason {
+		margin-bottom:30px;
+	}
+		.report-user__reason-item {
+			color:#9a1818;
+			font:bold 1.5rem 'Open Sans';
+			margin:16px 0;
+		}
+	.report-user__btns {
+		text-align:right;
+		margin-top:40px;
+	}
+		.report-user__btns .btn.btn--small {
+			border-radius:2px;
+			padding:0 34px;
+			margin-left:20px;
+		}
+	.report-user .textarea {
+		min-height:96px;
+		height:96px;
+	}
+/*  </report-user>  */
+
 /*  <elements>  */
 .select {
 	width:100%;

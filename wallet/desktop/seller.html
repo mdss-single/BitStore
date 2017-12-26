@@ -157,8 +157,8 @@
 					<div class="seller__avatar"><img src="i/avatar.jpg" alt="BitcoinStore2000"></div>
 					<p class="seller__name">BitcoinStore2000 <span class="seller__status seller__status--reliable">Надёжный</span></p>
 					<p class="seller__timeout">Был в сети 3 часа назад</p>
-					<a href="#" class="seller__abuse">Пожаловаться</a>
-					<a href="#" class="seller__favorite">Добавить в избранное</a>
+					<a href="#reportUser" class="seller__abuse js-modal">Пожаловаться</a>
+					<a href="#toFav" class="seller__favorite js-modal">Добавить в избранное</a>
 				</div>
 				<div class="seller__total">
 					<p class="seller__total-title">Сводная информация</p>
@@ -540,6 +540,47 @@
 					<span class="get-wallets__content-link js-wallet-copy" data-clipboard-text="">Копировать</span>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="modal tofav" id="toFav">
+		<p class="tofav__title">Добавить в избранное</p>
+		<div class="tofav__descr">
+			<p>При желании вы можете указать комментарий к пользователю.</p>
+			<p>Он будет виден только вам.</p>
+		</div>
+		<textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Комментарий"></textarea>
+		<div class="tofav__btns">
+			<a href="#" class="js-modal-close">Отменить</a>
+			<button class="btn btn--small">Добавить</button>
+		</div>
+	</div>
+	<div class="modal report-user" id="reportUser">
+		<p class="report-user__title">Пожаловаться на пользователя</p>
+		<div class="report-user__descr">
+			Укажите причину жалобы
+		</div>
+		<div class="report-user__reason">
+			<div class="report-user__reason-item">
+				<input type="radio" name="report" id="report1" class="radio" checked>
+				<label for="report1">Признаки мошенничества</label>
+			</div>
+			<div class="report-user__reason-item">
+				<input type="radio" name="report" id="report2" class="radio">
+				<label for="report2">Вышел из сделки</label>
+			</div>
+			<div class="report-user__reason-item">
+				<input type="radio" name="report" id="report3" class="radio">
+				<label for="report3">Некорретное общение</label>
+			</div>
+			<div class="report-user__reason-item">
+				<input type="radio" name="report" id="report4" class="radio">
+				<label for="report4">Я считаю данного продавца подозрительным и хочу заблокировать его</label>
+			</div>
+		</div>
+		<textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Дополнительная информация"></textarea>
+		<div class="report-user__btns">
+			<a href="#" class="js-modal-close">Отменить</a>
+			<button class="btn btn--small">Отправить</button>
 		</div>
 	</div>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
