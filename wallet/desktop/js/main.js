@@ -2,7 +2,18 @@
 	"use strict";
 
 	// custom styles for select, radio buttons and checkboxes
-	$('.select, .radio, .checkbox').styler();
+	$('.select, .radio, .checkbox').styler({
+		onSelectClosed: function() {
+			if ($(this).closest('.select').hasClass('js-select-cleansable') && (!$('.js-select-clear').length)) $(this).append('<span class="js-select-clear"></span>');
+			$('.js-select-clear').click(function() {
+				$(this).closest('.select').find('.select').prop('selectedIndex',0);
+				var placeholder = $(this).closest('.select[data-placeholder]').length ? $(this).closest('.select').find('.select').data('placeholder') : $(this).closest('.select').find('.select option:first').val();
+				$(this).closest('.select').find('.jq-selectbox__select-text').text(placeholder);
+				$(this).closest('.select').find('.select').trigger('refresh');
+				$(this).remove();
+			});
+		}
+	});
 
 	// hide all dropdown
 	$(document).click(function(e) {

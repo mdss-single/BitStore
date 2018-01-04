@@ -2048,6 +2048,25 @@ a {
 			.trade-search__btn:hover {
 				color:#498dea;
 			}
+	.js-select-clear {
+		position:absolute;
+		top:50%; right:40px;
+		width:15px; height:15px;
+		transform:translateY(-50%);
+	}
+		.js-select-clear::before, .js-select-clear::after {
+			position:absolute;
+			top:calc(50% - 1px); right:0; left:0;
+			height:1px;
+			background-color:#000;
+			content:'';
+		}
+		.js-select-clear::before {
+			transform:rotate(45deg);
+		}
+		.js-select-clear::after {
+			transform:rotate(-45deg);
+		}
 .trade__search-system {
 	display:-webkit-flex;
 	display:-moz-flex;
