@@ -2,15 +2,18 @@
 	"use strict";
 
 	// custom styles for select, radio buttons and checkboxes
-	$('.select, .radio, .checkbox').styler({
+	$('.radio, .checkbox').styler();
+	$('.select').styler({
 		onSelectClosed: function() {
-			if ($(this).closest('.select').hasClass('js-select-cleansable') && (!$('.js-select-clear').length)) $(this).append('<span class="js-select-clear"></span>');
-			$('.js-select-clear').click(function() {
-				$(this).closest('.select').find('.select').prop('selectedIndex',0);
-				var placeholder = $(this).closest('.select[data-placeholder]').length ? $(this).closest('.select').find('.select').data('placeholder') : $(this).closest('.select').find('.select option:first').val();
-				$(this).closest('.select').find('.jq-selectbox__select-text').text(placeholder);
-				$(this).closest('.select').find('.select').trigger('refresh');
-				$(this).remove();
+			$(this).find('.jq-selectbox__dropdown ul').click(function() {
+				if ($(this).closest('.select').hasClass('js-select-cleansable') && (!$(this).closest('.select').find('.js-select-clear').length)) $(this).closest('.select').append('<span class="js-select-clear"></span>');
+				$('.js-select-clear').click(function() {
+					$(this).closest('.select').find('.select').prop('selectedIndex',0);
+					var placeholder = $(this).closest('.select[data-placeholder]').length ? $(this).closest('.select').find('.select').data('placeholder') : $(this).closest('.select').find('.select option:first').val();
+					$(this).closest('.select').find('.jq-selectbox__select-text').text(placeholder);
+					$(this).closest('.select').find('.select').trigger('refresh');
+					$(this).remove();
+				});
 			});
 		}
 	});
@@ -457,5 +460,10 @@
 	});
 	// get clicked rating value
 	//var ratingValue = parseInt($('.deal-review__rating-item--selected').last().data('value'), 10);
+
+	$('.js-trade-menu').click(function(e) {
+		e.preventDefault();
+		$('.main').toggleClass('main--trade');
+	});
 
 })(jQuery);
