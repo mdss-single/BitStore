@@ -192,206 +192,213 @@
 					</div>
 				</div>
 				<p class="page__title tc">Посмотрите текущие предложения о покупке и продаже криптовалют</p>
-				<div class="trade-page__section">
-					<a href="#" class="trade-page__section-link trade-page__section-link--active">Быстрая покупка</a>
-					<a href="#" class="trade-page__section-link">Быстрая продажа</a>
-				</div>
-				<div class="trade-page__filter">
-					<div class="trade-page__filter-block">
-						<p class="trade-page__filter-title">Хочу купить</p>
-						<select name="" id="" class="trade-page__select js-trade-select" data-placeholder="Хочу купить">
-							<option></option>
-							<option value="">RUB</option>
-							<option value="">BTC</option>
-						</select>
+				<div class="trade-page__container">
+					<div class="trade-page__section">
+						<a href="#" class="trade-page__section-link trade-page__section-link--active">Быстрая покупка</a>
+						<a href="#" class="trade-page__section-link">Быстрая продажа</a>
 					</div>
-					<div class="trade-page__filter-block">
-						<input type="tel" name="" id="" class="trade-page__input" placeholder="Сумма">
-						<select name="" id="" class="trade-page__select trade-page__select-currency js-trade-select">
-							<option value="">RUB</option>
-							<option value="">USD</option>
-							<option value="">EUR</option>
-						</select>
+					<div class="trade-page__content trade-page__content--active">
+						<div class="trade-page__filter">
+							<div class="trade-page__filter-block">
+								<p class="trade-page__filter-title">Хочу купить</p>
+								<select name="" id="" class="trade-page__select js-trade-select" data-placeholder="Хочу купить">
+									<option></option>
+									<option value="">RUB</option>
+									<option value="">BTC</option>
+								</select>
+							</div>
+							<div class="trade-page__filter-block">
+								<input type="tel" name="" id="" class="trade-page__input" placeholder="Сумма">
+								<select name="" id="" class="trade-page__select trade-page__select-currency js-trade-select">
+									<option value="">RUB</option>
+									<option value="">USD</option>
+									<option value="">EUR</option>
+								</select>
+							</div>
+							<div class="trade-page__filter-block">
+								<select name="" id="" class="trade-page__select js-trade-select" data-placeholder="Страна покупки">
+									<option></option>
+									<option value="">Россия</option>
+									<option value="">Украина</option>
+								</select>
+							</div>
+							<div class="trade-page__filter-block">
+								<select name="" id="" class="trade-page__select js-trade-select" data-placeholder="Наличные при встрече">
+									<option></option>
+									<option value="">Да</option>
+									<option value="">Нет</option>
+								</select>
+							</div>
+							<div class="trade-page__filter-block">
+								<button class="trade-page__btn">Найти</button>
+							</div>
+						</div>
+						<div class="trade__page-system">
+							<div class="trade-page__system-verification">
+								<input name="" id="tradePage" class="trade-page__check" type="checkbox">
+								<label for="tradePage">Сначала верифицированные</label>
+							</div>
+							<div>
+								<input name="" id="tradeRating" class="trade-page__check" type="checkbox">
+								<label for="tradeRating">Рейтинг Надёжный+</label>
+							</div>
+						</div>
+						<div class="trade-page__result">
+							<table class="seller__buy-table">
+								<tr>
+									<th>Продавец</th>
+									<th>Способ оплаты</th>
+									<th>Покупка</th>
+									<th>Цена</th>
+									<th>Ограничения</th>
+									<th></th>
+								</tr>
+								<tr>
+									<td>
+										<div class="seller__buy-info">
+											<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
+											<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
+											<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
+										</div>
+									</td>
+									<td>Банковский перевод внутри страны</td>
+									<td><span class="seller__buy-currency">BTC</span></td>
+									<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
+									<td>50 - 5000 USD</td>
+									<td><a href="#" class="seller__buy-btn">Купить</a></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="seller__buy-info">
+											<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
+											<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
+											<p class="seller__buy-status"><span class="seller__buy-status--nonreliable">Ненадёжный 8.1</span> (210 сделок)</p>
+										</div>
+									</td>
+									<td>Банковский перевод внутри страны</td>
+									<td><span class="seller__buy-currency">BTC</span></td>
+									<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
+									<td>50 - 5000 USD</td>
+									<td><a href="#" class="seller__buy-btn">Купить</a></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="seller__buy-info">
+											<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
+											<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
+											<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
+										</div>
+									</td>
+									<td>Банковский перевод внутри страны</td>
+									<td><span class="seller__buy-currency">BTC</span></td>
+									<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
+									<td>50 - 5000 USD</td>
+									<td><a href="#" class="seller__buy-btn">Купить</a></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="seller__buy-info">
+											<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
+											<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
+											<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
+										</div>
+									</td>
+									<td>Банковский перевод внутри страны</td>
+									<td><span class="seller__buy-currency">BTC</span></td>
+									<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
+									<td>50 - 5000 USD</td>
+									<td><a href="#" class="seller__buy-btn">Купить</a></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="seller__buy-info">
+											<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
+											<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
+											<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
+										</div>
+									</td>
+									<td>Банковский перевод внутри страны</td>
+									<td><span class="seller__buy-currency">BTC</span></td>
+									<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
+									<td>50 - 5000 USD</td>
+									<td><a href="#" class="seller__buy-btn">Купить</a></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="seller__buy-info">
+											<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
+											<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
+											<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
+										</div>
+									</td>
+									<td>Банковский перевод внутри страны</td>
+									<td><span class="seller__buy-currency">BTC</span></td>
+									<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
+									<td>50 - 5000 USD</td>
+									<td><a href="#" class="seller__buy-btn">Купить</a></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="seller__buy-info">
+											<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
+											<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
+											<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
+										</div>
+									</td>
+									<td>Банковский перевод внутри страны</td>
+									<td><span class="seller__buy-currency">BTC</span></td>
+									<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
+									<td>50 - 5000 USD</td>
+									<td><a href="#" class="seller__buy-btn">Купить</a></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="seller__buy-info">
+											<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
+											<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
+											<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
+										</div>
+									</td>
+									<td>Банковский перевод внутри страны</td>
+									<td><span class="seller__buy-currency">BTC</span></td>
+									<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
+									<td>50 - 5000 USD</td>
+									<td><a href="#" class="seller__buy-btn">Купить</a></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="seller__buy-info">
+											<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
+											<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
+											<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
+										</div>
+									</td>
+									<td>Банковский перевод внутри страны</td>
+									<td><span class="seller__buy-currency">BTC</span></td>
+									<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
+									<td>50 - 5000 USD</td>
+									<td><a href="#" class="seller__buy-btn">Купить</a></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="seller__buy-info">
+											<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
+											<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
+											<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
+										</div>
+									</td>
+									<td>Банковский перевод внутри страны</td>
+									<td><span class="seller__buy-currency">BTC</span></td>
+									<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
+									<td>50 - 5000 USD</td>
+									<td><a href="#" class="seller__buy-btn">Купить</a></td>
+								</tr>
+							</table>
+						</div>
 					</div>
-					<div class="trade-page__filter-block">
-						<select name="" id="" class="trade-page__select js-trade-select" data-placeholder="Страна покупки">
-							<option></option>
-							<option value="">Россия</option>
-							<option value="">Украина</option>
-						</select>
+					<div class="trade-page__content">
+						tab 2
 					</div>
-					<div class="trade-page__filter-block">
-						<select name="" id="" class="trade-page__select js-trade-select" data-placeholder="Наличные при встрече">
-							<option></option>
-							<option value="">Да</option>
-							<option value="">Нет</option>
-						</select>
-					</div>
-					<div class="trade-page__filter-block">
-						<button class="trade-page__btn">Найти</button>
-					</div>
-				</div>
-				<div class="trade__page-system">
-					<div class="trade-page__system-verification">
-						<input name="" id="tradePage" class="trade-page__check" type="checkbox">
-						<label for="tradePage">Сначала верифицированные</label>
-					</div>
-					<div>
-						<input name="" id="tradeRating" class="trade-page__check" type="checkbox">
-						<label for="tradeRating">Рейтинг Надёжный+</label>
-					</div>
-				</div>
-				<div class="trade-page__result">
-					<table class="seller__buy-table">
-						<tr>
-							<th>Продавец</th>
-							<th>Способ оплаты</th>
-							<th>Покупка</th>
-							<th>Цена</th>
-							<th>Ограничения</th>
-							<th></th>
-						</tr>
-						<tr>
-							<td>
-								<div class="seller__buy-info">
-									<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
-									<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
-									<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
-								</div>
-							</td>
-							<td>Банковский перевод внутри страны</td>
-							<td><span class="seller__buy-currency">BTC</span></td>
-							<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-							<td>50 - 5000 USD</td>
-							<td><a href="#" class="seller__buy-btn">Купить</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="seller__buy-info">
-									<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
-									<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
-									<p class="seller__buy-status"><span class="seller__buy-status--nonreliable">Ненадёжный 8.1</span> (210 сделок)</p>
-								</div>
-							</td>
-							<td>Банковский перевод внутри страны</td>
-							<td><span class="seller__buy-currency">BTC</span></td>
-							<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-							<td>50 - 5000 USD</td>
-							<td><a href="#" class="seller__buy-btn">Купить</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="seller__buy-info">
-									<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
-									<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
-									<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
-								</div>
-							</td>
-							<td>Банковский перевод внутри страны</td>
-							<td><span class="seller__buy-currency">BTC</span></td>
-							<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-							<td>50 - 5000 USD</td>
-							<td><a href="#" class="seller__buy-btn">Купить</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="seller__buy-info">
-									<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
-									<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
-									<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
-								</div>
-							</td>
-							<td>Банковский перевод внутри страны</td>
-							<td><span class="seller__buy-currency">BTC</span></td>
-							<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-							<td>50 - 5000 USD</td>
-							<td><a href="#" class="seller__buy-btn">Купить</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="seller__buy-info">
-									<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
-									<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
-									<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
-								</div>
-							</td>
-							<td>Банковский перевод внутри страны</td>
-							<td><span class="seller__buy-currency">BTC</span></td>
-							<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-							<td>50 - 5000 USD</td>
-							<td><a href="#" class="seller__buy-btn">Купить</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="seller__buy-info">
-									<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
-									<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
-									<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
-								</div>
-							</td>
-							<td>Банковский перевод внутри страны</td>
-							<td><span class="seller__buy-currency">BTC</span></td>
-							<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-							<td>50 - 5000 USD</td>
-							<td><a href="#" class="seller__buy-btn">Купить</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="seller__buy-info">
-									<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
-									<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
-									<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
-								</div>
-							</td>
-							<td>Банковский перевод внутри страны</td>
-							<td><span class="seller__buy-currency">BTC</span></td>
-							<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-							<td>50 - 5000 USD</td>
-							<td><a href="#" class="seller__buy-btn">Купить</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="seller__buy-info">
-									<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
-									<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
-									<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
-								</div>
-							</td>
-							<td>Банковский перевод внутри страны</td>
-							<td><span class="seller__buy-currency">BTC</span></td>
-							<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-							<td>50 - 5000 USD</td>
-							<td><a href="#" class="seller__buy-btn">Купить</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="seller__buy-info">
-									<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
-									<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
-									<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
-								</div>
-							</td>
-							<td>Банковский перевод внутри страны</td>
-							<td><span class="seller__buy-currency">BTC</span></td>
-							<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-							<td>50 - 5000 USD</td>
-							<td><a href="#" class="seller__buy-btn">Купить</a></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="seller__buy-info">
-									<a href="#" class="seller__buy-avatar seller__buy-avatar--online"><img src="i/avatar.jpg" alt="BitcoinStore2000"></a>
-									<p class="seller__buy-name seller__buy--reliable"><a href="#">BitcoinStore2000</a></p>
-									<p class="seller__buy-status"><span class="seller__buy-status--reliable">Надёжный 8.1</span> (210 сделок)</p>
-								</div>
-							</td>
-							<td>Банковский перевод внутри страны</td>
-							<td><span class="seller__buy-currency">BTC</span></td>
-							<td><a href="#" class="seller__buy--cost">2000 USD</a></td>
-							<td>50 - 5000 USD</td>
-							<td><a href="#" class="seller__buy-btn">Купить</a></td>
-						</tr>
-					</table>
 				</div>
 				<div class="trade-page__enjoy">
 					<a href="#" class="btn">Начать торговать</a>

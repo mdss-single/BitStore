@@ -1360,6 +1360,13 @@ a {
 		text-decoration:none;
 		border-color:#208afe;
 	}
+.trade-page__content {
+	display:none;
+}
+.trade-page__content--active {
+	display:block;
+	animation:fadein .5s;
+}
 .trade-page__filter {}
 	.trade-page__filter-block {
 		border-top:1px solid #dfdfdf;

@@ -128,4 +128,19 @@
 		$(this).next().toggleClass('support__answer-text--active');
 	});
 
+	// fast sell/buy tabs
+	$('.trade-page__section').each(function(i) {
+		var storage = localStorage.getItem('tab' + i);
+		if (storage) {
+			$(this).find('a').removeClass('trade-page__section-link--active').eq(storage).addClass('trade-page__section-link--active').closest('.trade-page__container').find('.trade-page__content').removeClass('trade-page__content--active').eq(storage).addClass('trade-page__content--active');
+		}
+	});
+	$('.trade-page__section').on('click', 'a:not(.trade-page__section-link--active)', function(e) {
+		e.preventDefault();
+		$(this).addClass('trade-page__section-link--active').siblings().removeClass('trade-page__section-link--active').closest('.trade-page__container').find('.trade-page__content').removeClass('trade-page__content--active').eq($(this).index()).addClass('trade-page__content--active');
+		var ulIndex = $('.trade-page__section').index($(this).parents('.trade-page__section'));
+		localStorage.removeItem('tab' + ulIndex);
+		localStorage.setItem('tab' + ulIndex, $(this).index());
+	});
+
 })(jQuery);
