@@ -2308,13 +2308,70 @@ a {
 	color:#1964cc;
 }
 .trade-history {}
+	.trade-history__sort {
+		font-family:Smedium;
+		margin:35px 32px;
+	}
+		.trade-history__sort a {
+			color:#2570b5;
+			margin-left:35px;
+		}
 	.trade-history__number {
 		color:#1964cc;
 	}
 	.trade-history__title {
 		font-size:2rem;
-		margin:50px 32px 5px;
+		margin:35px 32px 5px;
 	}
+	.trade-history__status {
+		font-family:Ssemi;
+		border-bottom:2px dotted currentColor;
+	}
+	.trade-history__status--active {
+		color:#638210;
+	}
+	.trade-history__status--unactive {
+		color:#b12121;
+	}
+	.trade-history__comission {
+		border-bottom:1px dotted currentColor;
+	}
+	.trade-history__comission--hidden {
+		display:none;
+	}
+	.trade-history__comission--visible {
+		animation:fadein .5s;
+	}
+		a:hover.trade-history__comission {
+			text-decoration:none;
+			border-bottom:0;
+		}
+	.trade-history__comission-edit {
+		display:none;
+	}
+	.trade-history__comission-edit--active {
+		display:block;
+		animation:fadein .5s;
+	}
+		.input-text.trade-history__comission-percent {
+			width:47px; height:35px;
+			text-align:center;
+			padding:0;
+		}
+		.trade-history__comission-value {
+			vertical-align:middle;
+			font-family:Smedium;
+			margin:0 15px;
+		}
+		.btn.trade-history__comission-btn {
+			vertical-align:middle;
+			width:26px; height:26px;
+			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOBAMAAADUAYG5AAAAJ1BMVEUAAAD///////////////////////////////////////////////+uPUo5AAAADHRSTlMAlgFi9UIItynRh2uGHMBVAAAAOUlEQVQI12OAggYozXwayrA5CBU4IwQTUMAikJUAFagpg6oIOZ4MUcHqMweqJQSmhdVRAWp8E5gEAL9REEY3jYIhAAAAAElFTkSuQmCC);
+			background-repeat:no-repeat;
+			background-position:center center;
+			border-radius:2px;
+			padding:0;
+		}
 /*  </trade>  */
 
 /*  <seller>  */
@@ -2881,6 +2938,9 @@ a {
 				padding:0 25px 0 45px;
 				margin-top:30px;
 			}
+			.deal-chat__item--admin {
+				color:#ae2c2c;
+			}
 			.deal-chat__item:first-child {
 				margin-top:0;
 			}
@@ -2898,12 +2958,18 @@ a {
 					color:#a1a1a1;
 					margin:0 0 3px;
 				}
+				.deal-chat__item--admin .deal-chat__item-time {
+					color:#ae2c2c;
+				}
 				.deal-chat__item-text {
 					font-family:Smedium;
 				}
 					.deal-chat__item-text--name {
 						color:#a1a1a1;
 						font-family:Sregular;
+					}
+					.deal-chat__item--admin .deal-chat__item-text--name {
+						color:#ae2c2c;
 					}
 				.deal-chat__item-attach {
 					display:-webkit-flex;
@@ -3025,6 +3091,35 @@ a {
 					background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAANlBMVEUAAABnmR9nmR9nmR9nmR9nmR9nmR9nmR9nmR9nmR9nmR9nmR9nmR9nmR9nmR9nmR9nmR9nmR/g7xAwAAAAEXRSTlMADIAl9uazcMi9tdLtRBXGsdLCpDwAAABlSURBVBjTZY9bDsAgCAQRUFsfbff+l21QY5swf7OEwJIhnGJMLLTIioHm6QWbMub4kYlEt90NKsTbz9ABpvR5OIBEEWjndkQLenimW2Ar9Qo83VYYltBy8DxbZbmKe8y97sq5+i+XBApsohc+7wAAAABJRU5ErkJggg==);
 					content:'';
 				}
+.deal-info {
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:-o-flex;
+	display:flex;
+	justify-content:space-between;
+	-ms-align-items:center;
+	align-items:center;
+}
+	.deal-info__text {
+		flex:1;
+		margin-right:70px;
+	}
+		.deal-info__text p {
+			line-height:2.4rem;
+			margin:0;
+		}
+	.btn.deal-info__btn {
+		height:37px;
+		border-radius:2px;
+		padding:0 20px;
+	}
+	.deal-disput {
+		width:250px;
+	}
+		.deal-disput .btn {
+			margin-top:20px;
+		}
 .deal-review {
 	display:-webkit-flex;
 	display:-moz-flex;

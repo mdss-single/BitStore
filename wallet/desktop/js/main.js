@@ -466,4 +466,14 @@
 		$('.main').toggleClass('main--trade');
 	});
 
+	$('.js-trade-comission').click(function(e) {
+		e.preventDefault();
+		$(this).addClass('trade-history__comission--hidden').removeClass('trade-history__comission--visible');
+		$(this).next().addClass('trade-history__comission-edit--active');
+	});
+	$('.js-trade-save-comission').click(function() {
+		$(this).closest('.trade-history__comission-edit').removeClass('trade-history__comission-edit--active');
+		$(this).closest('.trade-history__comission-edit').prev().removeClass('trade-history__comission--hidden').addClass('trade-history__comission--visible');
+	});
+
 })(jQuery);
