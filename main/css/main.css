@@ -1046,7 +1046,71 @@ a {
 		background-color:#d6d6d6;
 		border-radius:3px;
 		padding:0 45px;
-		margin-top:35px;
+		margin-top:45px;
+	}
+.add-review {
+	display:none;
+	max-width:544px;
+	padding:40px 50px;
+}
+	.add-review__title {
+		font-size:1.7rem;
+		font-family:Ssemi;
+		margin:0 0 20px;
+	}
+	.add-review__rate {
+		font-size:1.7rem;
+		margin:20px 0;
+	}
+		.add-review__rating {
+			position:absolute;
+			left:-9999px;
+		}
+		.add-review__rating + label {
+			display:inline-block;
+			vertical-align:-10px;
+			width:32px; height:32px;
+		}
+		.add-review__rating--plus + label {
+			position:relative;
+			margin:0 32px 0 22px;
+		}
+			.add-review__rating--plus + label::after {
+				position:absolute;
+				top:50%; right:-18px;
+				width:1px; height:15px;
+				background-color:#c3c3c3;
+				content:'';
+				transform:translateY(-50%);
+			}
+			.add-review__rating + label svg {
+				opacity:.5;
+				cursor:pointer;
+				transition:all .2s;
+			}
+				.add-review__rating:checked + label svg {
+					opacity:1;
+					cursor:default;
+				}
+			.add-review__rating--plus + label svg {
+				fill:#6a9d29;
+			}
+			.add-review__rating--minus + label svg {
+				fill:#d04040;
+				transform:scale(1, -1);
+			}
+	.textarea.add-review__textarea {
+		height:150px;
+		margin:20px 0 40px;
+	}
+	.btn.add-review__btn, .btn.btn--grey.add-review__btn {
+		border-radius:2px;
+	}
+	.btn.btn--small.add-review__btn {
+		padding:0 20px;
+	}
+	.add-review__btn:first-of-type {
+		margin-right:10px;
 	}
 /*  </reviews>  */
 
@@ -1419,7 +1483,7 @@ a {
 							box-shadow:0 3px 7px rgba(0, 0, 0, .28);
 						}
 		.trade-page__input {
-			height:38px;
+			height:36px;
 			border:1px solid transparent;
 			padding:0;
 			transition:all .2s;
@@ -1506,6 +1570,25 @@ a {
 .trade-page__download {
 	display:none;
 }
+	.js-select-clear {
+		position:absolute;
+		top:50%; right:30px;
+		width:15px; height:15px;
+		transform:translateY(-50%);
+	}
+		.js-select-clear::before, .js-select-clear::after {
+			position:absolute;
+			top:calc(50% - 1px); right:0; left:0;
+			height:1px;
+			background-color:#000;
+			content:'';
+		}
+		.js-select-clear::before {
+			transform:rotate(45deg);
+		}
+		.js-select-clear::after {
+			transform:rotate(-45deg);
+		}
 /*  </trade-page>  */
 
 /*  <support>  */
@@ -1908,6 +1991,14 @@ a.btn {
 	display:inline-block;
 	line-height:44px;
 }
+.btn.btn--grey {
+	color:#000;
+	background-color:#e8e8e8;
+	border-radius:3px;
+}
+	.btn.btn--grey:hover {
+		background-color:#ddd;
+	}
 .btn.btn--small {
 	height:36px;
 	font-size:1.5rem;
@@ -2690,7 +2781,6 @@ a.btn {
 		}
 		.review__add {
 			background-color:#e7e7e7;
-			margin-top:15px;
 		}
 			a:hover.review__add {
 				text-decoration:none;
@@ -3120,7 +3210,7 @@ a.btn {
 				}
 				.trade-page__select.trade-page__select-currency {
 					position:absolute;
-					top:1px; right:1px; bottom:1px;
+					top:1px; right:1px;
 					width:65px;
 				}
 					.trade-page__select .jq-selectbox__select {
@@ -3129,6 +3219,7 @@ a.btn {
 						padding:0 30px 0 13px;
 					}
 					.trade-page__select.trade-page__select-currency .jq-selectbox__select {
+						height:34px;
 						padding:0 30px 0 0;
 					}
 						.trade-page__select.trade-page__select-currency .jq-selectbox__select-text {

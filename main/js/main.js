@@ -120,7 +120,20 @@
 		$('label[for="' + this.id + '"]').text($(this).val());
 	});
 
-	$('.select').styler();
+	$('.select').styler({
+		onSelectClosed: function() {
+			$(this).find('.jq-selectbox__dropdown ul').click(function() {
+				if ($(this).closest('.select').hasClass('js-select-cleansable') && (!$(this).closest('.select').find('.js-select-clear').length)) $(this).closest('.select').append('<span class="js-select-clear"></span>');
+				$('.js-select-clear').click(function() {
+					$(this).closest('.select').find('.select').prop('selectedIndex',0);
+					var placeholder = $(this).closest('.select[data-placeholder]').length ? $(this).closest('.select').find('.select').data('placeholder') : $(this).closest('.select').find('.select option:first').val();
+					$(this).closest('.select').find('.jq-selectbox__select-text').text(placeholder);
+					$(this).closest('.select').find('.select').trigger('refresh');
+					$(this).remove();
+				});
+			});
+		}
+	});
 
 	// support page QA expanding
 	$('.support__questions-link').click(function(e) {
@@ -141,6 +154,21 @@
 		var ulIndex = $('.trade-page__section').index($(this).parents('.trade-page__section'));
 		localStorage.removeItem('tab' + ulIndex);
 		localStorage.setItem('tab' + ulIndex, $(this).index());
+	});
+
+	$('.modal__close, .js-modal-close').click(function(e){
+		e.preventDefault();
+		$.fancybox.close();
+	});
+	$('.js-modal').fancybox({
+		touch: false,
+		lang : 'ru',
+		i18n : {
+			'ru' : {
+				CLOSE: 'Закрыть',
+				ERROR: 'Невозможно загрузить данные. Попробуйте еще раз.',
+			}
+		},
 	});
 
 })(jQuery);
