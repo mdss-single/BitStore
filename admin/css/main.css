@@ -86,7 +86,7 @@ a {
 		text-decoration:underline;
 	}
 .main {
-	flex:1;
+	flex:1 0 auto;
 	display:-webkit-flex;
 	display:-moz-flex;
 	display:-ms-flex;
@@ -98,7 +98,7 @@ a {
 	padding:30px 0 46px;
 }
 	.content {
-		flex:1;
+		flex:1 0 auto;
 		margin-right:34px;
 	}
 		.admin-block {
