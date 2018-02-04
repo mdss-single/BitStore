@@ -1009,6 +1009,9 @@ a {
 	font-size:2.5rem;
 	margin:20px 20px 20px 34px;
 }
+.users__title + .table td {
+	vertical-align:middle;
+}
 /*  </users>  */
 
 /*  <transaction>  */
@@ -1260,5 +1263,33 @@ a.btn {
 }
 .clipboard-tooltip--left {
 	transform:translate(calc(-100% - 5px), 3px);
+}
+.editable__link {
+	text-decoration:underline;
+	text-decoration-style:dotted;
+}
+	a:hover.editable__link {
+		text-decoration:none;
+	}
+.editable__link--hidden {
+	display:none;
+}
+.editable__content {
+	display:none;
+}
+.editable__content--active {
+	display:block;
+	animation:fadein .5s;
+}
+	.editable__content .input-text {
+		width:94px; height:35px;
+		margin-right:12px;
+	}
+.editable__btn {
+	vertical-align:middle;
+	width:26px; height:26px;
+	background:#498dea url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOBAMAAADUAYG5AAAAJ1BMVEUAAAD///////////////////////////////////////////////+uPUo5AAAADHRSTlMAlgFi9UIItynRh2uGHMBVAAAAOUlEQVQI12OAggYozXwayrA5CBU4IwQTUMAikJUAFagpg6oIOZ4MUcHqMweqJQSmhdVRAWp8E5gEAL9REEY3jYIhAAAAAElFTkSuQmCC') no-repeat 5px 6px;
+	border:0;
+	border-radius:2px;
 }
 /*  </elements>  */

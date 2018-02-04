@@ -159,4 +159,24 @@
 	var dHeight = $(window).height() - 515;
 	$('.js-chat-calculate-height').css('height',dHeight)
 
+	$('.js-editable').click(function(e) {
+		e.preventDefault();
+		$(this).addClass('editable__link--hidden').next('.editable__content').addClass('editable__content--active');
+		$('.select').styler({
+			onSelectClosed: function() {
+				$(this).closest('.editable__content').removeClass('editable__content--active');
+				$(this).closest('.editable__content').prev('.editable__link').removeClass('editable__link--hidden');
+			}
+		});
+		setTimeout(function() {
+			$('.select').trigger('refresh');
+		}, 1)
+	});
+	$('.editable__btn').click(function() {
+		$(this).closest('.editable__content').removeClass('editable__content--active');
+		$(this).closest('.editable__content').prev('.editable__link').removeClass('editable__link--hidden');
+	});
+
+	//$('.select').styler();
+
 })(jQuery);
