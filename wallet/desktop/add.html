@@ -10,6 +10,7 @@
 </head>
 <body>
 	<header class="header">
+		<a href="#" class="header__toggle-menu js-toggle-menu"></a>
 		<a href="#" class="header__logo"><img src="i/logo.svg" alt=""></a>
 		<button class="header__send-btn js-modal" data-src="#sendPayment">Отправить</button>
 		<button class="header__get-btn js-modal" data-src="#getPayment">Получить</button>
@@ -177,19 +178,19 @@
 					<div class="addplace__main">
 						<div class="addplace-main__row">
 							<!--<input type="checkbox" name="" id="a1" class="checkbox">-->
-							<input type="radio" name="a" id="a1" class="radio">
+							<input type="checkbox" name="a" id="a1" class="checkbox">
 							<label for="a1">Продать за наличный расчёт</label>
 						</div>
 						<div class="addplace-main__row">
-							<input type="radio" name="a" id="a2" class="radio">
+							<input type="checkbox" name="a" id="a2" class="checkbox">
 							<label for="a2">Купить за наличный расчёт</label>
 						</div>
 						<div class="addplace-main__row">
-							<input type="radio" name="a" id="a3" class="radio">
+							<input type="checkbox" name="a" id="a3" class="checkbox">
 							<label for="a3">Продать онлайн</label>
 						</div>
 						<div class="addplace-main__row">
-							<input type="radio" name="a" id="a4" class="radio">
+							<input type="checkbox" name="a" id="a4" class="checkbox">
 							<label for="a4">Купить онлайн</label>
 						</div>
 					</div>
@@ -281,6 +282,29 @@
 						Укажите прочие параметры сделки
 					</div>
 					<div class="addplace__main">
+						<div class="addplace-main__row addplace-main__advanced">
+							<p class="addplace-main__title">Минимальное количество сделок пользователя</p>
+							<select name="" id="" class="select">
+								<option value="">Все</option>
+								<option value="">От 1 до 100</option>
+								<option value="">От 100 до 100500</option>
+							</select>
+							<div class="addplace-main__descr">
+								Укажите минимальное количество сделок пользователя, который будет видеть Ваше  объявление.
+							</div>
+						</div>
+						<div class="addplace-main__row addplace-main__advanced">
+							<p class="addplace-main__title">Показывать объявление</p>
+							<select name="" id="" class="select">
+								<option value="">Всем</option>
+								<option value="">Никому</option>
+								<option value="">Только по ссылке</option>
+							</select>
+							<div class="addplace-main__descr">
+								Выберите минимальный рейтинг пользователя, который будет видеть Ваше объявление.
+							</div>
+						</div>
+						<!--
 						<div class="addplace-main__row">
 							<p class="addplace-main__title">Ваш номер телефона</p>
 							<input type="text" name="" id="" class="input-text js-input-phone">
@@ -297,6 +321,7 @@
 							<input type="checkbox" name="" id="b1" class="checkbox">
 							<label for="b1">Только для верифицированных пользователей</label>
 						</div>
+						-->
 					</div>
 				</div>
 				<div class="addplace__row">
@@ -305,6 +330,7 @@
 						<div class="addplace-main__row">
 							<input type="checkbox" name="" id="c1" class="checkbox">
 							<label for="c1">Размещая объявление, я принимаю <a href="#" class="addplace__link">Пользовательское соглашение</a> сервиса</label>
+							<label for="c1" class="error-message">Для размещения объявления необходимо принять Пользовательское соглашение</label>
 						</div>
 						<button class="btn addplace__btn">Разместить объявление</button>
 					</div>
@@ -372,8 +398,13 @@
 		<p class="send__title">Отправить</p>
 		<div class="send__settings">
 			<div class="send__settings-row">
+				<p class="send__settings-title">С кошелька</p>
+				<input type="text" name="" id="" class="input-text" placeholder="Выберите кошелёк для отправления" autofocus>
+			</div>
+			<div class="send__settings-row">
 				<p class="send__settings-title">Кому</p>
-				<input type="text" name="" id="" class="input-text" placeholder="Адрес или почта" autofocus>
+				<input type="text" name="" id="" class="input-text" placeholder="Адрес или почта">
+				<div class="send__settings-bitstore"></div>
 			</div>
 			<div class="send__settings-row">
 				<p class="send__settings-title">Сумма <span class="send__settings-title--aviable">доступно: 23.252452246624 BTC</span></p>
@@ -406,14 +437,17 @@
 				</div>
 				<div class="js-send-custom">
 					<div class="send-settings__item">
-						<input type="text" name="" id="" class="input-text" placeholder="0">
+						<input type="text" name="" id="" class="input-text" value="0.0000012" placeholder="0">
 						<span class="send-settings__currency">sat/b</span>
 					</div>
 					<div class="send-settings__item tr">
-						<p class="send-settings__comission">0.00000124 BTC (20 RUR)</p>
-						<a href="#" class="send-settings__comission-link js-send-custom-cancel">отменить</a>
+						<input type="text" name="" id="" class="input-text" value="500" placeholder="0">
+						<span class="send-settings__currency">RUR</span>
 					</div>
 				</div>
+			</div>
+			<div class="send__settings-descr">
+				<p>Данная транзакция будет выполнена мгновенно и без комиссии внутри системы Bitstore, не попадая в сеть Blockchain. Если Вы хотите отправить транзакцию через сеть Blockchain — пожалуйста, выберите любой другой приоритет.</p>
 			</div>
 		</div>
 		<button class="btn send__btn">Отправить</button>

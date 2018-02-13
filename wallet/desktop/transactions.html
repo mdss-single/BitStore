@@ -10,6 +10,7 @@
 </head>
 <body>
 	<header class="header">
+		<a href="#" class="header__toggle-menu js-toggle-menu"></a>
 		<a href="#" class="header__logo"><img src="i/logo.svg" alt=""></a>
 		<button class="header__send-btn js-modal" data-src="#sendPayment">Отправить</button>
 		<button class="header__get-btn js-modal" data-src="#getPayment">Получить</button>
@@ -152,165 +153,139 @@
 			</nav>
 		</aside>
 		<div class="content">
-			<div class="transactions wallet__white">
+			<div class="transactions">
 				<div class="transactions__nav">
 					<div class="transactions__nav-item transactions__nav-item--active"><a href="#">Все</a></div>
 					<div class="transactions__nav-item transactions__nav-item--secondary"><a href="#">Получена</a></div>
 					<div class="transactions__nav-item transactions__nav-item--secondary"><a href="#">Отправлена</a></div>
-					<div class="transactions__nav-item">
-						<select name="" id="" class="select transactions__nav-wallets">
-							<option value="">Все кошельки</option>
-							<option value="" data-value="2.900222">Bitcoin</option>
-							<option value="" data-value="1.883726">Etherum</option>
-							<option value="" data-value="8.373626">Litecoin</option>
-							<option value="" data-value="1.287765">Dashcoin</option>
-						</select>
-					</div>
-					<div class="transactions__nav-item">
-						<select name="" id="" class="select transactions__nav-period" data-placeholder="Весь период">
-							<option></option>
-							<option value="">Сегодня</option>
-							<option value="">Вчера</option>
-							<option value="">Неделя</option>
-							<option value="">Месяц</option>
-							<option value="">Год</option>
-							<option value="" class="js-transactions-period">Другой период</option>
-						</select>
-						<div class="transactions__period">
-							<p class="transaction-period__title">Другой период</p>
-							С
-							<input type="text" name="" id="" class="input-text transaction-period__text" value="Сентября">
-							по
-							<input type="text" name="" id="" class="input-text transaction-period__text" value="Октябрь">
-							<div class="transaction-period__btns">
-								<button class="btn btn--small btn--grey js-transactions-period-close">Отменить</button>
-								<button class="btn btn--small">Показать</button>
+					<div class="transactions__nav-last">
+						<div class="transactions__nav-lastItem">
+							<select name="" id="" class="select transactions__nav-wallets">
+								<option value="">Все кошельки</option>
+								<option value="" data-value="2.900222">Bitcoin</option>
+								<option value="" data-value="1.883726">Etherum</option>
+								<option value="" data-value="8.373626">Litecoin</option>
+								<option value="" data-value="1.287765">Dashcoin</option>
+							</select>
+						</div>
+						<div class="transactions__nav-lastItem">
+							<select name="" id="" class="select transactions__nav-period" data-placeholder="Весь период">
+								<option></option>
+								<option value="">Сегодня</option>
+								<option value="">Вчера</option>
+								<option value="">Неделя</option>
+								<option value="">Месяц</option>
+								<option value="">Год</option>
+								<option value="" class="js-transactions-period">Другой период</option>
+							</select>
+							<div class="transactions__period">
+								<p class="transaction-period__title">Другой период</p>
+								С
+								<input type="text" name="" id="" class="input-text transaction-period__text" value="Сентября">
+								по
+								<input type="text" name="" id="" class="input-text transaction-period__text" value="Октябрь">
+								<div class="transaction-period__btns">
+									<button class="btn btn--small btn--grey js-transactions-period-close">Отменить</button>
+									<button class="btn btn--small">Показать</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<table class="transactions__table">
-					<tr>
-						<th colspan="3">Сегодня</th>
-					</tr>
-					<tr>
-						<td>
-							<div class="transactions-table__status transactions-table__status--received">
-								<p class="transactions-table__status-title">Получена</p>
-								<p class="transactions-table__status-date">21.07.2017</p>
-							</div>
-						</td>
-						<td>
-							<p>От: Мой кошелёк</p>
-							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
-						</td>
-						<td>
-							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
-							<div class="transactions-table__summ">
-								<p class="transactions-table__summ-value">92.534435 BTC</p>
-								<span class="transactions-table__summ-ok">Подтверждена</span>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="transactions-table__status transactions-table__status--wait">
-								<p class="transactions-table__status-title">Получена</p>
-								<p class="transactions-table__status-date">21.07.2017</p>
-							</div>
-						</td>
-						<td>
-							<p>От: Мой кошелёк</p>
-							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
-						</td>
-						<td>
-							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
-							<div class="transactions-table__summ">
-								<p class="transactions-table__summ-value">92.534435 BTC</p>
-								<span class="transactions-table__summ-wait">Подтверждена</span>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="transactions-table__status transactions-table__status--sended">
-								<p class="transactions-table__status-title">Получена</p>
-								<p class="transactions-table__status-date">21.07.2017</p>
-							</div>
-						</td>
-						<td>
-							<p>От: Мой кошелёк</p>
-							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
-						</td>
-						<td>
-							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
-							<div class="transactions-table__summ">
-								<p class="transactions-table__summ-value">92.534435 BTC</p>
-								<span class="transactions-table__summ-ok">Подтверждена</span>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<th colspan="3">Вчера</th>
-					</tr>
-					<tr>
-						<td>
-							<div class="transactions-table__status transactions-table__status--received">
-								<p class="transactions-table__status-title">Получена</p>
-								<p class="transactions-table__status-date">21.07.2017</p>
-							</div>
-						</td>
-						<td>
-							<p>От: Мой кошелёк</p>
-							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
-						</td>
-						<td>
-							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
-							<div class="transactions-table__summ">
-								<p class="transactions-table__summ-value">92.534435 BTC</p>
-								<span class="transactions-table__summ-ok">Подтверждена</span>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="transactions-table__status transactions-table__status--wait">
-								<p class="transactions-table__status-title">Получена</p>
-								<p class="transactions-table__status-date">21.07.2017</p>
-							</div>
-						</td>
-						<td>
-							<p>От: Мой кошелёк</p>
-							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
-						</td>
-						<td>
-							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции""></a>
-							<div class="transactions-table__summ">
-								<p class="transactions-table__summ-value">92.534435 BTC</p>
-								<span class="transactions-table__summ-wait">Подтверждена</span>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="transactions-table__status transactions-table__status--sended">
-								<p class="transactions-table__status-title">Получена</p>
-								<p class="transactions-table__status-date">21.07.2017</p>
-							</div>
-						</td>
-						<td>
-							<p>От: Мой кошелёк</p>
-							<p>Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</p>
-						</td>
-						<td>
-							<a href="#" class="transactions-table__copy" data-tooltip="Открыть хеш транзакции"></a>
-							<div class="transactions-table__summ">
-								<p class="transactions-table__summ-value">92.534435 BTC</p>
-								<span class="transactions-table__summ-ok">Подтверждена</span>
-							</div>
-						</td>
-					</tr>
-				</table>
+				<div class="wallet__white">
+					<table class="transactions__table">
+						<tr>
+							<th colspan="3">Входящая транзакция</th>
+						</tr>
+						<tr>
+							<td>
+								<div class="transactions__table-date">21.07.2017</div>
+							</td>
+							<td>
+								14CE1BiDuZPnrSsg49mzhsonAm725cqqA6 <a href="#">(трек)</a>
+								<span class="transactions__table-approve">0 подтверждений</span>
+							</td>
+							<td>
+								<span class="transactions__table-summ">+ 92.534435 BTC</span>
+							</td>
+						</tr>
+						<tr>
+							<th colspan="3">Сегодня, 10 февраля</th>
+						</tr>
+						<tr>
+							<td>
+								<div class="transactions__table-date">22:30</div>
+							</td>
+							<td>
+								От: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6 <a href="#">(трек)</a>
+							</td>
+							<td>
+								<span class="transactions__table-summ transactions__table-summ--plus">+ 92.534435 BTC</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="transactions__table-date">21:00</div>
+							</td>
+							<td>
+								Кому: DGessegiDuZPnrSsg49mzhsjftjftjftjfsrtae34 <a href="#">(трек)</a>
+							</td>
+							<td>
+								<span class="transactions__table-summ transactions__table-summ--minus">- 1.4435 BTC</span>
+							</td>
+						</tr>
+						<tr>
+							<th colspan="3">Вчера, 9 февраля</th>
+						</tr>
+						<tr>
+							<td>
+								<div class="transactions__table-date">22:30</div>
+							</td>
+							<td>
+								От: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6 <a href="#">(трек)</a>
+							</td>
+							<td>
+								<span class="transactions__table-summ transactions__table-summ--plus">+ 92.534435 BTC</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="transactions__table-date">21:00</div>
+							</td>
+							<td>
+								Кому: DGessegiDuZPnrSsg49mzhsjftjftjftjfsrtae34 <a href="#">(трек)</a>
+							</td>
+							<td>
+								<span class="transactions__table-summ transactions__table-summ--minus">- 1.4435 BTC</span>
+							</td>
+						</tr>
+						<tr>
+							<th colspan="3">8 февраля</th>
+						</tr>
+						<tr>
+							<td>
+								<div class="transactions__table-date">22:30</div>
+							</td>
+							<td>
+								От: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6 <a href="#">(трек)</a>
+							</td>
+							<td>
+								<span class="transactions__table-summ transactions__table-summ--plus">+ 92.534435 BTC</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="transactions__table-date">21:00</div>
+							</td>
+							<td>
+								Кому: DGessegiDuZPnrSsg49mzhsjftjftjftjfsrtae34 <a href="#">(трек)</a>
+							</td>
+							<td>
+								<span class="transactions__table-summ transactions__table-summ--minus">- 1.4435 BTC</span>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
 	</main>
@@ -374,8 +349,13 @@
 		<p class="send__title">Отправить</p>
 		<div class="send__settings">
 			<div class="send__settings-row">
+				<p class="send__settings-title">С кошелька</p>
+				<input type="text" name="" id="" class="input-text" placeholder="Выберите кошелёк для отправления" autofocus>
+			</div>
+			<div class="send__settings-row">
 				<p class="send__settings-title">Кому</p>
-				<input type="text" name="" id="" class="input-text" placeholder="Адрес или почта" autofocus>
+				<input type="text" name="" id="" class="input-text" placeholder="Адрес или почта">
+				<div class="send__settings-bitstore"></div>
 			</div>
 			<div class="send__settings-row">
 				<p class="send__settings-title">Сумма <span class="send__settings-title--aviable">доступно: 23.252452246624 BTC</span></p>
@@ -408,14 +388,17 @@
 				</div>
 				<div class="js-send-custom">
 					<div class="send-settings__item">
-						<input type="text" name="" id="" class="input-text" placeholder="0">
+						<input type="text" name="" id="" class="input-text" value="0.0000012" placeholder="0">
 						<span class="send-settings__currency">sat/b</span>
 					</div>
 					<div class="send-settings__item tr">
-						<p class="send-settings__comission">0.00000124 BTC (20 RUR)</p>
-						<a href="#" class="send-settings__comission-link js-send-custom-cancel">отменить</a>
+						<input type="text" name="" id="" class="input-text" value="500" placeholder="0">
+						<span class="send-settings__currency">RUR</span>
 					</div>
 				</div>
+			</div>
+			<div class="send__settings-descr">
+				<p>Данная транзакция будет выполнена мгновенно и без комиссии внутри системы Bitstore, не попадая в сеть Blockchain. Если Вы хотите отправить транзакцию через сеть Blockchain — пожалуйста, выберите любой другой приоритет.</p>
 			</div>
 		</div>
 		<button class="btn send__btn">Отправить</button>

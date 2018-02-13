@@ -3,7 +3,7 @@
 
 /*  <fonts>  */
 @font-face {
-	font-family:'Sregular';
+	font-family:'S';
 	src: url('../fonts/SFUIDisplay-Regular.eot?#iefix') format('embedded-opentype'),
 		 url('../fonts/SFUIDisplay-Regular.otf') format('opentype'),
 		 url('../fonts/SFUIDisplay-Regular.woff') format('woff'),
@@ -13,33 +13,33 @@
 	font-style:normal;
 }
 @font-face {
-	font-family:'Slight';
+	font-family:'S';
 	src: url('../fonts/SFUIDisplay-Light.eot?#iefix') format('embedded-opentype'),
 		 url('../fonts/SFUIDisplay-Light.otf')  format('opentype'),
 		 url('../fonts/SFUIDisplay-Light.woff') format('woff'),
 		 url('../fonts/SFUIDisplay-Light.ttf')  format('truetype'),
 		 url('../fonts/SFUIDisplay-Light.svg#SFUIDisplay-Light') format('svg');
-	font-weight:normal;
+	font-weight:300;
 	font-style:normal;
 }
 @font-face {
-	font-family: 'Smedium';
+	font-family: 'S';
 	src: url('../fonts/SFUIDisplay-Medium.eot?#iefix') format('embedded-opentype'),
 		 url('../fonts/SFUIDisplay-Medium.otf')  format('opentype'),
 		 url('../fonts/SFUIDisplay-Medium.woff') format('woff'),
 		 url('../fonts/SFUIDisplay-Medium.ttf')  format('truetype'),
 		 url('../fonts/SFUIDisplay-Medium.svg#SFUIDisplay-Medium') format('svg');
-	font-weight:normal;
+	font-weight:500;
 	font-style:normal;
 }
 @font-face {
-	font-family:'Ssemi';
+	font-family:'S';
 	src: url('../fonts/SFUIDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
 		 url('../fonts/SFUIDisplay-Semibold.otf') format('opentype'),
 		 url('../fonts/SFUIDisplay-Semibold.woff') format('woff'),
 		 url('../fonts/SFUIDisplay-Semibold.ttf') format('truetype'),
 		 url('../fonts/SFUIDisplay-Semibold.svg#SFUIDisplay-Semibold') format('svg');
-	font-weight:normal;
+	font-weight:600;
 	font-style:normal;
 }
 
@@ -66,7 +66,7 @@ body {
 	flex-direction:column;
 	min-width:1280px;
 	color:#000;
-	font:normal 1.5rem/1.3 Sregular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font:normal 1.5rem/1.3 S, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	background-color:#fff;
 	font-size-adjust:0.5;
 }
@@ -100,12 +100,12 @@ a {
 	.content {
 		display:inline-block;
 		vertical-align:top;
-		width:calc(100% - 297px - .25em);
+		width:calc(100% - 115px);
 		padding-top:30px;
 		transition:all .2s;
 	}
-	.main--trade .content {
-		width:calc(100% - 115px);
+	.main--narrow .content {
+		width:calc(100% - 297px - .25em);
 	}
 @keyframes fadein {
 	from {
@@ -140,10 +140,7 @@ a {
 	background-color:#1a499b;
 	padding:0 34px 0 0;
 }
-	.header__trade-menu {
-		display:none;
-	}
-	.header--trade .header__trade-menu {
+	.header__toggle-menu {
 		display:block;
 		position:absolute;
 		top:50%; left:34px;
@@ -152,7 +149,7 @@ a {
 		border-width:1px 0;
 		transform:translateY(-50%);
 	}
-		.header--trade .header__trade-menu::before {
+		.header__toggle-menu::before {
 			position:absolute;
 			top:50%; right:0; left:0;
 			height:1px;
@@ -161,10 +158,7 @@ a {
 		}
 	.header__logo {
 		position:absolute;
-		top:16px; left:48px;
-	}
-	.header--trade .header__logo {
-		left:76px;
+		top:16px; left:76px;
 	}
 		.header__logo img {
 			width:113px;
@@ -174,7 +168,7 @@ a {
 		top:0;
 		height:54px;
 		color:#fff;
-		font-family:Smedium;
+		font-weight:500;
 		border:0;
 		transition:all .2s;
 	}
@@ -201,8 +195,8 @@ a {
 	.header__rates {
 		position:relative;
 		color:#698dcb;
-		font-family:Smedium;
-		line-height:54px;
+		font-weight:500;
+		line-height:5.4rem;
 		padding-right:14px;
 		margin-right:38px;
 	}
@@ -235,7 +229,7 @@ a {
 			right:0;
 			z-index:15;
 			color:#000;
-			font-family:Sregular;
+			font-weight:400;
 			line-height:1;
 			background-color:#fff;
 			border-radius:3px;
@@ -269,8 +263,8 @@ a {
 	.header__wallets {
 		position:relative;
 		color:#fff;
-		font-family:Smedium;
-		line-height:54px;
+		font-weight:500;
+		line-height:5.4rem;
 		padding-right:14px;
 		margin-right:32px;
 	}
@@ -298,7 +292,7 @@ a {
 			z-index:15;
 			width:302px;
 			color:#000;
-			font-family:Sregular;
+			font-weight:400;
 			line-height:1;
 			background-color:#fff;
 			border-radius:3px;
@@ -341,7 +335,7 @@ a {
 						background-color:#f9f9f9;
 					}
 					.header-wallet__item--value {
-						font-family:Smedium;
+						font-weight:500;
 					}
 	.header__notice-link {
 		position:relative;
@@ -438,8 +432,8 @@ a {
 			width:28px; height:28px;
 			color:#fff;
 			font-size:2rem;
-			font-family:Smedium;
-			line-height:28px;
+			font-weight:500;
+			line-height:2.8rem;
 			text-align:center;
 			background-color:#157efb;
 			border-radius:50%;
@@ -477,19 +471,19 @@ a {
 .sidebar {
 	display:inline-block;
 	vertical-align:top;
-	width:263px;
+	overflow:hidden;
+	width:78px;
 	padding-top:30px;
 	transition:width .2s;
 }
-.main--trade .sidebar {
-	overflow:hidden;
-	width:78px;
+.main--narrow .sidebar {
+	width:263px;
 }
 	.nav {
-		padding:0 19px 0 23px;
+		padding:0 19px 0 13px;
 	}
-	.main--trade .nav {
-		padding-left:13px;
+	.main--narrow .nav {
+		padding-left:23px;
 	}
 		.nav__item {
 			display:block;
@@ -558,7 +552,7 @@ a {
 			margin:0 0 12px;
 		}
 			.quick-stat__value--count {
-				font-family:Smedium;
+				font-weight:500;
 			}
 /*  </sidebar>  */
 
@@ -604,7 +598,7 @@ a {
 				color:#848383;
 			}
 			.wallets td:last-child.wallet__total-value {
-				font-family:Ssemi;
+				font-weight:600;
 				text-align:left;
 			}
 			.wallet__shortname {
@@ -615,7 +609,7 @@ a {
 				margin-right:30px;
 			}
 			.wallet__value {
-				font-family:Ssemi;
+				font-weight:600;
 			}
 			.wallet__uncorfirmed {
 				color:#a1a1a1;
@@ -727,7 +721,7 @@ a {
 				}
 					.wallet-password__title {
 						font-size:1.7rem;
-						font-family:Ssemi;
+						font-weight:600;
 						margin:0 0 20px;
 					}
 					.wallet-password__descr {
@@ -773,7 +767,7 @@ a {
 				}
 					.wallet-hide__title {
 						font-size:1.7rem;
-						font-family:Ssemi;
+						font-weight:600;
 						margin:0 0 20px;
 					}
 					.wallet-hide__descr {
@@ -818,7 +812,7 @@ a {
 	}
 		.wallet-rates__section-title {
 			font-size:1.7rem;
-			font-family:Smedium;
+			font-weight:500;
 			margin:0 0 8px;
 		}
 		.wallet-rates__exchange, .wallet-rates__currency {
@@ -832,7 +826,7 @@ a {
 		}
 			.wallet-rates__exchange-item {
 				width:90px;
-				line-height:36px;
+				line-height:3.6rem;
 				text-align:center;
 				background-color:#f5f6f8;
 				margin-right:1px;
@@ -855,7 +849,7 @@ a {
 				}
 			.wallet-rates__currency-item {
 				width:60px;
-				line-height:36px;
+				line-height:3.6rem;
 				text-align:center;
 				background-color:#f5f6f8;
 				margin-right:1px;
@@ -905,7 +899,7 @@ a {
 		}
 			.wallet-rates__converter-title {
 				font-size:1.7rem;
-				font-family:Smedium;
+				font-weight:500;
 				margin:0 0 20px;
 			}
 			.wallet-converter__wrap {
@@ -936,7 +930,7 @@ a {
 				}
 					.wallet-converter__block .jq-selectbox__select {
 						height:39px;
-						line-height:37px;
+						line-height:3.7rem;
 						border:1px solid #d0d3e4;
 						border-radius:0 2px 2px 0;
 						padding:0 25px 0 16px;
@@ -959,7 +953,7 @@ a {
 			.wallet-converter__delimiter {
 				color:#989898;
 				font-size:1.7rem;
-				line-height:37px;
+				line-height:3.7rem;
 			}
 		.wallet-rates__graph.wallet__white {
 			overflow:hidden;
@@ -972,14 +966,14 @@ a {
 				.wallet-graph-date-item {
 					display:inline-block;
 					color:#8d8d8d;
-					font-family:Sregular;
+					font-weight:400;
 					padding:20px 0 8px;
 					margin:0 15px;
 					cursor:pointer;
 				}
 				.wallet-graph-date-item--active {
 					color:#000;
-					font-family:Smedium;
+					font-weight:500;
 					border-bottom:3px solid #3c9ae3;
 					cursor:default;
 				}
@@ -1009,7 +1003,7 @@ a {
 				.wallet-timeline__table th {
 					text-align:left;
 					font-weight:normal;
-					font-family:Smedium;
+					font-weight:500;
 					padding:14px 10px 8px;
 				}
 				.wallet-timeline__table th:first-child {
@@ -1051,7 +1045,7 @@ a {
 	}
 		.settings-nav__item {
 			color:#6e6e6e;
-			line-height:50px;
+			line-height:5rem;
 			border-right:1px solid #e0e0e0;
 			padding:0 35px;
 			cursor:pointer;
@@ -1099,7 +1093,7 @@ a {
 				}
 				.settings__table td:nth-child(2) {
 					width:150px;
-					font-family:Smedium;
+					font-weight:500;
 				}
 				.settings__table.settings-2__table td:nth-child(2) {
 					width:360px;
@@ -1117,7 +1111,7 @@ a {
 				}
 					.settings__title {
 						font-size:1.7rem;
-						font-family:Smedium;
+						font-weight:500;
 						margin:0 0 10px;
 					}
 					.settings-2__table .settings__title {
@@ -1134,7 +1128,7 @@ a {
 					.settings__btn, .settings__active {
 						display:inline-block;
 						width:170px;
-						line-height:40px;
+						line-height:4.0rem;
 						text-align:center;
 						border-radius:3px;
 					}
@@ -1169,7 +1163,7 @@ a {
 							margin-top:0;
 						}
 							.second-password__title {
-								font-family:Smedium;
+								font-weight:500;
 								margin:0 0 8px;
 							}
 							.second-password__cancel {
@@ -1279,7 +1273,7 @@ a {
 			.partner__stat-value {
 				color:#3469c6;
 				font-size:3rem;
-				font-family:Smedium;
+				font-weight:500;
 				margin:0 0 8px;
 			}
 			.partner__stat-descr {
@@ -1329,8 +1323,8 @@ a {
 			width:100%; height:62px;
 			color:#2d71e9;
 			font-size:1.7rem;
-			font-family:Smedium;
-			line-height:60px;
+			font-weight:500;
+			line-height:6rem;
 			background-color:#f1f4fa;
 			border:solid #9fbdf2;
 			border-width:1px 0;
@@ -1377,7 +1371,7 @@ a {
 		}
 			.partner-promo__item-title {
 				font-size:1.7rem;
-				font-family:Smedium;
+				font-weight:500;
 				margin:0 0 10px;
 			}
 			.partner-promo__item-descr {
@@ -1428,7 +1422,7 @@ a {
 				.partner__history-table th {
 					vertical-align:top;
 					font-weight:normal;
-					font-family:Smedium;
+					font-weight:500;
 					text-align:left;
 					background-color:#f3f3f3;
 					padding:6px 10px;
@@ -1457,7 +1451,7 @@ a {
 			.partner-cashing__aviable {
 			}
 				.partner-cashing__aviable--value {
-					font-family:Smedium;
+					font-weight:500;
 					margin:0 0 25px;
 				}
 			.partner-cashing__item .select {
@@ -1541,7 +1535,7 @@ a {
 				width:100%; height:102px;
 				color:#fff;
 				font-size:3.2rem;
-				font-family:Smedium;
+				font-weight:500;
 				background-color:#3469c6;
 			}
 			.bsb__logo {
@@ -1567,7 +1561,7 @@ a {
 				padding:15px 20px;
 			}
 				.partner-banners__code pre, .partner-banners__code code {
-					font-family:Smedium;
+					font-weight:500;
 					margin:0;
 				}
 /*  </partner>  */
@@ -1581,7 +1575,7 @@ a {
 	.support__header-title {
 		color:#fff;
 		font-size:3.6rem;
-		font-family:Smedium;
+		font-weight:500;
 		margin-bottom:40px;
 	}
 	.support__header-wrap {
@@ -1621,8 +1615,8 @@ a {
 	.support__header-btn {
 		color:#fff;
 		font-size:1.7rem;
-		font-family:Ssemi;
-		line-height:41px;
+		font-weight:600;
+		line-height:4.1rem;
 		background-color:#5281d5;
 		background-repeat:no-repeat;
 		border-radius:2px;
@@ -1725,13 +1719,15 @@ a {
 		display:flex;
 		justify-content:flex-start;
 		font-size:1.6rem;
-		background-color:#eaeaea;
 		border-bottom:1px solid #ececec;
+		border-left:1px solid #e2e2e2;
 	}
 		.transactions__nav-item {
 			position:relative;
 			color:#6e6e6e;
-			line-height:48px;
+			line-height:4.8rem;
+			background-color:#eaeaea;
+			border-top:1px solid #ececec;
 			border-right:1px solid #e2e2e2;
 			transition:background .2s;
 		}
@@ -1757,40 +1753,42 @@ a {
 		.transactions__nav-item--secondary {
 			background-color:#ededed;
 		}
-			.select.transactions__nav-wallets, .select.transactions__nav-period {
-				width:236px;
-				cursor:pointer;
-			}
-			.select.transactions__nav-wallets {
-				background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAATCAMAAABSrFY3AAAAXVBMVEW+xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM8AAAC+xM++xM++xM++xM++xM++xM++xM9VLYPNAAAAHnRSTlOo6Par8EUR4JJ1aUvr5MyyoyLTjF9BLAC6not7MgP3+ACgAAAAeElEQVQY03XRyxaDMAgE0BFCEhONUWvtk///zO4rsOQu4MwgjmD8D2OMyGrPjtmRhMmRgMHe02RJK3Ic1ZBlvfECXCXdu7ZN6SqvqvkbH4aUEup5vg3ZRXn9NLLuPDUNSvZv4N4N0a2ISHUyIAp+bm7Ws9tP9jv9Adw/Kyu3lKUiAAAAAElFTkSuQmCC) no-repeat 26px center;
-			}
-			.select.transactions__nav-period {
-				background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAALVBMVEW+xM++xM8AAAC+xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM++xM/B6Xh6AAAADnRSTlNAgADA4KDv0CCfcF8wEFIzcaUAAABySURBVAjXY1BSMmFSUlJwVlJi0BY0NBQUFBYW3MRw7p3hOyAQfveGge9dCojp9u4BkAkBQOYFBijgRRJFZToGCxuaioCZRoyKQgLKENHJwoaWENGCpawBUezoCpJLTJzdzVBFEUwctvXBmC8YNGAuawIA9Wpk4B6z6lUAAAAASUVORK5CYII=) no-repeat 22px center;
+		.transactions__nav-last {
+			flex:1;
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:-ms-flex;
+			display:-o-flex;
+			display:flex;
+			justify-content:flex-end;
+			-ms-align-items:center;
+			align-items:center;
+			height:4.8rem;
+		}
+			.transactions__nav-lastItem {
+				position:relative;
+				width:176px;
+				margin-left:10px;
 			}
 			.transactions__nav-wallets .jq-selectbox__select, .transactions__nav-period .jq-selectbox__select {
-				height:40px;
-				line-height:40px;
-				border:0;
-			}
-			.transactions__nav-wallets .jq-selectbox__select {
-				padding:0 42px 0 63px;
-			}
-			.transactions__nav-period .jq-selectbox__select {
-				padding:0 42px 0 60px;
+				height:38px;
+				line-height:3.6rem;
+				background-color:#fff;
+				border-radius:0;
 			}
 				.transactions__nav-wallets.jq-selectbox .placeholder, .transactions__nav-period.jq-selectbox .placeholder {
 					color:#545961;
 				}
 				.transactions__nav-wallets .jq-selectbox__trigger-arrow, .transactions__nav-period .jq-selectbox__trigger-arrow {
-					width:0; height:0;
+					width:8px; height:8px;
 					background:none;
-					border:solid transparent;
-					border-width:7px 7px 0;
-					border-top-color:#bec4cf;
+					border:solid #333;
+					border-width:0 0 1px 1px;
+					transform:translateY(-50%) rotate(-45deg);
 					transition:all .2s;
 				}
 					.transactions__nav-wallets:hover .jq-selectbox__trigger-arrow, .transactions__nav-period:hover .jq-selectbox__trigger-arrow {
-						border-top-color:#545961;
+						border-color:#000;
 					}
 					.transactions__nav-wallets .jq-selectbox__dropdown li {
 						display:-webkit-flex;
@@ -1801,7 +1799,7 @@ a {
 						justify-content:space-between;
 					}
 					.transactions__nav-wallets .jq-selectbox__dropdown li::after {
-						font-family:Ssemi;
+						font-weight:600;
 						content:attr(data-value);
 					}
 			.transactions__period {
@@ -1811,7 +1809,7 @@ a {
 				display:block;
 				animation:fadein .5s;
 				position:absolute;
-				top:58px; right:0;
+				top:46px; right:0;
 				z-index:15;
 				width:356px;
 				color:#000;
@@ -1850,71 +1848,38 @@ a {
 		}
 			.transactions__table th {
 				color:#909090;
-				font-weight:normal;
-				font-family:Smedium;
+				font-weight:500;
+				font-size:1.7rem;
 				text-align:left;
-				padding:30px 34px 10px;
-			}
-			.transactions__table tr:first-child th {
-				padding:20px 34px 10px;
+				padding:40px 34px 10px;
 			}
 			.transactions__table td {
-				line-height:2.7rem;
+				font-size:1.8rem;
 				padding:20px 34px;
 			}
 			.transactions__table td:last-child {
+				font-weight:bold;
 				text-align:right;
 			}
+				.transactions__table-date {
+					color:#969696;
+				}
+				.transactions__table-approve {
+					font-weight:bold;
+					margin-left:58px;
+				}
 				.transactions__table td p {
 					margin:0;
 				}
-				.transactions-table__status {
-					background-repeat:no-repeat;
-					background-position:0 center;
-					padding-left:61px;
+				.transactions__table td a {
+					color:#3b80d6;
 				}
-					.transactions-table__status-title {
-						font-family:Smedium;
-					}
-					.transactions-table__status-date {
-						color:#969696;
-					}
-				.transactions-table__status--received {
-					background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAASFBMVEUAAABCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxnFx++wAAAAF3RSTlMAw/MX0EYGppZ94t3atphxYzgDjy3TEI9OHJYAAADoSURBVDjLhZNZksIwDEQlOd6yETxA3/+mgwkFnaSC/Wk9qbXK9wU/62g26uyDHJ9LBgwaow6AJbczh2yYFvdmlwmWw8ZdoVf+uCqUgtx6XPaSF/S3j39v/piUt9699RVkJwK65pEp/k4lvwRM2Y2DqVWRBM6/67gWJJFgk5wBMlkQj+UcWOBlhjsHHGbRQc4BGVRG/QXoKBZ/AdGaAEkUV1agOJKgJB+IpQIl4kFJUpl/T6LrnvbEZdZGEXG/Vzs3qraaCABp0+p1WEykzbAO4855O+7WwjRXrrW0zbVvH0779NrH2zz/fygjDFEc689cAAAAAElFTkSuQmCC);
+				.transactions__table-summ--plus {
+					color:#6b8638;
 				}
-				.transactions-table__status--wait {
-					background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAASFBMVEUAAAB+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn6vZcj7AAAAF3RSTlMAw/MX0EYGppZ94t3atphxYzgDjy3TEI9OHJYAAADoSURBVDjLhZNZksIwDEQlOd6yETxA3/+mgwkFnaSC/Wk9qbXK9wU/62g26uyDHJ9LBgwaow6AJbczh2yYFvdmlwmWw8ZdoVf+uCqUgtx6XPaSF/S3j39v/piUt9699RVkJwK65pEp/k4lvwRM2Y2DqVWRBM6/67gWJJFgk5wBMlkQj+UcWOBlhjsHHGbRQc4BGVRG/QXoKBZ/AdGaAEkUV1agOJKgJB+IpQIl4kFJUpl/T6LrnvbEZdZGEXG/Vzs3qraaCABp0+p1WEykzbAO4855O+7WwjRXrrW0zbVvH0779NrH2zz/fygjDFEc689cAAAAAElFTkSuQmCC);
+				.transactions__table-summ--minus {
+					color:#e22b2b;
 				}
-				.transactions-table__status--sended {
-					background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAASFBMVEUAAABCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxlCfxnFx++wAAAAF3RSTlMAw/MX0EYGppZ94t3atphxYzgDjy3TEI9OHJYAAADtSURBVDjLhZNJAsMgCEUBo8ZMTdOB+9+0phPfZAErhafMZJLiwpPIxEtMdJbQi+rIOfOoKn04mFMRndfwZddZpaTmOStfUXGtCvjkPuiFDnLR4f5/P0ikk0QZwtc/q9mRUP7EUfD/1kt5OxAGZSlwYdmd9Arx31R7yGW/JJkbe0PMkijqCvb8eGQgVo20aAD71nUbEEEX4vF3e1Y7dR1V4vnTjUzTP4ctbFSB/WB5TCSZUCqAksUFzAUC4AKCRMCCtDQRgDStUABgoazUAGCprVkGYLNO7Y6xbbc3MO7IeUPrjr2/OP7q+cvrrv8LrtkMURPMZgcAAAAASUVORK5CYII=);
-				}
-				.transactions-table__copy {
-					display:inline-block;
-					vertical-align:middle;
-					visibility:hidden;
-					width:30px; height:30px;
-					background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAAZlBMVEUAAACgqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLagqLaRzEHpAAAAIXRSTlMA7PG2hT/3E4teWFEgBdHMvq5JLqd4OSYbB8eYMyrg3g8kbNchAAAArUlEQVQY01XQ2xIDEQwGYGGx1C72fGyb93/J0ho0N2a+Ef6E1GVaQDf80Xjg4al4VHT32EiioS+0Wmy6cE6YSfof7awYRy+3gEq4bOrJG1iIppSX55YWmdSCpm/fXN0k0DgjJFonfPEGGXdohxTVouex0czKJIpRw61lKzPGqAb85eZsJ7Yd2S/ZosoG/bdHY2+yIdsjUah25KgmnaK03tAg4JwERCr1sEIwXssHoxQJ3m+3AdUAAAAASUVORK5CYII=) no-repeat center center;
-					margin-right:45px;
-				}
-					.transactions__table tr:hover .transactions-table__copy {
-						visibility:visible;
-						animation:fadein .5s;
-					}
-				.transactions-table__summ {
-					display:inline-block;
-					vertical-align:middle;
-				}
-					.transactions-table__summ-value {
-						font-family:Smedium;
-					}
-					.transactions-table__summ-ok {
-						background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAATlBMVEUAAACCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmSCrmQXvBvUAAAAGXRSTlMAtPdw5iaACdLEu389Lxvy6OPLpqSQdFpDuaUTjwAAAG1JREFUGNNlj1cOwCAMQyGsLugevv9F25CKVuL92VGcWDHOa2u1d+rFEDJkRGsUdJ7jh3n2qai1BTnli95UB/RfQhf2nGKBhs0mHGxbNtpgaE4nxODpkoZ4kRyW0GmIIzK9nC2Qqx6rXq/KVfVvENQPMeqSTYwAAAAASUVORK5CYII=) no-repeat 0 center;
-						padding-left:24px;
-					}
-					.transactions-table__summ-wait {
-						background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMi44NTcgMzIuODU3Ij4KCTxwYXRoIGQ9Ik0xNi40MjgsMzIuODU3QzcuMzY5LDMyLjg1NywwLDI1LjQ4OSwwLDE2LjQzMkMwLDcuMzcxLDcuMzY5LDAsMTYuNDI4LDBjOS4wNiwwLDE2LjQzLDcuMzcxLDE2LjQzLDE2LjQzMiAgICBDMzIuODU3LDI1LjQ4OSwyNS40ODcsMzIuODU3LDE2LjQyOCwzMi44NTd6IE0xNi40MjgsMUM3LjkyMSwxLDEsNy45MjMsMSwxNi40MzJjMCw4LjUwNiw2LjkyMSwxNS40MjYsMTUuNDI4LDE1LjQyNiAgICBjOC41MDgsMCwxNS40My02LjkyLDE1LjQzLTE1LjQyNkMzMS44NTcsNy45MjMsMjQuOTM2LDEsMTYuNDI4LDF6IiBmaWxsPSIjYmRiZGJkIi8+Cgk8cGF0aCBkPSJNMTEuNjUsMjIuNzAxYy0wLjExMiwwLTAuMjI2LTAuMDM4LTAuMzE5LTAuMTE1Yy0wLjIxMi0wLjE3Ni0wLjI0Mi0wLjQ5MS0wLjA2NS0wLjcwNGw0LjY2Mi01LjYzVjYuODQ0ICAgYzAtMC4yNzYsMC4yMjQtMC41LDAuNS0wLjVzMC41LDAuMjI0LDAuNSwwLjV2OS41ODhjMCwwLjExNi0wLjA0MSwwLjIyOS0wLjExNSwwLjMxOWwtNC43NzcsNS43NyAgIEMxMS45MzcsMjIuNjQsMTEuNzk0LDIyLjcwMSwxMS42NSwyMi43MDF6IiBmaWxsPSIjYmRiZGJkIi8+Cjwvc3ZnPgo=) no-repeat 0 center / 16px auto;
-						padding-left:24px;
-					}
 	.transactions__balance {
 		display:-webkit-flex;
 		display:-moz-flex;
@@ -1938,12 +1903,12 @@ a {
 				white-space:nowrap;
 			}
 			.transaction-balance__table td:last-child {
-				font-family:Smedium;
+				font-weight:500;
 			}
 		.transaction-balance__export {
 			position:absolute;
 			top:50%; right:0;
-			line-height:35px;
+			line-height:3.5rem;
 			transform:translateY(-50%);
 		}
 			.transaction-balance__export-link {
@@ -1980,7 +1945,7 @@ a {
 	}
 		.trade-nav__item {
 			color:#6e6e6e;
-			line-height:50px;
+			line-height:5rem;
 			border-right:1px solid #e0e0e0;
 			padding:0 38px;
 			cursor:pointer;
@@ -2010,7 +1975,7 @@ a {
 	.btn.trade__add-btn {
 		height:28px;
 		font-size:1.4rem;
-		line-height:28px;
+		line-height:2.8rem;
 		background-color:#498dea;
 		border-radius:2px;
 		padding:0 14px;
@@ -2073,7 +2038,7 @@ a {
 		}
 		.trade-search__btn {
 			height:44px;
-			font-family:Ssemi;
+			font-weight:600;
 			background-color:#fff;
 			border:1px solid #dfdfdf;
 			border-radius:1px;
@@ -2163,7 +2128,7 @@ a {
 		.trade-search__table th {
 			font-weight:normal;
 			font-size:1.3rem;
-			font-family:Smedium;
+			font-weight:500;
 			text-align:left;
 			padding:9px 10px 5px;
 		}
@@ -2208,7 +2173,6 @@ a {
 				}
 			.seller__buy-info {
 				position:relative;
-				padding-left:50px;
 			}
 				.seller__buy-avatar {
 					display:block;
@@ -2242,7 +2206,7 @@ a {
 					position:relative;
 					color:#000;
 					font-size:1.5rem;
-					font-family:Ssemi;
+					font-weight:600;
 					margin:0 0 5px;
 				}
 					.seller__buy--reliable::after {
@@ -2259,22 +2223,22 @@ a {
 					margin:0;
 				}
 					.seller__buy-status--reliable {
-						color:#51730f;
-						font-family:Ssemi;
+						color:#425915;
+						font-weight:500;
 					}
 					.seller__buy-status--nonreliable {
-						font-family:Ssemi;
+						font-weight:500;
 					}
 				.seller__buy--currency {
-					font-family:Ssemi;
+					font-weight:400;
 				}
 				.seller__buy--cost {
-					font-family:Ssemi;
+					font-weight:600;
 				}
 				.seller__buy-btn {
 					display:inline-block;
 					width:101px;
-					line-height:28px;
+					line-height:2.8rem;
 					text-align:center;
 					background-color:#ededed;
 					border-radius:2px;
@@ -2309,7 +2273,7 @@ a {
 }
 .trade-history {}
 	.trade-history__sort {
-		font-family:Smedium;
+		font-weight:500;
 		margin:35px 32px;
 	}
 		.trade-history__sort a {
@@ -2324,7 +2288,7 @@ a {
 		margin:35px 32px 5px;
 	}
 	.trade-history__status {
-		font-family:Ssemi;
+		font-weight:600;
 		border-bottom:2px dotted currentColor;
 	}
 	.trade-history__status--active {
@@ -2360,7 +2324,7 @@ a {
 		}
 		.trade-history__comission-value {
 			vertical-align:middle;
-			font-family:Smedium;
+			font-weight:500;
 			margin:0 15px;
 		}
 		.btn.trade-history__comission-btn {
@@ -2416,8 +2380,8 @@ a {
 	.seller__abuse, .seller__favorite {
 		position:absolute;
 		top:30px;
-		font-family:Smedium;
-		line-height:36px;
+		font-weight:500;
+		line-height:3.6rem;
 		text-align:center;
 		border-radius:2px;
 	}
@@ -2459,7 +2423,7 @@ a {
 			padding:10px 0;
 		}
 		.seller__total-table tr:nth-child(-n+2) td:last-child {
-			font-family:Ssemi;
+			font-weight:600;
 		}
 .seller__title {
 	font-size:2rem;
@@ -2556,7 +2520,7 @@ a {
 	}
 		.addplace__descr-title {
 			font-size:1.7rem;
-			font-family:Ssemi;
+			font-weight:600;
 			margin:0 0 5px;
 		}
 	.addplace__main {
@@ -2582,7 +2546,7 @@ a {
 			}
 			.addplace-main__row .jq-selectbox__select {
 				height:39px;
-				line-height:39px;
+				line-height:3.9rem;
 			}
 				.addplace-main__row .jq-selectbox .placeholder {
 					color:#000;
@@ -2599,7 +2563,7 @@ a {
 					justify-content:space-between;
 				}
 					.addplace__currency .jq-selectbox__select-text span {
-						font-family:Ssemi;
+						font-weight:600;
 						margin-right:6px;
 					}
 					.addplace__currency .jq-selectbox__dropdown li {
@@ -2611,7 +2575,7 @@ a {
 						justify-content:space-between;
 					}
 					.addplace__currency .jq-selectbox__dropdown li::after {
-						font-family:Ssemi;
+						font-weight:600;
 						content:attr(data-addplacevalue);
 					}
 			.addplace__address-link {
@@ -2714,7 +2678,7 @@ a {
 		display:inline-block;
 		vertical-align:middle;
 		width:232px;
-		font-family:Ssemi;
+		font-weight:600;
 		margin:0;
 	}
 	.deal-block__cnt {
@@ -2745,7 +2709,7 @@ a {
 	}
 		.deal-block__detail-title {
 			width:232px;
-			font-family:Ssemi;
+			font-weight:600;
 			margin:0 0 10px;
 		}
 		.deal-block__detail-value {
@@ -2753,7 +2717,7 @@ a {
 			margin:0 0 10px;
 		}
 		.deal-block__detail p:nth-child(2) {
-			font-family:Ssemi;
+			font-weight:600;
 		}
 			.deal-block__location {
 				color:#1a5785;
@@ -2765,7 +2729,7 @@ a {
 			.deal-block__buy-wrap::before {
 				position:absolute;
 				top:0; left:176px;
-				line-height:36px;
+				line-height:3.6rem;
 				text-shadow:0 -1px #bbb;
 				content:'=';
 			}
@@ -2815,7 +2779,7 @@ a {
 		margin-right:85px;
 	}
 		.deal-safety__cnt p:first-child {
-			font-family:Ssemi;
+			font-weight:600;
 			background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAMAAAD6fQULAAAAbFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0Iv+qAAAAI3RSTlMA9O3oB/r4x3pNQT0N797Ww763mH9zVzohy62ck4+KamMpG4gGO/0AAAB6SURBVAjXXY7ZDoUgDEQHREHAfb370v//RytiNJ6HdiZpToqAbXNE1PyWJJ4/xXnoakErme56SDpIkZyauLRyC+23IErQ8HnfaO/YdcODD5zybrXdYXjKaQrqF2zKq9hcI1RNO5UHbLa38OsnVoNAXnEuR0T+gzYzmAWQiBEfJpnF+gAAAABJRU5ErkJggg==) no-repeat 0 center;
 			padding-left:25px;
 			margin:0 0 22px;
@@ -2826,7 +2790,7 @@ a {
 		.deal-safety__aside-title {
 			color:#4e4e4e;
 			font-size:1.3rem;
-			font-family:Ssemi;
+			font-weight:600;
 			background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAdVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5WX1YAAAAJnRSTlMA8X6/Bt/OblQv7KqZNxX5+PXa1Mm4sKOIeWRBGsaTdnJeRiYdAaqoX9kAAACPSURBVBjTNYxZEoMwDENFEghhCZR9697m/kcsdtz3YWksjUD4523oZ+sgvLLAFPYLwjbhT2kAuIRsmt/bUx6A15xpHBQUDrm0dRxSWEiSUmlZwciPyiM2UkjizFUeC2tn3hc2k4xW2IKMHgPpiq1oaKwGaupm+17FwsnK3ZbOaEDkXWASZRD52LlPJ1WT/wFTSxcVlbfkmgAAAABJRU5ErkJggg==) no-repeat 0 center;
 			padding-left:24px;
 			margin:0 0 22px;
@@ -2842,7 +2806,7 @@ a {
 }
 	.deal-user__number {
 		font-size:2.1rem;
-		font-family:Smedium;
+		font-weight:500;
 		margin:0 0 10px;
 	}
 	.deal-user__descr {
@@ -2852,14 +2816,14 @@ a {
 			color:#3175d2;
 		}
 		.deal-user__descr-value {
-			font-family:Ssemi;
+			font-weight:600;
 		}
 	.deal-user__status {
 		font-size:1.7rem;
 		margin:0;
 	}
 		.deal-user__status span {
-			font-family:Smedium;
+			font-weight:500;
 		}
 .deal-chat {
 	display:-webkit-flex;
@@ -2902,7 +2866,7 @@ a {
 		}
 		.deal-chat__btn {
 			height:36px;
-			font-family:Smedium;
+			font-weight:500;
 			background-color:#ededed;
 			border:0;
 			border-radius:2px;
@@ -2962,11 +2926,11 @@ a {
 					color:#ae2c2c;
 				}
 				.deal-chat__item-text {
-					font-family:Smedium;
+					font-weight:500;
 				}
 					.deal-chat__item-text--name {
 						color:#a1a1a1;
-						font-family:Sregular;
+						font-weight:400;
 					}
 					.deal-chat__item--admin .deal-chat__item-text--name {
 						color:#ae2c2c;
@@ -3021,7 +2985,7 @@ a {
 			}
 			.deal-step__text strong {
 				font-weight:normal;
-				font-family:Ssemi;
+				font-weight:600;
 			}
 		.deal-step__table {
 			width:100%;
@@ -3034,7 +2998,7 @@ a {
 				width:150px;
 			}
 			.deal-step__table td:last-child {
-				font-family:Ssemi;
+				font-weight:600;
 			}
 		.deal-step__btns {
 			margin-top:22px;
@@ -3134,7 +3098,7 @@ a {
 		margin-right:30px;
 	}
 		.deal-review__descr-title {
-			font-family:Ssemi;
+			font-weight:600;
 			margin:0 0 18px;
 		}
 		.deal-review__descr-text {
@@ -3188,7 +3152,7 @@ a {
 				display:-o-flex;
 				display:flex;
 				align-items:center;
-				font-family:Smedium;
+				font-weight:500;
 				margin:18px 0;
 			}
 			.deal-review__main-item--green {
@@ -3213,12 +3177,12 @@ a {
 		position:absolute;
 		top:0; left:42px;
 		color:#b1b1b1;
-		line-height:90px;
+		line-height:9rem;
 		margin:0;
 	}
 	.language {
 		position:absolute;
-		line-height:90px;
+		line-height:9rem;
 		bottom:0; left:266px;
 		background-repeat:no-repeat;
 		background-position:0 center;
@@ -3395,8 +3359,8 @@ a {
 		}
 	.hello__skip, .hello__next {
 		display:inline-block;
-		line-height:36px;
-		font-family:Smedium;
+		line-height:3.6rem;
+		font-weight:500;
 		border-radius:2px;
 		margin:0 15px;
 	}
@@ -3437,14 +3401,24 @@ a {
 		}
 			.send__settings-title {
 				font-size:1.7rem;
-				font-family:Smedium;
+				font-weight:500;
 				margin:0 0 10px;
 			}
 				.send__settings-title--aviable {
 					color:#9c9c9c;
-					font-family:Sregular;
+					font-weight:400;
 					margin-left:5px;
 				}
+			.send__settings-bitstore {
+				position:absolute;
+				bottom:14px; right:14px;
+				width:95px; height:14px;
+				background-image:url(../i/bitstore.png);
+			}
+			.send__settings-descr {
+				line-height:2.4rem;
+				margin:25px 0 40px;
+			}
 			.send__qr {
 				position:absolute;
 				right:13px; bottom:6px;
@@ -3486,11 +3460,12 @@ a {
 					}
 				.send-settings__delimiter {
 					color:#8c8c8c;
-					line-height:44px;
+					line-height:4.4rem;
 				}
 	.btn.send__btn {
 		width:100%; height:52px;
 		font-size:2rem;
+		background-color:#498dea;
 	}
 	.send__confirm {
 		margin-bottom:60px;
@@ -3513,7 +3488,7 @@ a {
 					color:#616161;
 				}
 				.send-confirm__value {
-					font-family:Ssemi;
+					font-weight:600;
 				}
 		.send__confirm-summ {
 			text-align:center;
@@ -3526,7 +3501,7 @@ a {
 			}
 			.send-confirm__summ-value {
 				font-size:2.5rem;
-				font-family:Ssemi;
+				font-weight:600;
 				margin:0;
 			}
 	.send__google {
@@ -3563,7 +3538,7 @@ a {
 		display:block;
 		color:#346fbf;
 		font-size:1.7rem;
-		line-height:60px;
+		line-height:6rem;
 		text-align:center;
 	}
 		.send__resend {
@@ -3623,10 +3598,10 @@ a {
 					display:-o-flex;
 					display:flex;
 					justify-content:space-between;
-					font-family:Smedium;
+					font-weight:500;
 				}
 					.get__select .jq-selectbox__select-text span {
-						font-family:Sregular;
+						font-weight:400;
 					}
 				.get__select .jq-selectbox__dropdown li {
 					display:-webkit-flex;
@@ -3635,10 +3610,10 @@ a {
 					display:-o-flex;
 					display:flex;
 					justify-content:space-between;
-					font-family:Smedium;
+					font-weight:500;
 				}
 					.get__select .jq-selectbox__dropdown li::after {
-						font-family:Sregular;
+						font-weight:400;
 						content:attr(data-value);
 					}
 		.get-wallets__current-qr {
@@ -3658,7 +3633,7 @@ a {
 			display:-o-flex;
 			display:flex;
 			justify-content:space-between;
-			line-height:41px;
+			line-height:4.1rem;
 			background-color:#eaeaea;
 			padding:0 22px 0 15px;
 		}
@@ -3675,7 +3650,7 @@ a {
 }
 	.twostep__title {
 		font-size:2.5rem;
-		font-family:Ssemi;
+		font-weight:600;
 		margin:0 0 35px;
 	}
 	.twostep__tabs {
@@ -3776,7 +3751,7 @@ a {
 }
 	.verification__title {
 		font-size:2.5rem;
-		font-family:Ssemi;
+		font-weight:600;
 		margin:0 0 30px;
 	}
 	.verification__descr {
@@ -3840,7 +3815,7 @@ a {
 	}
 		.verification__ok-title {
 			color:#1f7122;
-			font-family:Smedium;
+			font-weight:500;
 			margin:0 0 25px;
 		}
 			.verification__ok-title span::before {
@@ -3859,7 +3834,7 @@ a {
 			}
 	.verification__close {
 		width:144px;
-		line-height:34px;
+		line-height:3.4rem;
 		margin:10px auto 0 20px;
 	}
 	.verification__back {
@@ -3882,7 +3857,7 @@ a {
 	}
 		.add-wallet__system .jq-selectbox__select {
 			height:39px;
-			line-height:39px;
+			line-height:3.9rem;
 		}
 			.add-wallet__system .jq-selectbox .placeholder {
 				color:#000;
@@ -3901,7 +3876,7 @@ a {
 }
 	.approve__title {
 		font-size:2.5rem;
-		font-family:Ssemi;
+		font-weight:600;
 		margin:0 0 30px;
 	}
 	.approve__descr {
@@ -3934,7 +3909,7 @@ a {
 }
 	.cancel-transaction__title {
 		font-size:2.5rem;
-		font-family:Ssemi;
+		font-weight:600;
 		margin:0 0 30px;
 	}
 	.cancel-transaction__descr {
@@ -4053,7 +4028,7 @@ a {
 	height:44px;
 	color:#fff;
 	font-size:1.6rem;
-	font-family:Smedium;
+	font-weight:500;
 	background-color:#157efb;
 	border:0;
 	border-radius:4px;
@@ -4063,14 +4038,14 @@ a {
 .btn.btn--small {
 	height:36px;
 	font-size:1.5rem;
-	font-family:Sregular;
+	font-weight:400;
 	padding:0 60px;
 }
 	button.btn.btn--small {
 		line-height:1;
 	}
 	a.btn.btn--small {
-		line-height:36px;
+		line-height:3.6rem;
 	}
 .btn.btn--grey {
 	color:#000;
@@ -4082,7 +4057,7 @@ a {
 	}
 a.btn {
 	display:inline-block;
-	line-height:44px;
+	line-height:4.4rem;
 }
 	a:hover.btn, .btn:hover {
 		text-decoration:none;
@@ -4097,8 +4072,8 @@ a.btn {
 		top:0; left:50%;
 		color:#000;
 		font-size:1.5rem;
-		font-family:Sregular;
-		line-height:32px;
+		font-weight:400;
+		line-height:3.2rem;
 		white-space:nowrap;
 		background-color:#fafafa;
 		border:1px solid #e6e6e6;
@@ -4160,8 +4135,8 @@ a.btn {
 	z-index:1000;
 	color:#000;
 	font-size:1.5rem;
-	font-family:Sregular;
-	line-height:32px;
+	font-weight:400;
+	line-height:3.2rem;
 	white-space:nowrap;
 	background-color:#fafafa;
 	border:1px solid #e6e6e6;
@@ -4189,7 +4164,7 @@ a.btn {
 	visibility:hidden;
 	color:#fff;
 	font-size:1.8rem;
-	font-family:Smedium;
+	font-weight:500;
 	transition:all 0.5s;
 }
 .general-notice--error {
@@ -4242,7 +4217,7 @@ a.btn {
 /*  <error>  */
 .error-message {
 	display:block;
-	color:#f00;
+	color:#ad2b2b;
 	margin-top:10px;
 }
 /*  </error>  */

@@ -9,6 +9,7 @@
 </head>
 <body>
 	<header class="header">
+		<a href="#" class="header__toggle-menu js-toggle-menu"></a>
 		<a href="#" class="header__logo"><img src="i/logo.svg" alt=""></a>
 		<button class="header__send-btn js-modal" data-src="#sendPayment">Отправить</button>
 		<button class="header__get-btn js-modal" data-src="#getPayment">Получить</button>
@@ -453,8 +454,13 @@
 		<p class="send__title">Отправить</p>
 		<div class="send__settings">
 			<div class="send__settings-row">
+				<p class="send__settings-title">С кошелька</p>
+				<input type="text" name="" id="" class="input-text" placeholder="Выберите кошелёк для отправления" autofocus>
+			</div>
+			<div class="send__settings-row">
 				<p class="send__settings-title">Кому</p>
-				<input type="text" name="" id="" class="input-text" placeholder="Адрес или почта" autofocus>
+				<input type="text" name="" id="" class="input-text" placeholder="Адрес или почта">
+				<div class="send__settings-bitstore"></div>
 			</div>
 			<div class="send__settings-row">
 				<p class="send__settings-title">Сумма <span class="send__settings-title--aviable">доступно: 23.252452246624 BTC</span></p>
@@ -487,14 +493,17 @@
 				</div>
 				<div class="js-send-custom">
 					<div class="send-settings__item">
-						<input type="text" name="" id="" class="input-text" placeholder="0">
+						<input type="text" name="" id="" class="input-text" value="0.0000012" placeholder="0">
 						<span class="send-settings__currency">sat/b</span>
 					</div>
 					<div class="send-settings__item tr">
-						<p class="send-settings__comission">0.00000124 BTC (20 RUR)</p>
-						<a href="#" class="send-settings__comission-link js-send-custom-cancel">отменить</a>
+						<input type="text" name="" id="" class="input-text" value="500" placeholder="0">
+						<span class="send-settings__currency">RUR</span>
 					</div>
 				</div>
+			</div>
+			<div class="send__settings-descr">
+				<p>Данная транзакция будет выполнена мгновенно и без комиссии внутри системы Bitstore, не попадая в сеть Blockchain. Если Вы хотите отправить транзакцию через сеть Blockchain — пожалуйста, выберите любой другой приоритет.</p>
 			</div>
 		</div>
 		<button class="btn send__btn">Отправить</button>

@@ -45,6 +45,9 @@
 		if (!$(e.target).closest('.wallet__hide').length) {
 			$('.wallet__hide').removeClass('wallet__hide--active');
 		}
+		if (!$(e.target).closest('.transactions__period').length) {
+			$('.transactions__period').removeClass('transactions__period--active');
+		}
 	});
 	
 	// show notices
@@ -375,6 +378,9 @@
 			$('.transactions__period').addClass('transactions__period--active');
 		}
 	});
+	$('.js-transactions-period').click(function(e) {
+		e.stopPropagation();
+	});
 	$('.js-transactions-period-close').click(function() {
 		$('.transactions__period--active').removeClass('transactions__period--active');
 	});
@@ -461,9 +467,9 @@
 	// get clicked rating value
 	//var ratingValue = parseInt($('.deal-review__rating-item--selected').last().data('value'), 10);
 
-	$('.js-trade-menu').click(function(e) {
+	$('.js-toggle-menu').click(function(e) {
 		e.preventDefault();
-		$('.main').toggleClass('main--trade');
+		$('.main').toggleClass('main--narrow');
 	});
 
 	$('.js-trade-comission').click(function(e) {
