@@ -482,9 +482,6 @@ a {
 	.nav {
 		padding:0 19px 0 13px;
 	}
-	.main--narrow .nav {
-		padding-left:23px;
-	}
 		.nav__item {
 			display:block;
 			position:relative;
@@ -2290,6 +2287,7 @@ a {
 	.trade-history__status {
 		font-weight:600;
 		border-bottom:2px dotted currentColor;
+		cursor:pointer;
 	}
 	.trade-history__status--active {
 		color:#638210;
@@ -2317,7 +2315,7 @@ a {
 		display:block;
 		animation:fadein .5s;
 	}
-		.input-text.trade-history__comission-percent {
+		.editable__content .input-text.trade-history__comission-percent {
 			width:47px; height:35px;
 			text-align:center;
 			padding:0;
@@ -2327,15 +2325,28 @@ a {
 			font-weight:500;
 			margin:0 15px;
 		}
-		.btn.trade-history__comission-btn {
-			vertical-align:middle;
-			width:26px; height:26px;
-			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOBAMAAADUAYG5AAAAJ1BMVEUAAAD///////////////////////////////////////////////+uPUo5AAAADHRSTlMAlgFi9UIItynRh2uGHMBVAAAAOUlEQVQI12OAggYozXwayrA5CBU4IwQTUMAikJUAFagpg6oIOZ4MUcHqMweqJQSmhdVRAWp8E5gEAL9REEY3jYIhAAAAAElFTkSuQmCC);
-			background-repeat:no-repeat;
-			background-position:center center;
-			border-radius:2px;
-			padding:0;
-		}
+.editable__link--hidden {
+	display:none;
+}
+.editable__content {
+	display:none;
+}
+.editable__content--active {
+	display:block;
+	animation:fadein .5s;
+}
+.editable__content .select, .editable__content .input-text {
+	width:calc(100% - 40px);
+}
+.btn.editable__btn {
+	vertical-align:middle;
+	width:26px; height:26px;
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOBAMAAADUAYG5AAAAJ1BMVEUAAAD///////////////////////////////////////////////+uPUo5AAAADHRSTlMAlgFi9UIItynRh2uGHMBVAAAAOUlEQVQI12OAggYozXwayrA5CBU4IwQTUMAikJUAFagpg6oIOZ4MUcHqMweqJQSmhdVRAWp8E5gEAL9REEY3jYIhAAAAAElFTkSuQmCC);
+	background-repeat:no-repeat;
+	background-position:center center;
+	border-radius:2px;
+	padding:0;
+}
 /*  </trade>  */
 
 /*  <seller>  */
