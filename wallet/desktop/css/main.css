@@ -447,7 +447,7 @@ a {
 		animation:fadein .5s;
 		position:absolute;
 		top:50px; right:34px;
-		z-index:10;
+		z-index:100;
 		width:140px;
 		color:#000;
 		font-size:1.5rem;
