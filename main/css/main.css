@@ -2229,6 +2229,7 @@ a.btn {
 				background-color:rgba(255, 255, 255, .15);
 				border-radius:2px;
 				padding:0 18px;
+				margin-left:22px;
 			}
 			.header--auth .header__login {
 				color:#fff;
@@ -2237,7 +2238,6 @@ a.btn {
 				background-color:rgba(255, 255, 255, .1);
 				border-radius:3px;
 				padding:0 19px;
-				margin-left:22px;
 			}
 				a:hover.header__login {
 					text-decoration:none;
