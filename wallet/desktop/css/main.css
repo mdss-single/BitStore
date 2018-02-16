@@ -1716,7 +1716,6 @@ a {
 		display:flex;
 		justify-content:flex-start;
 		font-size:1.6rem;
-		border-bottom:1px solid #ececec;
 		border-left:1px solid #e2e2e2;
 	}
 		.transactions__nav-item {
@@ -1834,6 +1833,18 @@ a {
 						padding:0 35px;
 						margin-right:8px;
 					}
+	.transactions__empty {
+		text-align:center;
+		padding:130px 40px;
+	}
+		.transactions__empty-title {
+			font-size:2.1rem;
+			margin:0 0 15px;
+		}
+		.transactions__empty-descr {
+			color:#535353;
+			font-size:1.7rem;
+		}
 	.transactions__table {
 		width:100%;
 	}
@@ -1890,6 +1901,7 @@ a {
 	}
 		.transaction-balance__table {
 			width:420px;
+			font-size:1.7rem;
 			margin-right:40px;
 		}
 			.transaction-balance__table td {
