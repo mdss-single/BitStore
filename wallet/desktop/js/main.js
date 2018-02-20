@@ -491,4 +491,23 @@
 		$(this).closest('.editable__content').prev('.js-editable').removeClass('editable__link--hidden');
 	});
 
+	// dynamic width of input-text
+	$.fn.textWidth = function(text, font) {
+		if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span>').hide().appendTo(document.body);
+		$.fn.textWidth.fakeEl.text(text || this.val() || this.text() || this.attr('placeholder')).css('font', font || this.css('font'));
+		return $.fn.textWidth.fakeEl.width();
+	};
+	$('.js-input-text-dynamic').on('input', function() {
+		var inputWidth = $(this).textWidth() + 70;
+		$(this).css({
+			width: inputWidth
+		})
+	}).trigger('input');
+	var targetElem = $('.js-input-text-dynamic');
+	inputWidth(targetElem);
+
 })(jQuery);
+
+function inputWidth(elem, minW, maxW) {
+	elem = $(this);
+}

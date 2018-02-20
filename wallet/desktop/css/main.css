@@ -2320,22 +2320,16 @@ a {
 			text-decoration:none;
 			border-bottom:0;
 		}
-	.trade-history__comission-edit {
-		display:none;
-	}
-	.trade-history__comission-edit--active {
-		display:block;
-		animation:fadein .5s;
-	}
-		.editable__content .input-text.trade-history__comission-percent {
-			width:47px; height:35px;
-			text-align:center;
-			padding:0;
-		}
 		.trade-history__comission-value {
-			vertical-align:middle;
-			font-weight:500;
-			margin:0 15px;
+			position:absolute;
+			top:50%; right:12px;
+			color:#7a7a7a;
+			font-size:1.5rem;
+			transform:translateY(-50%);
+			pointer-events:none;
+		}
+		.trade-history__comission-item {
+			margin-right:10px;
 		}
 .editable__link--hidden {
 	display:none;
@@ -2344,21 +2338,28 @@ a {
 	display:none;
 }
 .editable__content--active {
-	display:block;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:-o-flex;
+	display:flex;
+	-ms-align-items:center;
+	align-items:center;
 	animation:fadein .5s;
 }
-.editable__content .select, .editable__content .input-text {
-	width:calc(100% - 40px);
-}
-.btn.editable__btn {
-	vertical-align:middle;
-	width:26px; height:26px;
-	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOBAMAAADUAYG5AAAAJ1BMVEUAAAD///////////////////////////////////////////////+uPUo5AAAADHRSTlMAlgFi9UIItynRh2uGHMBVAAAAOUlEQVQI12OAggYozXwayrA5CBU4IwQTUMAikJUAFagpg6oIOZ4MUcHqMweqJQSmhdVRAWp8E5gEAL9REEY3jYIhAAAAAElFTkSuQmCC);
-	background-repeat:no-repeat;
-	background-position:center center;
-	border-radius:2px;
-	padding:0;
-}
+	.btn.editable__btn {
+		vertical-align:middle;
+		width:26px; height:26px;
+		background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOBAMAAADUAYG5AAAAJ1BMVEUAAAD///////////////////////////////////////////////+uPUo5AAAADHRSTlMAlgFi9UIItynRh2uGHMBVAAAAOUlEQVQI12OAggYozXwayrA5CBU4IwQTUMAikJUAFagpg6oIOZ4MUcHqMweqJQSmhdVRAWp8E5gEAL9REEY3jYIhAAAAAElFTkSuQmCC);
+		background-repeat:no-repeat;
+		background-position:center center;
+		border-radius:2px;
+		padding:0;
+	}
+	.editable__content .input-text {
+		width:auto; height:35px;
+		padding:0 50px 0 12px;
+	}
 /*  </trade>  */
 
 /*  <seller>  */
