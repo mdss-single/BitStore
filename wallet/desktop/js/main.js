@@ -506,6 +506,17 @@
 	var targetElem = $('.js-input-text-dynamic');
 	inputWidth(targetElem);
 
+	// datepicker
+	$('.js-datepicker').datepicker({
+		autoHide: true,
+		format: 'dd.mm.yyyy',
+		weekStart: 1,
+		days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+		daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+		months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+		monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
+	});
+
 })(jQuery);
 
 function inputWidth(elem, minW, maxW) {

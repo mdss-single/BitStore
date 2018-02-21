@@ -1819,8 +1819,8 @@ a {
 					margin:0 0 20px;
 				}
 				.input-text.transaction-period__text {
-					width:108px; height:32px;
-					padding:0 14px;
+					width:104px; height:32px;
+					padding:0 10px;
 					margin:0 15px;
 				}
 				.input-text.transaction-period__text:last-of-type {
