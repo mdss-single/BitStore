@@ -2015,7 +2015,17 @@ a {
 		.select.trade-search__select-currency {
 			position:absolute;
 			top:1px; right:1px; bottom:1px;
-			width:75px;
+			width:95px;
+		}
+		.trade-search__select-currency + .select2-container {
+			position:absolute;
+			top:0; right:0;
+		}
+		.trade-search__select-currency + .select2-container .select2-selection--single {
+			line-height:42px;
+		}
+		.trade-search__select-currency + .select2-container .select2-selection--single .select2-selection__rendered {
+			border-radius:0;
 		}
 			.trade-search__filter-block .jq-selectbox__select {
 				border-radius:0;
@@ -2618,6 +2628,14 @@ a {
 				.addplace__select .jq-selectbox__select {
 					border-radius:0 3px 3px 0;
 					box-shadow:none;
+				}
+				.addplace__select + .select2-container .select2-selection--single {
+					height:39px;
+					border-radius:0 3px 3px 0;
+				}
+				.addplace__select + .select2-container .select2-selection--single .select2-selection__rendered {
+					line-height:37px;
+					border-radius:0 3px 3px 0;
 				}
 			.input-text.addplace__extra-charge {
 				position:relative;
@@ -4023,6 +4041,32 @@ a {
 	}
 /*  </report-user>  */
 
+/*  <approve-payment>  */
+.approve-payment {
+	width:694px;
+	padding:45px 75px 20px;
+}
+	.approve-payment__title {
+		font-size:3rem;
+		margin:0 0 25px;
+	}
+	.approve-payment__descr {
+		line-height:2.4rem;
+		margin-bottom:35px;
+	}
+	.approve-payment__btns {
+		margin-top:35px;
+	}
+	.approve-payment__close {
+		display:block;
+		color:#346fbf;
+		font-size:1.7rem;
+		text-align:center;
+		padding:10px 0;
+		margin-top:15px;
+	}
+/*  </approve-payment>  */
+
 /*  <elements>  */
 .select {
 	width:100%;
@@ -4071,6 +4115,9 @@ a {
 	a.btn.btn--small {
 		line-height:3.6rem;
 	}
+.btn--fullwidth {
+	width:100%;
+}
 .btn.btn--grey {
 	color:#000;
 	background-color:#e8e8e8;

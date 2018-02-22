@@ -3,6 +3,7 @@
 
 	// custom styles for select, radio buttons and checkboxes
 	$('.radio, .checkbox').styler();
+	/*
 	$('.select').styler({
 		onSelectClosed: function() {
 			$(this).find('.jq-selectbox__dropdown ul').click(function() {
@@ -16,6 +17,9 @@
 				});
 			});
 		}
+	});*/
+	$('.select').select2({
+		tags: true,
 	});
 
 	// hide all dropdown
@@ -189,7 +193,8 @@
 		},
 		afterLoad: function(current) {
 			$(this).find('input[autofocus]').focus();
-			$('.select, .get__select').trigger('refresh');
+			//$('.select, .get__select').trigger('refresh');
+			$('.select').trigger("change");
 			$('.get__select').styler({
 				onFormStyled: function() {
 					var newVal = $('.get__select').find('li.selected').attr('data-value'),
