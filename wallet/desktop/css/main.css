@@ -917,36 +917,18 @@ a {
 					z-index:11;
 					height:39px;
 				}
-				.jq-selectbox.wallet-converter__select {
+				.wallet-converter__select + .select2 {
 					position:absolute;
 					top:0; right:0;
-					width:82px;
+					width:82px !important;
 				}
-				.jq-selectbox.wallet-converter__select.focused {
-					z-index:11 !important;
+				.wallet-converter__select + .select2-container .select2-selection--single .select2-selection__rendered {
+					height:39px;
+					line-height:3.7rem;
+					border:1px solid #d0d3e4;
+					border-radius:0 2px 2px 0;
+					padding:0 25px 0 16px;
 				}
-					.wallet-converter__block .jq-selectbox__select {
-						height:39px;
-						line-height:3.7rem;
-						border:1px solid #d0d3e4;
-						border-radius:0 2px 2px 0;
-						padding:0 25px 0 16px;
-					}
-						.wallet-converter__block .jq-selectbox__trigger {
-							width:25px;
-						}
-							.wallet-converter__block .jq-selectbox__trigger-arrow {
-								top:15px; right:12px;
-								width:0; height:0;
-								background:none;
-								border:6px solid transparent;
-								border-top-color:#777984;
-								transform:none;
-								transition:all .2s;
-							}
-								.wallet-converter__block:hover .jq-selectbox__trigger-arrow {
-									border-top-color:#000;
-								}
 			.wallet-converter__delimiter {
 				color:#989898;
 				font-size:1.7rem;
@@ -2008,7 +1990,7 @@ a {
 		text-align:left;
 		margin-right:0;
 	}
-		.trade-search__select .jq-selectbox__select {
+		.trade-search__filter-block .select2-container .select2-selection--single .select2-selection__rendered {
 			border:1px solid #dfdfdf;
 			border-radius:1px;
 		}
@@ -2071,6 +2053,7 @@ a {
 		position:absolute;
 		top:50%; right:40px;
 		width:15px; height:15px;
+		z-index:999;
 		transform:translateY(-50%);
 	}
 		.js-select-clear::before, .js-select-clear::after {
@@ -2341,6 +2324,9 @@ a {
 		.trade-history__comission-item {
 			margin-right:10px;
 		}
+			.editable__content .trade-history__comission-item .input-text {
+				margin-right:0;
+			}
 .editable__link--hidden {
 	display:none;
 }
@@ -2369,6 +2355,10 @@ a {
 	.editable__content .input-text {
 		width:auto; height:35px;
 		padding:0 50px 0 12px;
+		margin-right:10px;
+	}
+	.editable__content .select2 {
+		margin-right:10px;
 	}
 /*  </trade>  */
 
@@ -2588,7 +2578,7 @@ a {
 			.addplace__currency {
 				width:252px;
 			}
-				.addplace__currency .jq-selectbox__select-text {
+				.js-select-currency + .select2-container .select2-selection--single .select2-selection__rendered, .select2-results__option {
 					display:-webkit-flex;
 					display:-moz-flex;
 					display:-ms-flex;
@@ -2596,21 +2586,8 @@ a {
 					display:flex;
 					justify-content:space-between;
 				}
-					.addplace__currency .jq-selectbox__select-text span {
+					.js-select-currency + .select2 .select2-selection__rendered span, .select2-results__option span {
 						font-weight:600;
-						margin-right:6px;
-					}
-					.addplace__currency .jq-selectbox__dropdown li {
-						display:-webkit-flex;
-						display:-moz-flex;
-						display:-ms-flex;
-						display:-o-flex;
-						display:flex;
-						justify-content:space-between;
-					}
-					.addplace__currency .jq-selectbox__dropdown li::after {
-						font-weight:600;
-						content:attr(data-addplacevalue);
 					}
 			.addplace__address-link {
 				position:absolute;
@@ -3489,6 +3466,9 @@ a {
 					position:relative;
 					width:45%;
 				}
+					.send-settings__item .select2 {
+						width:100% !important;
+					}
 					.send-settings__currency {
 						position:absolute;
 						top:50%; right:20px;
@@ -3626,38 +3606,23 @@ a {
 	.get__wallets {
 		position:relative;
 	}
-		.get__select {
-			width:100%;
+		.get__select + .select2-container {
+			width:100% !important;
 			margin-bottom:30px;
 		}
-			.get__select .jq-selectbox__select {
+			.get__select + .select2-container .select2-selection--single .select2-selection__rendered {
+				display:-webkit-flex;
+				display:-moz-flex;
+				display:-ms-flex;
+				display:-o-flex;
+				display:flex;
+				justify-content:space-between;
+				font-weight:500;
 				border-radius:0;
 			}
-				.get__select .jq-selectbox__select-text {
-					display:-webkit-flex;
-					display:-moz-flex;
-					display:-ms-flex;
-					display:-o-flex;
-					display:flex;
-					justify-content:space-between;
-					font-weight:500;
+				.get__select + .select2-container .select2-selection--single .select2-selection__rendered span {
+					font-weight:400;
 				}
-					.get__select .jq-selectbox__select-text span {
-						font-weight:400;
-					}
-				.get__select .jq-selectbox__dropdown li {
-					display:-webkit-flex;
-					display:-moz-flex;
-					display:-ms-flex;
-					display:-o-flex;
-					display:flex;
-					justify-content:space-between;
-					font-weight:500;
-				}
-					.get__select .jq-selectbox__dropdown li::after {
-						font-weight:400;
-						content:attr(data-value);
-					}
 		.get-wallets__current-qr {
 			position:absolute;
 			top:7px; right:-40px;
@@ -3744,32 +3709,10 @@ a {
 			}
 			.twostep__mobile-phone {
 				position:relative;
-				padding-left:100px;
 			}
-				.twostep__mobile-prefix {
-					position:absolute;
-					top:50%; left:0;
-					width:42px; height:30px;
-					background-repeat:no-repeat;
-					background-position:center center;
-					border:1px solid #d6d6d6;
-					border-radius:2px;
-					transform:translateY(-50%);
+				.twostep__mobile-phone .intl-tel-input {
+					width:100%;
 				}
-				.twostep__mobile-prefix--ru {
-					background-image:url(../i/flags/ru.png);
-				}
-					.twostep__mobile-prefix::before {
-						position:absolute;
-						top:11px; right:-29px;
-						width:0; height:0;
-						border:8px solid transparent;
-						border-top-color:#333333;
-						content:'';
-					}
-						.twostep__mobile-prefix:hover::before {
-							border-top-color:#000;
-						}
 				.twostep__mobile-phone .input-text {
 					height:56px;
 					font-size:1.7rem;
@@ -4067,6 +4010,24 @@ a {
 	}
 /*  </approve-payment>  */
 
+/*  <invoice-modal>  */
+.invoice-modal {
+	width:694px;
+	padding:45px 75px 40px;
+}
+	.invoice-modal__title {
+		font-size:3rem;
+		margin:0 0 25px;
+	}
+	.invoice-modal__data {
+		margin-bottom:40px;
+	}
+		.invoice-modal__data-item {
+			font-size:1.8rem;
+			margin:10px 0;
+		}
+/*  </invoice-modal>  */
+
 /*  <elements>  */
 .select {
 	width:100%;
@@ -4214,7 +4175,7 @@ a.btn {
 	border-radius:2px;
 	padding:0 16px;
 	cursor:default;
-	transform:translate(-50%, calc(-100% - 8px));
+	transform:translate(0, calc(-100% - 8px));
 }
 .clipboard-tooltip--left {
 	transform:translate(calc(-100% - 5px), 3px);

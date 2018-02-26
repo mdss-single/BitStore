@@ -3,24 +3,37 @@
 
 	// custom styles for select, radio buttons and checkboxes
 	$('.radio, .checkbox').styler();
-	/*
-	$('.select').styler({
-		onSelectClosed: function() {
-			$(this).find('.jq-selectbox__dropdown ul').click(function() {
-				if ($(this).closest('.select').hasClass('js-select-cleansable') && (!$(this).closest('.select').find('.js-select-clear').length)) $(this).closest('.select').append('<span class="js-select-clear"></span>');
-				$('.js-select-clear').click(function() {
-					$(this).closest('.select').find('.select').prop('selectedIndex',0);
-					var placeholder = $(this).closest('.select[data-placeholder]').length ? $(this).closest('.select').find('.select').data('placeholder') : $(this).closest('.select').find('.select option:first').val();
-					$(this).closest('.select').find('.jq-selectbox__select-text').text(placeholder);
-					$(this).closest('.select').find('.select').trigger('refresh');
-					$(this).remove();
-				});
-			});
-		}
-	});*/
 	$('.select').select2({
-		tags: true,
+		minimumResultsForSearch: -1
 	});
+	// show wallet value in select
+	$('.js-select-currency').select2({
+		minimumResultsForSearch: -1,
+		templateSelection: selectCurrency,
+		templateResult: selectCurrency,
+		escapeMarkup: function(m) {
+			return m;
+		}
+	});
+	function selectCurrency(item) {
+		var $state = item.text + '<span>' + $(item.element).data('currency-value') + '</span>';
+		return $state;
+	};
+	$('.get__select').select2({
+		minimumResultsForSearch: -1,
+		templateSelection: getCurrency,
+		templateResult: getCurrency,
+		escapeMarkup: function(m) {
+			return m;
+		}
+	});
+	function getCurrency(item) {
+		var $state = item.text + '<span>' + $(item.element).data('value') + '</span>';
+		var hash = $(item.element).data('hash');
+		$('.get-wallet__content-hash').text(hash);
+		$('.get-wallets__content-link').attr('data-clipboard-text', hash);
+		return $state;
+	};
 
 	// hide all dropdown
 	$(document).click(function(e) {
@@ -82,8 +95,9 @@
 	});
 	$('[data-clipboard-text]').hover(function() {
 		var thisPos = $(this).position();
-		$('<span class="clipboard-tooltip" style="top:'+thisPos.top+'px;left:'+thisPos.left+'px">Копировать адрес</span>').insertAfter(this);
-		if ($(window).width() < thisPos.left+160) $('.clipboard-tooltip').addClass('clipboard-tooltip--left');
+		var thisWidth = $(this).outerWidth();
+		$('<span class="clipboard-tooltip" style="top:'+thisPos.top+'px;left:'+(thisPos.left - thisWidth / 2)+'px">Копировать адрес</span>').insertAfter(this);
+		if ($(window).width() < thisPos.left) $('.clipboard-tooltip').addClass('clipboard-tooltip--left');
 	}, function() {
 		$('.clipboard-tooltip').remove();
 	});
@@ -193,45 +207,14 @@
 		},
 		afterLoad: function(current) {
 			$(this).find('input[autofocus]').focus();
-			//$('.select, .get__select').trigger('refresh');
-			$('.select').trigger("change");
-			$('.get__select').styler({
-				onFormStyled: function() {
-					var newVal = $('.get__select').find('li.selected').attr('data-value'),
-					curVal = $('.get__select').find('.jq-selectbox__select-text').text(),
-					hash = $('.get__select').find('li.selected').attr('data-hash');
-					$('.get__select').find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
-					$('.get-wallet__content-hash').text(hash);
-					$('.get-wallets__content-link').attr('data-clipboard-text', hash);
-				},
-				onSelectClosed: function() {
-					var newVal = $(this).find('li.selected').attr('data-value'),
-					curVal = $(this).find('li.selected').text(),
-					hash = $(this).find('li.selected').attr('data-hash');
-					$(this).find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
-					$('.get-wallet__content-hash').text(hash);
-					$('.get-wallets__content-link').attr('data-clipboard-text', hash);
-				}
-			});
 			if (clipboard) {
 				clipboard.destroy();
 			}
 			var clipboard = new Clipboard('.js-wallet-copy', {
-				container: document.getElementById('modalGet'),
+				container: document.getElementById('getPayment'),
 			});
 			$('.js-wallet-copy').click(function(e) {
 				e.preventDefault();
-			});
-			$('[data-clipboard-text]').hover(function() {
-				var thisPos = $(this).position();
-				$('<span class="clipboard-tooltip" style="top:'+thisPos.top+'px;left:'+thisPos.left+'px">Копировать адрес</span>').insertAfter(this);
-				if ($(window).width() < thisPos.left+160) $('.clipboard-tooltip').addClass('clipboard-tooltip--left');
-			}, function() {
-				$('.clipboard-tooltip').remove();
-			});
-			clipboard.on('success', function(e) {
-				$('.clipboard-tooltip').text('Скопировано в буфер');
-				e.clearSelection();
 			});
 		}
 	});
@@ -296,7 +279,7 @@
 		var storage = localStorage.getItem('stab' + i);
 		if (storage) {
 			$(this).find('div').removeClass('settings-nav__item--active').eq(storage).addClass('settings-nav__item--active').closest('.settings').find('.settings__content').removeClass('settings__content--active').eq(storage).addClass('settings__content--active');
-			$('.select').trigger('refresh');
+			$('.select').trigger('change.select2');
 		}
 	});
 	$('.settings__nav').on('click', 'div:not(.settings-nav__item--active)', function() {
@@ -304,7 +287,7 @@
 		var ulIndex = $('.settings__nav').index($(this).parents('.settings__nav'));
 		localStorage.removeItem('stab' + ulIndex);
 		localStorage.setItem('stab' + ulIndex, $(this).index());
-		$('.select').trigger('refresh');
+		$('.select').trigger('change.select2');
 	});
 
 	// tabs in two step verification modal window
@@ -339,20 +322,6 @@
 	$('.js-partner-link').click(function(e) {
 		e.preventDefault();
 		$('.partner__link-link').toggleClass('partner__link-link--active');
-	});
-
-	// show wallet value on adding page
-	$('.js-addplace-currency').styler({
-		onFormStyled: function() {
-			var newVal = $('.addplace__currency').find('li.selected').data('addplacevalue');
-			var curVal = $('.addplace__currency').find('.jq-selectbox__select-text').text();
-			$('.addplace__currency').find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
-		},
-		onSelectClosed: function() {
-			var newVal = $(this).find('li.selected').data('addplacevalue');
-			var curVal = $(this).find('li.selected').text();
-			$(this).find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
-		}
 	});
 
 	// input file styling
@@ -396,31 +365,11 @@
 		$(this).next().toggleClass('support__answer-text--active');
 	});
 
-	// show wallet value into get modal
-	$('.get__select').styler({
-		onFormStyled: function() {
-			var newVal = $('.get__select').find('li.selected').attr('data-value'),
-			curVal = $('.get__select').find('.jq-selectbox__select-text').text(),
-			hash = $('.get__select').find('li.selected').attr('data-hash');
-			$('.get__select').find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
-			$('.get-wallet__content-hash').text(hash);
-			$('.get-wallets__content-link').attr('data-clipboard-text', hash);
-		},
-		onSelectClosed: function() {
-			var newVal = $(this).find('li.selected').attr('data-value'),
-			curVal = $(this).find('li.selected').text(),
-			hash = $(this).find('li.selected').attr('data-hash');
-			$(this).find('.jq-selectbox__select-text').html(curVal + '<span>' + newVal + '</span>');
-			$('.get-wallet__content-hash').text(hash);
-			$('.get-wallets__content-link').attr('data-clipboard-text', hash);
-		}
-	});
-
 	$('.js-settings-edit').click(function(e) {
 		e.preventDefault();
 		$(this).closest('tr').addClass('settings__hidden').next().addClass('settings__hidden--active');
 		$(this).closest('tr').next().find('input[autofocus]').focus();
-		$('.select').trigger('refresh');
+		$('.select').trigger('change.select2');
 	});
 	$('.js-settings-cancel').click(function(e) {
 		e.preventDefault();
@@ -488,7 +437,7 @@
 			}
 		});
 		setTimeout(function() {
-			$('.select').trigger('refresh');
+			$('.select').trigger('change.select2');
 		}, 1)
 	});
 	$('.editable__btn').click(function() {

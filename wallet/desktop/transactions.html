@@ -169,8 +169,7 @@
 							</select>
 						</div>
 						<div class="transactions__nav-lastItem">
-							<select name="" id="" class="select transactions__nav-period" data-placeholder="Весь период">
-								<option></option>
+							<select name="" id="" class="select transactions__nav-period">
 								<option value="">Сегодня</option>
 								<option value="">Вчера</option>
 								<option value="">Неделя</option>
@@ -538,6 +537,20 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal invoice-modal" id="invoiceModal">
+		<a href="#" class="modal__close"></a>
+		<p class="invoice-modal__title">Квитанция</p>
+		<div class="invoice-modal__data">
+			<div class="invoice-modal__data-item">Дата: 02.02.2018, 19:35</div>
+			<div class="invoice-modal__data-item">От: pa******.ru </div>
+			<div class="invoice-modal__data-item">Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</div>
+			<div class="invoice-modal__data-item">Сумма: 92.444 BTC</div>
+		</div>
+		<div class="invoice-modal__btns">
+			<button class="btn">Платёж выполнен</button>
+		</div>
+	</div>
+	<a href="#invoiceModal" class="js-modal">asdasdasd asdasdasdasd</a>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
