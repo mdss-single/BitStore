@@ -4026,6 +4026,16 @@ a {
 			font-size:1.8rem;
 			margin:10px 0;
 		}
+	.invoice-modal__status {
+		display:inline-block;
+		color:#fff;
+		font-weight:bold;
+		font-size:1.8rem;
+		line-height:47px;
+		background-color:#7fa058;
+		border-radius:3px;
+		padding:0 28px;
+	}
 /*  </invoice-modal>  */
 
 /*  <elements>  */
