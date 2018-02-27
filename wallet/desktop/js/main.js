@@ -452,7 +452,7 @@
 		return $.fn.textWidth.fakeEl.width();
 	};
 	$('.js-input-text-dynamic').on('input', function() {
-		var inputWidth = $(this).textWidth() + 70;
+		var inputWidth = $(this).textWidth();
 		$(this).css({
 			width: inputWidth
 		})

@@ -2313,19 +2313,31 @@ a {
 			text-decoration:none;
 			border-bottom:0;
 		}
-		.trade-history__comission-value {
-			position:absolute;
-			top:50%; right:12px;
-			color:#7a7a7a;
-			font-size:1.5rem;
-			transform:translateY(-50%);
-			pointer-events:none;
-		}
 		.trade-history__comission-item {
+			position:relative;
 			margin-right:10px;
 		}
+			.trade-history__comission-value {
+				position:absolute;
+				top:50%; right:12px;
+				color:#7a7a7a;
+				font-size:1.5rem;
+				transform:translateY(-50%);
+				pointer-events:none;
+			}
 			.editable__content .trade-history__comission-item .input-text {
+				box-sizing:content-box;
 				margin-right:0;
+			}
+			.editable__content .trade-history__comission-item--percent .input-text {
+				padding-right:30px;
+			}
+			.editable__content .trade-history__comission-item .select2 {
+				min-width:auto;
+				margin-right:0;
+			}
+			.editable__content .trade-history__comission-item .select2-container {
+				width:80px !important;
 			}
 .editable__link--hidden {
 	display:none;
@@ -2344,8 +2356,7 @@ a {
 	animation:fadein .5s;
 }
 	.btn.editable__btn {
-		vertical-align:middle;
-		width:26px; height:26px;
+		width:44px; height:44px;
 		background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOBAMAAADUAYG5AAAAJ1BMVEUAAAD///////////////////////////////////////////////+uPUo5AAAADHRSTlMAlgFi9UIItynRh2uGHMBVAAAAOUlEQVQI12OAggYozXwayrA5CBU4IwQTUMAikJUAFagpg6oIOZ4MUcHqMweqJQSmhdVRAWp8E5gEAL9REEY3jYIhAAAAAElFTkSuQmCC);
 		background-repeat:no-repeat;
 		background-position:center center;
@@ -2353,13 +2364,18 @@ a {
 		padding:0;
 	}
 	.editable__content .input-text {
-		width:auto; height:35px;
-		padding:0 50px 0 12px;
+		vertical-align:middle;
+		width:auto; height:42px;
+		padding:0 12px;
 		margin-right:10px;
 	}
 	.editable__content .select2 {
+		min-width:196px;
 		margin-right:10px;
 	}
+		.editable__content .select2-container .select2-selection--single .select2-selection__rendered {
+			border-radius:0;
+		}
 /*  </trade>  */
 
 /*  <seller>  */
