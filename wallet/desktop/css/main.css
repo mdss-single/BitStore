@@ -4026,23 +4026,26 @@ a {
 	}
 /*  </approve-payment>  */
 
-/*  <invoice-modal>  */
-.invoice-modal {
-	width:694px;
-	padding:45px 75px 40px;
+/*  <invoice>  */
+.invoice {
+	width:596px;
+	background-color:#fff;
+	border:1px solid #ececec;
+	padding:70px 75px 56px;
+	margin:98px auto 0;
 }
-	.invoice-modal__title {
+	.invoice__title {
 		font-size:3rem;
 		margin:0 0 25px;
 	}
-	.invoice-modal__data {
+	.invoice__data {
 		margin-bottom:40px;
 	}
-		.invoice-modal__data-item {
+		.invoice__data-item {
 			font-size:1.8rem;
 			margin:10px 0;
 		}
-	.invoice-modal__status {
+	.invoice__status {
 		display:inline-block;
 		color:#fff;
 		font-weight:bold;
@@ -4052,7 +4055,7 @@ a {
 		border-radius:3px;
 		padding:0 28px;
 	}
-/*  </invoice-modal>  */
+/*  </invoice>  */
 
 /*  <elements>  */
 .select {

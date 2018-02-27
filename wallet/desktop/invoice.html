@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>BitStore</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;subset=cyrillic">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+</head>
+<body>
+	<header class="header">
+		<a href="#" class="header__toggle-menu js-toggle-menu"></a>
+		<a href="#" class="header__logo"><img src="i/logo.svg" alt=""></a>
+		<button class="header__send-btn js-modal" data-src="#sendPayment">Отправить</button>
+		<button class="header__get-btn js-modal" data-src="#getPayment">Получить</button>
+		<button class="header__copy-btn js-wallet-copy" data-clipboard-text="1231231231"></button>
+		<div class="header__rates">
+			BTC <span class="header-rates__current-value">245 006 RUB</span>
+			<div class="header-rates__list">
+				<div class="header-rates__item header-rates__item--down">1 USD = 62.87 RUB</div>
+				<div class="header-rates__item header-rates__item--down">1 BTC = 157500.8271 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 ETH = 12497.9233 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 LTC = 3034.1574 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 DSH = 10665.0781 RUB</div>
+				<div class="header-rates__item header-rates__item--up">1 NVC = 42.0098 RUB</div>
+			</div>
+		</div>
+		<div class="header__wallets">
+			22.876988 BTC
+			<div class="header-wallets__choose">
+				<div class="header-wallets__choose-section">
+					<p class="header-wallets__choose-title">Основной кошелёк</p>
+					<div class="header-wallets__choose-item header-wallets__choose-item--btc">
+						Bitcoin (BTC)
+						<span class="header-wallet__item--value">0.000123124</span>
+					</div>
+				</div>
+				<div class="header-wallets__choose-section">
+					<p class="header-wallets__choose-title">Выбрать другую валюту</p>
+					<div class="header-wallets__choose-item header-wallets__choose-item--ltc">
+						Litecoin (LTC)
+						<span class="header-wallet__item--value">0.000123124</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- класс header__notice-link--newest добавляем только если есть новые уведомления -->
+		<a href="#" class="header__notice-link header__notice-link--newest js-header-notice">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510"><path d="M255,510c28.05,0,51-22.95,51-51H204C204,487.05,226.95,510,255,510z M420.75,357V216.75c0-79.05-53.55-142.8-127.5-160.65V38.25C293.25,17.85,275.4,0,255,0c-20.4,0-38.25,17.85-38.25,38.25V56.1c-73.95,17.85-127.5,81.6-127.5,160.65V357l-51,51v25.5h433.5V408L420.75,357z"></svg>
+		</a>
+		<div class="header__notice">
+			<div class="header__notice-head">
+				Уведомления
+				<a href="#" class="header__notice-clear">Очистить</a>
+			</div>
+			<div class="header__notice-content">
+				<div class="header__notice-item">
+					<p class="notice-item__time">Сегодня, 19:30</p>
+					<div class="header__notice-text">
+						Транзакция (2.183772 BTC) подтверждена
+					</div>
+					<a href="#" class="header-notice__item-link"></a>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">Сегодня, 10:00</p>
+					<div class="header__notice-text">
+						Новое сообщение в сделке 271665
+					</div>
+					<a href="#" class="header-notice__item-link"></a>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">Вчера, 11:30</p>
+					<div class="header__notice-text">
+						Транзакция (2.183772 BTC) подтверждена
+					</div>
+					<a href="#" class="header-notice__item-link"></a>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">20.07.17, 09:50</p>
+					<div class="header__notice-text">
+						Новое сообщение в сделке 271665
+					</div>
+					<a href="#" class="header-notice__item-link"></a>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">Сегодня, 19:30</p>
+					<div class="header__notice-text">
+						Транзакция (2.183772 BTC) подтверждена
+					</div>
+					<a href="#" class="header-notice__item-link"></a>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">Сегодня, 10:00</p>
+					<div class="header__notice-text">
+						Новое сообщение в сделке 271665
+					</div>
+					<a href="#" class="header-notice__item-link"></a>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">Вчера, 11:30</p>
+					<div class="header__notice-text">
+						Транзакция (2.183772 BTC) подтверждена
+					</div>
+					<a href="#" class="header-notice__item-link"></a>
+				</div>
+				<div class="header__notice-item">
+					<p class="notice-item__time">20.07.17, 09:50</p>
+					<div class="header__notice-text">
+						Новое сообщение в сделке 271665
+					</div>
+					<a href="#" class="header-notice__item-link"></a>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="header__avatar js-header-avatar">ppp@ya.ru</a>
+		<div class="header__system">
+			<a href="#" class="header-system__item">Настройки</a>
+			<a href="#" class="header-system__item">Выход</a>
+		</div>
+	</header>
+	<main class="main">
+		<div class="invoice">
+			<p class="invoice__title">Квитанция</p>
+			<div class="invoice__data">
+				<div class="invoice__data-item">Дата: 02.02.2018, 19:35</div>
+				<div class="invoice__data-item">От: pa******.ru </div>
+				<div class="invoice__data-item">Кому: 14CE1BiDuZPnrSsg49mzhsonAm725cqqA6</div>
+				<div class="invoice__data-item">Сумма: 92.444 BTC</div>
+			</div>
+			<div class="invoice__status">Платёж выполнен</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<p class="copyright">© BitStore 2017</p>
+		<a href="#" class="language language--ru js-footer-language">Ru</a>
+		<div class="footer__language-list">
+			<a href="#" class="footer__language-item footer__language-item--en">English</a>
+			<a href="#" class="footer__language-item footer__language-item--ru">Русский</a>
+			<a href="#" class="footer__language-item footer__language-item--cn">中国</a>
+		</div>
+		<nav class="footer__nav">
+			<a href="#" class="footer__nav-item">Приложение</a>
+			<a href="#" class="footer__nav-item">О компании</a>
+			<a href="#" class="footer__nav-item">Безопасность</a>
+			<a href="#" class="footer__nav-item">Партнёрам</a>
+			<a href="#" class="footer__nav-item">Карьера</a>
+			<a href="#" class="footer__nav-item">Поддержка</a>
+			<a href="#" class="footer__nav-item">Отзывы</a>
+		</nav>
+		<nav class="footer__nav">
+			<a href="#" class="footer__nav-item">Комиссии</a>
+			<a href="#" class="footer__nav-item">Пользовательское соглашение</a>
+			<a href="#" class="footer__nav-item">Соглашение о конфиденциальности</a>
+			<a href="#" class="footer__nav-item">Политика AML/KIC</a>
+		</nav>
+	</footer>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
