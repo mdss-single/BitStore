@@ -4275,6 +4275,66 @@ a.btn {
 			}
 /*  </general-notice>  */
 
+/*  <notice>  */
+.notice {
+	position:fixed;
+	top:70px; right:20px;
+	z-index:9999;
+}
+	.notice__item {
+		position:relative;
+		width:250px;
+		color:#000;
+		font-weight:bold;
+		font-size:1.5rem;
+		background-color:#fff;
+		border-radius:5px;
+		padding:18px 50px 18px 22px;
+		margin-bottom:15px;
+		box-shadow:0 3px 7px rgba(23, 22, 21, .28);
+		transition:all .2s;
+	}
+	.notice__item--hide {
+		animation:fadeOut .5s;
+	}
+		.notice__item:last-child {
+			margin-bottom:0;
+		}
+		.notice__item-close {
+			position:absolute;
+			top:50%; right:18px;
+			width:18px; height:18px;
+			transform:translateY(-50%);
+		}
+			.notice__item-close::before, .notice__item-close::after {
+				position:absolute;
+				top:0; bottom:0; left:50%;
+				width:2px;
+				background-color:#000;
+				margin-left:-1px;
+				content:'';
+			}
+			.notice__item-close::before {
+				transform:rotate(45deg);
+			}
+			.notice__item-close::after {
+				transform:rotate(-45deg);
+			}
+	.notice-wallet {
+		display:-webkit-flex;
+		display:-moz-flex;
+		display:-ms-flex;
+		display:-o-flex;
+		display:flex;
+		-ms-align-items:center;
+		align-items:center;
+	}
+		.notice-wallet__icon {
+			width:32px; height:32px;
+			margin-right:18px;
+		}
+/*  </notice>  */
+
 /*  <error>  */
 .error-message {
 	display:block;

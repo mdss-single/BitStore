@@ -471,6 +471,13 @@
 		monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
 	});
 
+	$('.js-notice-close').click(function(e) {
+		e.preventDefault();
+		$(this).closest('.notice__item').addClass('notice__item--hide').delay(500).queue(function(){
+			$(this).remove();
+		});
+	});
+
 })(jQuery);
 
 function inputWidth(elem, minW, maxW) {
