@@ -169,6 +169,13 @@
 		cellSelector: '.hello__item',
 		prevNextButtons: false,
 	});
+	var flkty = helloCarousel.data('flickity');
+	function playOnSelect() {
+		var video = flkty.selectedElement.querySelector('video');
+		video.play();
+	}
+	playOnSelect();
+	helloCarousel.on( 'select.flickity', playOnSelect );
 	$('.js-hello-skip').click(function(e) {
 		e.preventDefault();
 		$.fancybox.close();
