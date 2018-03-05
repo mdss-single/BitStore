@@ -216,6 +216,7 @@
 			$('.js-wallet-copy').click(function(e) {
 				e.preventDefault();
 			});
+			$('.js-hello').flickity('resize');
 		}
 	});
 
