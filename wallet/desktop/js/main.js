@@ -6,13 +6,12 @@
 	$('.select').select2({
 		minimumResultsForSearch: -1,
 	});
-	$('.get__select').on('select2:open', function (e) {
-		var container = $(this);
-		console.log(container);
+	$('.select, .get__select').on('select2:open', function (e) {
+		var container = $(this).closest('body').find('.select2-dropdown');
+		var winH = $(window).height();
 		var position = container.offset();
-		var availableHeight = $(window).height() - position.top - container.outerHeight();
+		var availableHeight = winH - position.top;
 		var bottomPadding = 50; // Set as needed
-		$('.select2-container').css('background','red');
 		$('ul.select2-results__options').css('max-height', (availableHeight - bottomPadding) + 'px');
 	});
 	// show wallet value in select
