@@ -2137,8 +2137,10 @@ a {
 		.trade-search__table th:first-child {
 			padding:9px 10px 5px 32px;
 		}
-		.trade-search__table th:last-child {
+		.trade-search__table th:nth-last-child(2) {
 			text-align:right;
+		}
+		.trade-search__table th:last-child {
 			padding:9px 22px 5px 10px;
 		}
 		.trade-search__table td {
@@ -2149,6 +2151,9 @@ a {
 		}
 		.trade-search__table td:first-child {
 			padding:14px 10px 14px 32px;
+		}
+		.trade-search__table td:nth-last-child(2) {
+			text-align:right;
 		}
 		.trade-search__table td:last-child {
 			text-align:right;
@@ -3438,6 +3443,9 @@ a {
 				font-weight:500;
 				margin:0 0 10px;
 			}
+				.send__settings-title a {
+					color:#498dea;
+				}
 				.send__settings-title--aviable {
 					color:#9c9c9c;
 					font-weight:400;
@@ -3468,6 +3476,7 @@ a {
 				display:flex;
 				justify-content:space-between;
 				animation:fadein .5s;
+				position:relative;
 			}
 			.send__settings-summ {
 				display:-webkit-flex;
@@ -3498,6 +3507,11 @@ a {
 				.send-settings__delimiter {
 					color:#8c8c8c;
 					line-height:4.4rem;
+				}
+				.send-settings__item-cancel {
+					position:absolute;
+					top:-30px; right:0;
+					color:#498dea;
 				}
 	.btn.send__btn {
 		width:100%; height:52px;

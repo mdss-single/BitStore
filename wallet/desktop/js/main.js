@@ -4,7 +4,16 @@
 	// custom styles for select, radio buttons and checkboxes
 	$('.radio, .checkbox').styler();
 	$('.select').select2({
-		minimumResultsForSearch: -1
+		minimumResultsForSearch: -1,
+	});
+	$('.get__select').on('select2:open', function (e) {
+		var container = $(this);
+		console.log(container);
+		var position = container.offset();
+		var availableHeight = $(window).height() - position.top - container.outerHeight();
+		var bottomPadding = 50; // Set as needed
+		$('.select2-container').css('background','red');
+		$('ul.select2-results__options').css('max-height', (availableHeight - bottomPadding) + 'px');
 	});
 	// show wallet value in select
 	$('.js-select-currency').select2({
@@ -169,13 +178,6 @@
 		cellSelector: '.hello__item',
 		prevNextButtons: false,
 	});
-	var flkty = helloCarousel.data('flickity');
-	function playOnSelect() {
-		var video = flkty.selectedElement.querySelector('video');
-		video.play();
-	}
-	playOnSelect();
-	helloCarousel.on( 'select.flickity', playOnSelect );
 	$('.js-hello-skip').click(function(e) {
 		e.preventDefault();
 		$.fancybox.close();
@@ -190,6 +192,13 @@
 				touch: false,
 				afterLoad : function( instance, current ) {
 					helloCarousel.flickity('resize');
+					var flkty = helloCarousel.data('flickity');
+					function playOnSelect() {
+						var video = flkty.selectedElement.querySelector('video');
+						video.play();
+					}
+					playOnSelect();
+					helloCarousel.on( 'select.flickity', playOnSelect );
 				}
 			}
 		});
@@ -438,12 +447,6 @@
 	$('.js-editable').click(function(e) {
 		e.preventDefault();
 		$(this).addClass('editable__link--hidden').next('.editable__content').addClass('editable__content--active');
-		$('.select').styler({
-			onSelectClosed: function() {
-				$(this).closest('.editable__content').removeClass('editable__content--active');
-				$(this).closest('.editable__content').prev('.editable__link').removeClass('editable__link--hidden');
-			}
-		});
 		setTimeout(function() {
 			$('.select').trigger('change.select2');
 		}, 1)
