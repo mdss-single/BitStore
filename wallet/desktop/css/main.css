@@ -1981,7 +1981,7 @@ a {
 	padding:32px 24px 18px 32px;
 }
 	.trade-search__filter-block {
-		flex:1 1 20%;
+		flex:1;
 		position:relative;
 		margin-right:12px;
 	}
@@ -3207,7 +3207,7 @@ a {
 .footer {
 	flex-shrink:0;
 	position:relative;
-	height:90px;
+	height:91px;
 	font-size:1.4rem;
 	background-color:#fff;
 	border-top:1px solid #ececec;
@@ -3869,13 +3869,16 @@ a {
 		width:250px;
 		margin-bottom:40px;
 	}
-		.add-wallet__system .jq-selectbox__select {
+		.add-wallet__system .select2-container {
+			width:100% !important;
+		}
+		.add-wallet__system .select2-container .select2-selection--single {
 			height:39px;
 			line-height:3.9rem;
 		}
-			.add-wallet__system .jq-selectbox .placeholder {
-				color:#000;
-			}
+		.add-wallet__system .select2-container .select2-selection--single .select2-selection__rendered {
+			line-height:3.9rem;
+		}
 		.add-wallet__system .input-text {
 			height:39px;
 			border-color:#d0d3e4;
