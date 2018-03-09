@@ -64,17 +64,19 @@ body {
 	display:-o-flex;
 	display:flex;
 	flex-direction:column;
-	min-width:1280px;
+	/*min-width:1280px;*/
 	color:#000;
 	font:normal 1.5rem/1.3 S, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	background-color:#fff;
 	font-size-adjust:0.5;
 }
+/*
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	body {
 		min-width:2560px;
 	}
 }
+*/
 :-moz-placeholder {
 	opacity:1;
 	color:currentColor;
