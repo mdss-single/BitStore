@@ -39,6 +39,11 @@
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.98 12.98"><path d="M6.49,0A6.49,6.49,0,1,0,13,6.49,6.49,6.49,0,0,0,6.49,0Zm.65,11.06H5.84V9.75h1.3ZM8.48,6l-.6.6a2.17,2.17,0,0,0-.77,1.84H5.81V8.14a2.59,2.59,0,0,1,.77-1.84l.79-.82a1.34,1.34,0,0,0,.4-.91,1.3,1.3,0,0,0-2.61,0H3.86a2.61,2.61,0,0,1,5.22,0A2.1,2.1,0,0,1,8.48,6h0Z"/></svg>
 				Помощь
 			</a>
+			<a href="#" class="menu-nav__item menu-nav__item--notice">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510"><path d="M255,510c28.05,0,51-22.95,51-51H204C204,487.05,226.95,510,255,510z M420.75,357V216.75    c0-79.05-53.55-142.8-127.5-160.65V38.25C293.25,17.85,275.4,0,255,0c-20.4,0-38.25,17.85-38.25,38.25V56.1    c-73.95,17.85-127.5,81.6-127.5,160.65V357l-51,51v25.5h433.5V408L420.75,357z" fill="#12336c"/></svg>
+				Уведомления
+				<span class="menu-nav__item-counter">1</span>
+			</a>
 		</nav>
 		<div class="menu-apps">
 			<a href="#" class="menu__link-full">Полная версия</a>
@@ -50,15 +55,18 @@
 		<p class="header__title">Сделка 123233532</p>
 	</header>
 	<main class="main">
-		<p class="user__title">Сделка</p>
 		<div class="user__block">
-			<div class="text-medium">
-				Продажа 0.27364227 BTC на 1000.00 RUB 
+			<div class="deal-block__name">
+				<div class="text-medium">
+					Сделка №146: продажа 0.00003121 BTC за 15 RUB
+				</div>
+				<div class="deal-block__name-descr">
+					Продажа по объявлению 146 (Банковский перевод на счет/карту) покупателю bitstore1111 по обменному курсу 480 579.01 RUB / BTC
+				</div>
 			</div>
 		</div>
-		<p class="user__title">Статус</p>
-		<div class="user__block text-medium">
-			Ожидание подтверждения оплаты
+		<div class="user__block">
+			Статус: <span class="text-medium">Ожидание подтверждения оплаты</span>
 		</div>
 		<div class="user__block">
 			<div class="deal-block__chat">
@@ -67,41 +75,70 @@
 				<a href="#" class="deal-block__chat-link js-chat-link"></a>
 			</div>
 		</div>
-		<div class="deal-block deal-block--detail">
-			<div class="deal-step">
-				<p class="deal-step__title">Шаг 1. Заплатите продавцу</p>
-				<div class="deal-step__text">
-					Чтобы продавец мог определить от кого поступил платёж, необходимо указать ссылочное сообщение:
-					<table class="deal-step__table">
-						<tr>
-							<td>Номер телефона:</td>
-							<td>+79998282828</td>
-						</tr>
-						<tr>
-							<td>Сумма:</td>
-							<td>10000 RUB</td>
-						</tr>
-						<tr>
-							<td>Ссылочный номер:</td>
-							<td>373е26пг232</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-			<div class="deal-step">
-				<p class="deal-step__title">Шаг 2. Подтвердите оплату</p>
-				<div class="deal-step__text">
-					Биткоины удерживаются на счёте продавца в течении: <span class="text-medium">60 минут</span> За это время вам необходимо осуществить оплату. После оплаты вам необходимо отметить платёж, как завершённый, нажав на кнопку <span class="text-medium">Я оплатил</span>. В противном случае сделка будет автоматически отменена.
-				</div>
+		<div class="user__block deal-block--detail">
+			<div class="deal-step__descr">
+				<p>Биткоины удерживаются на счёте продавца в течении: <span class="text-medium js-countdown" data-countdown="60:00"></span> минут</p>
+				<p>За это время вам необходимо осуществить оплату. После оплаты вам необходимо отметить платёж, как завершённый, нажав на кнопку <span class="text-medium">Я оплатил</span>. В противном случае сделка будет автоматически отменена.</p>
 			</div>
 			<div class="deal-step__btns">
 				<button class="btn btn--fullwidth js-deal-confirm">Я оплатил</button>
-				<button class="btn btn--fullwidth deal-step__cancel">Отменить сделку</button>
+				<button class="btn btn--fullwidth js-deal-cancel deal-step__cancel">Отменить сделку</button>
 			</div>
 		</div>
-		<p class="user__title">Информация о пользователе</p>
+		<div class="user__block">
+			<div class="deal-block__disput">
+				<div class="deal-block__disput-title">Оспорить сделку</div>
+				<div class="deal-block__disput-descr">
+					<p>Если покупатель не отвечает, либо не совершает платёж — Вы можете оспорить сделку.</p>
+					<p>При активации спора в сделку вступит модератор. Оспаривание будет доступчно через <span class="text-medium js-countdown" data-countdown="52:00"></span></p>
+				</div>
+				<div class="deal-block__disput-btns">
+					<button class="btn btn--fullwidth deal-block__disput-btn">Оспорить сделку</button>
+				</div>
+			</div>
+		</div>
+		<div class="user__block">
+			<div class="deal-block__review">
+				<div class="deal-block__review-title">Оставить отзыв</div>
+				<!--
+				<div class="deal-block__review-descr">
+					<span class="text-medium">Спасибо, ваш отзыв принят!</span>
+				</div>
+				<div class="deal-block__review-btns">
+					<button class="btn btn--fullwidth deal-block__review-btn">Изменить отзыв</button>
+				</div>-->
+				<div class="deal-block__review-descr">
+					Поставьте оценку продавцу. Также вы можете указать комментарий, он будет доступен для других пользователей.
+				</div>
+				<div class="deal-block__review-rate">
+					<div class="deal-block__review-rateItem deal-block__review-rateItem--good">
+						<input type="radio" name="r" id="r1" class="checkbox">
+						<label for="r1">Поставить высшую оценку продавцу</label>
+					</div>
+					<div class="deal-block__review-rateItem">
+						<input type="radio" name="r" id="r2" class="checkbox">
+						<label for="r2">Поставить среднюю оценку продавцу</label>
+					</div>
+					<div class="deal-block__review-rateItem deal-block__review-rateItem--bad">
+						<input type="radio" name="r" id="r3" class="checkbox">
+						<label for="r3">Я считаю данного продавца не надежным</label>
+					</div>
+					<div class="deal-block__review-rateItem deal-block__review-rateItem--bad">
+						<input type="radio" name="r" id="r4" class="checkbox">
+						<label for="r4">Я считаю данного продавца не надежным и хочу заблокировать его</label>
+					</div>
+				</div>
+				<div class="deal-block__review-text">
+					<textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Ваш комментарий"></textarea>
+				</div>
+				<div class="deal-block__review-btns">
+					<button class="btn btn--fullwidth deal-block__review-btn">Оставить отзыв</button>
+				</div>
+			</div>
+		</div>
 		<div class="user__block">
 			<div class="deal-userinfo">
+				<div class="deal-userinfo__title">Информация о пользователе</div>
 				<div class="deal-userinfo__item deal-userinfo__item--ok">Подтвердил адрес электронной почты.</div>
 				<div class="deal-userinfo__item deal-userinfo__item--ok">Подтвердил телефонный номер.</div>
 				<div class="deal-userinfo__item deal-userinfo__item--notok">Не установил настоящее имя в профиле.</div>
@@ -116,7 +153,6 @@
 		</div>
 		<div class="deal-chat__main">
 			<div class="deal-chat__message">
-				<a href="#" class="deal-chat__avatar"><img src="i/avatar__big.jpg" alt="Cookie"></a>
 				<div class="deal-chat__text">
 					<p>Привет. Битку мцкуиуцкиамясфук</p>
 					<p>фукмфукмфукмфукмфукм</p>
@@ -125,14 +161,12 @@
 				<p class="deal-chat__time">12.11.2016, 22:33</p>
 			</div>
 			<div class="deal-chat__message deal-chat__message--you">
-				<a href="#" class="deal-chat__avatar"><img src="i/avatar__big.jpg" alt="You"></a>
 				<div class="deal-chat__text">
 					Привет! Да, конечно
 				</div>
 				<p class="deal-chat__time">Не прочитано</p>
 			</div>
 			<div class="deal-chat__message">
-				<a href="#" class="deal-chat__avatar"><img src="i/avatar__big.jpg" alt="Cookie"></a>
 				<div class="deal-chat__text">
 					<p>Привет. Битку мцкуиуцкиамясфук</p>
 					<p>фукмфукмфукмфукмфукм</p>
@@ -141,14 +175,12 @@
 				<p class="deal-chat__time">12.11.2016, 22:33</p>
 			</div>
 			<div class="deal-chat__message deal-chat__message--you">
-				<a href="#" class="deal-chat__avatar"><img src="i/avatar__big.jpg" alt="You"></a>
 				<div class="deal-chat__text">
 					Привет! Да, конечно
 				</div>
 				<p class="deal-chat__time">Не прочитано</p>
 			</div>
 			<div class="deal-chat__message">
-				<a href="#" class="deal-chat__avatar"><img src="i/avatar__big.jpg" alt="Cookie"></a>
 				<div class="deal-chat__text">
 					<p>Привет. Битку мцкуиуцкиамясфук</p>
 					<p>фукмфукмфукмфукмфукм</p>
@@ -157,14 +189,12 @@
 				<p class="deal-chat__time">12.11.2016, 22:33</p>
 			</div>
 			<div class="deal-chat__message deal-chat__message--you">
-				<a href="#" class="deal-chat__avatar"><img src="i/avatar__big.jpg" alt="You"></a>
 				<div class="deal-chat__text">
 					Привет! Да, конечно
 				</div>
 				<p class="deal-chat__time">Не прочитано</p>
 			</div>
 			<div class="deal-chat__message">
-				<a href="#" class="deal-chat__avatar"><img src="i/avatar__big.jpg" alt="Cookie"></a>
 				<div class="deal-chat__text">
 					<p>Привет. Битку мцкуиуцкиамясфук</p>
 					<p>фукмфукмфукмфукмфукм</p>
@@ -173,7 +203,6 @@
 				<p class="deal-chat__time">12.11.2016, 22:33</p>
 			</div>
 			<div class="deal-chat__message deal-chat__message--you">
-				<a href="#" class="deal-chat__avatar"><img src="i/avatar__big.jpg" alt="You"></a>
 				<div class="deal-chat__text">
 					Привет! Да, конечно
 				</div>
@@ -197,6 +226,30 @@
 		<div class="modal__btns">
 			<button class="btn btn--grey js-modal-cancel">Закрыть</button>
 			<button class="btn">Я оплатил</button>
+		</div>
+	</div>
+	<div class="modal deal-cancel">
+		<p class="modal__title">Подтверждение оплаты</p>
+		<div class="modal__descr">
+			<p>Вы уверены, что хотите отменить сделку 23423551 на 10000.00 RUB?</p>
+			<p>Никогда не отменяйте сделку, если уже своершили оплату.</p>
+		</div>
+		<div class="modal__btns">
+			<button class="btn btn--grey js-modal-cancel">Продолжить</button>
+			<button class="btn">Отменить</button>
+		</div>
+	</div>
+	<div class="notice">
+		<div class="notice__item">
+			<a href="#" class="notice__item-close js-notice-close"></a>
+			<div class="notice-error">
+				<img src="i/notice-error.png" alt="" class="notice-error__icon">
+				Ошибка перевода
+			</div>
+		</div>
+		<div class="notice__item">
+			<a href="#" class="notice__item-close js-notice-close"></a>
+			Совершенно другое сообщение
 		</div>
 	</div>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>

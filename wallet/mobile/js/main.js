@@ -59,6 +59,12 @@
 		$('body').prepend('<div class="modal__bg"></div>');
 		$('html').css('overflow','hidden');
 	});
+	$('.js-deal-cancel').click(function(e) {
+		e.preventDefault();
+		$('.deal-cancel').addClass('modal--active');
+		$('body').prepend('<div class="modal__bg"></div>');
+		$('html').css('overflow','hidden');
+	});
 	$('body').on('click', '.modal__bg, .add-wallet__btn-cancel, .js-modal-cancel', function(e) {
 		$('.modal--active').removeClass('modal--active');
 		$('.modal__bg').remove();
@@ -113,6 +119,39 @@
 		$('.deal-chat').removeClass('deal-chat--active');
 		$('html').css('overflow-y','auto');
 	});
+
+	$('.js-notice-close').click(function(e) {
+		e.preventDefault();
+		$(this).closest('.notice__item').addClass('notice__item--hide').delay(500).queue(function(){
+			$(this).remove();
+		});
+	});
+
+	setInterval(function() {
+		var timer = $('.js-countdown').data('countdown').split(':');
+		var minutes = parseInt(timer[0], 10);
+		var seconds = parseInt(timer[1], 10);
+		--seconds;
+		minutes = (seconds < 0) ? --minutes : minutes;
+		if (minutes < 0) clearInterval(interval);
+		seconds = (seconds < 0) ? 59 : seconds;
+		seconds = (seconds < 10) ? '0' + seconds : seconds;
+		$('.js-countdown').html(minutes + ':' + seconds);
+		$('.js-countdown').data('countdown', minutes + ':' + seconds);
+	}, 1000);
+
+	$('.js-settings-avatar').change(function () {
+		readURL(this);
+	});
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$('.js-settings-avatar-pic').attr('src', e.target.result);
+			}
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
 
 })(jQuery);
 $(document).one('focus.autoExpand', 'textarea.autoExpand', function(){

@@ -51,71 +51,44 @@
 		</div>
 	</div>
 	<header class="header">
-		<a href="#" class="header__back"></a>
-		<p class="header__title">Информация о сделке</p>
+		<a href="#" class="burger"><span></span></a>
+		<p class="header__title">Результаты поиска</p>
+		<a href="#" class="header__filter"></a>
 	</header>
 	<main class="main">
-		<p class="user__title">Сделка</p>
-		<div class="user__block">
-			<div class="text-medium">
-				Покупка биткоинтов, используя QIWI, в валюте Russian Ruble (RUB)
-			</div>
-		</div>
-		<p class="user__title">Пользователь</p>
-		<div class="user__block">
-			<div class="user-info">
-				<p class="user-info__name">Hoooper (20+ сделок) Новичок, 9.5</p>
-			</div>
-			<a href="#" class="deal-user__link"></a>
-		</div>
-		<p class="user__title">Подробности</p>
-		<div class="user__block">
-			<table class="deal-info">
-				<tr>
-					<td>Цена</td>
-					<td class="text-medium">138456.00 RUB / BTC</td>
-				</tr>
-				<tr>
-					<td>Способ оплаты</td>
-					<td>QIWI</td>
-				</tr>
-				<tr>
-					<td>Ограничения</td>
-					<td>5000 - 100000 RUB</td>
-				</tr>
-				<tr>
-					<td>Местоположение</td>
-					<td><a href="#" class="deal-info__link">Russia, Russian Federation</a></td>
-				</tr>
-				<tr>
-					<td>Время на оплату</td>
-					<td>60 минут</td>
-				</tr>
-			</table>
-		</div>
-		<p class="user__title">Условия</p>
-		<div class="user__block">
-			<div>
-				Покупаю и продаю биткоинты с кошелька на кошелёк
-			</div>
-		</div>
-		<p class="user__title">Купить</p>
-		<div class="user__block">
-			<div class="send-wallet__summ">
-				<input name="" id="" class="send-wallet__summ-text" placeholder="0" type="text">
-				<input name="" id="" class="send-wallet__summ-text" placeholder="0" type="text">
-			</div>
-		</div>
-		<p class="deal-block__notice">Напишите трейдеру информацию о сделке и контакты</p>
-		<div class="form__row">
-			<button class="btn btn--fullwidth">Начать сделку</button>
-		</div>
-		<!-- show this block for unregistered users
-		<div class="deal-block__register">Зарегистрируйтесь, чтобы начать сделку прямо сейчас</div>
-		<div class="form__row">
-			<a href="#" class="btn btn--fullwidth">Зарегистрироваться</a>
-		</div>
-		-->
+		<table class="transaction-history">
+			<tr>
+				<th colspan="3">Показывать: За вчера, LTC</th>
+			</tr>
+			<tr>
+				<td>
+					<p>Отправляется</p>
+					<p>1 подтверждение</p>
+				</td>
+				<td>
+					<p class="transaction-history__minus">92.534435 BTC</p>
+					<p>20 минут назад</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Отправлена</p>
+				</td>
+				<td>
+					<p class="transaction-history__minus">92.534435 BTC</p>
+					<p>час назад</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Получена</p>
+				</td>
+				<td>
+					<p class="transaction-history__plus">92.534435 BTC</p>
+					<p>3 часа назад</p>
+				</td>
+			</tr>
+		</table>
 	</main>
 	<div class="notice">
 		<div class="notice__item">
