@@ -1223,13 +1223,26 @@ a {
 		.settings__address {
 			margin:10px -40px 0;
 		}
+			.settings-address__descr {
+				line-height:2.4rem;
+				margin:25px 40px;
+			}
+			.settings-address__sort {
+				margin:25px 40px;
+			}
+				.settings-address__sort-item {
+					color:#2570b5;
+					font-weight:500;
+					margin-right:32px;
+				}
+				.settings-address__sort-item--active {
+					color:#000;
+					pointer-events:none;
+				}
 			.settings-address__item {
 				line-height:2.4rem;
 				border-top:1px solid #eee;
 				padding:25px 40px;
-			}
-			.settings-address__item:first-child {
-				border-top:0;
 			}
 /*  </settings>  */
 
